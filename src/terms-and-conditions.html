@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Terms &amp; Conditions — Vashq</title>
+  <link rel="canonical" href="https://home.vashq.com/terms-and-conditions.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#007bff">
+  <meta name="description" content="Vashq terms and conditions for the car wash management app." />
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Terms & Conditions — Vashq">
+  <meta property="og:description" content="Vashq terms and conditions for the car wash management app.">
+  <meta property="og:image" content="https://home.vashq.com/og-image.webp">
+  <meta property="og:url" content="https://home.vashq.com/terms-and-conditions.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vashq">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terms & Conditions — Vashq">
+  <meta name="twitter:description" content="Vashq terms and conditions for the car wash management app.">
+  <meta name="twitter:image" content="https://home.vashq.com/og-image.webp">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/brand/logo-icon.webp">
+  <link rel="icon" type="image/webp" sizes="32x32" href="./assets/images/brand/logo-icon.webp">
+  <link rel="icon" type="image/webp" sizes="16x16" href="./assets/images/brand/logo-icon.webp">
+  <link rel="manifest" href="./assets/images/favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="./assets/scss/style.scss">
+  <style>
+    #page-loader {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e9e9e9;
+      z-index: 2000;
+      transition: opacity 220ms ease;
+    }
+
+    #page-loader .loader-card {
+      width: min(420px, 88vw);
+      padding: 18px 20px;
+      border-radius: 28px;
+      background: #f2f2f2;
+      box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.12), -10px -10px 24px rgba(255, 255, 255, 0.92),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.08), inset -5px -5px 10px rgba(255, 255, 255, 0.88);
+    }
+
+    #page-loader .shimmer {
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #e8e8e8, #f7f7f7, #e8e8e8);
+      background-size: 200% 100%;
+      animation: shimmer 1.1s linear infinite;
+    }
+
+    #page-loader .shimmer.sm {
+      height: 10px;
+      opacity: 0.85;
+    }
+
+    #page-loader .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: 200% 0
+      }
+
+      100% {
+        background-position: -200% 0
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-card">
+      <div class="stack">
+        <div class="d-flex justify-content-center">
+          <img src="./assets/images/brand/logo-icon.webp" width="64" height="64" alt="Vashq"
+            style="object-fit: contain;" />
+        </div>
+        <div class="shimmer" style="width: 62%; margin: 6px auto 0;"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const hide = () => {
+        const el = document.getElementById('page-loader');
+        if (!el) return;
+        el.style.opacity = '0';
+        el.style.pointerEvents = 'none';
+        window.setTimeout(() => el.remove(), 240);
+      };
+      window.addEventListener('load', hide, { once: true });
+      window.addEventListener('pageshow', (e) => { if (e.persisted) hide(); });
+    })();
+  </script>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-inline-flex align-items-center lh-1" href="/">
+        <img src="./assets/images/brand/logo-full.webp" alt="Vashq" height="32" loading="eager"
+          style="object-fit: contain;" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
+        aria-controls="mobileNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="d-none d-lg-flex flex-grow-1 align-items-center">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title h5 mb-0" id="mobileNavLabel">Menu</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav mb-4">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="d-grid gap-2">
+        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          data-bs-dismiss="offcanvas">Start Free Trial</a>
+        <a href="/?bookDemo=1" class="btn btn-light">Book Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-lg-13 py-8 bg-white" id="terms">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Legal</span>
+          <h1 class="fw-bold mt-4 mb-2">Terms &amp; Conditions</h1>
+          <p class="small text-muted mb-6">Effective Date: July 23, 2026</p>
+
+          <div class="card rounded-5 shadow-sm border">
+            <div class="card-body p-6">
+              <h2 class="h5 fw-bold mb-3">1. Acceptance</h2>
+              <p>By registering, accessing, subscribing to, or using VASHQ, you agree to these Terms &amp; Conditions.</p>
+              <p class="mb-0">If you disagree with any part, you should not use the platform.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">2. Service Description</h2>
+              <p>VASHQ is a cloud-based ERP and business management software for the car care industry.</p>
+              <p>Features may include:</p>
+              <ul class="mb-3">
+                <li>Job Management</li>
+                <li>Customer Management</li>
+                <li>Billing &amp; Invoicing</li>
+                <li>Booking Management</li>
+                <li>Employee Management</li>
+                <li>Inventory</li>
+                <li>Expense Tracking</li>
+                <li>Credit Management</li>
+                <li>Reports</li>
+                <li>AI Insights</li>
+                <li>WhatsApp Integration</li>
+                <li>Business Analytics</li>
+              </ul>
+              <p class="mb-0">Features may change over time without prior notice.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">3. Free Trial</h2>
+              <p>VASHQ provides a free trial period to allow customers to evaluate the software before purchasing.</p>
+              <p>Customers are expected to fully evaluate all features during the trial.</p>
+              <p class="mb-0">Once a paid subscription is purchased, it confirms that the customer is satisfied with the software.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">4. Subscription</h2>
+              <p>Subscriptions are offered on:</p>
+              <ul class="mb-3">
+                <li>Monthly (if applicable)</li>
+                <li>Annual Plans</li>
+              </ul>
+              <p class="mb-0">Subscriptions begin once payment is successfully completed.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">5. No Refund Policy</h2>
+              <p>All subscription payments are final and non-refundable.</p>
+              <p>Because VASHQ provides a free trial before purchase, users have sufficient opportunity to evaluate the platform before subscribing.</p>
+              <p>No refunds, whether full or partial, will be issued for:</p>
+              <ul class="mb-3">
+                <li>Change of mind</li>
+                <li>Lack of usage</li>
+                <li>Business closure</li>
+                <li>Staff changes</li>
+                <li>Technical knowledge limitations</li>
+                <li>Failure to utilize available features</li>
+                <li>Switching to another software</li>
+                <li>Dissatisfaction after subscription</li>
+                <li>Early cancellation</li>
+                <li>Partial subscription periods</li>
+              </ul>
+              <p class="mb-0">This policy applies to all annual subscription plans unless otherwise required by applicable law.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">6. Auto Renewal</h2>
+              <p>Subscriptions may renew automatically if enabled by the customer.</p>
+              <p class="mb-0">Customers are responsible for canceling auto-renewal before the renewal date.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">7. User Responsibilities</h2>
+              <p>Customers agree:</p>
+              <ul class="mb-0">
+                <li>To provide accurate information.</li>
+                <li>To maintain password confidentiality.</li>
+                <li>Not to share accounts without authorization.</li>
+                <li>Not to attempt unauthorized access.</li>
+                <li>Not to misuse the platform.</li>
+                <li>Not to upload illegal or harmful content.</li>
+                <li>Not to interfere with system operations.</li>
+              </ul>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">8. Intellectual Property</h2>
+              <p>All software, source code, branding, logos, designs, UI, workflows, documentation, AI systems, APIs, databases, and related intellectual property remain the exclusive property of Wisemove Consultancy Pvt. Ltd.</p>
+              <p class="mb-0">Customers receive a limited, non-transferable, non-exclusive license to use the software during an active subscription.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">9. Availability</h2>
+              <p>While we strive for high availability, uninterrupted service cannot be guaranteed.</p>
+              <p>Temporary interruptions may occur due to:</p>
+              <ul class="mb-0">
+                <li>Maintenance</li>
+                <li>Server Upgrades</li>
+                <li>Internet Issues</li>
+                <li>Third-party Service Failures</li>
+                <li>Force Majeure Events</li>
+              </ul>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">10. Support</h2>
+              <p>Technical support is provided according to the subscribed plan.</p>
+              <p class="mb-0">Support does not include custom development unless separately agreed in writing.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">11. Data Backup</h2>
+              <p>We perform regular backups; however, customers are responsible for maintaining copies of important business records where appropriate.</p>
+              <p class="mb-0">The Company is not liable for losses arising from unforeseen technical failures, third-party outages, or events beyond its reasonable control.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">12. Suspension</h2>
+              <p>We may suspend or terminate accounts for:</p>
+              <ul class="mb-3">
+                <li>Fraud</li>
+                <li>Abuse</li>
+                <li>Illegal Activities</li>
+                <li>Non-payment</li>
+                <li>Security Threats</li>
+                <li>Violation of these Terms</li>
+              </ul>
+              <p class="mb-0">No refund will be issued for accounts terminated due to violations.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">13. Limitation of Liability</h2>
+              <p>To the maximum extent permitted by law:</p>
+              <ul class="mb-0">
+                <li>VASHQ is provided on an "as is" and "as available" basis.</li>
+                <li>The Company does not guarantee uninterrupted, error-free, or completely secure operation.</li>
+                <li>The Company shall not be liable for indirect, incidental, consequential, special, exemplary, or punitive damages, including loss of profits, revenue, business opportunities, goodwill, or data.</li>
+                <li>The Company's total aggregate liability arising out of or relating to the use of VASHQ shall not exceed the subscription fees paid by the customer during the twelve (12) months immediately preceding the event giving rise to the claim.</li>
+              </ul>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">14. Indemnification</h2>
+              <p class="mb-0">Customers agree to indemnify and hold harmless Wisemove Consultancy Pvt. Ltd., its directors, employees, affiliates, and partners from claims, damages, liabilities, losses, and expenses arising from misuse of the platform, violation of these Terms, infringement of third-party rights, or unlawful activities conducted through their account.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">15. Governing Law</h2>
+              <p>These Terms shall be governed by the laws of India.</p>
+              <p class="mb-0">Any disputes shall be subject to the exclusive jurisdiction of the courts located in Ernakulam, Kerala, India, unless otherwise required by applicable law.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">16. Changes</h2>
+              <p>The Company reserves the right to modify these Terms at any time.</p>
+              <p class="mb-0">Continued use constitutes acceptance of the revised Terms.</p>
+            </div>
+          </div>
+
+          <div class="mt-8 d-flex gap-3">
+            <a href="privacy-policy.html" class="btn btn-light">Privacy Policy</a>
+            <a href="refund-policy.html" class="btn btn-light">Refund Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pt-lg-13 bg-light py-8">
+    <div class="container">
+      <div class="border-top pt-6 row small">
+        <div class="col-12 d-flex flex-column flex-md-row justify-content-between">
+          <div>
+            <p>© 2026 Vashq. All rights reserved.</p>
+          </div>
+          <div class="d-flex gap-3">
+            <a href="privacy-policy.html" class="link-primary">Privacy Policy</a>
+            <a href="terms-and-conditions.html" class="link-primary">Terms &amp; Conditions</a>
+            <a href="refund-policy.html" class="link-primary">Refund Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js" type="module"></script>
+</body>
+
+</html>

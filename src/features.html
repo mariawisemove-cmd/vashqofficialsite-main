@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Vashq Features — Car Wash Management App</title>
+  <link rel="canonical" href="https://home.vashq.com/features.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#007bff">
+  <meta name="description"
+    content="Explore Vashq features: dashboard, job management, employee system, customer & vehicle management, billing, reports, and WhatsApp automation." />
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Vashq Features — Car Wash Management App">
+  <meta property="og:description" content="Explore Vashq features for jobs, staff, customers, billing, WhatsApp, and reports.">
+  <meta property="og:image" content="https://home.vashq.com/og-image.webp">
+  <meta property="og:url" content="https://home.vashq.com/features.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vashq">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vashq Features — Car Wash Management App">
+  <meta name="twitter:description" content="Explore Vashq features for jobs, staff, customers, billing, WhatsApp, and reports.">
+  <meta name="twitter:image" content="https://home.vashq.com/og-image.webp">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/brand/logo-icon.webp">
+  <link rel="icon" type="image/webp" sizes="32x32" href="./assets/images/brand/logo-icon.webp">
+  <link rel="icon" type="image/webp" sizes="16x16" href="./assets/images/brand/logo-icon.webp">
+  <link rel="manifest" href="./assets/images/favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="./assets/scss/style.scss">
+  <style>
+    #page-loader {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e9e9e9;
+      z-index: 2000;
+      transition: opacity 220ms ease;
+    }
+
+    #page-loader .loader-card {
+      width: min(420px, 88vw);
+      padding: 18px 20px;
+      border-radius: 28px;
+      background: #f2f2f2;
+      box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.12), -10px -10px 24px rgba(255, 255, 255, 0.92),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.08), inset -5px -5px 10px rgba(255, 255, 255, 0.88);
+    }
+
+    #page-loader .shimmer {
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #e8e8e8, #f7f7f7, #e8e8e8);
+      background-size: 200% 100%;
+      animation: shimmer 1.1s linear infinite;
+    }
+
+    #page-loader .shimmer.sm {
+      height: 10px;
+      opacity: 0.85;
+    }
+
+    #page-loader .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: 200% 0
+      }
+
+      100% {
+        background-position: -200% 0
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-card">
+      <div class="stack">
+        <div class="d-flex justify-content-center">
+          <img src="./assets/images/brand/logo-icon.webp" width="64" height="64" alt="Vashq"
+            style="object-fit: contain;" />
+        </div>
+        <div class="shimmer" style="width: 62%; margin: 6px auto 0;"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const hide = () => {
+        const el = document.getElementById('page-loader');
+        if (!el) return;
+        el.style.opacity = '0';
+        el.style.pointerEvents = 'none';
+        window.setTimeout(() => el.remove(), 240);
+      };
+      window.addEventListener('load', hide, { once: true });
+      window.addEventListener('pageshow', (e) => { if (e.persisted) hide(); });
+    })();
+  </script>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+       <a class="navbar-brand d-inline-flex align-items-center lh-1" href="/">
+  <img src="./assets/images/brand/logo-full.webp"
+       alt="VASHQ logo"
+       height="32"
+       loading="eager"
+       style="object-fit: contain;" />
+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
+        aria-controls="mobileNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="d-none d-lg-flex flex-grow-1 align-items-center">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="d-flex gap-3 align-items-center">
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal">Book Demo</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title h5 mb-0" id="mobileNavLabel">Menu</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav mb-4">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="d-grid gap-2">
+        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal"
+          data-bs-dismiss="offcanvas">Book Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-lg-13 py-8 bg-white position-relative" id="features-hero">
+    <div class="circle-bg d-none d-lg-block"></div>
+    <div class="container">
+      <div class="row align-items-center gy-8">
+        <div class="col-lg-7 order-2 order-lg-1">
+          <span
+            class="badge bg-primary bg-opacity-10 text-primary px-4 py-3 fw-normal border border-primary rounded-pill">
+            <span class="ms-1">Features</span>
+          </span>
+          <h1 class="display-4 fw-bold  mt-4">Everything you need to run a car wash</h1>
+          <p class="my-6 lead fw-normal">From jobs and staff to invoices and WhatsApp updates — Vashq keeps your business
+            organized and accountable.</p>
+          <div class="d-flex flex-md-row flex-column justify-content-start gap-3">
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal">
+              <span>Book Demo</span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-arrow-right ms-2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <line x1="13" y1="18" x2="19" y2="12"></line>
+                  <line x1="13" y1="6" x2="19" y2="12"></line>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2">
+          <div class="card p-3 rounded-5 shadow-sm">
+            <img src="./assets/images-optimized/features/Tumbnail-image/Hero%20image.webp"
+              alt="Vashq dashboard overlaid on a car wash team at work"
+              class="rounded-5 img-fluid" loading="eager" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-lg-13 py-8" id="dashboard">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-7 mx-auto">
+          <div class="mb-10">
+            <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Dashboard</span>
+            <h2 class="fw-bold mt-4 mb-4">One-scroll business overview</h2>
+            <p class="mb-0">See what’s happening right now — revenue, jobs, and top performers — without switching
+              screens.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="card shadow-sm h-100 rounded-5 card-lift">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Dashboard-overview-images/One-scroll%20overview.webp"
+                  alt="Dashboard overview"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">One-scroll overview</h3>
+              <p class="mb-0 small mt-4">Your day at a glance: jobs, payments, and team performance in one dashboard.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card shadow-sm h-100 rounded-5 card-lift">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Dashboard-overview-images/Real-time%20insights.webp"
+                  alt="Real-time insights"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">Real-time insights</h3>
+              <p class="mb-0 small mt-4">Stay on top of revenue trends, workload, and job status in real time.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card shadow-sm h-100 rounded-5 card-lift">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Dashboard-overview-images/Booking%20management.webp"
+                  alt="Booking management dashboard"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">Booking Management</h3>
+              <p class="mb-0 small mt-4">Schedule appointments, manage time slots, and keep bookings organized without missed or double bookings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-lg-13 py-8 bg-light bg-opacity-25" id="job-management">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-7 mx-auto">
+          <div class="mb-10">
+            <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Job
+              Management</span>
+            <h2 class="fw-bold mt-4 mb-4">Create, assign, and track every job</h2>
+            <p class="mb-0">Keep work organized with job creation, before/after photos, and clear task tracking.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="card shadow-sm h-100 rounded-5 card-lift">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Job-management-images/Job%20creation.webp" alt="Job creation"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">Job creation</h3>
+              <p class="mb-0 small mt-4">Create jobs fast with customer, vehicle, and service details.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card shadow-sm h-100 rounded-5 card-lift">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Job-management-images/Beforeafter%20photos.webp"
+                  alt="Before and after photos"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">Before/after photos</h3>
+              <p class="mb-0 small mt-4">Capture proof of work and improve trust on premium services.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card shadow-sm h-100 rounded-5 card-lift">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Job-management-images/Task%20tracking.webp" alt="Task tracking"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">Task tracking</h3>
+              <p class="mb-0 small mt-4">Know what’s pending, in progress, and completed — without chasing updates.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-lg-13 py-8" id="employee-system">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-7 mx-auto">
+          <div class="mb-10">
+            <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Employee
+              System</span>
+            <h2 class="fw-bold mt-4 mb-4">Separate employee login portal</h2>
+            <p class="mb-0">Give employees their own access so job updates and performance tracking stay accurate.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card shadow-sm h-100 rounded-5 card-lift">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Employee-system/Separate%20logins.webp" alt="Separate logins"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">Separate logins</h3>
+              <p class="mb-0 small mt-4">Each employee can update assigned jobs without touching admin settings.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow-sm h-100 rounded-5 card-lift">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Employee-system/Performance%20tracking.webp"
+                  alt="Performance tracking"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">Performance tracking</h3>
+              <p class="mb-0 small mt-4">Track productivity and quality — and visualize performance on a leaderboard.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-lg-13 py-8 bg-light bg-opacity-50" id="customer-vehicle">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-7 mx-auto">
+          <div class="mb-10">
+            <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Customer &amp;
+              Vehicle</span>
+            <h2 class="fw-bold mt-4 mb-4">Customer and vehicle history in one place</h2>
+            <p class="mb-0">Keep a clean customer database and track vehicle service history for repeat business.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="card rounded-5 shadow-sm h-100 border">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Customers-and-vehicle/Customer%20data%20management.webp"
+                  alt="Customer data management"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">Customer data management</h3>
+              <p class="mb-0 small mt-4">Store customer info and keep your records consistent.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card rounded-5 shadow-sm h-100 border">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Customers-and-vehicle/Vehicle%20data%20management.webp"
+                  alt="Vehicle data management"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">Vehicle data management</h3>
+              <p class="mb-0 small mt-4">Track vehicles and link them to jobs and invoices.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card rounded-5 shadow-sm h-100 border">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Customers-and-vehicle/History%20tracking.webp" alt="History tracking"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">History tracking</h3>
+              <p class="mb-0 small mt-4">Review past services to deliver consistent quality and upsell effectively.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-lg-13 py-8" id="billing-payments">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-7 mx-auto">
+          <div class="mb-10">
+            <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Billing &amp;
+              Payments</span>
+            <h2 class="fw-bold mt-4 mb-4">Invoices, payments, and expenses — clarified</h2>
+            <p class="mb-0">Reduce billing confusion and keep day-end numbers clean.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="card shadow-sm h-100 rounded-5 card-lift">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Billing-and-payments/Invoice%20generation.webp"
+                  alt="Invoice generation"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">Invoice generation</h3>
+              <p class="mb-0 small mt-4">Generate invoices quickly and keep records organized.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card shadow-sm h-100 rounded-5 card-lift">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Billing-and-payments/Payment%20tracking.webp" alt="Payment tracking"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">Payment tracking</h3>
+              <p class="mb-0 small mt-4">Track payment status per job and reduce missed collections.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card shadow-sm h-100 rounded-5 card-lift">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Billing-and-payments/Expense%20management.webp"
+                  alt="Expense management"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">Expense management</h3>
+              <p class="mb-0 small mt-4">Record expenses to understand real profit, not just revenue.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-lg-13 py-8 bg-light bg-opacity-25" id="reports-analytics">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-7 mx-auto">
+          <div class="mb-10">
+            <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Reports &amp;
+              Analytics</span>
+            <h2 class="fw-bold mt-4 mb-4">Make better decisions with reports</h2>
+            <p class="mb-0">Understand revenue and performance trends over time.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card rounded-5 shadow-sm h-100 border">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Report-analytics/Revenue%20and%20other%20reports.webp"
+                  alt="Revenue and other reports"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">Revenue and other reports</h3>
+              <p class="mb-0 small mt-4">View financial statements, sales, collections, and outstanding reports — filter by date and download as CSV or PDF.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card rounded-5 shadow-sm h-100 border">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Report-analytics/AI%20Reports%20analysing.webp"
+                  alt="AI Reports analysing"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">AI Reports analysing</h3>
+              <p class="mb-0 small mt-4">Ask business questions or generate consultant-style reports with scores, insights, and action plans powered by AI.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-lg-13 py-8" id="whatsapp">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-7 mx-auto">
+          <div class="mb-10">
+            <span class="text-primary text-uppercase small fw-semibold"
+              style="letter-spacing: .125rem;">WhatsApp</span>
+            <h2 class="fw-bold mt-4 mb-4">WhatsApp automation that customers notice</h2>
+            <p class="mb-0">Send notifications and keep customers informed without extra calls or manual messages.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card shadow-sm h-100 rounded-5 card-lift">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Whatsapp/WhatsApp%20Customer%20Communications.webp"
+                  alt="WhatsApp customer communications"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">WhatsApp Customer Communications</h3>
+              <p class="mb-0 small mt-4">Send real-time job updates, pickup reminders, and invoices to customers automatically on WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow-sm h-100 rounded-5 card-lift">
+            <div class="card-body p-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-4">
+                <img src="./assets/images-optimized/features/Whatsapp/Template%20editing%20for%20personalization.webp"
+                  alt="Template editing for personalization"
+                  class="w-100 h-100" style="object-fit: cover;" loading="lazy" referrerpolicy="no-referrer" />
+              </div>
+              <h3 class="mb-1 fs-6">Template editing for personalization</h3>
+              <p class="mb-0 small mt-4">Customize WhatsApp message templates with customer, vehicle, and job variables to match your brand voice.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-10">
+        <div class="col-12 text-center">
+          <a href="#" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#bookDemoModal">
+            <span>Book Demo</span>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-arrow-right ms-1">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <line x1="13" y1="18" x2="19" y2="12"></line>
+                <line x1="13" y1="6" x2="19" y2="12"></line>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-lg-13 py-8 bg-light bg-opacity-25" id="final-cta">
+    <div class="container">
+      <div class="row align-items-center gy-6">
+        <div class="col-lg-7">
+          <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Ready?</span>
+          <h2 class="fw-bold mt-4 mb-4">Run your entire car wash business from one dashboard</h2>
+          <p class="mb-0">Start free, set up in minutes, and keep jobs, staff, customers, billing, and WhatsApp updates
+            under control.</p>
+        </div>
+        <div class="col-lg-5">
+          <div class="d-flex flex-md-row flex-column justify-content-lg-end gap-3">
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal">Book Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pt-lg-13 bg-light py-8">
+    <div class="container">
+      <div class="row gy-8">
+        <div class="col-md-4">
+          <div class="">
+            <a class="d-inline-flex align-items-center lh-1" href="/">
+              <img src="./assets/images/brand/logo-full.webp" alt="Vashq" height="32" loading="lazy"
+                style="object-fit: contain;" />
+            </a>
+            <p class="mt-4 mb-6">Run your entire car wash business from one dashboard. Jobs, staff, customers, billing,
+              and WhatsApp — all in one place.</p>
+            <div class="d-flex flex-column gap-2">
+              <span class="d-flex align-items-center gap-2">
+                <span class="text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                    <path d="M3 7l9 6l9 -6" />
+                  </svg>
+                </span>
+              <a class="text-decoration-none" href="mailto:vashqofficial@gmail.com">vashqofficial@gmail.com</a>
+              </span>
+              <span class="d-flex align-items-center gap-2">
+                <span class="text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-phone">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                  </svg>
+                </span>
+              <a class="text-decoration-none" href="tel:8891207778">8891207778</a>
+              </span>
+              <span class="d-flex align-items-center gap-2">
+                <span class="text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                  </svg>
+                </span>
+                <span>India</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="">
+                <h4 class="fs-5 mb-4">Product</h4>
+                <ul class="list-unstyled lh-lg small">
+                  <li><a href="features.html">Features</a></li>
+                  <li><a href="use-cases.html">Use Cases</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div>
+                <h4 class="fs-5 mb-4">Company</h4>
+                <ul class="list-unstyled lh-lg small">
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div>
+                <h4 class="fs-5 mb-4">Support</h4>
+                <ul class="list-unstyled lh-lg small">
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                  <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+                  <li><a href="refund-policy.html">Refund Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div>
+                <h4 class="fs-5 mb-4">Use cases</h4>
+                <ul class="list-unstyled lh-lg small">
+                  <li><a href="use-cases.html">Car wash centers</a></li>
+                  <li><a href="use-cases.html">Detailing studios</a></li>
+                  <li><a href="use-cases.html">Bike wash shops</a></li>
+                  <li><a href="features.html#whatsapp">WhatsApp automation</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-top mt-8 pt-6 row small">
+        <div class="col-12 d-flex flex-column flex-md-row justify-content-between">
+          <div>
+            <p>© 2026 Vashq. All rights reserved.</p>
+          </div>
+          <div>
+            <div class="d-flex gap-2">
+              <a href="https://www.instagram.com/vashqofficial/" class="btn rounded-circle btn-light btn-icon btn-xs"
+                target="_blank" rel="noopener noreferrer" aria-label="Vashq on Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                  <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                  <path d="M16.5 7.5l0 .01"></path>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/people/Vashq/61591704035022/" class="btn rounded-circle btn-light btn-icon btn-xs"
+                target="_blank" rel="noopener noreferrer" aria-label="Vashq on Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/company/wisemove-consultancy-pvt-ltd/" class="btn rounded-circle btn-light btn-icon btn-xs"
+                target="_blank" rel="noopener noreferrer" aria-label="Vashq on LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                  <path d="M8 11l0 5"></path>
+                  <path d="M8 8l0 .01"></path>
+                  <path d="M12 11l0 5"></path>
+                  <path d="M16 11a2 2 0 0 1 2 2l0 3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Book Demo Modal -->
+  <div class="modal fade" id="bookDemoModal" tabindex="-1" aria-labelledby="bookDemoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down">
+      <div class="modal-content rounded-5">
+        <div class="modal-body p-4 p-sm-6">
+          <button type="button" class="modal-x" data-bs-dismiss="modal" aria-label="Close">X</button>
+
+          <div id="bookDemoFormView">
+            <div class="mb-3">
+              <h2 class="card-title mb-2 h5" id="bookDemoModalLabel">Book a Demo</h2>
+              <p class="small text-muted mb-0">Share your details and we’ll reach out to schedule a walkthrough.</p>
+            </div>
+
+            <form id="bookDemoForm" class="mt-4 needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="demoFullName" class="form-label">Full name</label>
+                <input id="demoFullName" name="fullName" type="text" class="form-control" placeholder="Your full name"
+                  required minlength="2" autocomplete="name">
+                <div class="invalid-feedback">Please enter your full name.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="demoBusinessName" class="form-label">Business name</label>
+                <input id="demoBusinessName" name="businessName" type="text" class="form-control"
+                  placeholder="Your car wash / detailing business" required minlength="2" autocomplete="organization">
+                <div class="invalid-feedback">Please enter your business name.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="demoMobile" class="form-label">Mobile number</label>
+                <input id="demoMobile" name="mobile" type="tel" class="form-control" placeholder="10-digit mobile number"
+                  required inputmode="numeric" autocomplete="tel" pattern="^[6-9][0-9]{9}$">
+                <div class="invalid-feedback">Please enter a valid 10-digit Indian mobile number.</div>
+              </div>
+
+              <div class="mb-4">
+                <label for="demoLocationSearch" class="form-label">Location</label>
+                <div class="location-combobox" id="demoLocationCombobox">
+                  <input type="hidden" id="demoLocation" name="location" required>
+                  <input id="demoLocationSearch" type="text" class="form-control" role="combobox"
+                    placeholder="Search state or city" autocomplete="off" aria-autocomplete="list"
+                    aria-expanded="false" aria-controls="demoLocationList" required>
+                  <ul id="demoLocationList" class="location-combobox__list" role="listbox" hidden></ul>
+                </div>
+                <div class="invalid-feedback">Please search and select a state or city in India.</div>
+              </div>
+
+              <div class="d-grid">
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+              <p id="bookDemoError" class="small text-danger mt-3 mb-0 d-none" role="alert"></p>
+            </form>
+          </div>
+
+          <div id="bookDemoSuccessView" class="book-demo-success d-none" hidden aria-live="polite">
+            <div class="book-demo-success__mark" aria-hidden="true">
+              <svg class="book-demo-success__svg" viewBox="0 0 52 52">
+                <circle class="book-demo-success__circle" cx="26" cy="26" r="24" fill="none" />
+                <path class="book-demo-success__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+              </svg>
+            </div>
+            <h2 class="book-demo-success__title h4 fw-bold mb-2">Thank you!</h2>
+            <p class="book-demo-success__text mb-5">Your demo request was submitted. We’ll be in touch soon.</p>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar End -->
+  <script src="./assets/js/main.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Privacy Policy — Vashq</title>
+  <link rel="canonical" href="https://home.vashq.com/privacy-policy.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#007bff">
+  <meta name="description" content="Vashq privacy policy for the car wash management app." />
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Privacy Policy — Vashq">
+  <meta property="og:description" content="Vashq privacy policy for the car wash management app.">
+  <meta property="og:image" content="https://home.vashq.com/og-image.webp">
+  <meta property="og:url" content="https://home.vashq.com/privacy-policy.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vashq">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy Policy — Vashq">
+  <meta name="twitter:description" content="Vashq privacy policy for the car wash management app.">
+  <meta name="twitter:image" content="https://home.vashq.com/og-image.webp">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/brand/logo-icon.webp">
+  <link rel="icon" type="image/webp" sizes="32x32" href="./assets/images/brand/logo-icon.webp">
+  <link rel="icon" type="image/webp" sizes="16x16" href="./assets/images/brand/logo-icon.webp">
+  <link rel="manifest" href="./assets/images/favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="./assets/scss/style.scss">
+  <style>
+    #page-loader {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e9e9e9;
+      z-index: 2000;
+      transition: opacity 220ms ease;
+    }
+
+    #page-loader .loader-card {
+      width: min(420px, 88vw);
+      padding: 18px 20px;
+      border-radius: 28px;
+      background: #f2f2f2;
+      box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.12), -10px -10px 24px rgba(255, 255, 255, 0.92),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.08), inset -5px -5px 10px rgba(255, 255, 255, 0.88);
+    }
+
+    #page-loader .shimmer {
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #e8e8e8, #f7f7f7, #e8e8e8);
+      background-size: 200% 100%;
+      animation: shimmer 1.1s linear infinite;
+    }
+
+    #page-loader .shimmer.sm {
+      height: 10px;
+      opacity: 0.85;
+    }
+
+    #page-loader .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: 200% 0
+      }
+
+      100% {
+        background-position: -200% 0
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-card">
+      <div class="stack">
+        <div class="d-flex justify-content-center">
+          <img src="./assets/images/brand/logo-icon.webp" width="64" height="64" alt="Vashq"
+            style="object-fit: contain;" />
+        </div>
+        <div class="shimmer" style="width: 62%; margin: 6px auto 0;"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const hide = () => {
+        const el = document.getElementById('page-loader');
+        if (!el) return;
+        el.style.opacity = '0';
+        el.style.pointerEvents = 'none';
+        window.setTimeout(() => el.remove(), 240);
+      };
+      window.addEventListener('load', hide, { once: true });
+      window.addEventListener('pageshow', (e) => { if (e.persisted) hide(); });
+    })();
+  </script>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-inline-flex align-items-center lh-1" href="/">
+        <img src="./assets/images/brand/logo-full.webp" alt="Vashq" height="32" loading="eager"
+          style="object-fit: contain;" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
+        aria-controls="mobileNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="d-none d-lg-flex flex-grow-1 align-items-center">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title h5 mb-0" id="mobileNavLabel">Menu</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav mb-4">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="d-grid gap-2">
+        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          data-bs-dismiss="offcanvas">Start Free Trial</a>
+        <a href="/?bookDemo=1" class="btn btn-light">Book Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-lg-13 py-8 bg-white" id="privacy-policy">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Legal</span>
+          <h1 class="fw-bold mt-4 mb-2">Privacy Policy</h1>
+          <p class="small text-muted mb-6">Effective Date: July 23, 2026</p>
+
+          <div class="card rounded-5 shadow-sm border">
+            <div class="card-body p-6">
+              <h2 class="h5 fw-bold mb-3">1. Introduction</h2>
+              <p>Welcome to VASHQ, a cloud-based Software-as-a-Service (SaaS) platform developed and operated by Wisemove Consultancy Pvt. Ltd. ("Company", "we", "our", or "us").</p>
+              <p>VASHQ is designed specifically for businesses in the car care industry, including car wash centers, detailing studios, ceramic coating centers, automobile service centers, and related businesses.</p>
+              <p class="mb-0">By accessing or using VASHQ, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">2. Information We Collect</h2>
+              <p>We may collect the following information:</p>
+              <h3 class="h6 fw-bold mt-4 mb-2">Business Information</h3>
+              <ul class="mb-3">
+                <li>Business Name</li>
+                <li>GST Number (if applicable)</li>
+                <li>Business Address</li>
+                <li>Business Phone Number</li>
+                <li>Business Email Address</li>
+                <li>Business Logo</li>
+              </ul>
+              <h3 class="h6 fw-bold mt-4 mb-2">User Information</h3>
+              <ul class="mb-3">
+                <li>Owner Name</li>
+                <li>Employee Details</li>
+                <li>Login Credentials</li>
+                <li>User Roles &amp; Permissions</li>
+              </ul>
+              <h3 class="h6 fw-bold mt-4 mb-2">Customer Data</h3>
+              <p>Businesses using VASHQ may store:</p>
+              <ul class="mb-3">
+                <li>Customer Names</li>
+                <li>Mobile Numbers</li>
+                <li>Vehicle Information</li>
+                <li>Registration Numbers</li>
+                <li>Service History</li>
+                <li>Booking Details</li>
+                <li>Invoice Information</li>
+                <li>Payment Records</li>
+                <li>Outstanding Credit Details</li>
+                <li>Loyalty Information</li>
+              </ul>
+              <p class="mb-0">The customer data entered into VASHQ belongs to the subscribing business.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">3. Payment Information</h2>
+              <p>Payments are securely processed through third-party payment gateways.</p>
+              <p>We do not store:</p>
+              <ul class="mb-0">
+                <li>Debit Card Numbers</li>
+                <li>Credit Card Numbers</li>
+                <li>CVV</li>
+                <li>Banking Passwords</li>
+                <li>UPI PINs</li>
+              </ul>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">4. Device Information</h2>
+              <p>We may automatically collect:</p>
+              <ul class="mb-0">
+                <li>Browser Information</li>
+                <li>Device Type</li>
+                <li>IP Address</li>
+                <li>Login History</li>
+                <li>Operating System</li>
+                <li>Time Zone</li>
+                <li>Usage Analytics</li>
+              </ul>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">5. How We Use Information</h2>
+              <p>Information is used for:</p>
+              <ul class="mb-0">
+                <li>Providing SaaS services</li>
+                <li>Customer Support</li>
+                <li>Billing</li>
+                <li>Product Improvements</li>
+                <li>Security Monitoring</li>
+                <li>AI-powered Analytics</li>
+                <li>Feature Enhancements</li>
+                <li>Service Notifications</li>
+                <li>Legal Compliance</li>
+              </ul>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">6. AI Features</h2>
+              <p class="mb-0">Certain features within VASHQ use Artificial Intelligence to generate business insights and operational recommendations.</p>
+              <p class="mb-0 mt-3">AI-generated content is advisory only and should not be considered legal, accounting, financial, or business advice.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">7. Data Security</h2>
+              <p>We implement industry-standard security measures including:</p>
+              <ul class="mb-3">
+                <li>Secure Cloud Hosting</li>
+                <li>Encrypted Connections (HTTPS/SSL)</li>
+                <li>Authentication Controls</li>
+                <li>Role-based Access</li>
+                <li>Regular Backups</li>
+                <li>Firewall Protection</li>
+              </ul>
+              <p class="mb-0">However, no online system can guarantee 100% security.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">8. Data Ownership</h2>
+              <p>All customer records, invoices, job details, employee data, reports, and business information entered into VASHQ remain the property of the subscribing business.</p>
+              <p class="mb-0">The Company does not claim ownership over business data.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">9. Data Retention</h2>
+              <p>Data is retained while your subscription remains active.</p>
+              <p class="mb-0">Following subscription expiry or account termination, data may be retained for a reasonable period for backup, compliance, dispute resolution, fraud prevention, and legal obligations, after which it may be permanently deleted at our discretion.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">10. Third-Party Services</h2>
+              <p>VASHQ may integrate with:</p>
+              <ul class="mb-3">
+                <li>Payment Gateways</li>
+                <li>WhatsApp APIs</li>
+                <li>SMS Providers</li>
+                <li>Email Providers</li>
+                <li>Google Services</li>
+                <li>Cloud Infrastructure Providers</li>
+              </ul>
+              <p class="mb-0">These providers maintain their own privacy policies.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">11. Cookies</h2>
+              <p>We may use cookies for:</p>
+              <ul class="mb-0">
+                <li>Authentication</li>
+                <li>User Sessions</li>
+                <li>Preferences</li>
+                <li>Analytics</li>
+                <li>Security</li>
+              </ul>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">12. Children's Privacy</h2>
+              <p>VASHQ is intended solely for business use.</p>
+              <p class="mb-0">Our services are not intended for individuals under 18 years of age.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">13. Policy Updates</h2>
+              <p>We may update this Privacy Policy at any time.</p>
+              <p class="mb-0">Continued use of VASHQ constitutes acceptance of the updated policy.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">14. Contact</h2>
+              <p>For privacy-related questions:</p>
+              <p class="mb-1 fw-bold">Wisemove Consultancy Pvt. Ltd.</p>
+              <p class="mb-0">Email: <a href="mailto:vashqofficial@gmail.com">vashqofficial@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="mt-8 d-flex gap-3">
+            <a href="terms-and-conditions.html" class="btn btn-light">Terms &amp; Conditions</a>
+            <a href="refund-policy.html" class="btn btn-light">Refund Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pt-lg-13 bg-light py-8">
+    <div class="container">
+      <div class="border-top pt-6 row small">
+        <div class="col-12 d-flex flex-column flex-md-row justify-content-between">
+          <div>
+            <p>© 2026 Vashq. All rights reserved.</p>
+          </div>
+          <div class="d-flex gap-3">
+            <a href="privacy-policy.html" class="link-primary">Privacy Policy</a>
+            <a href="terms-and-conditions.html" class="link-primary">Terms &amp; Conditions</a>
+            <a href="refund-policy.html" class="link-primary">Refund Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Refund Policy — Vashq</title>
+  <link rel="canonical" href="https://home.vashq.com/refund-policy.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#007bff">
+  <meta name="description" content="Vashq refund policy for the car wash management app." />
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Refund Policy — Vashq">
+  <meta property="og:description" content="Vashq refund policy for the car wash management app.">
+  <meta property="og:image" content="https://home.vashq.com/og-image.webp">
+  <meta property="og:url" content="https://home.vashq.com/refund-policy.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vashq">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Refund Policy — Vashq">
+  <meta name="twitter:description" content="Vashq refund policy for the car wash management app.">
+  <meta name="twitter:image" content="https://home.vashq.com/og-image.webp">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/brand/logo-icon.webp">
+  <link rel="icon" type="image/webp" sizes="32x32" href="./assets/images/brand/logo-icon.webp">
+  <link rel="icon" type="image/webp" sizes="16x16" href="./assets/images/brand/logo-icon.webp">
+  <link rel="manifest" href="./assets/images/favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="./assets/scss/style.scss">
+  <style>
+    #page-loader {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e9e9e9;
+      z-index: 2000;
+      transition: opacity 220ms ease;
+    }
+
+    #page-loader .loader-card {
+      width: min(420px, 88vw);
+      padding: 18px 20px;
+      border-radius: 28px;
+      background: #f2f2f2;
+      box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.12), -10px -10px 24px rgba(255, 255, 255, 0.92),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.08), inset -5px -5px 10px rgba(255, 255, 255, 0.88);
+    }
+
+    #page-loader .shimmer {
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #e8e8e8, #f7f7f7, #e8e8e8);
+      background-size: 200% 100%;
+      animation: shimmer 1.1s linear infinite;
+    }
+
+    #page-loader .shimmer.sm {
+      height: 10px;
+      opacity: 0.85;
+    }
+
+    #page-loader .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: 200% 0
+      }
+
+      100% {
+        background-position: -200% 0
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-card">
+      <div class="stack">
+        <div class="d-flex justify-content-center">
+          <img src="./assets/images/brand/logo-icon.webp" width="64" height="64" alt="Vashq"
+            style="object-fit: contain;" />
+        </div>
+        <div class="shimmer" style="width: 62%; margin: 6px auto 0;"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const hide = () => {
+        const el = document.getElementById('page-loader');
+        if (!el) return;
+        el.style.opacity = '0';
+        el.style.pointerEvents = 'none';
+        window.setTimeout(() => el.remove(), 240);
+      };
+      window.addEventListener('load', hide, { once: true });
+      window.addEventListener('pageshow', (e) => { if (e.persisted) hide(); });
+    })();
+  </script>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-inline-flex align-items-center lh-1" href="/">
+        <img src="./assets/images/brand/logo-full.webp" alt="Vashq" height="32" loading="eager"
+          style="object-fit: contain;" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
+        aria-controls="mobileNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="d-none d-lg-flex flex-grow-1 align-items-center">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title h5 mb-0" id="mobileNavLabel">Menu</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav mb-4">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="d-grid gap-2">
+        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          data-bs-dismiss="offcanvas">Start Free Trial</a>
+        <a href="/?bookDemo=1" class="btn btn-light">Book Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-lg-13 py-8 bg-white" id="refund-policy">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <span class="text-primary text-uppercase small fw-semibold" style="letter-spacing: .125rem;">Legal</span>
+          <h1 class="fw-bold mt-4 mb-2">Refund Policy</h1>
+          <p class="small text-muted mb-6">Effective Date: July 23, 2026</p>
+
+          <div class="card rounded-5 shadow-sm border">
+            <div class="card-body p-6">
+              <h2 class="h5 fw-bold mb-3">Overview</h2>
+              <p>VASHQ offers a free trial before any paid subscription.</p>
+              <p>Customers are expected to evaluate the software thoroughly during the trial period.</p>
+              <p class="mb-0">By purchasing a subscription, the customer confirms that they have evaluated the software and agree to this Refund Policy.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">Annual Subscription</h2>
+              <p>All annual subscription payments are non-refundable.</p>
+              <p>No refunds shall be provided after payment has been successfully processed, including for:</p>
+              <ul class="mb-0">
+                <li>Cancellation after activation.</li>
+                <li>Partial use of the subscription.</li>
+                <li>Business closure.</li>
+                <li>Staff turnover.</li>
+                <li>Lack of usage.</li>
+                <li>Change of business requirements.</li>
+                <li>Switching to another provider.</li>
+                <li>Customer dissatisfaction after purchase.</li>
+              </ul>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">Trial Period</h2>
+              <p class="mb-0">The free trial exists specifically to allow customers to determine whether VASHQ meets their business needs before making a purchase.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">Exceptional Circumstances</h2>
+              <p class="mb-0">Refunds will only be considered where required by applicable law or where the Company, at its sole discretion, determines that extraordinary circumstances justify a refund.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">Subscription Cancellation</h2>
+              <p>Customers may cancel future renewals at any time.</p>
+              <p class="mb-0">Cancellation prevents future billing but does not entitle the customer to a refund for the current subscription period.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">Failed or Duplicate Payments</h2>
+              <p class="mb-0">If a payment is duplicated due to a verified technical or billing error, the Company will investigate and, where appropriate, process a refund or credit for the duplicate amount.</p>
+
+              <h2 class="h5 fw-bold mt-6 mb-3">Contact</h2>
+              <p>For billing questions:</p>
+              <p class="mb-1 fw-bold">Wisemove Consultancy Pvt. Ltd.</p>
+              <p class="mb-0">Email: <a href="mailto:vashqofficial@gmail.com">vashqofficial@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="mt-8 d-flex gap-3">
+            <a href="privacy-policy.html" class="btn btn-light">Privacy Policy</a>
+            <a href="terms-and-conditions.html" class="btn btn-light">Terms &amp; Conditions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pt-lg-13 bg-light py-8">
+    <div class="container">
+      <div class="border-top pt-6 row small">
+        <div class="col-12 d-flex flex-column flex-md-row justify-content-between">
+          <div>
+            <p>© 2026 Vashq. All rights reserved.</p>
+          </div>
+          <div class="d-flex gap-3">
+            <a href="privacy-policy.html" class="link-primary">Privacy Policy</a>
+            <a href="terms-and-conditions.html" class="link-primary">Terms &amp; Conditions</a>
+            <a href="refund-policy.html" class="link-primary">Refund Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js" type="module"></script>
+</body>
+
+</html>

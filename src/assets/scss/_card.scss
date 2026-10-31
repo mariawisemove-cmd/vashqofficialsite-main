@@ -1,0 +1,297 @@
+.card-lift {
+   transition:
+      transform 0.2s ease-in-out,
+      border-color 0.2s ease-in-out,
+      background-color 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out;
+   border-radius: $border-radius-lg;
+   &:hover,
+   &:focus,
+   &.active {
+      transform: translateY(-0.25rem);
+      box-shadow:
+         0 10px 15px -3px rgba(0, 0, 0, 0.1),
+         0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+   }
+}
+
+/* ========================================
+   FEATURES SECTION
+======================================== */
+
+#features {
+    overflow: hidden;
+    padding: 0px 0px !important;
+}
+
+.vashq-comparison-container{
+ background-color: #fff;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    padding: 70px;
+    padding-left: 150px;
+    padding-right: 150px;
+    border-radius: 50px;
+}
+
+.features-eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 7px 14px;
+
+    background-color: #eff6ff;
+    color: #2563eb;
+
+    border: 1px solid #dbeafe;
+    border-radius: 50px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.features-heading {
+    color: #111827;
+    font-size: clamp(28px, 3vw, 42px);
+    line-height: 1.25;
+    letter-spacing: -1.2px;
+}
+
+.features-heading span {
+    color: #2563eb;
+}
+
+.features-intro {
+    max-width: 680px;
+    margin-inline: auto;
+
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   FEATURE CARDS
+======================================== */
+
+#features .feature-card {
+    height: 100%;
+    min-height: 330px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.025);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Hover Effect */
+
+#features .feature-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #bfdbfe;
+
+    box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.07),
+        0 3px 8px rgba(37, 99, 235, 0.035);
+}
+
+
+/* ========================================
+   IMAGE AREA
+   Fixed space for every feature image
+======================================== */
+
+#features .feature-image-area {
+    width: 100%;
+    height: 175px;
+    min-height: 175px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffff;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+
+/* Feature Images */
+
+#features .feature-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+#features .feature-card:hover .feature-image {
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   FEATURE CONTENT
+======================================== */
+
+#features .feature-content {
+    display: flex;
+    flex-direction: column;
+  background-color: #f8fafc;
+    flex-grow: 1;
+
+    padding: 24px 24px 26px;
+}
+
+
+/* Feature Title */
+
+#features .feature-content h3 {
+    margin: 0 0 18px;
+
+    color: #111827;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1.5;
+    letter-spacing: -0.25px;
+}
+
+
+/* Feature List */
+
+#features .feature-content ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+#features .feature-content ul li {
+    position: relative;
+
+    margin-bottom: 12px;
+    padding-left: 20px;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+#features .feature-content ul li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Professional Blue Checkmarks */
+
+#features .feature-content ul li::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 7px;
+
+    width: 7px;
+    height: 7px;
+
+    background: #2563eb;
+    border-radius: 50%;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (min-width: 1200px) {
+    #features .col-xl-20 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 992px) {
+
+    #features .feature-image-area {
+        height: 190px;
+        min-height: 190px;
+    }
+
+    #features .feature-content {
+        padding: 26px;
+    }
+
+    #features .feature-content h3 {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .features-heading {
+        font-size: 29px;
+        letter-spacing: -0.7px;
+    }
+
+    .features-intro {
+        font-size: 14px;
+    }
+
+    #features .feature-card {
+        min-height: auto;
+        border-radius: 15px;
+    }
+
+    #features .feature-image-area {
+        height: 155px;
+        min-height: 155px;
+    }
+
+    #features .feature-image {
+        max-width: 110px;
+        max-height: 110px;
+    }
+
+    #features .feature-content {
+        padding: 20px;
+    }
+
+    #features .feature-content h3 {
+        font-size: 16px;
+    }
+}
+
+
+/* Accessibility: Disable animation when requested */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #features .feature-card,
+    #features .feature-image {
+        transition: none;
+    }
+
+    #features .feature-card:hover {
+        transform: none;
+    }
+}

@@ -1,0 +1,4581 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+
+@import "@tabler/icons-webfont/dist/tabler-icons.min.css";
+
+// Import Bootstrap functions first
+@import "bootstrap/scss/functions";
+
+// Override Bootstrap variables here
+@import "./variables";
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Custom styles
+@import "./custom";
+
+// Claymorphism overrides (keep last)
+@import "./clay";
+
+
+/* ==============================
+   CAR WASH HERO SECTION
+============================== */
+
+.carwash-hero {
+    position: relative;
+    height: 680px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 100px;
+
+    background-image: url("../images/pressure-of-water.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+
+}
+
+    .carwash-hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(245, 245, 245, 0) 0%,
+        rgba(245, 245, 245, 0.5) 55%,
+        rgb(233, 233, 233) 100%
+    );
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Dark overlay for readable text */
+
+.carwash-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(103, 161, 236, 0.94) 0%,
+            rgba(79, 124, 188, 0.82) 38%,
+            rgba(47, 77, 118, 0.42) 70%,
+            rgba(5, 12, 22, 0.30) 100%
+        );
+}
+
+/* Main content */
+
+.carwash-hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+/* Text area */
+
+.carwash-hero-text {
+    max-width: 1000px;
+
+}
+
+/* Small badge */
+
+.carwash-hero-badge {
+    display: inline-block;
+    padding: 10px 17px;
+    margin-bottom: 26px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.09);
+
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* Main heading */
+
+.carwash-hero h1 {
+    margin: 0;
+    font-family: Michroma;
+    color: #ffffff;
+    font-size: 56px;
+    font-weight: bolder;
+    line-height: 1.12;
+    letter-spacing: -2px;
+}
+
+.carwash-hero h1 span {
+    display: block;
+    color: #62d9ff;
+}
+
+/* Description */
+
+.carwash-hero-text > p {
+    max-width: 870px;
+    margin-top: 25px;
+    margin-bottom: 32px;
+    font-family: Michroma;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* Buttons */
+
+.carwash-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.carwash-btn {
+    min-height: 54px;
+    padding: 15px 24px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Xmind;
+    transition: all 0.3s ease;
+}
+
+/* Primary button */
+
+.carwash-btn-primary {
+    background: #087fba;
+    border: 1px solid #087fba;
+    color: #ffffff;
+}
+
+.carwash-btn-primary:hover {
+    background: #056594;
+    border-color: #056594;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Outline button */
+
+.carwash-btn-outline {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    color: #ffffff;
+}
+
+.carwash-btn-outline:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #101820;
+    transform: translateY(-3px);
+}
+
+/* Feature points */
+
+.carwash-hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    margin-top: 35px;
+}
+
+.hero-feature {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 13px;
+}
+
+.feature-check {
+    width: 21px;
+    height: 21px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: rgba(98, 217, 255, 0.16);
+
+    color: #62d9ff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Bottom tagline */
+
+.carwash-hero-bottom {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 65px;
+
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.hero-bottom-line {
+    width: 55px;
+    height: 1px;
+    background: #62d9ff;
+}
+
+
+
+/* ===================================
+   SMART CAR WASH SECTION
+=================================== */
+
+.smart-wash-section {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 50px;
+
+}
+
+.smart-wash-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 50px;
+}
+
+
+/* Left content */
+
+.smart-wash-content {
+    position: relative;
+    z-index: 2;
+    animation: smartWashTextIn 0.9s ease both;
+}
+
+/* Small label */
+
+.smart-wash-label {
+    display: inline-block;
+    margin-bottom: 22px;
+    padding: 10px 16px;
+
+    border-radius: 50px;
+    background: #eaf6ff;
+    border: 1px solid #c9e7ff;
+
+    color: #087fba;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+/* Heading */
+
+.smart-wash-content h2 {
+    max-width: 550px;
+    margin-bottom: 24px;
+    color: #142c46;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+}
+
+.smart-wash-content h2 span {
+    display: block;
+    color: #087fba;
+}
+
+/* Description */
+
+.smart-wash-description {
+    max-width: 520px;
+    margin-bottom: 32px;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* Features - 2 items per row */
+
+.smart-wash-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 30px;
+    margin-bottom: 34px;
+}
+
+/* Individual Feature */
+
+.smart-wash-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.smart-wash-check {
+    flex-shrink: 0;
+
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e7f5ff;
+    color: #087fba;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.smart-wash-feature h3 {
+    margin-bottom: 5px;
+    color: #18334e;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.smart-wash-feature p {
+    margin-bottom: 0;
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* CTA button */
+
+.smart-wash-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    padding: 16px 24px;
+
+    border: 1px solid #087fba;
+    border-radius: 7px;
+
+    background: #087fba;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.smart-wash-btn:hover {
+    background: #075f91;
+    border-color: #075f91;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.smart-wash-btn span {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.smart-wash-btn:hover span {
+    transform: translateX(5px);
+}
+
+/* Right Side Image */
+
+.smart-wash-image-wrapper {
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image floating animation */
+
+.smart-wash-image {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    object-fit: contain;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    animation: imageFloat 3s ease-in-out infinite;
+}
+
+.smart-wash-image:hover {
+    transform: translateY(-5px);
+}
+
+
+/* ==========================
+   VASHQ FAQ SECTION
+========================== */
+
+#faq {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Small FAQ Label */
+#faq .faq-label {
+  padding: 8px 16px;
+  border-radius: 50px;
+  background: #edf3ff;
+  color: #2455c4;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Main Heading */
+#faq .faq-main-title {
+  color: #101b35;
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+#faq .faq-title-dot {
+  color: #3568e8;
+}
+
+/* Subtitle */
+#faq .faq-subtitle {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #697386;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Accordion Item */
+#faq .accordion-item {
+  background: #fff !important;
+  border: 1px solid #e8edf5 !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+//   box-shadow: 0 3px 12px rgba(16, 27, 53, 0.025);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Hover Effect */
+#faq .accordion-item:hover {
+  border-color: #cbd9fb !important;
+  box-shadow: 0 8px 24px rgba(30, 64, 140, 0.07);
+}
+
+/* Accordion Question */
+#faq .accordion-button {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 23px 26px;
+  background: #ffffff;
+  color: #17233f;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  box-shadow: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Remove Bootstrap default focus shadow */
+#faq .accordion-button:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Open Question */
+#faq .accordion-button:not(.collapsed) {
+  color: #2455c4;
+  background: #f8faff;
+  box-shadow: none;
+}
+
+/* Question Number */
+#faq .faq-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #f0f4fb;
+  color: #63718a;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+#faq .accordion-button:not(.collapsed) .faq-number {
+  background: #e5edff;
+  color: #2455c4;
+}
+
+/* Custom Accordion Icon */
+#faq .accordion-button::after {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  background-color: #f0f4fb;
+  background-image: none;
+  border-radius: 50%;
+  content: "+";
+  color: #304568;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  transform: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+#faq .accordion-button:not(.collapsed)::after {
+  content: "−";
+  background-color: #2455c4;
+  color: #ffffff;
+  transform: none;
+}
+
+/* Answer Content */
+#faq .accordion-body {
+  padding: 0 76px 26px 82px;
+  color: #697386;
+  font-size: 15px;
+  line-height: 1.9;
+  background: #f8faff;
+}
+
+/* View All Button */
+#faq .faq-view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 24px;
+  border: 1px solid #d5deee;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #17233f;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#faq .faq-view-btn:hover {
+  border-color: #2455c4;
+  background: #2455c4;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(36, 85, 196, 0.18);
+  transform: translateY(-2px);
+}
+
+#faq .faq-arrow {
+  font-size: 19px;
+  transition: transform 0.3s ease;
+}
+
+#faq .faq-view-btn:hover .faq-arrow {
+  transform: translateX(4px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================
+   VASHQ COMPARISON SECTION
+======================================== */
+
+.vashq-comparison {
+  --vashq-primary: #007bff;
+  --vashq-text: #172033;
+  --vashq-muted: #697386;
+  --vashq-border: #e5eaf1;
+  --vashq-surface: #ffffff;
+  --vashq-background: #f7f9fc;
+
+  padding: 100px 24px;
+  background: var(--vashq-background);
+  color: var(--vashq-text);
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.vashq-comparison *,
+.vashq-comparison *::before,
+.vashq-comparison *::after {
+  box-sizing: border-box;
+}
+
+.vashq-comparison__container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ========================================
+   SECTION HEADER
+======================================== */
+
+.vashq-comparison__header {
+  max-width: 760px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+
+.vashq-comparison__eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--vashq-primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.vashq-comparison__title {
+  margin: 0 0 18px;
+  color: var(--vashq-text);
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+.vashq-comparison__title span {
+  color: var(--vashq-primary);
+}
+
+.vashq-comparison__description {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--vashq-muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   TOGGLE WRAPPER
+======================================== */
+
+.vashq-toggle-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+/* CENTER RIPPLE EFFECT */
+
+.vashq-section[data-state="true"] 
+.vashq-toggle-wrapper::before,
+.vashq-section[data-state="true"] 
+.vashq-toggle-wrapper::after {
+    border-color: rgba(48, 112, 249, 0.7);
+}
+
+
+
+.vashq-toggle-wrapper::before,
+.vashq-toggle-wrapper::after {
+    content: "";
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+
+    animation: vashqRipple 3s ease-out infinite;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.vashq-toggle-wrapper::after {
+    animation-delay: 1.5s;
+}
+
+/* Large Toggle Button */
+
+.vashq-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 116px;
+  height: 64px;
+  padding: 0;
+  border: 0;
+  border-radius: 50px;
+  background: #dfe4ec;
+  cursor: pointer;
+  transition: background-color 0.3s ease,
+  box-shadow 0.3s ease,
+  transform 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.vashq-toggle:hover {
+  transform: translateY(-2px);
+}
+
+.vashq-toggle:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.4);
+  outline-offset: 5px;
+}
+
+.vashq-toggle__track {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 7px;
+  border-radius: inherit;
+}
+
+.vashq-toggle__thumb {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.18);
+  transition: left 0.3s ease,
+  background-color 0.3s ease,
+  box-shadow 0.3s ease;
+}
+
+/* ON State */
+
+.vashq-comparison.is-on .vashq-toggle {
+  background: #16a34a;
+}
+
+.vashq-comparison.is-on .vashq-toggle__thumb {
+  left: calc(100% - 57px);
+}
+
+/* Toggle Status */
+
+.vashq-toggle__status {
+  margin: 22px 0 8px;
+  color: var(--vashq-text);
+  font-size: 24px;
+  font-weight: 750;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+
+/* ========================================
+   CONTENT PANEL
+======================================== */
+
+.vashq-comparison__content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.vashq-panel {
+  padding: 32px;
+  border: 1px solid var(--vashq-border);
+  border-radius: 24px;
+  background: var(--vashq-surface);
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.045);
+  animation: vashqPanelEnter 0.35s ease both;
+}
+
+/* Respect HTML hidden attribute */
+
+.vashq-panel[hidden] {
+  display: none !important;
+}
+
+/* ========================================
+   PANEL HEADER
+======================================== */
+
+.vashq-panel__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--vashq-border);
+}
+
+.vashq-panel__icon {
+  display: flex;
+  flex: 0 0 52px;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  font-size: 25px;
+}
+
+.vashq-panel__icon--problem {
+  color: #dc2626;
+  background: #fef2f2;
+}
+
+.vashq-panel__icon--benefit {
+  color: #15803d;
+  background: #f0fdf4;
+}
+
+.vashq-panel__header > div:nth-child(2) {
+  min-width: 0;
+  flex: 1;
+}
+
+.vashq-panel__header h3 {
+  margin: 0 0 5px;
+  color: var(--vashq-text);
+  font-size: 21px;
+  font-weight: 750;
+}
+
+.vashq-panel__header p {
+  margin: 0;
+  color: var(--vashq-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.vashq-panel__count {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: 1px solid var(--vashq-border);
+  border-radius: 30px;
+  color: var(--vashq-muted);
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ========================================
+   FEATURE LIST
+======================================== */
+
+.vashq-feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vashq-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f2f6;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.65;
+  transition: color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.vashq-feature-list li:hover {
+  color: var(--vashq-text);
+  transform: translateX(3px);
+}
+
+.vashq-feature-list li:last-child {
+  border-bottom-color: transparent;
+}
+
+.vashq-feature-list li i {
+  flex: 0 0 17px;
+  margin-top: 3px;
+  font-size: 16px;
+}
+
+.vashq-panel--problems .vashq-feature-list li i {
+  color: #dc6262;
+}
+
+.vashq-panel--benefits .vashq-feature-list li i {
+  color: #16a34a;
+}
+
+
+
+
+
+/* ==========================================
+   VASHQ COMPARISON SECTION
+========================================== */
+
+.vashq-section {
+    --vashq-primary: #111111;
+    --vashq-secondary: #4B5563;
+    --vashq-orbit: #D1D5DB;
+    --vashq-light: #F3F4F6;
+    --vashq-accent-light: #E5E7EB;
+
+    --vashq-animation: 1000ms;
+
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    // padding: 20px 50px;
+    color: var(--vashq-primary);
+    font-family: 'Inter', sans-serif;
+    isolation: isolate;
+
+    transition:
+        color 700ms ease,
+        background-color 700ms ease;
+}
+
+.vashq-features-container {
+    background-color: #fff;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    padding: 70px;
+    padding-left: 150px;
+    padding-right: 150px;
+    border-radius: 50px;
+}
+
+.vashq-section[data-state="true"] {
+    --vashq-primary: #007bff;
+    --vashq-secondary: #1D4ED8;
+    --vashq-orbit: #60A5FA;
+    --vashq-light: #EFF6FF;
+    --vashq-accent-light: #DBEAFE;
+}
+
+.vashq-section *,
+.vashq-section *::before,
+.vashq-section *::after {
+    box-sizing: border-box;
+}
+
+.vashq-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 50px;
+}
+
+/* ==========================================
+   SECTION INTRO
+========================================== */
+
+.vashq-intro {
+    position: relative;
+    z-index: 5;
+    max-width: 960px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.vashq-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 18px;
+    color: var(--vashq-secondary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.vashq-eyebrow::before {
+    content: "";
+    width: 22px;
+    height: 2px;
+    background: var(--vashq-primary);
+    border-radius: 10px;
+}
+
+.vashq-intro h2 {
+    margin: 0 0 18px;
+    color: #111111;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -1.8px;
+    line-height: 1.2;
+}
+
+.vashq-intro h2 span {
+    color: #007fbb;
+}
+
+.vashq-intro p {
+    max-width: 590px;
+    margin: 0 auto;
+    color: #6B7280;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.vashq-section[data-state="true"] .vashq-eyebrow {
+    color: #007fbb;
+}
+
+.vashq-section[data-state="true"] .vashq-eyebrow::before {
+    background: #007fbb;
+}
+
+/* ==========================================
+   MAIN ORBIT STAGE
+========================================== */
+
+.vashq-stage {
+    position: relative;
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        280px
+        minmax(0, 1fr);
+
+    align-items: center;
+    gap: 25px;
+
+    width: 100%;
+    min-height: 610px;
+
+    isolation: isolate;
+}
+
+/* ==========================================
+   ORBIT
+========================================== */
+
+.vashq-orbit-layer {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.vashq-orbit-rotor {
+    position: absolute;
+
+    width: 790px;
+    height: 790px;
+
+    border: 1px solid var(--vashq-orbit);
+    border-radius: 50%;
+
+    transform: rotate(0deg);
+
+    transition:
+        transform var(--vashq-animation)
+        cubic-bezier(0.22, 1, 0.36, 1);
+
+    will-change: transform;
+}
+
+.vashq-orbit-rotor::before {
+    content: "";
+    position: absolute;
+    inset: 70px;
+
+    border: 1px solid var(--vashq-accent-light);
+    border-radius: 50%;
+}
+
+.vashq-orbit-rotor::after {
+    content: "";
+    position: absolute;
+    inset: 135px;
+
+    border: 1px dashed var(--vashq-orbit);
+    border-radius: 50%;
+
+    opacity: 0.7;
+}
+
+.vashq-orbit-secondary {
+    position: absolute;
+
+    width: 560px;
+    height: 560px;
+
+    border: 1px solid var(--vashq-accent-light);
+    border-radius: 50%;
+}
+
+.vashq-orbit-dot {
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background: var(--vashq-primary);
+
+    box-shadow: 0 0 0 5px var(--vashq-light);
+
+    transition:
+        background-color 700ms ease,
+        box-shadow 700ms ease;
+
+        display: none !important;
+}
+
+.vashq-orbit-dot:nth-child(1) {
+    top: 7%;
+    left: 50%;
+}
+
+.vashq-orbit-dot:nth-child(2) {
+    top: 25%;
+    right: 8%;
+    width: 7px;
+    height: 7px;
+}
+
+.vashq-orbit-dot:nth-child(3) {
+    bottom: 9%;
+    right: 28%;
+    width: 12px;
+    height: 12px;
+}
+
+.vashq-orbit-dot:nth-child(4) {
+    bottom: 21%;
+    left: 9%;
+    width: 7px;
+    height: 7px;
+}
+
+.vashq-orbit-dot:nth-child(5) {
+    top: 47%;
+    right: 0;
+    width: 6px;
+    height: 6px;
+}
+
+.vashq-orbit-dot:nth-child(6) {
+    bottom: 0;
+    left: 48%;
+    width: 5px;
+    height: 5px;
+}
+
+/* ==========================================
+   LEFT AND RIGHT LISTS
+========================================== */
+
+.vashq-list {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 540px;
+    min-width: 0;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.vashq-list-left {
+    padding-right: 10px;
+}
+
+.vashq-list-right {
+    padding-left: 10px;
+}
+
+.vashq-item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 78px;
+
+    opacity: 1;
+
+    transition:
+        opacity 300ms ease,
+        transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.vashq-list-left .vashq-item {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.vashq-list-right .vashq-item {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* ==========================================
+   ITEM TEXT
+========================================== */
+
+.vashq-item-content {
+    flex: 0 1 auto;
+    min-width: 0;
+}
+
+.vashq-item h3 {
+    margin: 0;
+
+    color: var(--vashq-primary);
+
+    font-size: clamp(12px, 1.1vw, 15px);
+    font-weight: 550;
+    line-height: 1.55;
+    letter-spacing: -0.3px;
+
+    overflow-wrap: anywhere;
+
+    transition: color 650ms ease;
+}
+
+.vashq-item p {
+    margin: 5px 0 0;
+
+    color: var(--vashq-secondary);
+
+    font-size: 11px;
+    line-height: 1.65;
+
+    transition: color 650ms ease;
+}
+
+/* ==========================================
+   ITEM ICONS
+========================================== */
+
+.vashq-item-icon {
+    flex: 0 0 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+
+    border-radius: 50%;
+
+    color: var(--vashq-primary);
+    background: #FFFFFF;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 0 0 5px #FFFFFF,
+        0 0 0 6px var(--vashq-orbit),
+        0 6px 18px rgba(17, 24, 39, 0.08);
+
+    transition:
+        background-color 650ms ease,
+        box-shadow 650ms ease,
+        transform 350ms ease;
+}
+
+.vashq-item:hover .vashq-item-icon {
+    transform: scale(1.08);
+}
+
+/* ==========================================
+   CENTRAL TOGGLE
+========================================== */
+
+.vashq-center {
+    position: relative;
+    z-index: 4;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-width: 0;
+
+    text-align: center;
+}
+
+.vashq-toggle-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   width: 260px;
+    height: 260px;
+
+    margin-bottom: 26px;
+}
+
+.vashq-center-ring {
+    position: absolute;
+    inset: 0;
+
+    border: 1px solid var(--vashq-orbit);
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    transition:
+        border-color 700ms ease,
+        transform 800ms ease;
+}
+
+.vashq-center-ring:nth-child(2) {
+    inset: 12px;
+    border-style: dashed;
+    opacity: 0.8;
+}
+
+.vashq-center-ring:nth-child(3) {
+    inset: 24px;
+    border-color: var(--vashq-accent-light);
+}
+
+.vashq-section[data-state="true"]
+.vashq-center-ring:nth-child(2) {
+    transform: rotate(-30deg);
+}
+
+/* Hide native checkbox accessibly */
+
+.vashq-toggle-input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+
+    border: 0;
+}
+
+/* Clickable central circle */
+
+.vashq-toggle-label {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   width: 190px;
+    height: 190px;
+
+    border: 5px solid #FFFFFF;
+    border-radius: 50%;
+
+    color: #FFFFFF;
+    background: #111111;
+
+    cursor: pointer;
+    user-select: none;
+
+    box-shadow:
+        0 0 0 1px var(--vashq-orbit),
+        0 15px 40px rgba(0, 0, 0, 0.13);
+
+    transition:
+        background-color 700ms ease,
+        box-shadow 700ms ease,
+        transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.vashq-toggle-label:hover {
+    transform: scale(1.035);
+}
+
+.vashq-toggle-input:focus-visible
++ .vashq-toggle-label {
+    outline: 3px solid #60A5FA;
+    outline-offset: 8px;
+}
+
+.vashq-section[data-state="true"] .vashq-toggle-brand {
+    color: #007bff;
+}
+
+/* Center icon circle */
+.vashq-section[data-state="true"] .vashq-toggle-logo {
+    color: #007bff;
+    border-color: #BFDBFE;
+}
+
+/* Subtitle */
+.vashq-section[data-state="true"] .vashq-toggle-subtitle {
+    color: #007bff;
+}
+
+/* Keyboard focus */
+.vashq-section[data-state="true"]
+.vashq-toggle-input:focus-visible
++ .vashq-toggle-label {
+    outline-color: #007bff;
+}
+
+
+.vashq-section[data-state="true"] .vashq-toggle-label {
+    background: #FFFFFF;
+    color: #007bff;
+
+    border-color: #FFFFFF;
+
+    box-shadow:
+        0 0 0 1px #60A5FA,
+        0 15px 40px rgba(37, 99, 235, 0.15);
+}
+
+/* CENTER RIPPLE EFFECT */
+
+.vashq-toggle-wrapper::before,
+.vashq-toggle-wrapper::after {
+    content: "";
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+
+    animation: vashqRipple 3s ease-out infinite;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.vashq-toggle-wrapper::after {
+    animation-delay: 1.5s;
+}
+
+.vashq-toggle-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+    height: 65px;
+
+    margin-bottom: 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+
+    font-size: 29px;
+}
+
+.vashq-toggle-brand {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.vashq-toggle-subtitle {
+    margin-top: 7px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+/* ==========================================
+   STATE LABEL AND CLICK ME
+========================================== */
+
+.vashq-status
+.vashq-click-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 9px;
+
+    color: #9CA3AF;
+
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.vashq-click-hint i {
+    font-size: 10px;
+    animation: vashq-point 1.6s ease-in-out infinite;
+}
+
+/* ==========================================
+   OUTGOING CONTENT ANIMATION
+========================================== */
+
+.vashq-stage.vashq-is-transitioning .vashq-item {
+    opacity: 0;
+}
+
+.vashq-stage.vashq-is-transitioning
+.vashq-list-left .vashq-item {
+    transform: translateX(-24px);
+}
+
+.vashq-stage.vashq-is-transitioning
+.vashq-list-right .vashq-item {
+    transform: translateX(24px);
+}
+
+.vashq-stage.vashq-is-transitioning
+.vashq-toggle-label {
+    transform: scale(0.94);
+}
+
+/* ==========================================
+   INCOMING CONTENT ANIMATION
+========================================== */
+
+.vashq-stage.vashq-content-entering
+.vashq-list-left .vashq-item {
+    animation: vashq-content-in-left 450ms both;
+}
+
+.vashq-stage.vashq-content-entering
+.vashq-list-right .vashq-item {
+    animation: vashq-content-in-right 450ms both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.vashq-carousels-container {
+    background-color: #fff;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    padding: 70px;
+    padding-left: 150px;
+    padding-right: 150px;
+    border-radius: 50px;
+}
+
+
+.vashq-customers-container {
+    background-color: #fff;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    padding: 70px;
+    width: 1420px;
+    padding-left: 150px;
+    padding-right: 150px;
+    border-radius: 50px;
+}
+
+
+
+/* =========================================
+   VASHQ TESTIMONIALS SECTION
+========================================= */
+
+.vashq-testimonials {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.vashq-testimonials-heading {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.vashq-testimonials-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 15px;
+
+    background: #eaf1ff;
+    border: 1px solid #dce7ff;
+    border-radius: 50px;
+
+    color: #2864e8;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 2px;
+}
+
+.vashq-testimonials-heading h2 {
+    margin: 0 0 18px;
+
+    color: #101828;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+}
+
+.vashq-testimonials-heading h2 span {
+    color: #2864e8;
+}
+
+.vashq-testimonials-heading > p {
+    max-width: 570px;
+    margin: 0 auto;
+
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   INFINITE MARQUEE CONTAINER
+========================================= */
+
+.vashq-testimonial-marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0 25px;
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        #000 5%,
+        #000 95%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        #000 5%,
+        #000 95%,
+        transparent 100%
+    );
+}
+
+
+/* =========================================
+   MOVING TRACK
+========================================= */
+
+.vashq-testimonial-track {
+    display: flex;
+    width: max-content;
+
+    transform: translateX(0);
+    will-change: transform;
+
+    animation: vashq-testimonial-scroll 45s linear infinite;
+}
+
+
+/* =========================================
+   REVIEW GROUP
+========================================= */
+
+.vashq-testimonial-group {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: stretch;
+
+    gap: 24px;
+    padding-right: 24px;
+}
+
+
+/* =========================================
+   INDIVIDUAL REVIEW CARD
+========================================= */
+
+.vashq-review-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 360px;
+
+    width: 360px;
+    min-height: 300px;
+
+    padding: 28px;
+
+    background: #ffffff;
+    border: 1px solid #e7ecf4;
+    border-radius: 20px;
+
+    box-shadow:
+        0 4px 10px rgba(16, 24, 40, 0.02),
+        0 12px 30px rgba(16, 24, 40, 0.035);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Card hover */
+
+.vashq-review-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #c9d9ff;
+
+    box-shadow:
+        0 8px 18px rgba(37, 99, 235, 0.04),
+        0 20px 45px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.vashq-review-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 17px;
+}
+
+.vashq-review-quote {
+    display: block;
+
+    height: 42px;
+
+    color: #2864e8;
+
+    font-family: Georgia, serif;
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+/* =========================================
+   STAR RATING
+========================================= */
+
+.vashq-review-stars {
+    color: #f5a623;
+
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   REVIEW CONTENT
+========================================= */
+
+.vashq-review-text {
+    flex-grow: 1;
+
+    margin: 0 0 25px;
+
+    color: #475467;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   CUSTOMER INFORMATION
+========================================= */
+
+.vashq-review-author {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: auto;
+    padding-top: 19px;
+
+    border-top: 1px solid #edf0f5;
+}
+
+
+/* Customer initials avatar */
+
+.vashq-review-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 47px;
+    height: 47px;
+    flex: 0 0 47px;
+
+    background: #eaf1ff;
+    border: 1px solid #dce7ff;
+    border-radius: 50%;
+
+    color: #2864e8;
+
+    font-size: 14px;
+    font-weight: 750;
+    letter-spacing: 0.3px;
+}
+
+
+/* Customer name and role */
+
+.vashq-review-author-info {
+    min-width: 0;
+}
+
+.vashq-review-author-info h3 {
+    margin: 0 0 5px;
+
+    color: #101828;
+
+    font-size: 14px;
+    font-weight: 750;
+    line-height: 1.4;
+}
+
+.vashq-review-author-info p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.vashq-review-author-info p span {
+    display: inline-block;
+    margin-left: 3px;
+}
+
+
+/* Demo review label */
+
+.vashq-demo-label {
+    display: inline-block;
+
+    margin-top: 6px;
+    padding: 3px 7px;
+
+    background: #eef4ff;
+    border-radius: 4px;
+
+    color: #2864e8;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* Pause animation on hover */
+
+.vashq-testimonial-marquee:hover
+.vashq-testimonial-track {
+    animation-play-state: paused;
+}
+
+
+/* =========================================
+   SECTION FOOTER
+========================================= */
+
+.vashq-testimonials-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.vashq-testimonials-footer p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.vashq-footer-line {
+    display: block;
+
+    width: 35px;
+    height: 1px;
+    flex-shrink: 0;
+
+    background: #d5dce8;
+}
+
+
+
+/* =========================================
+   VASHQ BUSINESS GALLERY
+========================================= */
+
+
+/* Heading */
+
+.vashq-target-heading {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vashq-target-label {
+    display: inline-block;
+    margin-bottom: 16px;
+
+    color: #2864e8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.vashq-target-heading h2 {
+    color: #171b25;
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+}
+
+.vashq-target-heading p {
+    max-width: 680px;
+    margin: 0 auto;
+
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   GALLERY GRID
+========================================= */
+
+.vashq-business-gallery {
+    display: grid;
+
+    grid-template-columns: 1.25fr 0.9fr 1.2fr;
+    grid-template-rows: 350px 350px;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+/* Gallery item positioning */
+
+.vashq-business-item {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: #e8e8e3;
+}
+
+
+/* First image: wide top-left */
+
+.vashq-business-one {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+/* Second image: smaller top-middle */
+
+.vashq-business-two {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+/* Third image: tall right side */
+
+.vashq-business-three {
+    grid-column: 3;
+    grid-row: 1 / 3;
+}
+
+
+/* Fourth image: bottom-left */
+
+.vashq-business-four {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+
+/* Fifth image: bottom-middle */
+
+.vashq-business-five {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
+/* =========================================
+   IMAGE AREA
+========================================= */
+
+.vashq-business-image {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #e5e7e2,
+        #cfd4cd
+    );
+}
+
+
+/* Image itself */
+
+.vashq-business-image img {
+    position: absolute;
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    transition:
+        transform 0.7s ease,
+        opacity 0.4s ease;
+}
+
+
+/* Show image only when src is provided */
+
+.vashq-business-image img[src]:not([src=""]) {
+    opacity: 1;
+}
+
+
+/* Hide placeholder when a valid image is added */
+
+.vashq-business-image:has(
+    img[src]:not([src=""])
+) .vashq-image-placeholder {
+    display: none;
+}
+
+
+/* Image placeholder */
+
+.vashq-image-placeholder {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #e8e9e4,
+        #d9ddd6
+    );
+
+    color: #6b7469;
+}
+
+.vashq-placeholder-number {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    opacity: 0.6;
+}
+
+.vashq-placeholder-text {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.vashq-business-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 28px;
+
+    background: linear-gradient(
+        to top,
+        rgba(13, 18, 16, 0.88) 0%,
+        rgba(13, 18, 16, 0.42) 38%,
+        rgba(13, 18, 16, 0.03) 75%
+    );
+
+    color: #ffffff;
+
+    transition: background 0.4s ease;
+}
+
+
+/* Item number */
+
+.vashq-business-number {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+/* Item heading */
+
+.vashq-business-overlay h3 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: clamp(19px, 1.8vw, 26px);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.4px;
+}
+
+
+/* Item description */
+
+.vashq-business-overlay p {
+    max-width: 340px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.vashq-business-item:hover img {
+    transform: scale(1.06);
+}
+
+.vashq-business-item:hover .vashq-business-overlay {
+    background: linear-gradient(
+        to top,
+        rgba(13, 18, 16, 0.92) 0%,
+        rgba(13, 18, 16, 0.48) 48%,
+        rgba(13, 18, 16, 0.08) 100%
+    );
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.vashq-target-button .btn {
+    padding: 13px 26px;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.vashq-target-button .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(40, 100, 232, 0.12);
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   VASHQ WHY CHOOSE US
+========================================= */
+
+.vashq-why-choose {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #ebebeb 0%,#ffff 70%, #ffffff 100%);
+}
+
+.company-side{
+    position: relative;
+    overflow: hidden;
+    background-color: #cde1fc;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    padding: 70px;
+    padding-left: 150px;
+    padding-right: 150px;
+    border-radius: 50px;
+
+}
+
+/* Half-circle decorative design */
+.company-side::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    right: 18%;
+    bottom: -150px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 35px rgba(40, 100, 232, 0.025),
+        0 0 0 70px rgba(40, 100, 232, 0.02);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Keep content above the decoration */
+.company-side > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.vashq-why-heading {
+    max-width: 700px;
+
+    margin: 0 auto 65px;
+    padding: 0 15px;
+
+    text-align: center;
+}
+
+.vashq-why-label {
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    color: #2864e8;
+
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 2.5px;
+}
+
+.vashq-why-heading h2 {
+    margin: 0 0 18px;
+
+    color: #151b28;
+
+    font-size: clamp(32px, 4vw, 46px);
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -1.3px;
+}
+
+.vashq-why-heading h2 span {
+    color: #2864e8;
+}
+
+.vashq-why-heading > p {
+    max-width: 570px;
+
+    margin: 0 auto;
+
+    color: #667085;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FEATURES GRID
+========================================= */
+
+.vashq-why-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    column-gap: 42px;
+    row-gap: 52px;
+}
+
+
+/* =========================================
+   FEATURE ITEM
+========================================= */
+
+.vashq-why-item {
+    position: relative;
+
+    padding: 0 0 8px;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Feature heading row */
+
+.vashq-why-item-heading {
+    display: grid;
+
+    grid-template-columns: auto 42px minmax(0, 1fr);
+
+    align-items: start;
+
+    column-gap: 10px;
+
+    margin-bottom: 17px;
+}
+
+
+/* Number */
+
+.vashq-why-number {
+    padding-top: 3px;
+
+    color: #2864e8;
+
+    font-size: 13px;
+    font-weight: 750;
+    letter-spacing: 0.5px;
+}
+
+
+/* Horizontal divider */
+
+.vashq-why-line {
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    margin-top: 12px;
+
+    background: linear-gradient(
+        120deg,
+        #e5efff 0%,
+        #d5e5fc 55%,
+        #cbdffc 100%
+    );;
+
+    transition:
+        background 0.3s ease,
+        height 0.3s ease;
+}
+
+
+/* Feature title */
+
+.vashq-why-item-heading h3 {
+    margin: 0;
+
+    color: #19202d;
+
+    font-size: 18px;
+    font-weight: 750;
+    line-height: 1.45;
+    letter-spacing: -0.3px;
+}
+
+
+/* Feature description */
+
+.vashq-why-item > p {
+    margin: 0;
+
+    padding-left: 0;
+
+    color: #667085;
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.vashq-why-item:hover {
+    transform: translateY(-3px);
+}
+
+.vashq-why-item:hover .vashq-why-line {
+    height: 2px;
+    background: #2864e8;
+}
+
+/* Compact Our Team */
+
+.vashq-our-team {
+    margin-top: 40px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.vashq-our-team > h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 750;
+    color: #151b28;
+}
+
+.vashq-our-team > h2 span {
+    color: #2864e8;
+}
+
+.vashq-team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.vashq-team-card {
+    padding: 16px 10px;
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 14px;
+    transition: transform 0.25s ease;
+}
+
+.vashq-team-card:hover {
+    transform: translateY(-3px);
+}
+
+.vashq-team-photo {
+    position: relative;
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 12px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #dce8fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vashq-team-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+.vashq-team-photo img[src]:not([src=""]) {
+    opacity: 1;
+}
+
+.vashq-team-photo:has(img[src]:not([src=""])) span {
+    display: none;
+}
+
+.vashq-team-photo span {
+    color: #2864e8;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.vashq-team-card h3 {
+    margin: 0 0 5px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #19202d;
+}
+
+.vashq-team-card p {
+    margin: 0;
+    color: #2864e8;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SCROLL REVEAL ANIMATION
+========================================= */
+
+/* Initial hidden state */
+
+.vashq-why-heading,
+.vashq-why-item,
+.vashq-our-team > h2,
+.vashq-team-card {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* Visible state */
+
+.vashq-why-heading.show,
+.vashq-why-item.show,
+.vashq-our-team > h2.show,
+.vashq-team-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Feature items stagger delay */
+
+.vashq-why-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.vashq-why-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.vashq-why-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.vashq-why-item:nth-child(4) {
+    transition-delay: 0.1s;
+}
+
+.vashq-why-item:nth-child(5) {
+    transition-delay: 0.2s;
+}
+
+.vashq-why-item:nth-child(6) {
+    transition-delay: 0.3s;
+}
+
+
+/* Team cards stagger delay */
+
+.vashq-team-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.vashq-team-card:nth-child(2) {
+    transition-delay: 0.25s;
+}
+
+.vashq-team-card:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .vashq-why-heading,
+    .vashq-why-item,
+    .vashq-our-team > h2,
+    .vashq-team-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+}
+/* =================================
+   VASHQ PREMIUM FINAL CTA
+================================= */
+
+#final-cta {
+    width: 100%;
+     background: #ffffff ;
+}
+
+.vashq-final-cta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+
+    padding: 75px 80px;
+
+    background: linear-gradient(
+        120deg,
+        #e5efff 0%,
+        #d5e5fc 55%,
+        #cbdffc 100%
+    );
+
+    border: 1px solid rgba(40, 100, 232, 0.08);
+    border-radius: 32px;
+
+    box-shadow: 0 16px 40px rgba(30, 55, 90, 0.09);
+
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Subtle Decorative Circle */
+
+.vashq-final-cta::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    right: 22%;
+    top: -230px;
+
+    border: 1px solid rgba(40, 100, 232, 0.10);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 35px rgba(40, 100, 232, 0.025),
+        0 0 0 70px rgba(40, 100, 232, 0.02);
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* LEFT CONTENT */
+
+.vashq-cta-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.vashq-cta-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 23px;
+    font-family:sans-serif;
+    color: #2864e8;
+    font-size: 60px;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+.vashq-label-dot {
+    width: 8px;
+    height: 8px;
+    background: #2864e8;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(40, 100, 232, 0.10);
+}
+
+.vashq-cta-content h2 {
+    margin: 0 0 20px;
+
+    color: #172033;
+    font-size: 38px;
+    font-weight: 650;
+    line-height: 1.16;
+    letter-spacing: -1.8px;
+}
+
+.vashq-cta-content h2 span {
+    color: #2864e8;
+}
+
+.vashq-cta-content p {
+    max-width: 470px;
+    margin: 0;
+
+    color: #596b85;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* RIGHT CTA */
+
+.vashq-cta-action {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+/* Main Button */
+
+.vashq-cta-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    min-width: 255px;
+    padding: 20px 23px 20px 27px;
+
+    color: #fff !important;
+    background: #2864e8;
+
+    border: 1px solid #2864e8;
+    border-radius: 50px;
+
+    font-size: 16px;
+    font-weight: 650;
+    text-decoration: none;
+
+    box-shadow: 0 8px 20px rgba(40, 100, 232, 0.20);
+
+    transition:
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.vashq-cta-primary:hover {
+    color: #fff !important;
+    background: #1e50c5;
+    border-color: #1e50c5;
+
+    transform: translateY(-3px);
+    box-shadow: 0 13px 25px rgba(40, 100, 232, 0.25);
+}
+
+
+
+.vashq-cta-primary:hover .vashq-cta-arrow {
+    transform: translateX(3px);
+}
+
+/* Supporting Text */
+
+.vashq-cta-note {
+    margin-top: 15px;
+    color: #60718a;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Top to bottom infinite movement */
+
+@keyframes imageFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes vashqRipple {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+@keyframes vashqPanelEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vashq-point {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+}
+
+@keyframes vashq-content-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes vashq-content-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================
+   INFINITE SCROLL ANIMATION
+========================================= */
+
+@keyframes vashq-testimonial-scroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* ==============================
+   TABLET RESPONSIVE
+============================== */
+
+@media (max-width: 991px) {
+
+    .carwash-hero {
+        min-height: 620px;
+        background-position: 57% center;
+    }
+
+    .carwash-hero-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(5, 12, 22, 0.91),
+            rgba(5, 12, 22, 0.68)
+        );
+    }
+
+    .carwash-hero-content {
+        padding-top: 85px;
+        padding-bottom: 60px;
+    }
+
+    .carwash-hero-text {
+        max-width: 650px;
+    }
+
+    .carwash-hero-bottom {
+        margin-top: 50px;
+    }
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 576px) {
+
+    .carwash-hero {
+        min-height: 650px;
+        background-position: 58% center;
+    }
+
+    .carwash-hero-overlay {
+        background: rgba(5, 12, 22, 0.78);
+    }
+
+    .carwash-hero-content {
+        padding: 75px 22px 45px;
+    }
+
+    .carwash-hero-badge {
+        padding: 9px 12px;
+        margin-bottom: 22px;
+
+        font-size: 9px;
+        letter-spacing: 1.3px;
+    }
+
+    .carwash-hero h1 {
+        font-size: clamp(39px, 10vw, 52px);
+        letter-spacing: -1.5px;
+        line-height: 1.15;
+    }
+
+    .carwash-hero-text > p {
+        margin-top: 20px;
+        margin-bottom: 26px;
+
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .carwash-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .carwash-btn {
+        width: 100%;
+        min-height: 52px;
+    }
+
+    .carwash-hero-features {
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 28px;
+    }
+
+    .carwash-hero-bottom {
+        margin-top: 42px;
+        gap: 10px;
+        font-size: 9px;
+        letter-spacing: 1.8px;
+    }
+
+    .hero-bottom-line {
+        width: 30px;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+    .smart-wash-image {
+        max-width: 550px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+    .smart-wash-image-wrapper {
+        margin-top: 20px;
+    }
+
+    .smart-wash-image {
+        width: 100%;
+        max-width: 420px;
+    }
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+@media (max-width: 767px) {
+  #faq .faq-main-title {
+    letter-spacing: -0.8px;
+  }
+
+  #faq .faq-subtitle {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  #faq .accordion-button {
+    gap: 12px;
+    padding: 18px 15px;
+    font-size: 14px;
+  }
+
+  #faq .faq-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    font-size: 11px;
+  }
+
+  #faq .accordion-button::after {
+    width: 26px;
+    height: 26px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  #faq .accordion-body {
+    padding: 0 18px 22px 59px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  #faq .faq-view-btn {
+    padding: 12px 20px;
+  }
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+  .vashq-comparison {
+    padding: 75px 20px;
+  }
+
+  .vashq-comparison__header {
+    margin-bottom: 35px;
+  }
+
+  .vashq-comparison__title {
+    letter-spacing: -0.8px;
+  }
+
+  .vashq-toggle-wrapper {
+    margin-bottom: 35px;
+  }
+
+  .vashq-panel {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .vashq-panel__header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .vashq-panel__count {
+    margin-left: auto;
+  }
+
+  .vashq-feature-list {
+    gap: 0 18px;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 576px) {
+  .vashq-comparison {
+    padding: 60px 16px;
+  }
+
+  .vashq-comparison__header {
+    margin-bottom: 32px;
+  }
+
+  .vashq-comparison__title {
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .vashq-comparison__description {
+    font-size: 14px;
+  }
+
+  .vashq-toggle {
+    width: 104px;
+    height: 58px;
+  }
+
+  .vashq-toggle__thumb {
+    width: 44px;
+    height: 44px;
+  }
+
+  .vashq-comparison.is-on .vashq-toggle__thumb {
+    left: calc(100% - 51px);
+  }
+
+  .vashq-toggle__status {
+    font-size: 21px;
+  }
+
+  .vashq-panel {
+    padding: 20px 18px;
+    border-radius: 18px;
+  }
+
+  .vashq-panel__header {
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 18px;
+  }
+
+  .vashq-panel__icon {
+    flex-basis: 44px;
+    width: 44px;
+    height: 44px;
+    font-size: 21px;
+    border-radius: 13px;
+  }
+
+  .vashq-panel__header h3 {
+    font-size: 18px;
+  }
+
+  .vashq-panel__header p {
+    font-size: 12px;
+  }
+
+  .vashq-panel__count {
+    margin-left: 0;
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .vashq-feature-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .vashq-feature-list li {
+    padding: 13px 0;
+    font-size: 13px;
+  }
+
+  .vashq-comparison__footer {
+    font-size: 12px;
+  }
+}
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .vashq-comparison *,
+  .vashq-comparison *::before,
+  .vashq-comparison *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .vashq-section {
+        padding: 75px 22px;
+    }
+
+    .vashq-stage {
+        grid-template-columns:
+            minmax(0, 1fr)
+            230px
+            minmax(0, 1fr);
+
+        gap: 14px;
+        min-height: 570px;
+    }
+
+    .vashq-list {
+        height: 500px;
+    }
+
+    .vashq-item {
+        gap: 9px;
+        min-height: 75px;
+    }
+
+    .vashq-item-icon {
+        flex-basis: 35px;
+        width: 35px;
+        height: 35px;
+        font-size: 13px;
+    }
+
+    .vashq-toggle-logo {
+        width: 55px;
+        height: 55px;
+        font-size: 25px;
+    }
+
+    .vashq-item h3 {
+        font-size: 12px;
+    }
+
+    .vashq-item p {
+        font-size: 10px;
+    }
+
+    .vashq-toggle-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+
+    .vashq-toggle-label {
+        width: 165px;
+        height: 165px;
+    }
+
+    .vashq-toggle-brand {
+        font-size: 26px;
+    }
+
+    .vashq-orbit-rotor {
+        width: 650px;
+        height: 650px;
+    }
+
+    .vashq-orbit-secondary {
+        width: 470px;
+        height: 470px;
+    }
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .vashq-section {
+        padding: 60px 16px 70px;
+    }
+
+    .vashq-intro {
+        margin-bottom: 40px;
+    }
+
+    .vashq-intro h2 {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .vashq-intro p {
+        font-size: 13px;
+    }
+
+    .vashq-stage {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 28px;
+
+        min-height: auto;
+    }
+
+    .vashq-center {
+        order: 0;
+        margin-bottom: 4px;
+    }
+
+    .vashq-toggle-wrapper {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 22px;
+    }
+
+    .vashq-toggle-label {
+        width: 140px;
+        height: 140px;
+    }
+
+    .vashq-status {
+        font-size: 14px;
+    }
+
+    /* Hide large circular orbit on mobile */
+
+    .vashq-orbit-layer {
+        display: none;
+    }
+
+    /* Two-column grid */
+
+    .vashq-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        align-content: start;
+        gap: 12px;
+
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .vashq-list-left {
+        order: 1;
+    }
+
+    .vashq-list-right {
+        order: 2;
+    }
+
+    .vashq-list-left .vashq-item,
+    .vashq-list-right .vashq-item {
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        gap: 9px;
+
+        min-height: 112px;
+        padding: 13px 10px;
+
+        text-align: left;
+
+        border: 1px solid #E5E7EB;
+        border-radius: 12px;
+
+        background: #FFFFFF;
+
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.025);
+
+        transition:
+            border-color 650ms ease,
+            opacity 300ms ease,
+            transform 450ms ease;
+    }
+
+    .vashq-section[data-state="true"]
+    .vashq-list-left .vashq-item,
+    .vashq-section[data-state="true"]
+    .vashq-list-right .vashq-item {
+        border-color: #DBEAFE;
+    }
+
+    .vashq-item-icon {
+        flex-basis: 31px;
+        width: 31px;
+        height: 31px;
+
+        margin-top: 1px;
+        font-size: 12px;
+
+        box-shadow: none;
+    }
+
+    .vashq-item-content {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .vashq-item h3 {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .vashq-item p {
+        margin-top: 5px;
+        font-size: 10px;
+        line-height: 1.55;
+    }
+
+    .vashq-stage.vashq-is-transitioning
+    .vashq-list-left .vashq-item,
+    .vashq-stage.vashq-is-transitioning
+    .vashq-list-right .vashq-item {
+        transform: translateY(10px);
+    }
+
+    .vashq-stage.vashq-content-entering
+    .vashq-item {
+        animation: vashq-mobile-content-in 450ms both;
+    }
+
+    @keyframes vashq-mobile-content-in {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 360px) {
+
+    .vashq-section {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .vashq-list {
+        gap: 8px;
+    }
+
+    .vashq-list-left .vashq-item,
+    .vashq-list-right .vashq-item {
+        gap: 7px;
+        padding: 10px 7px;
+        min-height: 105px;
+    }
+
+    .vashq-item-icon {
+        flex-basis: 27px;
+        width: 27px;
+        height: 27px;
+        font-size: 11px;
+    }
+
+    .vashq-item h3 {
+        font-size: 10px;
+    }
+
+    .vashq-item p {
+        font-size: 9px;
+    }
+}
+
+/* ==========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .vashq-section *,
+    .vashq-section *::before,
+    .vashq-section *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .vashq-testimonials {
+        padding: 75px 0 60px;
+    }
+
+    .vashq-testimonials-heading {
+        margin-bottom: 35px;
+    }
+
+    .vashq-review-card {
+        width: 330px;
+        flex-basis: 330px;
+
+        min-height: 300px;
+        padding: 25px;
+    }
+
+    .vashq-testimonial-group {
+        gap: 20px;
+        padding-right: 20px;
+    }
+
+    .vashq-testimonial-track {
+        animation-duration: 38s;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .vashq-testimonials {
+        padding: 60px 0 45px;
+    }
+
+    .vashq-testimonials-heading {
+        padding: 0 22px;
+        margin-bottom: 30px;
+    }
+
+    .vashq-testimonials-heading h2 {
+        font-size: 30px;
+        letter-spacing: -0.8px;
+    }
+
+    .vashq-testimonials-heading > p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .vashq-testimonials-label {
+        font-size: 10px;
+        letter-spacing: 1.8px;
+    }
+
+    .vashq-review-card {
+        width: 285px;
+        flex-basis: 285px;
+
+        min-height: 305px;
+        padding: 23px;
+
+        border-radius: 17px;
+    }
+
+    .vashq-review-text {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .vashq-review-author-info h3 {
+        font-size: 13px;
+    }
+
+    .vashq-review-author-info p {
+        font-size: 11px;
+    }
+
+    .vashq-testimonial-group {
+        gap: 16px;
+        padding-right: 16px;
+    }
+
+    .vashq-testimonial-track {
+        animation-duration: 32s;
+    }
+
+    .vashq-testimonials-footer {
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .vashq-testimonials-footer p {
+        font-size: 10px;
+        line-height: 1.7;
+    }
+
+    .vashq-footer-line {
+        width: 18px;
+    }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .vashq-testimonial-track {
+        animation: none !important;
+        transform: none !important;
+    }
+
+    .vashq-testimonial-marquee {
+        overflow-x: auto;
+
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    .vashq-review-card {
+        transition: none;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .vashq-business-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 300px 300px;
+
+        gap: 12px;
+    }
+
+    .vashq-business-one {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .vashq-business-two {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .vashq-business-three {
+        grid-column: 2;
+        grid-row: 2 / 4;
+    }
+
+    .vashq-business-four {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .vashq-business-five {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .vashq-business-overlay {
+        padding: 22px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .vashq-target-heading {
+        padding: 0 10px;
+    }
+
+    .vashq-target-heading h2 {
+        font-size: 30px;
+        letter-spacing: -0.7px;
+    }
+
+    .vashq-target-heading p {
+        font-size: 13px;
+    }
+
+    .vashq-business-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 260px);
+
+        gap: 12px;
+    }
+
+    .vashq-business-one {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .vashq-business-two {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .vashq-business-three {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .vashq-business-four {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .vashq-business-five {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    .vashq-business-image {
+        min-height: 0;
+    }
+
+    .vashq-business-overlay {
+        padding: 22px;
+    }
+
+    .vashq-business-overlay h3 {
+        font-size: 23px;
+    }
+
+    .vashq-business-overlay p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .vashq-why-choose {
+        padding: 75px 0;
+    }
+
+    .vashq-why-heading {
+        margin-bottom: 50px;
+    }
+
+    .vashq-why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        column-gap: 30px;
+        row-gap: 42px;
+    }
+
+    .vashq-why-item-heading {
+        grid-template-columns: auto 30px minmax(0, 1fr);
+        column-gap: 9px;
+    }
+
+    .vashq-why-item-heading h3 {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .vashq-why-choose {
+        padding: 60px 0;
+    }
+
+    .vashq-why-heading {
+        margin-bottom: 42px;
+    }
+
+    .vashq-why-heading h2 {
+        font-size: 32px;
+        letter-spacing: -0.8px;
+    }
+
+    .vashq-why-heading > p {
+        font-size: 13px;
+    }
+
+    .vashq-why-grid {
+        grid-template-columns: 1fr;
+
+        row-gap: 32px;
+        column-gap: 0;
+    }
+
+    .vashq-why-item {
+        padding-bottom: 24px;
+
+        border-bottom: 1px solid #dbe5ed;
+    }
+
+    .vashq-why-item:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .vashq-why-item-heading {
+        grid-template-columns: auto 30px minmax(0, 1fr);
+
+        column-gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .vashq-why-number {
+        font-size: 12px;
+    }
+
+    .vashq-why-item-heading h3 {
+        font-size: 17px;
+    }
+
+    .vashq-why-item > p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .vashq-our-team {
+        margin-top: 30px;
+        padding-top: 25px;
+    }
+
+    .vashq-our-team > h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .vashq-team-grid {
+        gap: 8px;
+    }
+
+    .vashq-team-card {
+        padding: 12px 5px;
+    }
+
+    .vashq-team-photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .vashq-team-photo span {
+        font-size: 18px;
+    }
+
+    .vashq-team-card h3 {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .vashq-team-card p {
+        font-size: 11px;
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+    #final-cta {
+        padding: 55px 0;
+    }
+
+    .vashq-final-cta {
+        gap: 35px;
+        padding: 55px 40px;
+    }
+
+    .vashq-cta-content h2 {
+        font-size: 36px;
+        letter-spacing: -1.2px;
+    }
+
+    .vashq-cta-primary {
+        min-width: 220px;
+        gap: 18px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 576px) {
+    #final-cta {
+        padding: 35px 0;
+    }
+
+    .vashq-final-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+
+        padding: 38px 25px;
+        border-radius: 24px;
+    }
+
+    .vashq-cta-label {
+        margin-bottom: 18px;
+        font-size: 10px;
+    }
+
+    .vashq-cta-content h2 {
+        font-size: 32px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+    }
+
+    .vashq-cta-content p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .vashq-cta-action {
+        width: 100%;
+    }
+
+    .vashq-cta-primary {
+        width: 100%;
+        min-width: 0;
+        padding: 16px 18px;
+        font-size: 15px;
+    }
+
+    .vashq-cta-note {
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   VASHQ FOOTER
+========================================== */
+
+.footer-section {
+    background-color: #fff;
+}
+
+
+/* ==========================================
+   VASHQ FOOTER BACKGROUND GRID
+========================================== */
+
+.vashq-footer {
+    position: relative;
+    z-index: 2;
+
+    background-color: #027ad5;
+
+    /* Soft grid pattern */
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.055) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.055) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 255, 255, 0.13),
+            transparent 65%
+        );
+
+    background-size:
+        45px 45px,
+        45px 45px,
+        100% 100%;
+
+    background-position:
+        center center,
+        center center,
+        center top;
+
+    background-blend-mode:
+        normal,
+        normal,
+        screen;
+
+    color: #ffffff;
+    padding: 1px 35px 22px;
+    border-radius: 65px 65px 0 0;
+    overflow: visible;
+
+    box-shadow:
+        0 -12px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==========================================
+   FOOTER CONTAINER
+========================================== */
+
+.vashq-footer-container {
+    position: relative;
+    max-width: 1400px;
+    z-index: 1;
+    margin: 0 auto;
+    font-family: Minchrome;
+}
+
+/* ==========================================
+   CENTER BRAND / FLOATING LOGO
+========================================== */
+
+.vashq-footer-brand-center {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -65px;
+    margin-bottom: 65px;
+}
+
+.vashq-footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    
+}
+
+.vashq-footer-logo img {
+    display: block;
+    width: auto;
+    max-width: 380px;
+    height: 200px;
+    object-fit: contain;
+    box-shadow: 0 3px 12px rgba(16, 27, 53, 0.025);
+}
+
+/* ==========================================
+   BRAND DESCRIPTION
+========================================== */
+
+.vashq-footer-brand-center p {
+    max-width: 720px;
+    margin: 0 0 20px;
+    color: #ffffff;
+    
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.8;
+    letter-spacing: 0.4px;
+    text-transform: none;
+}
+
+/* ==========================================
+   PHONE BOOKING FORM
+========================================== */
+
+.vashq-footer-booking {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 440px;
+    margin: 5px auto 0;
+    padding: 6px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Phone Input */
+
+.vashq-footer-booking input {
+    flex: 1;
+    min-width: 0;
+    height: 48px;
+    padding: 0 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background: #f3f7fb;
+    color: #071d35;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.vashq-footer-booking input::placeholder {
+    color: #8996a5;
+    font-size: 18px;
+}
+
+.vashq-footer-booking input:focus {
+    background: #ffffff;
+    border-color: #027ad5;
+    box-shadow: 0 0 0 3px rgba(2, 122, 213, 0.10);
+}
+
+/* Book Button */
+
+.vashq-footer-booking button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 48px;
+    min-width: 110px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 8px;
+    background: #027ad5;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.vashq-footer-booking button:hover {
+    background: #071d35;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(7, 29, 53, 0.2);
+}
+
+.vashq-footer-booking button:active {
+    transform: scale(0.97);
+}
+
+/* ==========================================
+   MAIN FOOTER CONTENT
+========================================== */
+
+.vashq-footer-main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 55px;
+    padding: 0 25px 45px;
+}
+
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+.vashq-footer-contact h4,
+.vashq-footer-links h4 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.vashq-contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.vashq-contact-details a,
+.vashq-contact-details div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #eaf4ff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.vashq-contact-details i {
+    color: #071d35;
+    font-size: 16px;
+}
+
+.vashq-contact-details a:hover {
+    color: #071d35;
+}
+
+/* ==========================================
+   FOOTER LINK GROUPS
+========================================== */
+
+.vashq-footer-link-groups {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.vashq-footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vashq-footer-links li {
+    margin-bottom: 12px;
+}
+
+.vashq-footer-links a {
+    color: #eaf4ff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.vashq-footer-links a:hover {
+    color: #071d35;
+}
+
+/* ==========================================
+   FOOTER BOTTOM
+========================================== */
+
+.vashq-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.vashq-footer-bottom p {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* ==========================================
+   SOCIAL ICONS
+========================================== */
+
+.vashq-social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.vashq-social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #071d35;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.vashq-social-icons a:hover {
+    background: #ffffff;
+    color: #071d35;
+    transform: translateY(-4px);
+}
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 992px) {
+
+    .vashq-footer-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .vashq-footer-link-groups {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 576px) {
+
+    .vashq-footer {
+        margin-top: 85px;
+        padding: 1px 20px 20px;
+        border-radius: 35px 35px 0 0;
+    }
+
+    .vashq-footer-brand-center {
+        margin-top: -55px;
+        margin-bottom: 45px;
+    }
+
+    .vashq-footer-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .vashq-footer-logo img {
+        height: 58px;
+        max-width: 150px;
+    }
+
+    .vashq-footer-brand-center p {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    .vashq-footer-booking {
+        max-width: 100%;
+        gap: 7px;
+        padding: 0 5px;
+    }
+
+    .vashq-footer-booking input {
+        height: 43px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .vashq-footer-booking button {
+        height: 43px;
+        padding: 0 17px;
+        font-size: 12px;
+    }
+
+    .vashq-footer-main {
+        padding: 0 5px 30px;
+        gap: 35px;
+    }
+
+    .vashq-footer-link-groups {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 15px;
+    }
+
+    .vashq-footer-contact h4,
+    .vashq-footer-links h4 {
+        font-size: 15px;
+    }
+
+    .vashq-footer-bottom {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 5px 0;
+        text-align: center;
+    }
+}
