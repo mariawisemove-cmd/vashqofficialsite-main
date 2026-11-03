@@ -50,6 +50,7 @@
       sizes="16x16"
       href="./assets/images/brand/logo-icon.webp"
     />
+
     <link rel="manifest" href="./assets/images/favicon_io/site.webmanifest" />
     <link rel="stylesheet" href="./assets/scss/style.scss" />
     <style>
@@ -109,9 +110,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
 
  <link rel="stylesheet" href="./assets/scss/style.scss">
 <script src="./assets/js/features.js" defer></script>
@@ -156,431 +165,445 @@
 
     <!-- Navbar Start -->
 
-    <nav class="navbar navbar-expand-lg px-3">
-      <!-- <div class="container"> -->
-      <a class="navbar-brand d-inline-flex align-items-center lh-1" href="/">
-        <img
-          src="./assets/images/brand/logo-full.webp"
-          alt="VASHQ logo"
-          height="32"
-          loading="eager"
-          style="object-fit: contain"
-        />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
+   <nav class="navbar navbar-expand-lg px-3">
+
+    <a class="navbar-brand d-inline-flex align-items-center lh-1" href="/">
+        <img src="./assets/images/brand/logo-full.webp"
+             alt="VASHQ logo"
+             height="32"
+             loading="eager"
+             style="object-fit: contain;" />
+    </a>
+
+    <button class="navbar-toggler" type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#mobileNav"
         aria-controls="mobileNav"
-        aria-label="Toggle navigation"
-      >
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="d-none d-lg-flex flex-grow-1 align-items-center">
+    </button>
+
+    <!-- DESKTOP NAVBAR -->
+    <div class="d-none d-lg-flex flex-grow-1 align-items-center">
+
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-          <li class="nav-item">
-            <a href="features.html" class="nav-link">Features</a>
-          </li>
-          <li class="nav-item">
-            <a href="use-cases.html" class="nav-link">What We Do</a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              href="#"
-              class="nav-link dropdown-toggle"
-              id="resourcesDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Resources
-            </a>
 
-            <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
-              <li>
-                <a class="dropdown-item" href="blog.html">Blog</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="customer-story.html"
-                  >Customer Story</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="demo.html">Buyer's Guide</a>
-              </li>
-            </ul>
-          </li>
+            <li class="nav-item">
+                <a href="/" class="nav-link">Home</a>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">Watch Their Story → </a>
-          </li>
+            <li class="nav-item">
+                <a href="features.html" class="nav-link">Features</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="use-cases.html" class="nav-link">What We Do</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="blog.html" class="nav-link">Blogs</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Watch Their Story →</a>
+            </li>
+
         </ul>
-        <div class="d-flex gap-3 align-items-center">
-          <a
-            href="#"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#bookDemoModal"
-            >Book Demo</a
-          >
-          <a
-            href="#"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#bookDemoModal"
-            >Log In / Sign Up</a
-          >
-        </div>
-      </div>
-      <!-- </div> -->
-    </nav>
 
-    <div
-      class="offcanvas offcanvas-end"
-      tabindex="-1"
-      id="mobileNav"
-      aria-labelledby="mobileNavLabel"
-    >
-      <div class="offcanvas-header">
-        <h2 class="offcanvas-title h5 mb-0" id="mobileNavLabel">Menu</h2>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav mb-4">
-          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-          <li class="nav-item">
-            <a href="features.html" class="nav-link">Features</a>
-          </li>
-          <li class="nav-item">
-            <a href="use-cases.html" class="nav-link">What We Do</a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              href="#"
-              class="nav-link dropdown-toggle"
-              id="resourcesDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Resources
+        <div class="d-flex gap-3 align-items-center">
+
+            <a href="#" class="btn btn-primary"
+               data-bs-toggle="modal"
+               data-bs-target="#bookDemoModal">
+                Book Demo
             </a>
 
-            <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
-              <li>
-                <a class="dropdown-item" href="blog.html">Blog</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="customer-story.html"
-                  >Customer Story</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="demo.html">Buyer's Guide</a>
-              </li>
-            </ul>
-          </li>
+            <a href="#" class="btn btn-primary"
+               data-bs-toggle="modal"
+               data-bs-target="#bookDemoModal">
+                Log In / Sign Up
+            </a>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">Watch Their Story → </a>
-          </li>
+        </div>
+    </div>
+</nav>
+
+
+<!-- MOBILE OFFCANVAS NAVBAR -->
+<div class="offcanvas offcanvas-end"
+     tabindex="-1"
+     id="mobileNav"
+     aria-labelledby="mobileNavLabel">
+
+    <div class="offcanvas-header">
+
+        <h2 class="offcanvas-title h5 mb-0" id="mobileNavLabel">
+            Menu
+        </h2>
+
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close">
+        </button>
+
+    </div>
+
+    <div class="offcanvas-body">
+
+        <ul class="navbar-nav mb-4">
+
+            <li class="nav-item">
+                <a href="/" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="features.html" class="nav-link">Features</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="use-cases.html" class="nav-link">What We Do</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="blog.html" class="nav-link">Blogs</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Watch Their Story →</a>
+            </li>
+
         </ul>
 
         <div class="d-grid gap-2">
-          <a
-            href="#"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#bookDemoModal"
-            data-bs-dismiss="offcanvas"
-            >Book Demo</a
-          >
+
+            <a href="#" class="btn btn-primary"
+               data-bs-toggle="modal"
+               data-bs-target="#bookDemoModal"
+               data-bs-dismiss="offcanvas">
+                Book Demo
+            </a>
+
         </div>
+
         <div class="d-grid gap-2 mt-3">
-          <a
-            href="#"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#bookDemoModal"
-            data-bs-dismiss="offcanvas"
-            >Log In / Sign Up</a
-          >
+
+            <a href="#" class="btn btn-primary"
+               data-bs-toggle="modal"
+               data-bs-target="#bookDemoModal"
+               data-bs-dismiss="offcanvas">
+                Log In / Sign Up
+            </a>
+
         </div>
-      </div>
+
     </div>
+</div>
 
     <!-- Navbar End -->
 
-    
+
+    <section class="feature-hero">
+
+    <!-- <div class="carwash-hero-overlay"></div> -->
+
+    <div class="container feature-hero-content">
+
+        <div class="feature-hero-text">
+
+            <h1>PLATFORM FEATURES, VASHQ FEATURES OVERVIEW</h1>
+
+            <p>
+              From the first scan at the gate to the final report of the day, Vashq brings your operations, customers and finances together in one seamless platform.
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
 
 <section class="vashq-feature-details" id="feature-details">
 
     <div class="vashq-feature-container">
 
-        <!-- FEATURE 01: DASHBOARD -->
+        <!-- FEATURE 01: JOB CREATION AND ASSIGNING -->
         <div class="vashq-feature-row">
             <div class="vashq-feature-image">
-                <img src="./assets/images-optimized/features/vashq-features/feature1.png" alt="VASHQ Dashboard">
+                <img src="./assets/images-optimized/features/vashq-features/feature9.png" alt="Job Creation and Assigning">
             </div>
+
             <div class="vashq-feature-content">
-                <span class="vashq-feature-number">01 / DASHBOARD</span>
-                <h2>Complete Business Visibility at Your Fingertips</h2>
-                <p>Get a complete overview of your car wash business with a powerful dashboard that brings all your essential operations together.</p>
+                <span class="vashq-feature-number">JOB CREATION AND ASSIGNING</span>
+                <h2>Every job, started right and handed to the right hands.</h2>
+                <p>Create a job in moments and assign it to the right team member instantly. Every vehicle has a live status, so nothing slips through, even on your busiest day.</p>
                 <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Real-time business overview</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Track daily performance</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Monitor revenue and operations</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Quick entry for walk-ins and bookings</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Clear ownership of every job</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Live progress across the wash floor</li>
                 </ul>
             </div>
         </div>
 
-        <!-- FEATURE 02: OPERATIONS -->
+        <!-- FEATURE 02: NUMBER PLATE SCAN -->
         <div class="vashq-feature-row reverse">
             <div class="vashq-feature-image">
-                <img src="./assets/images-optimized/features/vashq-features/feature2.png" alt="VASHQ Operations">
+                <img src="./assets/images-optimized/features/vashq-features/feature15.png" alt="Number Plate Scan">
             </div>
+
             <div class="vashq-feature-content">
-                <span class="vashq-feature-number">02 / OPERATIONS</span>
-                <h2>Manage Every Job Without the Hassle</h2>
-                <p>Organize your daily car wash activities and manage every service efficiently from one centralized platform.</p>
+                <span class="vashq-feature-number">NUMBER PLATE SCAN</span>
+                <h2>Recognition at the gate. Not data entry.</h2>
+                <p>Scan the plate and Vashq identifies the vehicle at once. Returning customers appear with their details and history, so check-in feels effortless for them and for you.</p>
                 <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Easy job management</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Organized service workflow</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Better team coordination</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Instant vehicle and customer lookup</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Fewer errors at entry</li>
+                    <li><i class="bi bi-check-circle-fill"></i> A faster, more polished first impression</li>
                 </ul>
             </div>
         </div>
 
-        <!-- FEATURE 03: CUSTOMER MANAGEMENT -->
+        <!-- FEATURE 03: ADD SERVICE -->
         <div class="vashq-feature-row">
             <div class="vashq-feature-image">
-                <img src="./assets/images-optimized/features/vashq-features/feature3.png" alt="Customer Management">
+                <img src="./assets/images-optimized/features/vashq-features/feature1.png" alt="Add Service">
             </div>
+
             <div class="vashq-feature-content">
-                <span class="vashq-feature-number">03 / CUSTOMER MANAGEMENT</span>
-                <h2>Build Stronger Customer Relationships</h2>
-                <p>Keep customer information, vehicle details and service history organized to deliver a better customer experience.</p>
+                <span class="vashq-feature-number">ADD SERVICE</span>
+                <h2>Every extra, captured and billed.</h2>
+                <p>When a customer wants more, add it to the running job in a tap. The bill updates itself, so no service goes unrecorded and no revenue is left behind.</p>
                 <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Customer profiles</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Vehicle service history</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Easy customer management</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Add services without restarting the job</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Automatic bill updates</li>
+                    <li><i class="bi bi-check-circle-fill"></i> A complete record of the work done</li>
                 </ul>
             </div>
         </div>
 
-        <!-- FEATURE 04: BILLING -->
+        <!-- FEATURE 04: PRODUCT QUALITY CHECK -->
         <div class="vashq-feature-row reverse">
             <div class="vashq-feature-image">
-                <img src="./assets/images-optimized/features/vashq-features/feature4.png" alt="Billing Management">
+                <img src="./assets/images-optimized/features/vashq-features/feature13.png" alt="Product Quality Check">
             </div>
+
             <div class="vashq-feature-content">
-                <span class="vashq-feature-number">04 / BILLING</span>
-                <h2>Simplify Your Billing and Payments</h2>
-                <p>Manage invoices, payments and service charges with a streamlined billing experience.</p>
+                <span class="vashq-feature-number">PRODUCT QUALITY CHECK</span>
+                <h2>Excellence, confirmed before it leaves.</h2>
+                <p>Add a final checkpoint before handover to make sure every vehicle meets your standard. Catch issues early and protect the reputation you’ve built.</p>
                 <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Quick invoice generation</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Payment tracking</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Organized billing records</li>
+                    <li><i class="bi bi-check-circle-fill"></i> A built-in review before delivery</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Consistent quality across your team</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Fewer complaints</li>
                 </ul>
             </div>
         </div>
 
-        <!-- FEATURE 05: BOOKINGS -->
+        <!-- FEATURE 05: EMPLOYEE ATTENDANCE -->
         <div class="vashq-feature-row">
             <div class="vashq-feature-image">
-                <img src="./assets/images-optimized/features/vashq-features/feature5.png" alt="Service Bookings">
+                <img src="./assets/images-optimized/features/vashq-features/feature7.png" alt="Employee Attendance">
             </div>
+
             <div class="vashq-feature-content">
-                <span class="vashq-feature-number">05 / BOOKINGS</span>
-                <h2>Make Service Bookings Effortless</h2>
-                <p>Manage customer appointments and service schedules while keeping your daily operations organized.</p>
+                <span class="vashq-feature-number">EMPLOYEE ATTENDANCE</span>
+                <h2>Your team, accounted for. Effortlessly.</h2>
+                <p>Track attendance and shifts digitally and see how your day is staffed at a glance. Replace registers and guesswork with accurate, organised records.</p>
                 <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Appointment management</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Service slot scheduling</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Better time management</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Digital attendance for every employee</li>
+                    <li><i class="bi bi-check-circle-fill"></i> A clear view of daily coverage</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Reliable records for payroll and planning</li>
                 </ul>
             </div>
         </div>
 
-        <!-- FEATURE 06: EMPLOYEE MANAGEMENT -->
+        <!-- FEATURE 06: CUSTOMERS AND LEADS -->
         <div class="vashq-feature-row reverse">
             <div class="vashq-feature-image">
-                <img src="./assets/images-optimized/features/vashq-features/feature6.png" alt="Employee Management">
+                <img src="./assets/images-optimized/features/vashq-features/feature4.png" alt="Customers and Leads">
             </div>
+
             <div class="vashq-feature-content">
-                <span class="vashq-feature-number">06 / EMPLOYEE MANAGEMENT</span>
-                <h2>Keep Your Team Working in Sync</h2>
-                <p>Manage employees, assign responsibilities and maintain better control over your workforce.</p>
+                <span class="vashq-feature-number">CUSTOMERS AND LEADS</span>
+                <h2>Every customer known. Every enquiry followed up.</h2>
+                <p>Keep customer details, enquiries and leads in one organised space. Respond at the right moment and turn first-time interest into loyal, repeat business.</p>
                 <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Employee management</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Task assignments</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Team performance tracking</li>
+                    <li><i class="bi bi-check-circle-fill"></i> A single home for customer information</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Enquiry and lead tracking</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Timely follow-ups that convert</li>
                 </ul>
             </div>
         </div>
 
-        <!-- FEATURE 07: MULTI-BRANCH -->
+        <!-- FEATURE 07: CUSTOMER HISTORY -->
         <div class="vashq-feature-row">
             <div class="vashq-feature-image">
-                <img src="./assets/images-optimized/features/vashq-features/feature7.png" alt="Multi Branch Management">
+                <img src="./assets/images-optimized/features/vashq-features/feature5.png" alt="Customer History">
             </div>
+
             <div class="vashq-feature-content">
-                <span class="vashq-feature-number">07 / MULTI-BRANCH</span>
-                <h2>Manage Multiple Branches Seamlessly</h2>
-                <p>Bring multiple business locations together and maintain visibility across your entire operation.</p>
+                <span class="vashq-feature-number">CUSTOMER HISTORY</span>
+                <h2>A memory for every customer, every visit.</h2>
+                <p>See each customer’s past services and bills in a single view. Recommend the right service, answer questions with confidence and make every return visit feel personal.</p>
                 <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Centralized branch management</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Branch-wise performance</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Simplified operations</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Full service and billing history</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Smarter recommendations for repeat customers</li>
+                    <li><i class="bi bi-check-circle-fill"></i> A more personal experience that builds trust</li>
                 </ul>
             </div>
         </div>
 
-        <!-- FEATURE 08: INVENTORY -->
+        <!-- FEATURE 08: PACKAGES -->
+        <div class="vashq-feature-row reverse">
+            <div class="vashq-feature-image">
+                <img src="./assets/images-optimized/features/vashq-features/feature12.png" alt="Packages">
+            </div>
+
+            <div class="vashq-feature-content">
+                <span class="vashq-feature-number">PACKAGES</span>
+                <h2>Smart packages. Effortless upselling.</h2>
+                <p>Create wash and detailing packages to suit every customer and budget. Pitch the right one during job creation and add it in a single tap.</p>
+                <ul>
+                    <li><i class="bi bi-check-circle-fill"></i> Flexible packages for every need</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Natural upselling at the point of service</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Clear, consistent pricing and higher value per visit</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FEATURE 09: ONLINE APPOINTMENT BOOKING -->
+        <div class="vashq-feature-row">
+            <div class="vashq-feature-image">
+                <img src="./assets/images-optimized/features/vashq-features/feature11.png" alt="Online Appointment Booking">
+            </div>
+
+            <div class="vashq-feature-content">
+                <span class="vashq-feature-number">ONLINE APPOINTMENT BOOKING</span>
+                <h2>Open for bookings, around the clock.</h2>
+                <p>Let customers choose their service and time slot online, whenever it suits them. Bookings land in Vashq automatically, so your team is ready before the vehicle arrives.</p>
+                <ul>
+                    <li><i class="bi bi-check-circle-fill"></i> Booking available day and night</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Fewer missed calls and missed customers</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Better planning for peak hours</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FEATURE 10: DASHBOARD -->
+        <div class="vashq-feature-row reverse">
+            <div class="vashq-feature-image">
+                <img src="./assets/images-optimized/features/vashq-features/feature6.png" alt="VASHQ Dashboard">
+            </div>
+
+            <div class="vashq-feature-content">
+                <span class="vashq-feature-number">DASHBOARD</span>
+                <h2>Your entire business, live on one screen.</h2>
+                <p>Open Vashq and see jobs, revenue and staff activity as they happen. No waiting for end-of-day numbers, no digging through paperwork.</p>
+                <ul>
+                    <li><i class="bi bi-check-circle-fill"></i> Real-time view of operations and sales</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Key numbers on a single screen</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Check in on your wash from anywhere</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FEATURE 11: AI ASSISTANT -->
+        <div class="vashq-feature-row">
+            <div class="vashq-feature-image">
+                <img src="./assets/images-optimized/features/vashq-features/feature2.png" alt="AI Assistant">
+            </div>
+
+            <div class="vashq-feature-content">
+                <span class="vashq-feature-number">AI ASSISTANT</span>
+                <h2>Ask your business anything.</h2>
+                <p>Open AI Insights to get a Full Report on your performance, or ask questions in plain language with Q&A. Clear answers in seconds, without building reports by hand.</p>
+                <ul>
+                    <li><i class="bi bi-check-circle-fill"></i> Full Report for a complete performance summary</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Q&A for quick, specific answers</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Insights written in simple, usable language</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FEATURE 12: REPORT SUMMARY -->
+        <div class="vashq-feature-row reverse">
+            <div class="vashq-feature-image">
+                <img src="./assets/images-optimized/features/vashq-features/feature14.png" alt="Report Summary">
+            </div>
+
+            <div class="vashq-feature-content">
+                <span class="vashq-feature-number">REPORT SUMMARY</span>
+                <h2>Clear reports. Confident decisions.</h2>
+                <p>Understand your sales, services, staff and trends through clean, easy-to-read summaries. See what’s working, what isn’t and where to focus next.</p>
+                <ul>
+                    <li><i class="bi bi-check-circle-fill"></i> Performance summaries at a glance</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Growth tracked over time</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Comparisons across services, staff and periods</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FEATURE 13: CASH AND BANK BOOK -->
+        <div class="vashq-feature-row">
+            <div class="vashq-feature-image">
+                <img src="./assets/images-optimized/features/vashq-features/feature3.png" alt="Cash and Bank Book">
+            </div>
+
+            <div class="vashq-feature-content">
+                <span class="vashq-feature-number">CASH AND BANK BOOK</span>
+                <h2>Every rupee in, every rupee out, accounted for.</h2>
+                <p>Record cash and bank transactions along with daily expenses in one place. Understand where your money goes and what your business truly earns.</p>
+                <ul>
+                    <li><i class="bi bi-check-circle-fill"></i> Cash, bank and expenses together</li>
+                    <li><i class="bi bi-check-circle-fill"></i> A clear daily and monthly financial picture</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Fewer errors and easier reconciliation</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FEATURE 14: INVENTORY MANAGEMENT -->
         <div class="vashq-feature-row reverse">
             <div class="vashq-feature-image">
                 <img src="./assets/images-optimized/features/vashq-features/feature8.png" alt="Inventory Management">
             </div>
+
             <div class="vashq-feature-content">
-                <span class="vashq-feature-number">08 / INVENTORY</span>
-                <h2>Stay in Control of Your Products</h2>
-                <p>Keep track of products, stock levels and essential supplies used in your car wash business.</p>
+                <span class="vashq-feature-number">INVENTORY MANAGEMENT</span>
+                <h2>The right stock, always on the shelf.</h2>
+                <p>Manage the car care products you sell, with stock updating as sales happen. Know what’s selling, what’s running low and when to reorder.</p>
                 <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Product management</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Stock monitoring</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Organized inventory</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Real-time stock for retail products</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Low-stock alerts</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Insight into your best sellers</li>
                 </ul>
             </div>
         </div>
 
-        <!-- FEATURE 09: REPORTS -->
+        <!-- FEATURE 15: MULTIPLE BRANCHES -->
         <div class="vashq-feature-row">
             <div class="vashq-feature-image">
-                <img src="./assets/images-optimized/features/vashq-features/feature9.png" alt="Business Reports">
+                <img src="./assets/images-optimized/features/vashq-features/feature10.png" alt="Multiple Branches">
             </div>
-            <div class="vashq-feature-content">
-                <span class="vashq-feature-number">09 / REPORTS</span>
-                <h2>Turn Business Data Into Better Decisions</h2>
-                <p>Understand your business performance through structured reports and meaningful insights.</p>
-                <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Sales reports</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Business performance insights</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Easy report analysis</li>
-                </ul>
-            </div>
-        </div>
 
-        <!-- FEATURE 10: EXPENSE MANAGEMENT -->
-        <div class="vashq-feature-row reverse">
-            <div class="vashq-feature-image">
-                <img src="./assets/images-optimized/features/vashq-features/feature10.png" alt="Expense Management">
-            </div>
             <div class="vashq-feature-content">
-                <span class="vashq-feature-number">10 / EXPENSE MANAGEMENT</span>
-                <h2>Track Every Business Expense</h2>
-                <p>Monitor your operational expenses and maintain a clear picture of where your money goes.</p>
+                <span class="vashq-feature-number">MULTIPLE BRANCHES</span>
+                <h2>Many locations. One standard of excellence.</h2>
+                <p>Manage every branch from a single account. Compare performance, track sales and staff by location and keep the same standards everywhere you operate.</p>
                 <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Expense recording</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Expense categorization</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Financial visibility</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- FEATURE 11: QUALITY CONTROL -->
-        <div class="vashq-feature-row">
-            <div class="vashq-feature-image">
-                <img src="./assets/images-optimized/features/vashq-features/feature11.png" alt="Quality Control">
-            </div>
-            <div class="vashq-feature-content">
-                <span class="vashq-feature-number">11 / QUALITY CONTROL</span>
-                <h2>Deliver Consistent Service Quality</h2>
-                <p>Maintain service standards and monitor quality throughout your car wash workflow.</p>
-                <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Quality checkpoints</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Service monitoring</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Consistent customer experience</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- FEATURE 12: CUSTOMER COMMUNICATION -->
-        <div class="vashq-feature-row reverse">
-            <div class="vashq-feature-image">
-                <img src="./assets/images-optimized/features/vashq-features/feature12.png" alt="Customer Communication">
-            </div>
-            <div class="vashq-feature-content">
-                <span class="vashq-feature-number">12 / CUSTOMER COMMUNICATION</span>
-                <h2>Stay Connected With Your Customers</h2>
-                <p>Make customer communication easier and keep customers informed about their services.</p>
-                <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> WhatsApp communication</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Service updates</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Better engagement</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- FEATURE 13: COUPONS & OFFERS -->
-        <div class="vashq-feature-row">
-            <div class="vashq-feature-image">
-                <img src="./assets/images-optimized/features/vashq-features/feature13.png" alt="Coupons and Offers">
-            </div>
-            <div class="vashq-feature-content">
-                <span class="vashq-feature-number">13 / COUPONS &amp; OFFERS</span>
-                <h2>Create Offers That Bring Customers Back</h2>
-                <p>Manage promotional offers and customer discounts to encourage repeat visits.</p>
-                <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Discount management</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Promotional offers</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Customer retention</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- FEATURE 14: AI INSIGHTS -->
-        <div class="vashq-feature-row reverse">
-            <div class="vashq-feature-image">
-                <img src="./assets/images-optimized/features/vashq-features/feature14.png" alt="AI Business Insights">
-            </div>
-            <div class="vashq-feature-content">
-                <span class="vashq-feature-number">14 / AI INSIGHTS</span>
-                <h2>Make Smarter Decisions With AI</h2>
-                <p>Use intelligent insights to understand business activity and identify opportunities for improvement.</p>
-                <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> AI-powered assistance</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Business insights</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Smarter decision-making</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- FEATURE 15: BUSINESS GROWTH -->
-        <div class="vashq-feature-row">
-            <div class="vashq-feature-image">
-                <img src="./assets/images-optimized/features/vashq-features/feature15.png" alt="Business Growth">
-            </div>
-            <div class="vashq-feature-content">
-                <span class="vashq-feature-number">15 / BUSINESS GROWTH</span>
-                <h2>Everything You Need to Grow Your Business</h2>
-                <p>Bring your essential business operations together with one connected car wash management platform.</p>
-                <ul>
-                    <li><i class="bi bi-check-circle-fill"></i> Unified business management</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Improved productivity</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Scalable operations</li>
+                    <li><i class="bi bi-check-circle-fill"></i> All branches under one login</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Branch-wise performance at a glance</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Built to grow with your business</li>
                 </ul>
             </div>
         </div>
@@ -589,6 +612,56 @@
 
 </section>
 
+
+<section class="vashq-white-demo-section">
+
+    <div class="vashq-white-demo-container">
+
+        <div class="vashq-white-demo-content">
+
+            <span class="vashq-white-demo-label">
+                <span class="vashq-demo-label-dot"></span>
+                LET'S GET STARTED
+            </span>
+
+            <h2>
+                Ready to transform
+                <span>your car wash business?</span>
+            </h2>
+
+            <p>
+                Discover how VASHQ simplifies your daily operations,
+                improves productivity and helps your business grow.
+            </p>
+
+        </div>
+
+
+        <div class="vashq-white-demo-action">
+
+            <a href="#"
+               class="vashq-white-demo-btn"
+               data-bs-toggle="modal"
+               data-bs-target="#bookDemoModal">
+
+                <span>Book Your Free Demo</span>
+
+                <span class="vashq-demo-arrow">
+                    <i class="bi bi-arrow-up-right"></i>
+                </span>
+
+            </a>
+
+            <span class="vashq-demo-note">
+                <i class="bi bi-clock"></i>
+                20-minute personalized demo
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 <footer class="footer-section">
@@ -665,44 +738,27 @@
                 
                 <div class="vashq-footer-link-groups">
 
-                    <div class="vashq-footer-links">
-                        <h4>Product</h4>
-                        <ul>
-                            <li><a href="features.html">Features</a></li>
-                            <li><a href="use-cases.html">Use Cases</a></li>
-                        </ul>
-                    </div>
+                  
 
                     <div class="vashq-footer-links">
                         <h4>Company</h4>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Press</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blog.html">Blog</a></li>
                         </ul>
                     </div>
 
                     <div class="vashq-footer-links">
                         <h4>Support</h4>
                         <ul>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Refund Policy</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="refund-policy.html">Refund Policy</a></li>
                         </ul>
                     </div>
 
-                    <div class="vashq-footer-links">
-                        <h4>Use Cases</h4>
-                        <ul>
-                            <li><a href="#">Car wash centers</a></li>
-                            <li><a href="#">Detailing studios</a></li>
-                            <li><a href="#">Bike wash shops</a></li>
-                            <li><a href="#">WhatsApp automation</a></li>
-                        </ul>
-                    </div>
 
                 </div>
 

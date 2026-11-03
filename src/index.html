@@ -274,105 +274,148 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 
   <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg px-3">
-    <!-- <div class="container"> -->
-      <a class="navbar-brand d-inline-flex align-items-center lh-1 " href="/">
-  <img src="./assets/images/brand/logo-full.webp"
-       alt="VASHQ logo"
-       height="32"
-       loading="eager"
-       style="object-fit: contain;" />
-</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
-        aria-controls="mobileNav" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg px-3">
+
+    <a class="navbar-brand d-inline-flex align-items-center lh-1" href="/">
+        <img src="./assets/images/brand/logo-full.webp"
+             alt="VASHQ logo"
+             height="32"
+             loading="eager"
+             style="object-fit: contain;" />
+    </a>
+
+    <button class="navbar-toggler" type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mobileNav"
+        aria-controls="mobileNav"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="d-none d-lg-flex flex-grow-1 align-items-center">
+    </button>
+
+    <!-- DESKTOP NAVBAR -->
+    <div class="d-none d-lg-flex flex-grow-1 align-items-center">
+
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
-          <li class="nav-item"><a href="use-cases.html" class="nav-link">What We Do</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item dropdown">
-        <a href="#"
-           class="nav-link dropdown-toggle"
-           id="resourcesDropdown"
-           role="button"
-           data-bs-toggle="dropdown"
-           aria-expanded="false">
-            Resources
-        </a>
 
-        <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
-            <li>
-                <a class="dropdown-item" href="blog.html">Blog</a>
+            <li class="nav-item">
+                <a href="/" class="nav-link">Home</a>
             </li>
-            <li>
-                <a class="dropdown-item" href="customer-story.html">Customer Story</a>
+
+            <li class="nav-item">
+                <a href="features.html" class="nav-link">Features</a>
             </li>
-            <li>
-                <a class="dropdown-item" href="demo.html">Buyer's Guide</a>
+
+            <li class="nav-item">
+                <a href="use-cases.html" class="nav-link">What We Do</a>
             </li>
+
+            <li class="nav-item">
+                <a href="blog.html" class="nav-link">Blogs</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Watch Their Story →</a>
+            </li>
+
         </ul>
-    </li>
-          
-          <li class="nav-item"><a href="#" class="nav-link">Watch Their Story → </a></li>
-        </ul>
+
         <div class="d-flex gap-3 align-items-center">
-          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal">Book Demo</a>
-          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal">Log In / Sign Up</a>
+
+            <a href="#" class="btn btn-primary"
+               data-bs-toggle="modal"
+               data-bs-target="#bookDemoModal">
+                Book Demo
+            </a>
+
+            <a href="#" class="btn btn-primary"
+               data-bs-toggle="modal"
+               data-bs-target="#bookDemoModal">
+                Log In / Sign Up
+            </a>
+
         </div>
-      </div>
-    <!-- </div> -->
-  </nav>
+    </div>
+</nav>
 
 
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+<!-- MOBILE OFFCANVAS NAVBAR -->
+<div class="offcanvas offcanvas-end"
+     tabindex="-1"
+     id="mobileNav"
+     aria-labelledby="mobileNavLabel">
+
     <div class="offcanvas-header">
-      <h2 class="offcanvas-title h5 mb-0" id="mobileNavLabel">Menu</h2>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="navbar-nav mb-4">
-        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
-         <li class="nav-item"><a href="use-cases.html" class="nav-link">What We Do</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item dropdown">
-        <a href="#"
-           class="nav-link dropdown-toggle"
-           id="resourcesDropdown"
-           role="button"
-           data-bs-toggle="dropdown"
-           aria-expanded="false">
-            Resources
-        </a>
 
-        <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
-            <li>
-                <a class="dropdown-item" href="blog.html">Blog</a>
-            </li>
-            <li>
-                <a class="dropdown-item" href="customer-story.html">Customer Story</a>
-            </li>
-            <li>
-                <a class="dropdown-item" href="demo.html">Buyer's Guide</a>
-            </li>
-        </ul>
-    </li>
-          
-          <li class="nav-item"><a href="#" class="nav-link">Watch Their Story → </a></li>
-        </ul>
-        
-      <div class="d-grid gap-2">
-        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal"
-          data-bs-dismiss="offcanvas">Book Demo</a>
-      </div>
-      <div class="d-grid gap-2 mt-3">
-        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal" data-bs-dismiss="offcanvas">Log In / Sign Up</a>
-      </div>
+        <h2 class="offcanvas-title h5 mb-0" id="mobileNavLabel">
+            Menu
+        </h2>
+
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close">
+        </button>
+
     </div>
-  </div>
+
+    <div class="offcanvas-body">
+
+        <ul class="navbar-nav mb-4">
+
+            <li class="nav-item">
+                <a href="/" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="features.html" class="nav-link">Features</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="use-cases.html" class="nav-link">What We Do</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="blog.html" class="nav-link">Blogs</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Watch Their Story →</a>
+            </li>
+
+        </ul>
+
+        <div class="d-grid gap-2">
+
+            <a href="#" class="btn btn-primary"
+               data-bs-toggle="modal"
+               data-bs-target="#bookDemoModal"
+               data-bs-dismiss="offcanvas">
+                Book Demo
+            </a>
+
+        </div>
+
+        <div class="d-grid gap-2 mt-3">
+
+            <a href="#" class="btn btn-primary"
+               data-bs-toggle="modal"
+               data-bs-target="#bookDemoModal"
+               data-bs-dismiss="offcanvas">
+                Log In / Sign Up
+            </a>
+
+        </div>
+
+    </div>
+</div>
 
 
   <!-- Hero Section Start -->

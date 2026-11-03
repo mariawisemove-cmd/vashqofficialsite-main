@@ -1,63 +1,136 @@
 
 /* =====================================================
-   VASHQ FEATURE SCROLL REVEAL SYSTEM
+   VASHQ FEATURE SECTION SCROLL ANIMATION
 ===================================================== */
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    const featureSections = document.querySelectorAll(
+    const featureRows = document.querySelectorAll(
         ".vashq-feature-row"
     );
 
     // Check browser support
-    if (!("IntersectionObserver" in window)) {
+    if ("IntersectionObserver" in window) {
 
-        featureSections.forEach(section => {
-            section.classList.add("is-visible");
+        const featureObserver = new IntersectionObserver(
+            (entries, observer) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        // Activate feature animation
+                        entry.target.classList.add("is-visible");
+
+                        // Stop observing after animation
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+        // Observe all feature sections
+        featureRows.forEach((row) => {
+            featureObserver.observe(row);
         });
 
+    } else {
+
+        // Fallback for unsupported browsers
+        featureRows.forEach((row) => {
+            row.classList.add("is-visible");
+        });
+
+    }
+
+});
+
+
+/* =====================================================
+   VASHQ INTERACTIVE MOUSE FOLLOWING GRID EFFECT
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const section = document.querySelector(
+        ".vashq-feature-details"
+    );
+
+    if (!section) return;
+
+    // Enable only on mouse-based devices
+    if (window.matchMedia("(hover: none)").matches) {
         return;
     }
 
-    const featureObserver = new IntersectionObserver(
+    let animationFrame = null;
 
-        function (entries) {
+    /* ================================================
+       MOUSE MOVE
+    ================================================ */
 
-            entries.forEach(function (entry) {
+    section.addEventListener("mousemove", (event) => {
 
-                const section = entry.target;
-
-                if (entry.isIntersecting) {
-
-                    // Start animation when section enters viewport
-                    section.classList.add("is-visible");
-
-                } else {
-
-                    // Reset animation when section leaves viewport
-                    // Animation plays again when user scrolls back
-
-                    section.classList.remove("is-visible");
-
-                }
-
-            });
-
-        },
-
-        {
-            root: null,
-            threshold: 0.20,
-            rootMargin: "0px 0px -5% 0px"
+        // Avoid unnecessary animation frames
+        if (animationFrame) {
+            cancelAnimationFrame(animationFrame);
         }
 
-    );
+        animationFrame = requestAnimationFrame(() => {
 
-    // Observe all 15 feature sections
+            // Get section position
+            const rect = section.getBoundingClientRect();
 
-    featureSections.forEach(function (section) {
+            // Calculate cursor position inside section
+            const mouseX = event.clientX - rect.left;
+            const mouseY = event.clientY - rect.top;
 
-        featureObserver.observe(section);
+            // Update horizontal cursor position
+            section.style.setProperty(
+                "--vfd-mouse-x",
+                `${mouseX}px`
+            );
+
+            // Update vertical cursor position
+            section.style.setProperty(
+                "--vfd-mouse-y",
+                `${mouseY}px`
+            );
+
+            // Activate local grid and glow
+            section.classList.add(
+                "vfd-mouse-active"
+            );
+
+            animationFrame = null;
+
+        });
+
+    });
+
+
+    /* ================================================
+       MOUSE LEAVE
+    ================================================ */
+
+    section.addEventListener("mouseleave", () => {
+
+        // Cancel pending animation
+        if (animationFrame) {
+            cancelAnimationFrame(animationFrame);
+            animationFrame = null;
+        }
+
+        // Hide grid and glow
+        section.classList.remove(
+            "vfd-mouse-active"
+        );
 
     });
 

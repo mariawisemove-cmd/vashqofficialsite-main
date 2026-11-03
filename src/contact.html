@@ -74,6 +74,14 @@
       }
     }
   </style>
+
+  <link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
 </head>
 
 <body>
@@ -101,159 +109,683 @@
       window.addEventListener('pageshow', (e) => { if (e.persisted) hide(); });
     })();
   </script>
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
-    <div class="container">
-      <a class="navbar-brand d-inline-flex align-items-center lh-1" href="/">
-        <img src="./assets/images/brand/logo-full.webp" alt="Vashq" height="32" loading="eager"
-          style="object-fit: contain;" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
-        aria-controls="mobileNav" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="d-none d-lg-flex flex-grow-1 align-items-center">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
-          <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="d-flex gap-3 align-items-center">
-          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Start Free Trial</a>
-        </div>
-      </div>
-    </div>
-  </nav>
 
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+
+  <nav class="navbar navbar-expand-lg px-3">
+
+    <a class="navbar-brand d-inline-flex align-items-center lh-1" href="/">
+        <img src="./assets/images/brand/logo-full.webp"
+             alt="VASHQ logo"
+             height="32"
+             loading="eager"
+             style="object-fit: contain;" />
+    </a>
+
+    <button class="navbar-toggler" type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mobileNav"
+        aria-controls="mobileNav"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- DESKTOP NAVBAR -->
+    <div class="d-none d-lg-flex flex-grow-1 align-items-center">
+
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+                <a href="/" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="features.html" class="nav-link">Features</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="use-cases.html" class="nav-link">What We Do</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="blog.html" class="nav-link">Blogs</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Watch Their Story →</a>
+            </li>
+
+        </ul>
+
+        <div class="d-flex gap-3 align-items-center">
+
+            <a href="#" class="btn btn-primary"
+               data-bs-toggle="modal"
+               data-bs-target="#bookDemoModal">
+                Book Demo
+            </a>
+
+            <a href="#" class="btn btn-primary"
+               data-bs-toggle="modal"
+               data-bs-target="#bookDemoModal">
+                Log In / Sign Up
+            </a>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- MOBILE OFFCANVAS NAVBAR -->
+<div class="offcanvas offcanvas-end"
+     tabindex="-1"
+     id="mobileNav"
+     aria-labelledby="mobileNavLabel">
+
     <div class="offcanvas-header">
-      <h2 class="offcanvas-title h5 mb-0" id="mobileNavLabel">Menu</h2>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+        <h2 class="offcanvas-title h5 mb-0" id="mobileNavLabel">
+            Menu
+        </h2>
+
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close">
+        </button>
+
     </div>
+
     <div class="offcanvas-body">
-      <ul class="navbar-nav mb-4">
-        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="features.html" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="use-cases.html" class="nav-link">Use Cases</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="d-grid gap-2">
-        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-          data-bs-dismiss="offcanvas">Start Free Trial</a>
-        <a href="/?bookDemo=1" class="btn btn-light">Book Demo</a>
-      </div>
+
+        <ul class="navbar-nav mb-4">
+
+            <li class="nav-item">
+                <a href="/" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="features.html" class="nav-link">Features</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="use-cases.html" class="nav-link">What We Do</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="blog.html" class="nav-link">Blogs</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Watch Their Story →</a>
+            </li>
+
+        </ul>
+
+        <div class="d-grid gap-2">
+
+            <a href="#" class="btn btn-primary"
+               data-bs-toggle="modal"
+               data-bs-target="#bookDemoModal"
+               data-bs-dismiss="offcanvas">
+                Book Demo
+            </a>
+
+        </div>
+
+        <div class="d-grid gap-2 mt-3">
+
+            <a href="#" class="btn btn-primary"
+               data-bs-toggle="modal"
+               data-bs-target="#bookDemoModal"
+               data-bs-dismiss="offcanvas">
+                Log In / Sign Up
+            </a>
+
+        </div>
+
     </div>
+</div>
+
+
+
+<!-- ==========================================
+     SECTION 01 - CONTACT US
+========================================== -->
+
+
+<section class="vashq-contact-section" id="contact">
+
+  <div class="container">
+
+    <div class="vashq-contact-card">
+
+      <!-- TOP HEADER -->
+      <div class="vashq-contact-header">
+        <h2>Contact Us</h2>
+        <p>
+          We're here to help! Whether you have questions, feedback, or
+          need support, our team is ready to assist you.
+        </p>
+      </div>
+
+      <div class="row g-5 vashq-contact-content">
+
+        <!-- LEFT SIDE: CONTACT DETAILS -->
+        <div class="col-lg-6">
+
+          <div class="vashq-contact-info">
+
+            <h3>Get in touch</h3>
+
+            <p class="vashq-contact-description">
+              Reach out for a demo, questions, or setup guidance.
+              No technical skills required.
+            </p>
+
+            <!-- WHATSAPP -->
+            <div class="vashq-contact-whatsapp">
+
+              <a
+                href="https://wa.me/918891207778?text=Hi%20Vashq%2C%20I%20have%20a%20question."
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <i class="bi bi-whatsapp"></i>
+                <span>Chat on WhatsApp</span>
+
+              </a>
+
+            </div>
+
+            <!-- PHONE -->
+            <div class="vashq-contact-detail">
+
+              <span class="vashq-contact-label">Phone</span>
+
+              <a href="tel:8891207778">
+                <i class="bi bi-telephone"></i>
+                8891207778
+              </a>
+
+            </div>
+
+            <!-- EMAIL -->
+            <div class="vashq-contact-detail">
+
+              <span class="vashq-contact-label">Email</span>
+
+              <a href="mailto:vashqofficial@gmail.com">
+                <i class="bi bi-envelope"></i>
+                vashqofficial@gmail.com
+              </a>
+
+            </div>
+
+            <!-- FOLLOW US -->
+            <div class="vashq-contact-social">
+
+              <span class="vashq-contact-label">Follow Us</span>
+
+              <div class="vashq-social-links">
+
+                <a href="https://www.facebook.com/people/Vashq/61591704035022/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Facebook">
+                  <i class="bi bi-facebook"></i>
+                </a>
+
+                <a href="https://www.instagram.com/vashqofficial/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram">
+                  <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/company/wisemove-consultancy-pvt-ltd/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="LinkedIn">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE: CONTACT FORM -->
+        <div class="col-lg-6">
+
+          <div class="vashq-contact-form-wrapper">
+
+            <div id="contactFormView">
+
+              <h3 class="vashq-form-heading">
+                Send us a message
+              </h3>
+
+              <p class="vashq-form-description">
+                Share your details and we'll get back to you.
+              </p>
+
+
+              <form id="contactForm"
+                    class="needs-validation"
+                    novalidate>
+
+                <!-- FULL NAME -->
+                <div class="mb-3">
+
+                  <label for="contactFullName" class="form-label">
+                    Full Name
+                  </label>
+
+                  <input
+                    id="contactFullName"
+                    name="fullName"
+                    type="text"
+                    class="form-control"
+                    placeholder="Your full name"
+                    required
+                    minlength="2"
+                    autocomplete="name">
+
+                  <div class="invalid-feedback">
+                    Please enter your full name.
+                  </div>
+
+                </div>
+
+
+                <!-- BUSINESS NAME -->
+                <div class="mb-3">
+
+                  <label for="contactBusinessName" class="form-label">
+                    Business Name
+                  </label>
+
+                  <input
+                    id="contactBusinessName"
+                    name="businessName"
+                    type="text"
+                    class="form-control"
+                    placeholder="Your car wash / detailing business"
+                    required
+                    minlength="2"
+                    autocomplete="organization">
+
+                  <div class="invalid-feedback">
+                    Please enter your business name.
+                  </div>
+
+                </div>
+
+
+                <!-- MOBILE NUMBER -->
+                <div class="mb-3">
+
+                  <label for="contactMobile" class="form-label">
+                    Mobile Number
+                  </label>
+
+                  <input
+                    id="contactMobile"
+                    name="mobile"
+                    type="tel"
+                    class="form-control"
+                    placeholder="10-digit mobile number"
+                    required
+                    inputmode="numeric"
+                    autocomplete="tel"
+                    pattern="^[6-9][0-9]{9}$">
+
+                  <div class="invalid-feedback">
+                    Please enter a valid 10-digit Indian mobile number.
+                  </div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+                <div class="mb-4">
+
+                  <label for="contactLocationSearch" class="form-label">
+                    Location
+                  </label>
+
+                  <div class="location-combobox"
+                       id="contactLocationCombobox">
+
+                    <input
+                      type="hidden"
+                      id="contactLocation"
+                      name="location"
+                      required>
+
+                    <input
+                      id="contactLocationSearch"
+                      type="text"
+                      class="form-control"
+                      role="combobox"
+                      placeholder="Search state or city"
+                      autocomplete="off"
+                      aria-autocomplete="list"
+                      aria-expanded="false"
+                      aria-controls="contactLocationList"
+                      required>
+
+                    <ul
+                      id="contactLocationList"
+                      class="location-combobox__list"
+                      role="listbox"
+                      hidden>
+                    </ul>
+
+                  </div>
+
+                  <div class="invalid-feedback">
+                    Please search and select a state or city in India.
+                  </div>
+
+                </div>
+
+
+                <!-- SUBMIT BUTTON -->
+                <div class="d-grid">
+
+                  <button
+                    class="vashq-contact-submit-btn"
+                    type="submit">
+
+                    <span>Send Message</span>
+                    <i class="bi bi-arrow-right"></i>
+
+                  </button>
+
+                </div>
+
+
+                <!-- ERROR MESSAGE -->
+                <p
+                  id="contactError"
+                  class="small text-danger mt-3 mb-0 d-none"
+                  role="alert">
+                </p>
+
+              </form>
+
+            </div>
+
+
+            <!-- SUCCESS VIEW -->
+            <div
+              id="contactSuccessView"
+              class="book-demo-success d-none"
+              hidden
+              aria-live="polite">
+
+              <div class="book-demo-success__mark"
+                   aria-hidden="true">
+
+                <svg
+                  class="book-demo-success__svg"
+                  viewBox="0 0 52 52">
+
+                  <circle
+                    class="book-demo-success__circle"
+                    cx="26"
+                    cy="26"
+                    r="24"
+                    fill="none"/>
+
+                  <path
+                    class="book-demo-success__check"
+                    fill="none"
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+
+                </svg>
+
+              </div>
+
+              <h2 class="book-demo-success__title h4 fw-bold mb-2">
+                Thank you!
+              </h2>
+
+              <p class="book-demo-success__text mb-5">
+                Your message was submitted. We'll be in touch soon.
+              </p>
+
+              <button
+                type="button"
+                class="vashq-contact-reset"
+                id="contactSuccessReset">
+
+                Send another message
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <section class="py-lg-13 py-8 bg-white position-relative" id="contact">
-    <div class="circle-bg d-none d-lg-block"></div>
-    <div class="container">
-      <div class="row align-items-center gy-8">
-        <div class="col-lg-6">
-          <span
-            class="badge bg-primary bg-opacity-10 text-primary px-4 py-3 fw-normal border border-primary rounded-pill">
-            <span class="ms-1">Contact</span>
-          </span>
-          <h1 class="display-4 fw-bold mt-4">Let’s talk about your workflow</h1>
-          <p class="my-6 lead fw-normal">Reach out for a demo, questions, or setup guidance. No technical skills
-            required.</p>
+</section>
 
-          <div class="d-flex flex-column gap-3">
-            <a href="https://wa.me/918891207778?text=Hi%20Vashq%2C%20I%20have%20a%20question."
-              class="btn btn-outline-dark align-self-start" target="_blank" rel="noopener noreferrer">Chat on
-              WhatsApp</a>
-            <div class="d-flex flex-column gap-2 small">
-              <span><span class="fw-bold">Phone:</span> <a class="text-decoration-none"
-                  href="tel:8891207778">8891207778</a></span>
-              <span><span class="fw-bold">Email:</span> <a class="text-decoration-none"
-                  href="mailto:vashqofficial@gmail.com">vashqofficial@gmail.com</a></span>
-            </div>
-          </div>
+
+
+<!-- ==========================================
+     SECTION 02 - BLUE CTA BANNER
+========================================== -->
+
+<section class="vashq-blue-cta">
+
+  <div class="container">
+
+    <div class="vashq-blue-cta-inner">
+
+      <!-- BACKGROUND DECORATION -->
+      <div class="vashq-cta-circle vashq-cta-circle-one"></div>
+      <div class="vashq-cta-circle vashq-cta-circle-two"></div>
+
+      <!-- LEFT CONTENT -->
+      <div class="vashq-cta-content">
+
+        <span class="vashq-cta-tag">
+          <i class="bi bi-stars"></i>
+          Experience VASHQ
+        </span>
+
+        <h2>
+          Ready to Transform Your
+          <span>Business Management?</span>
+        </h2>
+
+        <p>
+          Experience the future of car wash and detailing management
+          with VASHQ. Simplify your operations, manage your business
+          smarter, and take your services to the next level.
+        </p>
+
+        <a href="#"
+           class="vashq-cta-button">
+          Download App
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+
+      </div>
+
+
+      <!-- RIGHT SIDE IMAGE SPACE -->
+        <div class="vashq-cta-visual">
+            <!-- <div class="vashq-cta-visual">
+                <img src="assets/images/your-app-image.png" alt="VASHQ App Preview">
+            </div> -->
         </div>
-        <div class="col-lg-6">
-          <div class="card shadow-sm rounded-5">
-            <div class="card-body p-4 p-sm-6">
-              <div id="contactFormView">
-                <h2 class="h5 fw-bold mb-2">Contact us</h2>
-                <p class="small text-muted mb-4">Share your details and we’ll get back to you.</p>
 
-                <form id="contactForm" class="needs-validation" novalidate>
-                  <div class="mb-3">
-                    <label for="contactFullName" class="form-label">Full name</label>
-                    <input id="contactFullName" name="fullName" type="text" class="form-control"
-                      placeholder="Your full name" required minlength="2" autocomplete="name">
-                    <div class="invalid-feedback">Please enter your full name.</div>
-                  </div>
+    </div>
 
-                  <div class="mb-3">
-                    <label for="contactBusinessName" class="form-label">Business name</label>
-                    <input id="contactBusinessName" name="businessName" type="text" class="form-control"
-                      placeholder="Your car wash / detailing business" required minlength="2"
-                      autocomplete="organization">
-                    <div class="invalid-feedback">Please enter your business name.</div>
-                  </div>
+  </div>
 
-                  <div class="mb-3">
-                    <label for="contactMobile" class="form-label">Mobile number</label>
-                    <input id="contactMobile" name="mobile" type="tel" class="form-control"
-                      placeholder="10-digit mobile number" required inputmode="numeric" autocomplete="tel"
-                      pattern="^[6-9][0-9]{9}$">
-                    <div class="invalid-feedback">Please enter a valid 10-digit Indian mobile number.</div>
-                  </div>
+</section>
 
-                  <div class="mb-4">
-                    <label for="contactLocationSearch" class="form-label">Location</label>
-                    <div class="location-combobox" id="contactLocationCombobox">
-                      <input type="hidden" id="contactLocation" name="location" required>
-                      <input id="contactLocationSearch" type="text" class="form-control" role="combobox"
-                        placeholder="Search state or city" autocomplete="off" aria-autocomplete="list"
-                        aria-expanded="false" aria-controls="contactLocationList" required>
-                      <ul id="contactLocationList" class="location-combobox__list" role="listbox" hidden></ul>
+
+
+ <footer class="footer-section">
+    <div class="vashq-footer">
+        <div class="vashq-footer-container">
+
+            
+            <div class="vashq-footer-brand-center">
+
+                <a href="/" class="vashq-footer-logo">
+                    <img src="./assets/images/brand/logo-icon.webp"
+                         alt="Vashq"
+                         height="200">
+                </a>
+
+                <p>
+                    Exclusive to Car Care, Designed by Operators, Powered by AI
+                </p>
+
+                
+               
+<form class="vashq-footer-booking">
+
+    <input
+        type="tel"
+        name="phone"
+        placeholder="Enter your phone number"
+        aria-label="Phone number"
+        pattern="[0-9+\-\s()]{7,15}"
+        required
+    >
+
+    <button type="submit">
+        Book
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+
+</form>
+
+
+            </div>
+
+
+            
+            <div class="vashq-footer-main">
+
+                
+                <div class="vashq-footer-contact">
+
+                    <h4>Contact</h4>
+
+                    <div class="vashq-contact-details">
+
+                        <a href="mailto:vashqofficial@gmail.com">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>vashqofficial@gmail.com</span>
+                        </a>
+
+                        <a href="tel:8891207778">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 8891207778</span>
+                        </a>
+
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>India</span>
+                        </div>
+
                     </div>
-                    <div class="invalid-feedback">Please search and select a state or city in India.</div>
-                  </div>
 
-                  <div class="d-grid">
-                    <button class="btn btn-primary" type="submit">Submit</button>
-                  </div>
-                  <p id="contactError" class="small text-danger mt-3 mb-0 d-none" role="alert"></p>
-                </form>
-              </div>
-
-              <div id="contactSuccessView" class="book-demo-success d-none" hidden aria-live="polite">
-                <div class="book-demo-success__mark" aria-hidden="true">
-                  <svg class="book-demo-success__svg" viewBox="0 0 52 52">
-                    <circle class="book-demo-success__circle" cx="26" cy="26" r="24" fill="none" />
-                    <path class="book-demo-success__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-                  </svg>
                 </div>
-                <h2 class="book-demo-success__title h4 fw-bold mb-2">Thank you!</h2>
-                <p class="book-demo-success__text mb-5">Your message was submitted. We’ll be in touch soon.</p>
-                <button type="button" class="btn btn-primary" id="contactSuccessReset">Send another message</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <footer class="pt-lg-13 bg-light py-8">
-    <div class="container">
-      <div class="border-top pt-6 row small">
-        <div class="col-12 d-flex flex-column flex-md-row justify-content-between">
-          <div>
-            <p>© 2026 Vashq. All rights reserved.</p>
-          </div>
-          <div class="d-flex gap-3">
-            <a href="privacy-policy.html" class="link-primary">Privacy Policy</a>
-            <a href="terms-and-conditions.html" class="link-primary">Terms &amp; Conditions</a>
-            <a href="refund-policy.html" class="link-primary">Refund Policy</a>
-          </div>
+
+                
+                <div class="vashq-footer-link-groups">
+
+                  
+
+                    <div class="vashq-footer-links">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="vashq-footer-links">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="refund-policy.html">Refund Policy</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+           
+            <div class="vashq-footer-bottom">
+
+                <p>© 2026 Vashq. All rights reserved.</p>
+
+                <div class="vashq-social-icons">
+
+                    <a href="https://www.instagram.com/vashqofficial/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/people/Vashq/61591704035022/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/wisemove-consultancy-pvt-ltd/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
     </div>
-  </footer>
+</footer>
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -3157,7 +3157,7 @@
 
 .vashq-footer-link-groups {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
 
@@ -3218,7 +3218,7 @@
     height: 36px;
     border-radius: 50%;
     background: #071d35;
-    color: #ffffff;
+    color: #fff;
     font-size: 18px;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -3786,7 +3786,7 @@
     }
 
     .vashq-footer-link-groups {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 20px;
     }
 
