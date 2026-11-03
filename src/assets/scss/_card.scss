@@ -24,14 +24,7 @@
     padding: 0px 0px !important;
 }
 
-.vashq-comparison-container{
- background-color: #fff;
-    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-    padding: 70px;
-    padding-left: 150px;
-    padding-right: 150px;
-    border-radius: 50px;
-}
+
 
 .features-eyebrow {
     display: inline-block;
@@ -326,510 +319,450 @@
 
 
 
-/* ==========================================
-   1. MAIN STYLES
-========================================== */
+/* =====================================================
+   VASHQ PREMIUM FULL SCREEN FEATURE SECTIONS
+===================================================== */
 
-.vashq-circuit-section {
-    --circuit-color: #172033;
-    --circuit-glow: rgba(23, 32, 51, 0.15);
-    --circuit-bg: #ffffff;
+.vashq-feature-details {
+    --vfd-primary: #1769ff;
+    --vfd-heading: #172033;
+    --vfd-text: #687386;
 
-    position: relative;
     width: 100%;
-    padding: 100px 40px;
-    background: var(--circuit-bg);
+    background: #ffffff;
     overflow: hidden;
-    transition: background 0.5s ease;
 }
 
-.vashq-circuit-section.is-enabled {
-    --circuit-color: #0879d1;
-    --circuit-glow: rgba(8, 121, 209, 0.35);
-    --circuit-bg: #f5faff;
-}
-
-.vashq-circuit-container {
+.vashq-feature-container {
     width: 100%;
-    max-width: 1250px;
-    margin: 0 auto;
 }
 
-.vashq-circuit-heading {
-    text-align: center;
-    margin-bottom: 75px;
-}
+/* =====================================================
+   INDIVIDUAL FEATURE SECTION
+===================================================== */
 
-.vashq-section-label {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: #0879d1;
-    margin-bottom: 15px;
-}
+.vashq-feature-row {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
 
-.vashq-circuit-heading h2 {
-    font-size: clamp(28px, 4vw, 42px);
-    font-weight: 750;
-    color: #172033;
-    margin: 0 0 12px;
-}
-
-.vashq-circuit-heading p {
-    color: #697386;
-    font-size: 15px;
-    margin: 0;
-}
-
-
-/* ==========================================
-   2. COMPONENT STYLES
-========================================== */
-
-/* Main circuit layout */
-
-.vashq-circuit-stage {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 150px minmax(0, 1fr);
-    grid-template-rows: repeat(4, 82px);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
     align-items: center;
+    gap: clamp(40px, 2vw, 100px);
+
+    padding: 50px 70px;
+
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ALTERNATING BACKGROUND */
+
+.vashq-feature-row:nth-child(even) {
+    background: #ffff;
+}
+
+/* =====================================================
+   REVERSE LAYOUT
+===================================================== */
+
+.vashq-feature-row.reverse .vashq-feature-image {
+    order: 2;
+}
+
+.vashq-feature-row.reverse .vashq-feature-content {
+    order: 1;
+}
+
+/* =====================================================
+   IMAGE ANIMATION
+===================================================== */
+
+.vashq-feature-image {
     width: 100%;
     position: relative;
+    z-index: 1;
+
+    opacity: 0;
+    transform: translateY(65px) scale(.94);
+
+    transition:
+        opacity 1s ease,
+        transform 1.2s cubic-bezier(.16, 1, .3, 1);
 }
 
-/* Left and right sides */
+.vashq-feature-image img {
+    display: block;
 
-.vashq-circuit-side {
-    display: grid;
-    grid-template-rows: repeat(4, 82px);
-    align-items: center;
-    min-width: 0;
+    width: 100%;
+    height: auto;
+    max-height: 570px;
+
+    object-fit: contain;
+    object-position: center;
+
+    border-radius: 18px;
+
+    filter: drop-shadow(
+        0 25px 45px rgba(20, 40, 80, .10)
+    );
+
+    transition: transform .2s ease;
 }
 
-.vashq-left-side {
-    grid-column: 1;
-    grid-row: 1 / 5;
+/* IMAGE HOVER */
+
+.vashq-feature-image:hover img {
+    transform: scale(1.025);
 }
 
-.vashq-right-side {
-    grid-column: 3;
-    grid-row: 1 / 5;
-}
+/* =====================================================
+   TEXT CONTENT ANIMATION
+===================================================== */
 
-/* Individual circuit points */
+.vashq-feature-content {
+    width: 100%;
+    max-width: 570px;
 
-.vashq-circuit-point {
-    display: flex;
-    align-items: center;
-    min-width: 0;
-    gap: 8px;
     position: relative;
     z-index: 2;
-}
 
-.vashq-left-side .vashq-circuit-point {
-    justify-content: flex-end;
-}
+    opacity: 0;
+    transform: translateY(65px);
 
-.vashq-right-side .vashq-circuit-point {
-    justify-content: flex-start;
-}
-
-/* Content text */
-
-.vashq-point-text {
-    flex: 0 1 230px;
-    min-width: 0;
-    color: #263244;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.5;
     transition:
-        color 0.5s ease,
-        transform 0.5s ease,
-        opacity 0.4s ease;
+        opacity .9s ease,
+        transform 1s cubic-bezier(.16, 1, .3, 1);
 }
 
-.vashq-left-side .vashq-point-text {
-    text-align: right;
+/* =====================================================
+   ACTIVE SCROLL STATE
+===================================================== */
+
+.vashq-feature-row.is-visible .vashq-feature-image {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
-.vashq-right-side .vashq-point-text {
-    text-align: left;
+/* Text appears slightly after image */
+
+.vashq-feature-row.is-visible .vashq-feature-content {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition-delay: .35s;
 }
 
-.vashq-circuit-section.is-enabled .vashq-point-text {
-    color: #0879d1;
-}
+/* =====================================================
+   FEATURE NUMBER
+===================================================== */
 
-/* Circuit tentacles */
+.vashq-feature-number {
+    display: inline-block;
 
-.vashq-tentacle {
-    flex: 0 1 160px;
-    width: 160px;
-    min-width: 45px;
-    height: 50px;
-    overflow: visible;
-    position: relative;
-}
+    font-size: 12px;
+    font-weight: 700;
 
-.vashq-line-base,
-.vashq-line-active {
-    fill: none;
-    stroke-width: 2.8;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
 
-.vashq-line-base {
-    stroke: #172033;
-    transition: stroke 0.5s ease;
-}
+    color: var(--vfd-primary);
 
-.vashq-line-active {
-    stroke: #0879d1;
-    stroke-width: 3.2;
-    stroke-dasharray: 250;
-    stroke-dashoffset: 250;
+    margin-bottom: 24px;
+
+    opacity: 0;
+    transform: translateY(15px);
+
     transition:
-        stroke-dashoffset 0.9s ease,
-        stroke 0.5s ease,
-        filter 0.5s ease;
+        opacity .6s ease,
+        transform .6s ease;
 }
 
-.vashq-circuit-section.is-enabled .vashq-line-active {
-    stroke-dashoffset: 0;
-    filter: drop-shadow(0 0 4px rgba(8, 121, 209, 0.6));
+.vashq-feature-row.is-visible .vashq-feature-number {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition-delay: .45s;
 }
 
-.vashq-circuit-section.is-enabled .vashq-line-base {
-    stroke: #c5e3fa;
-}
+/* =====================================================
+   FEATURE HEADING
+===================================================== */
 
-/* Circuit nodes */
+.vashq-feature-content h2 {
+    font-size: clamp(34px, 4vw, 54px);
 
-.vashq-node {
-    fill: #172033;
-    stroke: #172033;
-    stroke-width: 2;
+    line-height: 1.13;
+    font-weight: 750;
+
+    letter-spacing: -1.8px;
+
+    color: var(--vfd-heading);
+
+    margin: 0 0 24px;
+
+    opacity: 0;
+    transform: translateY(25px);
+
     transition:
-        fill 0.5s ease,
-        stroke 0.5s ease,
-        filter 0.5s ease;
+        opacity .7s ease,
+        transform .7s cubic-bezier(.16, 1, .3, 1);
 }
 
-.vashq-circuit-section.is-enabled .vashq-node {
-    fill: #0879d1;
-    stroke: #0879d1;
-    filter: drop-shadow(0 0 5px rgba(8, 121, 209, 0.5));
+.vashq-feature-row.is-visible .vashq-feature-content h2 {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition-delay: .50s;
 }
 
-/* Center toggle */
+/* =====================================================
+   FEATURE DESCRIPTION
+===================================================== */
 
-.vashq-circuit-center {
-    grid-column: 2;
-    grid-row: 1 / 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 5;
+.vashq-feature-content p {
+    font-size: 16px;
+
+    line-height: 1.9;
+    font-weight: 400;
+
+    color: var(--vfd-text);
+
+    margin: 0 0 30px;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
 }
 
-.vashq-center-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+.vashq-feature-row.is-visible .vashq-feature-content p {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition-delay: .65s;
 }
 
-/* Status text */
+/* =====================================================
+   FEATURE LIST
+===================================================== */
 
-.vashq-status {
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 1.2px;
-    color: #172033;
-    white-space: nowrap;
-    transition: color 0.5s ease;
-}
-
-.vashq-circuit-section.is-enabled .vashq-status {
-    color: #0879d1;
-}
-
-/* Outer circular button */
-
-.vashq-toggle {
-    width: 76px;
-    height: 76px;
-    min-width: 76px;
-    border-radius: 50%;
-    border: 3px solid #172033;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.vashq-feature-content ul {
     padding: 0;
-    outline: none;
-    box-shadow:
-        0 0 0 7px rgba(23, 32, 51, 0.06),
-        0 8px 25px rgba(0, 0, 0, 0.12);
-    transition:
-        border-color 0.5s ease,
-        box-shadow 0.5s ease,
-        transform 0.3s ease;
+    margin: 0;
+
+    list-style: none;
 }
 
-.vashq-toggle:hover {
-    transform: scale(1.06);
-}
+.vashq-feature-content ul li {
+    display: flex;
+    align-items: center;
 
-.vashq-toggle:focus-visible {
-    outline: 3px solid #0879d1;
-    outline-offset: 8px;
-}
+    gap: 12px;
 
-/* Inner radio-style circle */
+    font-size: 15px;
+    font-weight: 500;
 
-.vashq-toggle-inner {
-    width: 27px;
-    height: 27px;
-    border-radius: 50%;
-    background: #172033;
-    position: relative;
-    transition:
-        background 0.5s ease,
-        transform 0.4s ease,
-        box-shadow 0.5s ease;
-}
+    line-height: 1.6;
 
-.vashq-circuit-section.is-enabled .vashq-toggle {
-    border-color: #0879d1;
-    box-shadow:
-        0 0 0 7px rgba(8, 121, 209, 0.09),
-        0 0 25px rgba(8, 121, 209, 0.25);
-}
+    color: #39465a;
 
-.vashq-circuit-section.is-enabled .vashq-toggle-inner {
-    background: #0879d1;
-    transform: scale(1.15);
-    box-shadow: 0 0 14px rgba(8, 121, 209, 0.65);
-}
+    margin-bottom: 17px;
 
-/* Click text */
-
-.vashq-click-text {
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: #8993a2;
-}
-
-
-/* ==========================================
-   3. ANIMATIONS / KEYFRAMES
-========================================== */
-
-/* Initial circuit drawing animation */
-
-.vashq-circuit-section:not(.is-loaded) .vashq-line-base {
-    stroke-dasharray: 250;
-    stroke-dashoffset: 250;
-}
-
-.vashq-circuit-section.is-loaded .vashq-line-base {
-    stroke-dashoffset: 0;
-    transition: stroke-dashoffset 1s ease;
-}
-
-/* Left and right content entrance */
-
-.vashq-circuit-point {
     opacity: 0;
-    animation: vashqPointReveal 0.7s ease forwards;
+    transform: translateX(30px);
+
+    transition:
+        opacity .65s ease,
+        transform .7s cubic-bezier(.16, 1, .3, 1);
 }
 
-.vashq-left-side .vashq-circuit-point:nth-child(1),
-.vashq-right-side .vashq-circuit-point:nth-child(1) {
-    animation-delay: 0.15s;
+/* STAGGER ANIMATION */
+
+.vashq-feature-row.is-visible
+.vashq-feature-content ul li:nth-child(1) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: .80s;
 }
 
-.vashq-left-side .vashq-circuit-point:nth-child(2),
-.vashq-right-side .vashq-circuit-point:nth-child(2) {
-    animation-delay: 0.3s;
+.vashq-feature-row.is-visible
+.vashq-feature-content ul li:nth-child(2) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: .95s;
 }
 
-.vashq-left-side .vashq-circuit-point:nth-child(3),
-.vashq-right-side .vashq-circuit-point:nth-child(3) {
-    animation-delay: 0.45s;
+.vashq-feature-row.is-visible
+.vashq-feature-content ul li:nth-child(3) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 1.10s;
 }
 
-.vashq-left-side .vashq-circuit-point:nth-child(4),
-.vashq-right-side .vashq-circuit-point:nth-child(4) {
-    animation-delay: 0.6s;
+/* =====================================================
+   CHECK ICON
+===================================================== */
+
+.vashq-feature-content ul li i {
+    flex-shrink: 0;
+
+    font-size: 18px;
+
+    color: var(--vfd-primary);
 }
 
-@keyframes vashqPointReveal {
-    from {
-        opacity: 0;
-        transform: translateX(12px);
+/* =====================================================
+   TABLET RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .vashq-feature-row {
+        gap: 40px;
+        padding: 90px 6%;
     }
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Content switching animation */
-
-.vashq-circuit-point.is-changing .vashq-point-text {
-    opacity: 0;
-    transform: translateY(5px);
-}
-
-/* Circuit wave delays */
-
-.vashq-circuit-point:nth-child(1) .vashq-line-active {
-    transition-delay: 0.05s;
-}
-
-.vashq-circuit-point:nth-child(2) .vashq-line-active {
-    transition-delay: 0.15s;
-}
-
-.vashq-circuit-point:nth-child(3) .vashq-line-active {
-    transition-delay: 0.25s;
-}
-
-.vashq-circuit-point:nth-child(4) .vashq-line-active {
-    transition-delay: 0.35s;
-}
-
-
-/* ==========================================
-   4. RESPONSIVE STYLES / MEDIA QUERIES
-========================================== */
-
-@media (max-width: 900px) {
-
-    .vashq-circuit-section {
-        padding: 80px 20px;
+    .vashq-feature-content h2 {
+        font-size: 36px;
     }
 
-    .vashq-circuit-stage {
-        grid-template-columns: minmax(0, 1fr) 115px minmax(0, 1fr);
-        grid-template-rows: repeat(4, 90px);
+    .vashq-feature-image img {
+        max-height: 430px;
     }
 
-    .vashq-circuit-side {
-        grid-template-rows: repeat(4, 90px);
-    }
-
-    .vashq-point-text {
-        font-size: 12px;
-    }
-
-    .vashq-tentacle {
-        min-width: 35px;
-        flex-basis: 100px;
-    }
-
-    .vashq-toggle {
-        width: 66px;
-        height: 66px;
-        min-width: 66px;
+    .vashq-feature-content p {
+        font-size: 15px;
     }
 
 }
 
-@media (max-width: 600px) {
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
 
-    .vashq-circuit-section {
-        padding: 65px 18px;
-    }
+@media (max-width: 767px) {
 
-    .vashq-circuit-heading {
-        margin-bottom: 40px;
-    }
+    .vashq-feature-row {
+        min-height: 100svh;
 
-    .vashq-circuit-stage {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+
+        align-content: center;
+
         gap: 30px;
+
+        padding: 90px 22px 70px;
     }
 
-    .vashq-circuit-center {
-        order: 0;
+    /* RESET REVERSE ORDER ON MOBILE */
+
+    .vashq-feature-row.reverse .vashq-feature-image,
+    .vashq-feature-row.reverse .vashq-feature-content {
+        order: initial;
+    }
+
+    /* MOBILE IMAGE */
+
+    .vashq-feature-image {
         width: 100%;
     }
 
-    .vashq-left-side {
-        order: 1;
-    }
-
-    .vashq-right-side {
-        order: 2;
-    }
-
-    .vashq-circuit-side {
+    .vashq-feature-image img {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+        max-height: 350px;
+
+        border-radius: 14px;
     }
 
-    .vashq-circuit-point {
-        width: 100%;
-        min-height: 48px;
-        justify-content: flex-start !important;
-        gap: 12px;
+    /* MOBILE TEXT */
+
+    .vashq-feature-content {
+        max-width: 100%;
     }
 
-    .vashq-left-side .vashq-circuit-point {
-        flex-direction: row-reverse;
-    }
-
-    .vashq-point-text {
-        flex: 1;
-        text-align: left !important;
-        font-size: 13px;
-    }
-
-    .vashq-tentacle {
-        flex: 0 0 65px;
-        width: 65px;
-        height: 40px;
-    }
-
-    .vashq-left-side .vashq-tentacle {
-        transform: scaleX(-1);
-    }
-
-    .vashq-toggle {
-        width: 72px;
-        height: 72px;
-    }
-
-    .vashq-status {
+    .vashq-feature-number {
         font-size: 11px;
+        letter-spacing: 2px;
+
+        margin-bottom: 15px;
+    }
+
+    .vashq-feature-content h2 {
+        font-size: clamp(29px, 8vw, 36px);
+
+        line-height: 1.2;
+        letter-spacing: -.8px;
+
+        margin-bottom: 18px;
+    }
+
+    .vashq-feature-content p {
+        font-size: 14px;
+        line-height: 1.8;
+
+        margin-bottom: 22px;
+    }
+
+    .vashq-feature-content ul li {
+        font-size: 14px;
+        gap: 10px;
+
+        margin-bottom: 13px;
+    }
+
+    .vashq-feature-content ul li i {
+        font-size: 16px;
     }
 
 }
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .vashq-feature-row {
+        padding: 80px 18px 55px;
+        gap: 22px;
+    }
+
+    .vashq-feature-content h2 {
+        font-size: 27px;
+    }
+
+    .vashq-feature-image img {
+        max-height: 270px;
+    }
+
+}
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
-    .vashq-circuit-section *,
-    .vashq-circuit-section *::before,
-    .vashq-circuit-section *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
+    .vashq-feature-image,
+    .vashq-feature-content,
+    .vashq-feature-number,
+    .vashq-feature-content h2,
+    .vashq-feature-content p,
+    .vashq-feature-content ul li {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .vashq-feature-image:hover img {
+        transform: none;
     }
 
 }

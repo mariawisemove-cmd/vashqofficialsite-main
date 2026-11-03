@@ -199,16 +199,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     animation: shimmer 1.1s linear infinite;
 }
 
-@keyframes shimmer {
-    0% {
-        background-position: 200% 0;
-    }
-
-    100% {
-        background-position: -200% 0;
-    }
-}
-
 #page-loader h1 {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 500;
@@ -229,6 +219,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       flex-direction: column;
       gap: 12px;
     }
+
 
     @keyframes shimmer {
       0% {
@@ -628,9 +619,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 <!-- End VASHQ Comparison Section -->
 
 
-<section class="vashq-circuit-section" id="vashqCircuit">
+<!-- <section class="vashq-circuit-section" id="vashqCircuit">
+  <div class="vashq-container">
 
-    <div class="vashq-circuit-container">
+    <div class="vashq-comparison-container">
 
         <div class="vashq-circuit-heading">
             <span class="vashq-section-label">THE VASHQ DIFFERENCE</span>
@@ -640,7 +632,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
         <div class="vashq-circuit-stage">
 
-            <!-- LEFT SIDE -->
             <div class="vashq-circuit-side vashq-left-side">
 
                 <div class="vashq-circuit-point" data-index="0">
@@ -694,7 +685,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             </div>
 
 
-            <!-- CENTER TOGGLE -->
             <div class="vashq-circuit-center">
 
                 <div class="vashq-center-content">
@@ -723,7 +713,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             </div>
 
 
-            <!-- RIGHT SIDE -->
             <div class="vashq-circuit-side vashq-right-side">
 
                 <div class="vashq-circuit-point" data-index="4">
@@ -795,8 +784,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         </div>
 
     </div>
+    </div>
 
-</section>
+</section> -->
 
 
   
@@ -804,7 +794,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
   <section id="features">
   <div class="vashq-container">
-   <div class="vashq-features-container">
+   <div class="vashq-comparison-container">
 
     <!-- Section Heading -->
     <div class="row text-center">
@@ -2390,8 +2380,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
   <script src="./assets/js/vashq-carousels.js"></script>
 
   <script src="./assets/js/comparison.js" defer></script>
-
-  <script src="./assets/js/compare.js" defer></script>
 
   <script src="./assets/js/customer-review.js" defer></script>
 

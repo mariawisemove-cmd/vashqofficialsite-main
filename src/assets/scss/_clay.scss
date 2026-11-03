@@ -168,6 +168,7 @@ footer a img {
 
 .navbar .nav-link.active,
 .navbar .nav-link[aria-current="page"] {
+  color: rgb(19, 62, 108) !important;
   background-color: rgba(rgb(56, 149, 248), 0.14);
   box-shadow: var(--clay-shadow-inner);
   font-weight: 600;
