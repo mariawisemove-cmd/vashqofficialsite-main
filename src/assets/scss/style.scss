@@ -24,30 +24,100 @@
    CAR WASH HERO SECTION
 ============================== */
 
+/* ==============================
+   CAR WASH HERO SECTION
+============================== */
+
 .carwash-hero {
     position: relative;
     height: 680px;
     min-height: 100vh;
+
     display: flex;
     align-items: center;
+
     overflow: hidden;
+    isolation: isolate;
+
     margin-top: 0;
     padding-top: 100px;
 
-    background-image: url("../images/pressure-of-water.png");
+    /* Fallback image */
+    background-image: url("../images/pressure-of-water.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     color: #ffffff;
-
 }
 
-    .carwash-hero::after {
+
+/* ==============================
+   VIDEO BACKGROUND
+============================== */
+
+.carwash-hero-media {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* Both videos occupy exactly the same space */
+
+.carwash-hero-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    opacity: 0;
+
+    transition: opacity 0.8s ease;
+
+    pointer-events: none;
+}
+
+
+/* Active video */
+
+.carwash-hero-video.is-active {
+    opacity: 1;
+}
+
+
+/* Intro and loop video */
+
+.carwash-intro-video,
+.carwash-loop-video {
+    z-index: 1;
+}
+
+
+/* ==============================
+   BOTTOM IMAGE FADE
+============================== */
+
+.carwash-hero::after {
     content: "";
+
     position: absolute;
     bottom: 0;
     left: 0;
+
     width: 100%;
     height: 180px;
 
@@ -59,14 +129,20 @@
     );
 
     pointer-events: none;
-    z-index: 1;
+
+    z-index: 2;
 }
 
-/* Dark overlay for readable text */
+
+/* ==============================
+   DARK OVERLAY
+============================== */
 
 .carwash-hero-overlay {
     position: absolute;
     inset: 0;
+
+    z-index: 2;
 
     background:
         linear-gradient(
@@ -78,26 +154,37 @@
         );
 }
 
-/* Main content */
+
+/* ==============================
+   MAIN CONTENT
+============================== */
 
 .carwash-hero-content {
     position: relative;
-    z-index: 2;
+
+    z-index: 3;
+
     padding-top: 100px;
     padding-bottom: 80px;
 }
 
-/* Text area */
+
+/* ==============================
+   TEXT AREA
+============================== */
 
 .carwash-hero-text {
     max-width: 1000px;
-
 }
 
-/* Small badge */
+
+/* ==============================
+   SMALL BADGE
+============================== */
 
 .carwash-hero-badge {
     display: inline-block;
+
     padding: 10px 17px;
     margin-bottom: 26px;
 
@@ -107,19 +194,27 @@
     background: rgba(255, 255, 255, 0.09);
 
     color: #ffffff;
+
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 2px;
 }
 
-/* Main heading */
+
+/* ==============================
+   MAIN HEADING
+============================== */
 
 .carwash-hero h1 {
     margin: 0;
+
     font-family: Michroma;
+
     color: #ffffff;
+
     font-size: 56px;
     font-weight: bolder;
+
     line-height: 1.12;
     letter-spacing: -2px;
 }
@@ -129,19 +224,29 @@
     color: #62d9ff;
 }
 
-/* Description */
+
+/* ==============================
+   DESCRIPTION
+============================== */
 
 .carwash-hero-text > p {
     max-width: 870px;
+
     margin-top: 25px;
     margin-bottom: 32px;
+
     font-family: Michroma;
+
     color: rgba(255, 255, 255, 0.82);
+
     font-size: 17px;
     line-height: 1.9;
 }
 
-/* Buttons */
+
+/* ==============================
+   BUTTONS
+============================== */
 
 .carwash-hero-buttons {
     display: flex;
@@ -151,21 +256,27 @@
 
 .carwash-btn {
     min-height: 54px;
+
     padding: 15px 24px;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     gap: 18px;
 
     border-radius: 7px;
 
     text-decoration: none;
+
     font-size: 18px;
     font-weight: 700;
+
     font-family: Xmind;
+
     transition: all 0.3s ease;
 }
+
 
 /* Primary button */
 
@@ -179,29 +290,39 @@
     background: #056594;
     border-color: #056594;
     color: #ffffff;
+
     transform: translateY(-3px);
 }
+
 
 /* Outline button */
 
 .carwash-btn-outline {
     background: rgba(255, 255, 255, 0.07);
+
     border: 1px solid rgba(255, 255, 255, 0.65);
+
     color: #ffffff;
 }
 
 .carwash-btn-outline:hover {
     background: #ffffff;
     border-color: #ffffff;
+
     color: #101820;
+
     transform: translateY(-3px);
 }
 
-/* Feature points */
+
+/* ==============================
+   FEATURE POINTS
+============================== */
 
 .carwash-hero-features {
     display: flex;
     flex-wrap: wrap;
+
     gap: 24px;
 
     margin-top: 35px;
@@ -210,9 +331,11 @@
 .hero-feature {
     display: flex;
     align-items: center;
+
     gap: 9px;
 
     color: rgba(255, 255, 255, 0.9);
+
     font-size: 13px;
 }
 
@@ -225,32 +348,101 @@
     justify-content: center;
 
     border-radius: 50%;
+
     background: rgba(98, 217, 255, 0.16);
 
     color: #62d9ff;
+
     font-size: 13px;
     font-weight: bold;
 }
 
-/* Bottom tagline */
+
+/* ==============================
+   BOTTOM TAGLINE
+============================== */
 
 .carwash-hero-bottom {
     display: flex;
     align-items: center;
+
     gap: 15px;
 
     margin-top: 65px;
 
     color: rgba(255, 255, 255, 0.75);
+
     font-size: 10px;
     font-weight: 700;
+
     letter-spacing: 3px;
 }
 
 .hero-bottom-line {
     width: 55px;
     height: 1px;
+
     background: #62d9ff;
+}
+
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 767px) {
+
+    .carwash-hero {
+        min-height: 100vh;
+        height: 680px;
+
+        background-position: center;
+    }
+
+    .carwash-hero-video {
+        object-position: center;
+    }
+
+    .carwash-hero-content {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+
+    .carwash-hero h1 {
+        font-size: 36px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+    .carwash-hero-text > p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .carwash-btn {
+        font-size: 15px;
+    }
+
+    .carwash-hero::after {
+        height: 120px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .carwash-hero h1 {
+        font-size: 29px;
+    }
+
+    .carwash-hero-buttons {
+        width: 100%;
+    }
+
+    .carwash-btn-primary {
+        width: 100%;
+    }
+
 }
 
 

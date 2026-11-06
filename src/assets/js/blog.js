@@ -21,7 +21,7 @@ const blogData = [
     category: "Finance",
     title: "GST for Car Wash Business in India (2026): The Complete Guide for Car Wash & Auto Detailing Owners",
     date: "November 05, 2026",
-    image: "assets/blog/blog-01.jpg",
+    image: "assets/blog/blog-01.png",
 
     content: String.raw`
 *Everything you need to know about GST registration, GST rates, invoicing, compliance, and record keeping—explained specifically for car wash and auto detailing businesses.*
@@ -1327,7 +1327,7 @@ Whether you continue using manual processes or adopt a digital solution like **V
     category: "Car Wash Business Growth",
     title: "Car Wash Management Software: The Smart Way to Automate and Grow Your Car Wash Business",
     date: "November 02, 2026",
-    image: "assets/blog/blog-02.jpg",
+    image: "assets/blog/blog-02.png",
 
     content: String.raw`
 
@@ -1570,7 +1570,7 @@ For businesses planning to grow, open new branches, or improve daily operations,
     category: "Appointment Scheduling",
     title: "10 Proven Ways to Reduce Booking Cancellations and No-Shows in Your Car Wash Business",
     date: "October 28, 2026",
-    image: "assets/blog/blog-03.jpg",
+    image: "assets/blog/blog-03.jpeg",
 
     content: String.raw`
 
@@ -2014,7 +2014,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn more about how VASHQ ca
     category: "Invoice Management",
     title: "Finding Old Car Wash Invoices Shouldn’t Take More Than a Few Seconds",
     date: "October 25, 2026",
-    image: "assets/blog/blog-04.jpg",
+    image: "assets/blog/blog-04.png",
 
     content: String.raw`
 
@@ -2273,7 +2273,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to explore how VASHQ can help si
     category: "Car Wash Industry Trends",
     title: "Are You Unsure When It’s the Right Time to Expand Your Car Wash Business?",
     date: "October 20, 2026",
-    image: "assets/blog/blog-05.jpg",
+    image: "assets/blog/blog-05.png",
 
     content: String.raw`
 
@@ -2536,7 +2536,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
     category: "Multi-Location Business Management",
     title: "How to Manage Different Service Prices Across Multiple Car Wash Branches",
     date: "October 18, 2026",
-    image: "assets/blog/blog-06.jpg",
+    image: "assets/blog/blog-06.png",
 
     content: String.raw`
 
@@ -3009,7 +3009,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
     category: "Seasonal Business Challenges",
     title: "How Monsoon Season Reduces Demand for Premium Car Detailing",
     date: "October 15, 2026",
-    image: "assets/blog/blog-07.jpg",
+    image: "assets/blog/blog-07.jpeg",
 
     content: String.raw`
 
@@ -3179,7 +3179,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
     category: "Workflow Management",
     title: "How to Reduce Customer Waiting Time at a Service Centre",
     date: "October 12, 2026",
-    image: "assets/blog/blog-08.jpg",
+    image: "assets/blog/blog-08.png",
 
     content: String.raw`
 
@@ -3644,7 +3644,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
     category: "Car Wash Risk Management",
     title: "How to Reduce Vehicle Damage Claims and Disputes During Service",
     date: "October 10, 2026",
-    image: "assets/blog/blog-09.jpg",
+    image: "assets/blog/blog-09.png",
 
     content: String.raw`
 
@@ -3951,7 +3951,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
     category: "Service Center Management",
     title: "How to Prevent Double-Booking at a Busy Service Center",
     date: "October 08, 2026",
-    image: "assets/blog/blog-10.jpg",
+    image: "assets/blog/blog-10.png",
 
     content: String.raw`
 
@@ -4283,7 +4283,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
     category: "Car Wash Operations",
     title: 'How to Track Vehicle Status So Customers Stop Calling to Ask, "Is It Ready Yet?"',
     date: "October 05, 2026",
-    image: "assets/blog/blog-11.jpg",
+    image: "assets/blog/blog-11.png",
 
     content: String.raw`
 
@@ -4561,7 +4561,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
     category: "Business Performance Analysis",
     title: "How to Track Which Services Are Actually Profitable (and Which Aren't)",
     date: "October 02, 2026",
-    image: "assets/blog/blog-12.jpg",
+    image: "assets/blog/blog-12.png",
 
     content: String.raw`
 
@@ -4812,7 +4812,7 @@ With VASHQ software, [car wash](https://home.vashq.com/) companies can organize 
     category: "Car Detailing & Maintenance",
     title: "Why Do We Love Shiny Cars? The Psychology of a Clean Vehicle",
     date: "October 01, 2026",
-    image: "assets/blog/blog-13.jpg",
+    image: "assets/blog/blog-13.jpeg",
 
     content: String.raw`
 
@@ -4928,7 +4928,7 @@ A shiny car may bring a customer through the door, but a consistently good exper
     category: "Car Care Center",
     title: "From Horse Carriages to Hatchbacks: How Vehicle Care Changed With Every Era",
     date: "September 28, 2026",
-    image: "assets/blog/blog-14.jpg",
+    image: "assets/blog/blog-14.jpeg",
 
     content: String.raw`
 
