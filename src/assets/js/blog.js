@@ -12,7 +12,6 @@
 
 const blogData = [
 
-    // BLOG 01
 
 // BLOG 01
 
@@ -5088,7 +5087,7 @@ From horse carriages to hatchbacks, the methods have changed. The need for good 
     category: "Car Detailing & Maintenance",
     title: "The Science of Dirt: Why Your Car Gets Dirty Faster Than You Think",
     date: "November 07, 2026",
-    image: "assets/blog/blog-15.jpg",
+    image: "assets/blog/blog-15.png",
 
     content: String.raw`
 
