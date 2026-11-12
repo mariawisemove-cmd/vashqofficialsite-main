@@ -25,1252 +25,574 @@
     <link rel="manifest" href="./assets/images/favicon_io/site.webmanifest">
     <link rel="stylesheet" href="./assets/scss/style.scss">
     <style>
-        /* =====================================================
-   VASHQ PREMIUM REFUND POLICY
-===================================================== */
-
-        .vrp-section {
-            --vrp-blue: #1769ff;
-            --vrp-dark: #0b3d91;
-            --vrp-heading: #172033;
-            --vrp-text: #68768b;
-
-            position: relative;
-            width: 100%;
-            background: #fff;
-            overflow: hidden;
-            isolation: isolate;
-            font-family: 'DM Sans', sans-serif;
-            color: var(--vrp-text);
-        }
-
-        .vrp-section * {
-            box-sizing: border-box;
-        }
-
-        .vrp-container {
-            width: 100%;
-            max-width: 1240px;
-            margin: 0 auto;
-            padding-left: 25px;
-            padding-right: 25px;
-        }
-
-        /* BACKGROUND */
-
-        .vrp-grid-bg {
-            position: absolute;
-            inset: 0;
-            z-index: -2;
-            pointer-events: none;
-            opacity: .3;
-            background-image: radial-gradient(#8ab5ff 1px, transparent 1px);
-            background-size: 32px 32px;
-            mask-image: linear-gradient(to bottom, black, transparent 75%);
-        }
-
-        .vrp-bg-orb {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            filter: blur(100px);
-            z-index: -1;
-            pointer-events: none;
-            opacity: .12;
-            animation: vrp-orb-float 12s ease-in-out infinite alternate;
-        }
-
-        .vrp-orb-one {
-            background: #1769ff;
-            top: -220px;
-            left: -200px;
-        }
-
-        .vrp-orb-two {
-            background: #73aaff;
-            top: 400px;
-            right: -350px;
-            animation-delay: -5s;
-        }
-
-        @keyframes vrp-orb-float {
-            to {
-                transform: translate(50px, 40px) scale(1.2);
-            }
-        }
-
-        /* =====================================================
-   HERO
-===================================================== */
-
-        .vrp-hero {
-            position: relative;
-            padding: 115px 0 105px;
-            background: linear-gradient(120deg,
-                    #f5f9ff 0%,
-                    #edf4ff 50%,
-                    #ffffff 100%);
-            border-bottom: 1px solid #e8effa;
-        }
-
-        .vrp-hero>.vrp-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 50px;
-        }
-
-        .vrp-hero-content {
-            max-width: 650px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .vrp-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 16px 8px 9px;
-            background: #fff;
-            border: 1px solid #dce8ff;
-            border-radius: 50px;
-            color: var(--vrp-blue);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 1.8px;
-            margin-bottom: 27px;
-            box-shadow: 0 5px 20px rgba(23, 105, 255, .05);
-        }
-
-        .vrp-eyebrow-icon {
-            width: 29px;
-            height: 29px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            color: white;
-            background: var(--vrp-blue);
-            font-size: 14px;
-        }
-
-        .vrp-hero h1 {
-            font-family: 'Outfit', sans-serif;
-            font-size: clamp(44px, 5.5vw, 72px);
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -2.8px;
-            color: var(--vrp-heading);
-            margin: 0 0 22px;
-        }
-
-        .vrp-hero h1 span {
-            background: linear-gradient(110deg, #1769ff, #0b3d91);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .vrp-hero-content>p {
-            max-width: 550px;
-            font-size: 16px;
-            line-height: 1.9;
-            color: #718096;
-            margin-bottom: 30px;
-        }
-
-        .vrp-hero-meta {
-            display: flex;
-            align-items: center;
-            gap: 17px;
-            flex-wrap: wrap;
-            font-size: 12px;
-            font-weight: 600;
-            color: #62738b;
-        }
-
-        .vrp-hero-meta span:not(.vrp-meta-divider) {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .vrp-hero-meta i {
-            color: var(--vrp-blue);
-            font-size: 15px;
-        }
-
-        .vrp-meta-divider {
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background: #a8b9d1;
-        }
-
-        /* HERO VISUAL */
-
-        .vrp-hero-visual {
-            width: 360px;
-            height: 350px;
-            flex-shrink: 0;
-            position: relative;
-            display: grid;
-            place-items: center;
-        }
-
-        .vrp-payment-circle {
-            position: relative;
-            z-index: 2;
-            width: 165px;
-            height: 165px;
-            border-radius: 45px;
-            display: grid;
-            place-items: center;
-            background: linear-gradient(145deg, #4a91ff, #0b3d91);
-            box-shadow: 0 25px 55px rgba(23, 105, 255, .27);
-            transform: rotate(-8deg);
-            animation: vrp-payment-float 4s ease-in-out infinite;
-        }
-
-        .vrp-payment-icon {
-            color: white;
-            font-size: 70px;
-            transform: rotate(8deg);
-        }
-
-        .vrp-check-icon {
-            position: absolute;
-            width: 47px;
-            height: 47px;
-            display: grid;
-            place-items: center;
-            right: -13px;
-            bottom: -13px;
-            border-radius: 50%;
-            background: #fff;
-            color: #1769ff;
-            border: 4px solid #e6f0ff;
-            font-size: 23px;
-            box-shadow: 0 5px 20px rgba(23, 105, 255, .18);
-        }
-
-        @keyframes vrp-payment-float {
-
-            0%,
-            100% {
-                transform: rotate(-8deg) translateY(0);
-            }
-
-            50% {
-                transform: rotate(-3deg) translateY(-13px);
-            }
-        }
-
-        .vrp-visual-ring {
-            position: absolute;
-            border: 1px solid rgba(23, 105, 255, .16);
-            border-radius: 50%;
-        }
-
-        .vrp-ring-one {
-            width: 250px;
-            height: 250px;
-            animation: vrp-ring-pulse 5s ease-in-out infinite;
-        }
-
-        .vrp-ring-two {
-            width: 320px;
-            height: 320px;
-            border-style: dashed;
-            animation: vrp-rotate 35s linear infinite;
-        }
-
-        @keyframes vrp-ring-pulse {
-            50% {
-                transform: scale(1.08);
-                opacity: .4;
-            }
-        }
-
-        @keyframes vrp-rotate {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* FLOATING CARDS */
-
-        .vrp-float-card {
-            position: absolute;
-            z-index: 3;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 13px 17px;
-            background: rgba(255, 255, 255, .92);
-            backdrop-filter: blur(15px);
-            border: 1px solid #e3edff;
-            border-radius: 15px;
-            box-shadow: 0 12px 35px rgba(23, 60, 120, .09);
-            animation: vrp-card-float 4s ease-in-out infinite;
-        }
-
-        .vrp-float-top {
-            top: 30px;
-            right: -5px;
-        }
-
-        .vrp-float-bottom {
-            bottom: 35px;
-            left: -20px;
-            animation-delay: -2s;
-        }
-
-        .vrp-float-icon {
-            width: 38px;
-            height: 38px;
-            display: grid;
-            place-items: center;
-            color: white;
-            background: linear-gradient(135deg, #1769ff, #0b3d91);
-            border-radius: 11px;
-            font-size: 17px;
-        }
-
-        .vrp-float-card strong,
-        .vrp-float-card small {
-            display: block;
-        }
-
-        .vrp-float-card strong {
-            color: #172033;
-            font-size: 12px;
-            margin-bottom: 3px;
-        }
-
-        .vrp-float-card small {
-            color: #8592a5;
-            font-size: 10px;
-        }
-
-        @keyframes vrp-card-float {
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .vrp-orbit-dot {
-            position: absolute;
-            width: 11px;
-            height: 11px;
-            background: #1769ff;
-            border-radius: 50%;
-            top: 70px;
-            left: 50px;
-            box-shadow: 0 0 20px #1769ff;
-        }
-
-        .vrp-dot-two {
-            top: auto;
-            left: auto;
-            right: 30px;
-            bottom: 75px;
-            width: 8px;
-            height: 8px;
-            background: #8bb8ff;
-        }
-
-        /* =====================================================
-   MAIN LAYOUT
-===================================================== */
-
-        .vrp-main {
-            display: grid;
-            grid-template-columns: 270px minmax(0, 1fr);
-            gap: 40px;
-            align-items: start;
-            padding-top: 75px;
-            padding-bottom: 100px;
-        }
-
-        /* SIDEBAR */
-
-        .vrp-sidebar {
-            position: sticky;
-            top: 30px;
-        }
-
-        .vrp-sidebar-card {
-            border: 1px solid #e7edf7;
-            border-radius: 20px;
-            background: #fff;
-            padding: 22px 16px;
-            box-shadow: 0 10px 40px rgba(25, 65, 120, .045);
-        }
-
-        .vrp-sidebar-heading {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 3px 9px 18px;
-            border-bottom: 1px solid #edf1f7;
-            color: #172033;
-            font-size: 14px;
-            font-weight: 800;
-        }
-
-        .vrp-sidebar-heading i {
-            color: var(--vrp-blue);
-            font-size: 18px;
-        }
-
-        .vrp-toc {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            padding: 15px 0;
-        }
-
-        .vrp-toc-link {
-            display: flex;
-            align-items: center;
-            gap: 11px;
-            padding: 10px 9px;
-            text-decoration: none;
-            border-radius: 9px;
-            color: #77869a;
-            font-size: 12px;
-            font-weight: 600;
-            transition: all .3s ease;
-        }
-
-        .vrp-toc-link span {
-            font-size: 10px;
-            font-weight: 800;
-            color: #a4b1c3;
-            transition: color .3s ease;
-        }
-
-        .vrp-toc-link:hover,
-        .vrp-toc-link.active {
-            color: var(--vrp-blue);
-            background: #eff5ff;
-        }
-
-        .vrp-toc-link.active span {
-            color: var(--vrp-blue);
-        }
-
-        /* SIDEBAR HELP */
-
-        .vrp-sidebar-help {
-            margin-top: 12px;
-            padding: 18px;
-            border-radius: 14px;
-            background: linear-gradient(145deg, #f1f6ff, #e8f1ff);
-        }
-
-        .vrp-help-icon {
-            width: 35px;
-            height: 35px;
-            display: grid;
-            place-items: center;
-            border-radius: 10px;
-            background: #fff;
-            color: var(--vrp-blue);
-            margin-bottom: 12px;
-            font-size: 17px;
-        }
-
-        .vrp-sidebar-help strong {
-            display: block;
-            color: #172033;
-            font-size: 13px;
-        }
-
-        .vrp-sidebar-help p {
-            color: #718096;
-            font-size: 11px;
-            line-height: 1.7;
-            margin: 7px 0 12px;
-        }
-
-        .vrp-sidebar-help a {
-            color: var(--vrp-blue);
-            font-size: 11px;
-            font-weight: 800;
-            text-decoration: none;
-        }
-
-        /* =====================================================
-   POLICY CARDS
-===================================================== */
-
-        .vrp-policy-content {
-            min-width: 0;
-        }
-
-        .vrp-policy-card {
-            position: relative;
-            padding: 35px 38px;
-            margin-bottom: 22px;
-            border: 1px solid #e9eef6;
-            border-radius: 19px;
-            background: #fff;
-            box-shadow: 0 8px 30px rgba(30, 65, 115, .035);
-            scroll-margin-top: 35px;
-
-            opacity: 0;
-            transform: translateY(25px);
-            transition:
-                opacity .7s ease,
-                transform .7s cubic-bezier(.2, .8, .2, 1),
-                box-shadow .35s ease,
-                border-color .35s ease;
-        }
-
-        .vrp-policy-card.vrp-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .vrp-policy-card:hover {
-            border-color: #d7e5ff;
-            box-shadow: 0 15px 40px rgba(23, 105, 255, .065);
-        }
-
-        .vrp-card-heading {
-            display: flex;
-            align-items: center;
-            gap: 17px;
-            margin-bottom: 25px;
-        }
-
-        .vrp-section-number {
-            flex-shrink: 0;
-            width: 48px;
-            height: 48px;
-            display: grid;
-            place-items: center;
-            border-radius: 14px;
-            color: var(--vrp-blue);
-            background: #eff5ff;
-            font-family: 'Outfit', sans-serif;
-            font-size: 17px;
-            font-weight: 800;
-            transition: all .35s ease;
-        }
-
-        .vrp-policy-card:hover .vrp-section-number {
-            background: var(--vrp-blue);
-            color: white;
-            transform: rotate(-5deg);
-        }
-
-        .vrp-card-label {
-            display: block;
-            color: var(--vrp-blue);
-            font-size: 9px;
-            font-weight: 800;
-            letter-spacing: 1.6px;
-            margin-bottom: 5px;
-        }
-
-        .vrp-card-heading h2 {
-            font-family: 'Outfit', sans-serif;
-            color: var(--vrp-heading);
-            font-size: 23px;
-            font-weight: 700;
-            letter-spacing: -.5px;
-            margin: 0;
-        }
-
-        .vrp-policy-card>p {
-            color: #6e7b8f;
-            font-size: 13px;
-            line-height: 1.95;
-            margin-bottom: 15px;
-        }
-
-        .vrp-policy-card p.mb-0 {
-            margin-bottom: 0;
-        }
-
-        /* NOTICE */
-
-        .vrp-notice {
-            display: flex;
-            align-items: flex-start;
-            gap: 13px;
-            padding: 17px 19px;
-            margin-top: 22px;
-            border: 1px solid #dce9ff;
-            border-left: 3px solid var(--vrp-blue);
-            border-radius: 10px;
-            background: #f4f8ff;
-        }
-
-        .vrp-notice>i {
-            flex-shrink: 0;
-            color: var(--vrp-blue);
-            font-size: 17px;
-            margin-top: 2px;
-        }
-
-        .vrp-notice p {
-            color: #526985;
-            font-size: 12px;
-            line-height: 1.8;
-            margin: 0;
-        }
-
-        .vrp-warning-notice {
-            background: #f4f8ff;
-            border-color: #dce9ff;
-            border-left-color: #1769ff;
-        }
-
-        .vrp-warning-notice>i {
-            color: #1769ff;
-        }
-
-        /* HIGHLIGHT BOX */
-
-        .vrp-highlight-box {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            padding: 20px;
-            margin-bottom: 23px;
-            border: 1px solid #dce9ff;
-            border-radius: 14px;
-            background: linear-gradient(110deg, #eff5ff, #f9fbff);
-        }
-
-        .vrp-highlight-icon {
-            width: 48px;
-            height: 48px;
-            flex-shrink: 0;
-            display: grid;
-            place-items: center;
-            border-radius: 13px;
-            background: #1769ff;
-            color: white;
-            font-size: 21px;
-        }
-
-        .vrp-highlight-box strong {
-            display: block;
-            color: #172033;
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-
-        .vrp-highlight-box p {
-            color: #718096;
-            font-size: 12px;
-            line-height: 1.7;
-            margin: 0;
-        }
-
-        /* REASONS GRID */
-
-        .vrp-reason-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 11px;
-            margin-top: 20px;
-        }
-
-        .vrp-reason-item {
-            display: flex;
-            align-items: center;
-            gap: 11px;
-            padding: 14px;
-            border: 1px solid #edf1f8;
-            border-radius: 10px;
-            background: #fbfcff;
-            color: #66758a;
-            font-size: 11px;
-            font-weight: 600;
-            line-height: 1.5;
-            transition: all .3s ease;
-        }
-
-        .vrp-reason-item:hover {
-            background: #eff5ff;
-            border-color: #cfe0ff;
-            transform: translateY(-3px);
-        }
-
-        .vrp-reason-item i {
-            color: #1769ff;
-            font-size: 17px;
-            flex-shrink: 0;
-        }
-
-        /* =====================================================
-   TRIAL VISUAL
-===================================================== */
-
-        .vrp-trial-visual {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            padding: 25px 10px 12px;
-        }
-
-        .vrp-trial-icon {
-            width: 55px;
-            height: 55px;
-            display: grid;
-            place-items: center;
-            border-radius: 15px;
-            background: #eff5ff;
-            color: #1769ff;
-            border: 1px solid #dce9ff;
-            font-size: 22px;
-            transition: all .3s ease;
-        }
-
-        .vrp-trial-icon:hover {
-            color: #fff;
-            background: #1769ff;
-            transform: translateY(-5px);
-        }
-
-        .vrp-trial-arrow {
-            color: #a5bde0;
-            font-size: 20px;
-        }
-
-        .vrp-trial-labels {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-bottom: 25px;
-        }
-
-        .vrp-trial-labels span {
-            color: #738198;
-            font-size: 10px;
-            font-weight: 700;
-        }
-
-        /* =====================================================
-   CANCELLATION
-===================================================== */
-
-        .vrp-cancellation-box {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            padding: 20px;
-            margin-top: 20px;
-            border: 1px solid #e4edfc;
-            border-radius: 13px;
-            background: #f8faff;
-        }
-
-        .vrp-cancel-icon {
-            width: 45px;
-            height: 45px;
-            flex-shrink: 0;
-            display: grid;
-            place-items: center;
-            border-radius: 12px;
-            background: #eaf2ff;
-            color: #1769ff;
-            font-size: 20px;
-        }
-
-        .vrp-cancellation-box strong {
-            display: block;
-            color: #26364c;
-            font-size: 13px;
-            margin-bottom: 7px;
-        }
-
-        .vrp-cancellation-box p {
-            color: #718096;
-            font-size: 12px;
-            line-height: 1.8;
-            margin: 0;
-        }
-
-        /* PAYMENT VISUAL */
-
-        .vrp-payment-visual {
-            position: relative;
-            width: 100%;
-            height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px 0 20px;
-            border-radius: 15px;
-            background: radial-gradient(circle, #eaf2ff, #f8faff 65%, transparent);
-        }
-
-        .vrp-payment-symbol {
-            width: 65px;
-            height: 65px;
-            display: grid;
-            place-items: center;
-            border-radius: 17px;
-            background: linear-gradient(145deg, #4a91ff, #0b3d91);
-            color: white;
-            font-size: 29px;
-            box-shadow: 0 12px 25px rgba(23, 105, 255, .22);
-            animation: vrp-symbol-float 3s ease-in-out infinite;
-        }
-
-        .vrp-payment-check {
-            position: absolute;
-            margin-left: 90px;
-            margin-top: 45px;
-            width: 36px;
-            height: 36px;
-            display: grid;
-            place-items: center;
-            background: #fff;
-            color: #1769ff;
-            border: 1px solid #dce9ff;
-            border-radius: 50%;
-            box-shadow: 0 5px 15px rgba(23, 105, 255, .12);
-            animation: vrp-check-pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes vrp-symbol-float {
-            50% {
-                transform: translateY(-8px);
-            }
-        }
-
-        @keyframes vrp-check-pulse {
-            50% {
-                transform: scale(1.12);
-            }
-        }
-
-        /* =====================================================
-   CONTACT
-===================================================== */
-
-        .vrp-contact-card {
-            background: linear-gradient(145deg, #fff, #f5f9ff);
-            border-color: #dce9ff;
-        }
-
-        .vrp-company-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 20px;
-            margin-top: 20px;
-            background: white;
-            border: 1px solid #e5edfa;
-            border-radius: 13px;
-        }
-
-        .vrp-company-icon {
-            width: 48px;
-            height: 48px;
-            flex-shrink: 0;
-            display: grid;
-            place-items: center;
-            border-radius: 13px;
-            background: #eff5ff;
-            color: var(--vrp-blue);
-            font-size: 20px;
-        }
-
-        .vrp-company-info strong,
-        .vrp-company-info a {
-            display: block;
-        }
-
-        .vrp-company-info strong {
-            color: #172033;
-            font-size: 13px;
-            margin-bottom: 7px;
-        }
-
-        .vrp-company-info a {
-            color: var(--vrp-blue);
-            text-decoration: none;
-            font-size: 12px;
-            overflow-wrap: anywhere;
-        }
-
-        .vrp-company-info a i {
-            margin-right: 5px;
-        }
-
-        .vrp-contact-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 13px 23px;
-            margin-top: 20px;
-            border-radius: 50px;
-            background: linear-gradient(120deg, #1769ff, #0b3d91);
-            color: white;
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: 700;
-            box-shadow: 0 8px 20px rgba(23, 105, 255, .18);
-            transition: all .3s ease;
-        }
-
-        .vrp-contact-btn:hover {
-            color: white;
-            transform: translateY(-4px);
-            box-shadow: 0 13px 25px rgba(23, 105, 255, .28);
-        }
-
-        /* BOTTOM NAVIGATION */
-
-        .vrp-bottom-nav {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 15px;
-            margin-top: 35px;
-        }
-
-        .vrp-bottom-nav>a {
-            display: flex;
-            align-items: center;
-            gap: 13px;
-            padding: 19px;
-            border: 1px solid #e5ecf6;
-            border-radius: 13px;
-            text-decoration: none;
-            background: #fff;
-            transition: all .3s ease;
-        }
-
-        .vrp-bottom-nav>a:hover {
-            border-color: #cbdfff;
-            background: #f5f9ff;
-            transform: translateY(-4px);
-        }
-
-        .vrp-bottom-nav>a>i:first-child {
-            color: var(--vrp-blue);
-            font-size: 22px;
-        }
-
-        .vrp-bottom-nav>a>i:last-child {
-            margin-left: auto;
-            color: #8ba0bd;
-        }
-
-        .vrp-bottom-nav span small,
-        .vrp-bottom-nav span strong {
-            display: block;
-        }
-
-        .vrp-bottom-nav span small {
-            color: #9aa8bb;
-            font-size: 9px;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        .vrp-bottom-nav span strong {
-            color: #27364b;
-            font-size: 12px;
-        }
-
-        /* BACK TO TOP */
-
-        .vrp-back-top {
-            position: fixed;
-            right: 25px;
-            bottom: 25px;
-            width: 45px;
-            height: 45px;
-            display: grid;
-            place-items: center;
-            border: 0;
-            border-radius: 13px;
-            background: linear-gradient(135deg, #1769ff, #0b3d91);
-            color: white;
-            font-size: 19px;
-            cursor: pointer;
-            z-index: 999;
-            box-shadow: 0 8px 25px rgba(23, 105, 255, .25);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(15px);
-            transition: all .3s ease;
-        }
-
-        .vrp-back-top.vrp-show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .vrp-back-top:hover {
-            transform: translateY(-5px);
-        }
-
-        /* =====================================================
-   RESPONSIVE
-===================================================== */
-
-        @media (max-width: 991px) {
-
-            .vrp-hero {
-                padding: 85px 0 75px;
-            }
-
-            .vrp-hero>.vrp-container {
-                gap: 15px;
-            }
-
-            .vrp-hero-visual {
-                width: 280px;
-                transform: scale(.85);
-            }
-
-            .vrp-main {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                padding-top: 50px;
-            }
-
-            .vrp-sidebar {
-                position: relative;
-                top: 0;
-            }
-
-            .vrp-sidebar-card {
-                padding: 20px;
-            }
-
-            .vrp-toc {
-                display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 5px;
-            }
-
-            .vrp-sidebar-help {
-                display: none;
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            .vrp-container {
-                padding-left: 18px;
-                padding-right: 18px;
-            }
-
-            .vrp-hero {
-                padding: 70px 0 55px;
-            }
-
-            .vrp-hero>.vrp-container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .vrp-hero-content {
-                width: 100%;
-            }
-
-            .vrp-eyebrow {
-                font-size: 9px;
-                margin-bottom: 20px;
-            }
-
-            .vrp-hero h1 {
-                font-size: 43px;
-                letter-spacing: -1.8px;
-            }
-
-            .vrp-hero-content>p {
-                font-size: 13px;
-                line-height: 1.8;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .vrp-hero-meta {
-                justify-content: center;
-                gap: 10px;
-                font-size: 10px;
-            }
-
-            .vrp-hero-visual {
-                width: 100%;
-                max-width: 300px;
-                height: 260px;
-                transform: scale(.85);
-                margin-top: -5px;
-            }
-
-            .vrp-main {
-                padding-top: 35px;
-                padding-bottom: 60px;
-                gap: 22px;
-            }
-
-            .vrp-sidebar-card {
-                padding: 15px 12px;
-                border-radius: 15px;
-            }
-
-            .vrp-toc {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .vrp-toc-link {
-                gap: 7px;
-                padding: 9px 6px;
-                font-size: 10px;
-            }
-
-            .vrp-toc-link span {
-                font-size: 9px;
-            }
-
-            .vrp-policy-card {
-                padding: 23px 19px;
-                margin-bottom: 15px;
-                border-radius: 15px;
-            }
-
-            .vrp-card-heading {
-                gap: 12px;
-                margin-bottom: 20px;
-            }
-
-            .vrp-section-number {
-                width: 40px;
-                height: 40px;
-                font-size: 14px;
-                border-radius: 11px;
-            }
-
-            .vrp-card-heading h2 {
-                font-size: 19px;
-            }
-
-            .vrp-card-label {
-                font-size: 8px;
-            }
-
-            .vrp-policy-card>p {
-                font-size: 12px;
-            }
-
-            .vrp-reason-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .vrp-reason-item {
-                font-size: 11px;
-            }
-
-            .vrp-trial-visual {
-                gap: 8px;
-            }
-
-            .vrp-trial-icon {
-                width: 43px;
-                height: 43px;
-                font-size: 18px;
-            }
-
-            .vrp-trial-arrow {
-                font-size: 15px;
-            }
-
-            .vrp-trial-labels {
-                gap: 15px;
-            }
-
-            .vrp-trial-labels span {
-                font-size: 9px;
-            }
-
-            .vrp-highlight-box {
-                padding: 15px;
-            }
-
-            .vrp-highlight-box strong {
-                font-size: 12px;
-            }
-
-            .vrp-highlight-box p {
-                font-size: 11px;
-            }
-
-            .vrp-notice {
-                padding: 14px;
-            }
-
-            .vrp-notice p {
-                font-size: 11px;
-            }
-
-            .vrp-company-info {
-                padding: 15px;
-            }
-
-            .vrp-company-info strong {
-                font-size: 11px;
-            }
-
-            .vrp-company-info a {
-                font-size: 10px;
-            }
-
-            .vrp-bottom-nav {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .vrp-bottom-nav>a {
-                padding: 15px;
-            }
-
-            .vrp-back-top {
-                width: 40px;
-                height: 40px;
-                right: 15px;
-                bottom: 15px;
-            }
-        }
-
-        /* REDUCED MOTION */
-
-        @media (prefers-reduced-motion: reduce) {
-
-            .vrp-section *,
-            .vrp-section *::before,
-            .vrp-section *::after {
-                animation: none !important;
-                transition-duration: .01ms !important;
-                scroll-behavior: auto !important;
-            }
-
-            .vrp-policy-card {
-                opacity: 1;
-                transform: none;
-            }
-        }
-
-
-
-
-
-
+       
+/* ==========================================
+   VASHQ REFUND POLICY
+   SIMPLE WHITE + BLUE DESIGN
+========================================== */
+
+.vrp-section {
+    --vrp-blue: #1769ff;
+    --vrp-dark: #0b3d91;
+    --vrp-heading: #172033;
+    --vrp-text: #536174;
+    --vrp-border: #e5eaf2;
+
+    width: 100%;
+    background: #fff;
+    color: var(--vrp-text);
+    font-family: Arial, sans-serif;
+}
+
+.vrp-section *,
+.vrp-section *::before,
+.vrp-section *::after {
+    box-sizing: border-box;
+}
+
+.vrp-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* HERO */
+
+.vrp-hero {
+    padding: 75px 0 45px;
+    background: #fff;
+    border-bottom: 1px solid var(--vrp-border);
+}
+
+.vrp-hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.vrp-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 7px 14px;
+    border-radius: 30px;
+    background: #eff5ff;
+    color: var(--vrp-blue);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.vrp-hero h1 {
+    margin: 0 0 16px;
+    color: var(--vrp-heading);
+    font-size: clamp(34px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+}
+
+.vrp-hero h1 span {
+    color: var(--vrp-blue);
+}
+
+.vrp-hero-content > p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--vrp-text);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* MAIN CONTENT */
+
+.vrp-main {
+    display: block;
+    padding-top: 45px;
+    padding-bottom: 75px;
+}
+
+.vrp-policy-content {
+    width: 100%;
+}
+
+/* POLICY CARDS */
+
+.vrp-policy-card {
+    padding: 28px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--vrp-border);
+    scroll-margin-top: 100px;
+}
+
+.vrp-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.vrp-section-number {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #eff5ff;
+    color: var(--vrp-blue);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.vrp-card-label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--vrp-blue);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.vrp-card-heading h2 {
+    margin: 0;
+    color: var(--vrp-heading);
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.vrp-policy-card > p {
+    margin: 0 0 14px;
+    color: var(--vrp-text);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.vrp-policy-card > p:last-child {
+    margin-bottom: 0;
+}
+
+.vrp-policy-card p.mb-0 {
+    margin-bottom: 0;
+}
+
+/* NOTICE */
+
+.vrp-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 17px;
+    margin-top: 20px;
+    border: 1px solid #dce8ff;
+    border-radius: 9px;
+    background: #f5f8ff;
+}
+
+.vrp-notice > i {
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: var(--vrp-blue);
+    font-size: 17px;
+}
+
+.vrp-notice p {
+    margin: 0;
+    color: var(--vrp-text);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.vrp-warning-notice {
+    background: #f5f8ff;
+    border-color: #dce8ff;
+}
+
+/* HIGHLIGHT BOX */
+
+.vrp-highlight-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    margin-bottom: 20px;
+    border: 1px solid #dce8ff;
+    border-radius: 10px;
+    background: #f5f8ff;
+}
+
+.vrp-highlight-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    background: var(--vrp-blue);
+    color: #fff;
+    font-size: 20px;
+}
+
+.vrp-highlight-box strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--vrp-heading);
+    font-size: 14px;
+}
+
+.vrp-highlight-box p {
+    margin: 0;
+    color: var(--vrp-text);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* REASONS GRID */
+
+.vrp-reason-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.vrp-reason-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px;
+    border: 1px solid var(--vrp-border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--vrp-text);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.vrp-reason-item i {
+    flex-shrink: 0;
+    color: var(--vrp-blue);
+    font-size: 16px;
+}
+
+/* TRIAL VISUAL */
+
+.vrp-trial-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 20px 10px 12px;
+}
+
+.vrp-trial-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #dce8ff;
+    border-radius: 10px;
+    background: #eff5ff;
+    color: var(--vrp-blue);
+    font-size: 20px;
+}
+
+.vrp-trial-arrow {
+    color: #9aabc3;
+    font-size: 18px;
+}
+
+.vrp-trial-labels {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 22px;
+}
+
+.vrp-trial-labels span {
+    color: var(--vrp-text);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* CANCELLATION */
+
+.vrp-cancellation-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px;
+    margin-top: 18px;
+    border: 1px solid var(--vrp-border);
+    border-radius: 9px;
+    background: #f8faff;
+}
+
+.vrp-cancel-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    background: #eff5ff;
+    color: var(--vrp-blue);
+    font-size: 19px;
+}
+
+.vrp-cancellation-box strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--vrp-heading);
+    font-size: 14px;
+}
+
+.vrp-cancellation-box p {
+    margin: 0;
+    color: var(--vrp-text);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* PAYMENT VISUAL */
+
+.vrp-payment-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px;
+    margin-bottom: 18px;
+    border-radius: 9px;
+    background: #f5f8ff;
+}
+
+.vrp-payment-symbol {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--vrp-blue);
+    color: #fff;
+    font-size: 22px;
+}
+
+.vrp-payment-check {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #dce8ff;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--vrp-blue);
+}
+
+/* CONTACT */
+
+.vrp-contact-card {
+    border-bottom: 0;
+}
+
+.vrp-company-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px;
+    margin-top: 18px;
+    border: 1px solid var(--vrp-border);
+    border-radius: 9px;
+    background: #fff;
+}
+
+.vrp-company-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    background: #eff5ff;
+    color: var(--vrp-blue);
+    font-size: 19px;
+}
+
+.vrp-company-info strong,
+.vrp-company-info a {
+    display: block;
+}
+
+.vrp-company-info strong {
+    margin-bottom: 6px;
+    color: var(--vrp-heading);
+    font-size: 14px;
+}
+
+.vrp-company-info a {
+    color: var(--vrp-blue);
+    font-size: 13px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.vrp-company-info a i {
+    margin-right: 5px;
+}
+
+.vrp-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 19px;
+    margin-top: 18px;
+    border-radius: 7px;
+    background: var(--vrp-blue);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.vrp-contact-btn:hover {
+    background: var(--vrp-dark);
+    color: #fff;
+}
+
+/* BOTTOM NAVIGATION */
+
+.vrp-bottom-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 35px;
+}
+
+.vrp-bottom-nav > a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 17px;
+    border: 1px solid var(--vrp-border);
+    border-radius: 9px;
+    background: #fff;
+    text-decoration: none;
+}
+
+.vrp-bottom-nav > a > i:first-child {
+    color: var(--vrp-blue);
+    font-size: 21px;
+}
+
+.vrp-bottom-nav > a > i:last-child {
+    margin-left: auto;
+    color: #8998ad;
+}
+
+.vrp-bottom-nav span small,
+.vrp-bottom-nav span strong {
+    display: block;
+}
+
+.vrp-bottom-nav span small {
+    margin-bottom: 5px;
+    color: #8491a4;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.vrp-bottom-nav span strong {
+    color: var(--vrp-heading);
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .vrp-container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .vrp-hero {
+        padding: 55px 0 35px;
+    }
+
+    .vrp-hero h1 {
+        font-size: 35px;
+        letter-spacing: -1px;
+    }
+
+    .vrp-hero-content > p {
+        font-size: 13px;
+    }
+
+    .vrp-main {
+        padding-top: 25px;
+        padding-bottom: 50px;
+    }
+
+    .vrp-policy-card {
+        padding: 23px 0;
+    }
+
+    .vrp-card-heading {
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .vrp-section-number {
+        width: 37px;
+        height: 37px;
+        font-size: 12px;
+    }
+
+    .vrp-card-heading h2 {
+        font-size: 18px;
+    }
+
+    .vrp-policy-card > p {
+        font-size: 13px;
+    }
+
+    .vrp-reason-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vrp-trial-visual {
+        gap: 10px;
+    }
+
+    .vrp-trial-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    .vrp-trial-arrow {
+        font-size: 14px;
+    }
+
+    .vrp-trial-labels {
+        gap: 18px;
+    }
+
+    .vrp-trial-labels span {
+        font-size: 9px;
+    }
+
+    .vrp-highlight-box,
+    .vrp-cancellation-box,
+    .vrp-company-info {
+        padding: 14px;
+    }
+
+    .vrp-bottom-nav {
+        grid-template-columns: 1fr;
+    }
+}
 
         #page-loader {
             position: fixed;
@@ -1533,6 +855,7 @@
         </div>
 
     </div>
+
     <script>
         (() => {
             const hide = () => {
@@ -1546,6 +869,7 @@
             window.addEventListener('pageshow', (e) => { if (e.persisted) hide(); });
         })();
     </script>
+
     <nav class="navbar navbar-expand-lg px-3">
 
         <a class="navbar-brand d-inline-flex align-items-center lh-1" href="/">
@@ -1670,542 +994,311 @@
     </div>
 
 
-    <section class="vrp-section" id="refund-policy">
+    
+<section class="vrp-section" id="refund-policy">
 
-        <!-- BACKGROUND -->
-        <div class="vrp-bg-orb vrp-orb-one"></div>
-        <div class="vrp-bg-orb vrp-orb-two"></div>
-        <div class="vrp-grid-bg"></div>
+    <!-- HERO -->
+    <div class="vrp-hero">
+        <div class="vrp-container">
 
+            <div class="vrp-hero-content">
 
-        <!-- HERO -->
-        <div class="vrp-hero">
+                <h1>
+                    Refund <span>Policy</span>
+                </h1>
 
-            <div class="vrp-container">
-
-                <div class="vrp-hero-content">
-
-                    <h1>
-                        Clear Policies.<br>
-                        <span>Transparent Payments.</span>
-                    </h1>
-
-                    <p>
-                        Everything you need to know about subscriptions,
-                        cancellations, refunds, and payment-related matters
-                        when using VASHQ.
-                    </p>
-
-                    <div class="vrp-hero-meta">
-
-                        <span>
-                            <i class="bi bi-shield-check"></i>
-                            Billing Policy
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- HERO VISUAL -->
-                <div class="vrp-hero-visual">
-
-                    <div class="vrp-visual-ring vrp-ring-one"></div>
-                    <div class="vrp-visual-ring vrp-ring-two"></div>
-
-                    <div class="vrp-payment-circle">
-
-                        <div class="vrp-payment-icon">
-                            <i class="bi bi-wallet2"></i>
-                        </div>
-
-                        <div class="vrp-check-icon">
-                            <i class="bi bi-check-lg"></i>
-                        </div>
-
-                    </div>
-
-
-                    <div class="vrp-float-card vrp-float-top">
-
-                        <span class="vrp-float-icon">
-                            <i class="bi bi-credit-card"></i>
-                        </span>
-
-                        <div>
-                            <strong>Secure Payments</strong>
-                            <small>Payment transparency</small>
-                        </div>
-
-                    </div>
-
-
-                    <div class="vrp-float-card vrp-float-bottom">
-
-                        <span class="vrp-float-icon">
-                            <i class="bi bi-arrow-repeat"></i>
-                        </span>
-
-                        <div>
-                            <strong>Clear Policies</strong>
-                            <small>Know before you pay</small>
-                        </div>
-
-                    </div>
-
-
-                    <div class="vrp-orbit-dot"></div>
-                    <div class="vrp-orbit-dot vrp-dot-two"></div>
-
-                </div>
+                <p>
+                    Everything you need to know about subscriptions,
+                    cancellations, refunds, and payment-related matters
+                    when using VASHQ.
+                </p>
 
             </div>
 
         </div>
+    </div>
 
 
-        <!-- MAIN CONTENT -->
-        <div class="vrp-container vrp-main">
+    <!-- MAIN CONTENT -->
+    <div class="vrp-container vrp-main">
+
+        <div class="vrp-policy-content">
 
 
-            <!-- SIDEBAR -->
-            <aside class="vrp-sidebar">
+            <!-- 01 OVERVIEW -->
+            <article class="vrp-policy-card" id="vrp-overview">
 
-                <div class="vrp-sidebar-card">
+                <div class="vrp-card-heading">
 
-                    <div class="vrp-sidebar-heading">
-                        <i class="bi bi-list-ul"></i>
-                        <span>On This Page</span>
+                    <span class="vrp-section-number">01</span>
+
+                    <div>
+                        <span class="vrp-card-label">INTRODUCTION</span>
+                        <h2>Overview</h2>
                     </div>
-
-
-                    <nav class="vrp-toc">
-
-                        <a href="#vrp-overview" class="vrp-toc-link active">
-                            <span>01</span> Overview
-                        </a>
-
-                        <a href="#vrp-annual" class="vrp-toc-link">
-                            <span>02</span> Annual Subscription
-                        </a>
-
-                        <a href="#vrp-trial" class="vrp-toc-link">
-                            <span>03</span> Trial Period
-                        </a>
-
-                        <a href="#vrp-exceptional" class="vrp-toc-link">
-                            <span>04</span> Exceptional Circumstances
-                        </a>
-
-                        <a href="#vrp-cancellation" class="vrp-toc-link">
-                            <span>05</span> Subscription Cancellation
-                        </a>
-
-                        <a href="#vrp-payment" class="vrp-toc-link">
-                            <span>06</span> Failed or Duplicate Payments
-                        </a>
-
-                        <a href="#vrp-contact" class="vrp-toc-link">
-                            <span>07</span> Contact
-                        </a>
-
-                    </nav>
-
 
                 </div>
 
-            </aside>
+                <p>
+                    VASHQ offers a free trial before any paid subscription.
+                </p>
+
+                <p>
+                    Customers are expected to evaluate the software thoroughly
+                    during the trial period.
+                </p>
+
+                <div class="vrp-notice">
+                    <i class="bi bi-info-circle-fill"></i>
+
+                    <p>
+                        By purchasing a subscription, the customer confirms
+                        that they have evaluated the software and agree to
+                        this Refund Policy.
+                    </p>
+                </div>
+
+            </article>
 
 
+            <!-- 02 ANNUAL SUBSCRIPTION -->
+            <article class="vrp-policy-card" id="vrp-annual">
 
-            <!-- POLICY CONTENT -->
-            <div class="vrp-policy-content">
+                <div class="vrp-card-heading">
 
+                    <span class="vrp-section-number">02</span>
 
-                <!-- 01 OVERVIEW -->
-                <article class="vrp-policy-card" id="vrp-overview">
-
-                    <div class="vrp-card-heading">
-
-                        <span class="vrp-section-number">01</span>
-
-                        <div>
-                            <span class="vrp-card-label">INTRODUCTION</span>
-                            <h2>Overview</h2>
-                        </div>
-
+                    <div>
+                        <span class="vrp-card-label">SUBSCRIPTION TERMS</span>
+                        <h2>Annual Subscription</h2>
                     </div>
 
+                </div>
 
-                    <p>
-                        VASHQ offers a free trial before any paid subscription.
-                    </p>
+                <div class="vrp-highlight-box">
 
-                    <p>
-                        Customers are expected to evaluate the software thoroughly
-                        during the trial period.
-                    </p>
+                    <div class="vrp-highlight-icon">
+                        <i class="bi bi-calendar-check"></i>
+                    </div>
 
-                    <div class="vrp-notice">
-                        <i class="bi bi-info-circle-fill"></i>
+                    <div>
+                        <strong>Non-Refundable Subscription</strong>
 
                         <p>
-                            By purchasing a subscription, the customer confirms
-                            that they have evaluated the software and agree to
-                            this Refund Policy.
+                            All annual subscription payments are
+                            non-refundable.
                         </p>
                     </div>
 
-                </article>
+                </div>
 
+                <p>
+                    No refunds shall be provided after payment has been
+                    successfully processed, including for:
+                </p>
 
+                <div class="vrp-reason-grid">
 
-                <!-- 02 ANNUAL SUBSCRIPTION -->
-                <article class="vrp-policy-card" id="vrp-annual">
-
-                    <div class="vrp-card-heading">
-
-                        <span class="vrp-section-number">02</span>
-
-                        <div>
-                            <span class="vrp-card-label">SUBSCRIPTION TERMS</span>
-                            <h2>Annual Subscription</h2>
-                        </div>
-
+                    <div class="vrp-reason-item">
+                        <i class="bi bi-x-circle"></i>
+                        Cancellation after activation
                     </div>
 
-
-                    <div class="vrp-highlight-box">
-
-                        <div class="vrp-highlight-icon">
-                            <i class="bi bi-calendar-check"></i>
-                        </div>
-
-                        <div>
-                            <strong>Non-Refundable Subscription</strong>
-
-                            <p>
-                                All annual subscription payments are
-                                non-refundable.
-                            </p>
-                        </div>
-
+                    <div class="vrp-reason-item">
+                        <i class="bi bi-hourglass-split"></i>
+                        Partial use of the subscription
                     </div>
 
+                    <div class="vrp-reason-item">
+                        <i class="bi bi-building-x"></i>
+                        Business closure
+                    </div>
+
+                    <div class="vrp-reason-item">
+                        <i class="bi bi-people"></i>
+                        Staff turnover
+                    </div>
+
+                    <div class="vrp-reason-item">
+                        <i class="bi bi-activity"></i>
+                        Lack of usage
+                    </div>
+
+                    <div class="vrp-reason-item">
+                        <i class="bi bi-arrow-left-right"></i>
+                        Change of business requirements
+                    </div>
+
+                    <div class="vrp-reason-item">
+                        <i class="bi bi-arrow-repeat"></i>
+                        Switching to another provider
+                    </div>
+
+                    <div class="vrp-reason-item">
+                        <i class="bi bi-chat-square-dots"></i>
+                        Customer dissatisfaction after purchase
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 03 TRIAL PERIOD -->
+            <article class="vrp-policy-card" id="vrp-trial">
+
+                <div class="vrp-card-heading">
+
+                    <span class="vrp-section-number">03</span>
+
+                    <div>
+                        <span class="vrp-card-label">BEFORE YOU PURCHASE</span>
+                        <h2>Trial Period</h2>
+                    </div>
+
+                </div>
+
+                <div class="vrp-trial-visual">
+
+                    <div class="vrp-trial-icon">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+
+                    <div class="vrp-trial-arrow">
+                        <i class="bi bi-arrow-right"></i>
+                    </div>
+
+                    <div class="vrp-trial-icon">
+                        <i class="bi bi-check-circle"></i>
+                    </div>
+
+                    <div class="vrp-trial-arrow">
+                        <i class="bi bi-arrow-right"></i>
+                    </div>
+
+                    <div class="vrp-trial-icon">
+                        <i class="bi bi-credit-card"></i>
+                    </div>
+
+                </div>
+
+                <div class="vrp-trial-labels">
+                    <span>Explore VASHQ</span>
+                    <span>Evaluate</span>
+                    <span>Subscribe</span>
+                </div>
+
+                <p class="mb-0">
+                    The free trial exists specifically to allow customers
+                    to determine whether VASHQ meets their business needs
+                    before making a purchase.
+                </p>
+
+            </article>
+
+
+            <!-- 04 EXCEPTIONAL CIRCUMSTANCES -->
+            <article class="vrp-policy-card" id="vrp-exceptional">
+
+                <div class="vrp-card-heading">
+
+                    <span class="vrp-section-number">04</span>
+
+                    <div>
+                        <span class="vrp-card-label">SPECIAL CONSIDERATIONS</span>
+                        <h2>Exceptional Circumstances</h2>
+                    </div>
+
+                </div>
+
+                <div class="vrp-notice vrp-warning-notice">
+
+                    <i class="bi bi-exclamation-circle-fill"></i>
 
                     <p>
-                        No refunds shall be provided after payment has been
-                        successfully processed, including for:
+                        Refunds will only be considered where required by
+                        applicable law or where the Company, at its sole
+                        discretion, determines that extraordinary circumstances
+                        justify a refund.
                     </p>
 
+                </div>
 
-                    <div class="vrp-reason-grid">
+            </article>
 
-                        <div class="vrp-reason-item">
-                            <i class="bi bi-x-circle"></i>
-                            Cancellation after activation
-                        </div>
 
-                        <div class="vrp-reason-item">
-                            <i class="bi bi-hourglass-split"></i>
-                            Partial use of the subscription
-                        </div>
+            <!-- 05 SUBSCRIPTION CANCELLATION -->
+            <article class="vrp-policy-card" id="vrp-cancellation">
 
-                        <div class="vrp-reason-item">
-                            <i class="bi bi-building-x"></i>
-                            Business closure
-                        </div>
+                <div class="vrp-card-heading">
 
-                        <div class="vrp-reason-item">
-                            <i class="bi bi-people"></i>
-                            Staff turnover
-                        </div>
+                    <span class="vrp-section-number">05</span>
 
-                        <div class="vrp-reason-item">
-                            <i class="bi bi-activity"></i>
-                            Lack of usage
-                        </div>
-
-                        <div class="vrp-reason-item">
-                            <i class="bi bi-arrow-left-right"></i>
-                            Change of business requirements
-                        </div>
-
-                        <div class="vrp-reason-item">
-                            <i class="bi bi-arrow-repeat"></i>
-                            Switching to another provider
-                        </div>
-
-                        <div class="vrp-reason-item">
-                            <i class="bi bi-chat-square-dots"></i>
-                            Customer dissatisfaction after purchase
-                        </div>
-
+                    <div>
+                        <span class="vrp-card-label">MANAGE YOUR SUBSCRIPTION</span>
+                        <h2>Subscription Cancellation</h2>
                     </div>
 
-                </article>
+                </div>
 
+                <p>
+                    Customers may cancel future renewals at any time.
+                </p>
 
+                <div class="vrp-cancellation-box">
 
-                <!-- 03 TRIAL -->
-                <article class="vrp-policy-card" id="vrp-trial">
-
-                    <div class="vrp-card-heading">
-
-                        <span class="vrp-section-number">03</span>
-
-                        <div>
-                            <span class="vrp-card-label">BEFORE YOU PURCHASE</span>
-                            <h2>Trial Period</h2>
-                        </div>
-
+                    <div class="vrp-cancel-icon">
+                        <i class="bi bi-calendar2-x"></i>
                     </div>
 
+                    <div>
 
-                    <div class="vrp-trial-visual">
-
-                        <div class="vrp-trial-icon">
-                            <i class="bi bi-laptop"></i>
-                        </div>
-
-                        <div class="vrp-trial-arrow">
-                            <i class="bi bi-arrow-right"></i>
-                        </div>
-
-                        <div class="vrp-trial-icon">
-                            <i class="bi bi-check-circle"></i>
-                        </div>
-
-                        <div class="vrp-trial-arrow">
-                            <i class="bi bi-arrow-right"></i>
-                        </div>
-
-                        <div class="vrp-trial-icon">
-                            <i class="bi bi-credit-card"></i>
-                        </div>
-
-                    </div>
-
-
-                    <div class="vrp-trial-labels">
-                        <span>Explore VASHQ</span>
-                        <span>Evaluate</span>
-                        <span>Subscribe</span>
-                    </div>
-
-
-                    <p class="mb-0">
-                        The free trial exists specifically to allow customers
-                        to determine whether VASHQ meets their business needs
-                        before making a purchase.
-                    </p>
-
-                </article>
-
-
-
-                <!-- 04 EXCEPTIONAL -->
-                <article class="vrp-policy-card" id="vrp-exceptional">
-
-                    <div class="vrp-card-heading">
-
-                        <span class="vrp-section-number">04</span>
-
-                        <div>
-                            <span class="vrp-card-label">SPECIAL CONSIDERATIONS</span>
-                            <h2>Exceptional Circumstances</h2>
-                        </div>
-
-                    </div>
-
-
-                    <div class="vrp-notice vrp-warning-notice">
-
-                        <i class="bi bi-exclamation-circle-fill"></i>
+                        <strong>Future Renewals</strong>
 
                         <p>
-                            Refunds will only be considered where required by
-                            applicable law or where the Company, at its sole
-                            discretion, determines that extraordinary circumstances
-                            justify a refund.
+                            Cancellation prevents future billing but does
+                            not entitle the customer to a refund for the
+                            current subscription period.
                         </p>
 
                     </div>
 
-                </article>
+                </div>
+
+            </article>
 
 
+            <!-- 06 FAILED OR DUPLICATE PAYMENTS -->
+            <article class="vrp-policy-card" id="vrp-payment">
 
-                <!-- 05 CANCELLATION -->
-                <article class="vrp-policy-card" id="vrp-cancellation">
+                <div class="vrp-card-heading">
 
-                    <div class="vrp-card-heading">
+                    <span class="vrp-section-number">06</span>
 
-                        <span class="vrp-section-number">05</span>
-
-                        <div>
-                            <span class="vrp-card-label">MANAGE YOUR SUBSCRIPTION</span>
-                            <h2>Subscription Cancellation</h2>
-                        </div>
-
+                    <div>
+                        <span class="vrp-card-label">PAYMENT ASSISTANCE</span>
+                        <h2>Failed or Duplicate Payments</h2>
                     </div>
-
-
-                    <p>
-                        Customers may cancel future renewals at any time.
-                    </p>
-
-
-                    <div class="vrp-cancellation-box">
-
-                        <div class="vrp-cancel-icon">
-                            <i class="bi bi-calendar2-x"></i>
-                        </div>
-
-                        <div>
-
-                            <strong>Future Renewals</strong>
-
-                            <p>
-                                Cancellation prevents future billing but does
-                                not entitle the customer to a refund for the
-                                current subscription period.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- 06 FAILED PAYMENTS -->
-                <article class="vrp-policy-card" id="vrp-payment">
-
-                    <div class="vrp-card-heading">
-
-                        <span class="vrp-section-number">06</span>
-
-                        <div>
-                            <span class="vrp-card-label">PAYMENT ASSISTANCE</span>
-                            <h2>Failed or Duplicate Payments</h2>
-                        </div>
-
-                    </div>
-
-
-                    <div class="vrp-payment-visual">
-
-                        <div class="vrp-payment-symbol">
-                            <i class="bi bi-credit-card-2-front"></i>
-                        </div>
-
-                        <div class="vrp-payment-check">
-                            <i class="bi bi-arrow-repeat"></i>
-                        </div>
-
-                    </div>
-
-
-                    <p class="mb-0">
-                        If a payment is duplicated due to a verified technical
-                        or billing error, the Company will investigate and,
-                        where appropriate, process a refund or credit for the
-                        duplicate amount.
-                    </p>
-
-                </article>
-
-
-
-                <!-- 07 CONTACT -->
-                <article class="vrp-policy-card vrp-contact-card" id="vrp-contact">
-
-                    <div class="vrp-card-heading">
-
-                        <span class="vrp-section-number">07</span>
-
-                        <div>
-                            <span class="vrp-card-label">WE'RE HERE TO HELP</span>
-                            <h2>Contact</h2>
-                        </div>
-
-                    </div>
-
-
-                    <p>For billing questions:</p>
-
-
-                    <div class="vrp-company-info">
-
-                        <div class="vrp-company-icon">
-                            <i class="bi bi-buildings-fill"></i>
-                        </div>
-
-                        <div>
-
-                            <strong>Wisemove Consultancy Pvt. Ltd.</strong>
-
-                            <a href="mailto:vashqofficial@gmail.com">
-                                <i class="bi bi-envelope"></i>
-                                vashqofficial@gmail.com
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <a href="mailto:vashqofficial@gmail.com" class="vrp-contact-btn">
-
-                        Contact Billing Support
-                        <i class="bi bi-arrow-up-right"></i>
-
-                    </a>
-
-                </article>
-
-
-
-                <!-- BOTTOM NAVIGATION -->
-                <div class="vrp-bottom-nav">
-
-                    <a href="privacy-policy.html">
-
-                        <i class="bi bi-shield-lock"></i>
-
-                        <span>
-                            <small>READ ALSO</small>
-                            <strong>Privacy Policy</strong>
-                        </span>
-
-                        <i class="bi bi-arrow-up-right"></i>
-
-                    </a>
-
-
-                    <a href="terms-and-conditions.html">
-
-                        <i class="bi bi-file-earmark-text"></i>
-
-                        <span>
-                            <small>READ ALSO</small>
-                            <strong>Terms & Conditions</strong>
-                        </span>
-
-                        <i class="bi bi-arrow-up-right"></i>
-
-                    </a>
 
                 </div>
 
-            </div>
+
+                <p class="mb-0">
+                    If a payment is duplicated due to a verified technical
+                    or billing error, the Company will investigate and,
+                    where appropriate, process a refund or credit for the
+                    duplicate amount.
+                </p>
+
+            </article>
+
 
         </div>
 
-    </section>
+    </div>
+
+</section>
+
 
 
 
@@ -2217,7 +1310,7 @@
                 <!-- TOP BRAND SECTION -->
                 <div class="vashq-footer-brand-center">
 
-                    <a href="/" class="vashq-footer-logo">
+                    <a href="" class="vashq-footer-logo">
                         <img src="./assets/images/brand/logo-icon.webp" alt="Vashq" height="200">
                     </a>
 
@@ -2239,7 +1332,7 @@
 
                             <h1>BOOK NOW</h1>
 
-                            <p style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-size: 14px; font-weight: 500; color: #fff;"><i class="bi bi-clock" style="color: #1769ff; font-size: 15px;"></i> 20-minute personalized demo
+                            <p style="display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #fff;"><i class="bi bi-clock" style="color: #ffff; font-size: 15px;"></i> 20-minute personalized demo
                             </p>
 
                             <button type="submit">
@@ -2456,7 +1549,7 @@
 
                                 <label for="demoLocationSearch">
                                     Business Location
-                                    <span class="vashq-optional-label">(Optional)</span>
+                                    <span class="vashq-optional-label"></span>
                                 </label>
 
                                 <div class="location-combobox vashq-demo-location" id="demoLocationCombobox">
@@ -2555,200 +1648,6 @@
 
     </div>
 
-
-
-
-    <script>
-
-        /* =====================================================
-           VASHQ REFUND POLICY INTERACTIONS
-        ===================================================== */
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const vrpSection = document.querySelector(".vrp-section");
-
-            if (!vrpSection) return;
-
-            const vrpCards = vrpSection.querySelectorAll(".vrp-policy-card");
-            const vrpLinks = vrpSection.querySelectorAll(".vrp-toc-link");
-            const vrpBackTop = document.getElementById("vrpBackTop");
-
-
-            /* ==============================================
-               1. SCROLL REVEAL
-            ============================================== */
-
-            if ("IntersectionObserver" in window) {
-
-                const vrpRevealObserver = new IntersectionObserver(
-                    (entries, observer) => {
-
-                        entries.forEach(entry => {
-
-                            if (entry.isIntersecting) {
-
-                                entry.target.classList.add("vrp-visible");
-
-                                observer.unobserve(entry.target);
-
-                            }
-
-                        });
-
-                    },
-                    {
-                        threshold: 0.08,
-                        rootMargin: "0px 0px -35px 0px"
-                    }
-                );
-
-                vrpCards.forEach(card => {
-                    vrpRevealObserver.observe(card);
-                });
-
-            } else {
-
-                vrpCards.forEach(card => {
-                    card.classList.add("vrp-visible");
-                });
-
-            }
-
-
-            /* ==============================================
-               2. SMOOTH TABLE OF CONTENTS
-            ============================================== */
-
-            vrpLinks.forEach(link => {
-
-                link.addEventListener("click", function (e) {
-
-                    const targetId = this.getAttribute("href");
-
-                    const target = vrpSection.querySelector(targetId);
-
-                    if (!target) return;
-
-                    e.preventDefault();
-
-                    target.scrollIntoView({
-
-                        behavior: window.matchMedia(
-                            "(prefers-reduced-motion: reduce)"
-                        ).matches ? "instant" : "smooth",
-
-                        block: "start"
-
-                    });
-
-                    vrpLinks.forEach(item => {
-                        item.classList.remove("active");
-                    });
-
-                    this.classList.add("active");
-
-                });
-
-            });
-
-
-            /* ==============================================
-               3. ACTIVE SECTION TRACKING
-            ============================================== */
-
-            if ("IntersectionObserver" in window) {
-
-                const vrpActiveObserver = new IntersectionObserver(
-
-                    (entries) => {
-
-                        entries.forEach(entry => {
-
-                            if (entry.isIntersecting) {
-
-                                const currentId = entry.target.id;
-
-                                vrpLinks.forEach(link => {
-
-                                    link.classList.toggle(
-
-                                        "active",
-
-                                        link.getAttribute("href") === "#" + currentId
-
-                                    );
-
-                                });
-
-                            }
-
-                        });
-
-                    },
-
-                    {
-                        rootMargin: "-20% 0px -65% 0px",
-                        threshold: 0
-                    }
-
-                );
-
-                vrpCards.forEach(card => {
-                    vrpActiveObserver.observe(card);
-                });
-
-            }
-
-
-            /* ==============================================
-               4. BACK TO TOP
-            ============================================== */
-
-            function vrpHandleScroll() {
-
-                if (!vrpBackTop) return;
-
-                if (window.scrollY > 450) {
-
-                    vrpBackTop.classList.add("vrp-show");
-
-                } else {
-
-                    vrpBackTop.classList.remove("vrp-show");
-
-                }
-
-            }
-
-            window.addEventListener("scroll", vrpHandleScroll, {
-                passive: true
-            });
-
-            vrpHandleScroll();
-
-
-            if (vrpBackTop) {
-
-                vrpBackTop.addEventListener("click", function () {
-
-                    window.scrollTo({
-
-                        top: 0,
-
-                        behavior: window.matchMedia(
-                            "(prefers-reduced-motion: reduce)"
-                        ).matches ? "instant" : "smooth"
-
-                    });
-
-                });
-
-            }
-
-        });
-
-    </script>
 
 
     <script src="./assets/js/main.js" type="module"></script>

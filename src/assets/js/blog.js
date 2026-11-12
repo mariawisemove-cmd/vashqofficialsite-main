@@ -2,7 +2,8 @@
 /* ==========================================
    VASHQ EDITORIAL BLOG SYSTEM
    LAST OPENED TIME
-   WITHOUT AUTHOR SECTION
+   SINGLE LEFT SIDEBAR
+   LATEST BLOG OPENS IN CENTER
 ========================================== */
 
 
@@ -10,11 +11,11 @@
    1. BLOG DATA
 ========================================== */
 
+
 const blogData = [
 
 
-// BLOG 01
-
+    // BLOG 01
 {
     id: 1,
     category: "Finance",
@@ -1321,7 +1322,7 @@ Whether you continue using manual processes or adopt a digital solution like **V
 
 
     // BLOG 02
- {
+{
     id: 2,
     category: "Car Wash Business Growth",
     title: "Car Wash Management Software: The Smart Way to Automate and Grow Your Car Wash Business",
@@ -2007,7 +2008,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn more about how VASHQ ca
 },
 
 
-// BLOG 04
+    // BLOG 04
 {
     id: 4,
     category: "Invoice Management",
@@ -2529,7 +2530,6 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
 
 
     // BLOG 06
-
 {
     id: 6,
     category: "Multi-Location Business Management",
@@ -3002,8 +3002,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
 
 
     // BLOG 07
-
-   {
+{
     id: 7,
     category: "Seasonal Business Challenges",
     title: "How Monsoon Season Reduces Demand for Premium Car Detailing",
@@ -3172,8 +3171,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
 
 
     // BLOG 08
-
-    {
+{
     id: 8,
     category: "Workflow Management",
     title: "How to Reduce Customer Waiting Time at a Service Centre",
@@ -3637,8 +3635,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
 
 
     // BLOG 09
-
-    {
+{
     id: 9,
     category: "Car Wash Risk Management",
     title: "How to Reduce Vehicle Damage Claims and Disputes During Service",
@@ -3944,8 +3941,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
 
 
     // BLOG 10
-
-    {
+{
     id: 10,
     category: "Service Center Management",
     title: "How to Prevent Double-Booking at a Busy Service Center",
@@ -4276,8 +4272,7 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
 
 
     // BLOG 11
-
-    {
+{
     id: 11,
     category: "Car Wash Operations",
     title: 'How to Track Vehicle Status So Customers Stop Calling to Ask, "Is It Ready Yet?"',
@@ -4554,7 +4549,6 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
 
 
     // BLOG 12
-
 {
     id: 12,
     category: "Business Performance Analysis",
@@ -4805,7 +4799,6 @@ With VASHQ software, [car wash](https://home.vashq.com/) companies can organize 
 },
 
     // BLOG 13
-
 {
     id: 13,
     category: "Car Detailing & Maintenance",
@@ -4921,7 +4914,6 @@ A shiny car may bring a customer through the door, but a consistently good exper
 },
 
    // BLOG 14
-
 {
     id: 14,
     category: "Car Care Center",
@@ -5080,8 +5072,7 @@ From horse carriages to hatchbacks, the methods have changed. The need for good 
 `
 },
 
-// BLOG 15
-
+    // BLOG 15
 {
     id: 15,
     category: "Car Detailing & Maintenance",
@@ -5193,30 +5184,132 @@ A better cleaning experience begins with identifying the problem. With organised
 `
 },
 
+    // BLOG 16
+{
+    id: 16,
+    category: "Car Detailing & Maintenance",
+    title: "How Sunlight, Salt, and Rain Slowly Destroy Car Paint (Especially in Humid Climates)",
+    date: "November 12, 2026",
+    image: "assets/blog/blog-16.png",
+
+    content: String.raw`
+# How Sunlight, Salt and Rain Affect Your Car's Paint
+
+A car can look clean and shiny after a wash, but everyday exposure to sunlight, rain, humidity, and environmental pollutants gradually affects its paintwork. In regions with hot weather, coastal air, and heavy monsoon seasons, maintaining a vehicle's exterior can be particularly challenging. Even when a car is not involved in an accident, its paint can slowly lose its original gloss and develop stains, fading, or surface damage.
+
+Modern automotive paint is made up of multiple layers, including primer, colour coat and clear coat. The clear coat is the outer protective layer that helps preserve the finish against environmental exposure. However, it is not completely damage-proof. Continuous exposure to UV radiation, moisture, salt, and contaminants can gradually affect its appearance and performance.
+
+Understanding these environmental effects helps car owners maintain their vehicles and helps car wash businesses recommend the right cleaning and protection services.
+
+## How Sunlight Gradually Damages Car Paint
+
+Sunlight is one of the major factors behind paint ageing. Ultraviolet (UV) radiation can gradually break down chemical bonds in automotive paint and clear coat. Over time, prolonged exposure can contribute to fading, loss of gloss and deterioration of the protective finish.
+
+Vehicles parked outdoors throughout the day receive more direct sunlight than those kept in covered parking areas. The bonnet, roof and boot are particularly exposed because they receive sunlight from above. Repeated heat exposure can also accelerate certain ageing processes in the paint system.
+
+Regular washing removes accumulated dirt, but it cannot reverse UV damage that has already occurred. Depending on the condition of the finish, polishing, paint correction, or suitable protective treatments may help improve its appearance and provide additional protection.
+
+## Oxidation: Why Does Your Car Lose Its Shine?
+
+Oxidation is a chemical process involving reactions with oxygen. In automotive finishes, prolonged environmental exposure and UV-related degradation can contribute to an oxidised appearance.
+
+As the paint ages, the surface may begin to look dull, faded or chalky. The original gloss becomes less noticeable, and the vehicle may no longer have the same depth of colour it had when new.
+
+Oxidation is different from ordinary dirt. A regular wash can remove dust and grime, but it cannot necessarily restore a deteriorated paint finish. Depending on the severity, professional polishing or paint correction may be required.
+
+This is why inspecting the paint condition during routine maintenance is important. Identifying early signs of deterioration helps determine whether a vehicle needs basic cleaning or a more specialised detailing service.
+
+## Why Salt in Coastal Air Is a Hidden Threat
+
+Vehicles regularly driven or parked near coastal areas face another challenge: salt exposure. Sea spray and airborne salt particles can settle on the vehicle's body, windows, wheels and underbody.
+
+Salt deposits can attract and retain moisture. When salt and water remain around exposed metal areas, they can encourage corrosion. This is especially concerning around wheel arches, underbody components, exposed fasteners, and areas where paint or protective coatings are already damaged.
+
+Salt can also leave visible deposits on exterior surfaces. If these deposits remain for long periods, they can make the vehicle harder to clean and contribute to a neglected appearance.
+
+For vehicles regularly used near the coast, periodic washing is important. Special attention should be given to the underbody and wheel arches, where salt and road contamination can accumulate. A thorough rinse helps remove these deposits before they remain on the vehicle for extended periods.
+
+## How Rain and Acid Rain Affect Car Paint
+
+Rainwater does not always leave a vehicle cleaner. As raindrops collect airborne dust and pollutants, they can leave marks when the water evaporates.
+
+Acid rain is another concern. It can form when atmospheric pollutants such as sulphur dioxide and nitrogen oxides react with moisture in the atmosphere. The resulting acidic precipitation may leave deposits that contribute to spotting or paint damage under certain conditions.
+
+Water spots can become more difficult to remove when mineral deposits and contaminants remain on the surface. If exposed to heat and sunlight, dried deposits may become more noticeable and, in some cases, contribute to damage to the clear coat.
+
+Rainwater alone does not automatically damage every vehicle. The risk depends on the water's composition, the contaminants present, the surface condition, and how long the deposits remain.
+
+## Why Monsoon Conditions Make Maintenance More Important
+
+Monsoon weather creates several challenges for vehicle paint. Wet roads splash mud, oily road film, and other contaminants onto the bodywork. Repeated cycles of rain and drying can leave water marks, while prolonged moisture exposure can increase corrosion risks around damaged paint and exposed metal.
+
+Parking under trees during rainy weather can also expose vehicles to sap, leaves, bird droppings, and other organic deposits. When these contaminants remain on the surface, they may become harder to remove and can contribute to staining.
+
+Another common mistake is assuming that rain has washed the vehicle. Rain may remove some loose dust, but it can also deposit new pollutants and dirt. A proper wash is still necessary to remove accumulated contamination.
+
+## Why Regular Washing and Periodic Protection Matter
+
+Regular washing is one of the simplest ways to remove road film, salt, mud and other contaminants before they remain on the vehicle for too long. It also provides an opportunity to inspect the paintwork and identify early signs of damage.
+
+However, not every vehicle needs the same maintenance routine. A car regularly driven near the coast may benefit from more frequent washing and underbody cleaning. A vehicle parked outdoors may need suitable paint protection. A car with dull or contaminated paint may require professional decontamination or polishing before a protection product is applied.
+
+Wax, synthetic paint sealants and ceramic coatings offer different levels of water repellency and environmental protection. Their performance depends on the product, surface preparation, application quality and maintenance. None of these treatments makes a vehicle completely immune to sunlight, salt, rain or physical damage.
+
+The right approach is to inspect the vehicle and recommend services according to its actual condition rather than offering the same package to every customer.
+
+## How Car Wash Businesses Can Create Periodic Maintenance Packages
+
+Environmental exposure creates an opportunity for car wash businesses to offer structured maintenance packages. Instead of waiting until a vehicle looks heavily damaged, businesses can help customers maintain their paintwork through suitable periodic services.
+
+For example, a maintenance package might include regular exterior washing and wheel cleaning. A vehicle frequently used near the coast may need additional underbody rinsing. A car with contaminated paint may require periodic decontamination, while a suitable wax or sealant application can be recommended according to the customer's requirements.
+
+Staff should clearly explain why each service is recommended, what it includes and what benefits the customer can realistically expect. This makes the package more valuable than simply combining several services and offering a discount.
+
+Service history also matters. If a customer recently received ceramic coating, the business should recommend appropriate maintenance rather than automatically selling another coating application.
+
+## How VASHQ Helps Manage Service History and Customer Reminders
+
+As a car wash business grows, remembering every customer's last wash, paint protection treatment, and recommended maintenance date becomes difficult. Without organised records, staff may miss follow-ups or recommend services without knowing what the vehicle has already received.
+
+VASHQ is a [Car Wash Management Software](https://home.vashq.com) designed to help car wash and auto detailing businesses organise their daily operations. It supports job tracking, customer and vehicle records, service and package management, employee management, invoices, reports and WhatsApp communication.
+
+With organised customer and vehicle information, businesses can refer to previous services and understand which treatments have already been completed. This helps staff make more relevant maintenance recommendations and manage periodic service packages more systematically.
+
+Customer communication can also support timely reminders about routine washing or previously recommended maintenance. These reminders should be relevant to the vehicle's usage and service history rather than sent at random intervals.
+
+By combining organised service records with consistent customer communication, car wash businesses can build stronger relationships and encourage repeat visits.
+
+## Protecting Car Paint Starts with Consistent Care
+
+Sunlight, salt and rain affect vehicles in different ways. UV radiation contributes to paint ageing, oxidation reduces gloss, salt deposits increase corrosion risks, and polluted rainwater can leave stubborn marks. Humid and monsoon conditions can make these challenges more noticeable, particularly for vehicles regularly exposed to outdoor environments.
+
+Regular washing removes surface contamination, while periodic detailing and suitable paint protection help maintain the finish. For car wash businesses, organised service packages and relevant customer reminders make it easier to encourage consistent vehicle care.
+
+A well-maintained car does not depend on one expensive treatment. It depends on the right cleaning, suitable protection, and regular attention. With organised service history, package management and customer communication, VASHQ helps car wash businesses deliver that maintenance experience more consistently.
+
+**Discover VASHQ:** [https://home.vashq.com/](https://home.vashq.com/)
+
+`
+},
+
 ];
 
 
-// ==========================================
-// 2. GET HTML ELEMENTS
-// ==========================================
+/* ==========================================
+   2. GET HTML ELEMENTS
+========================================== */
 
 const vebLeft = document.getElementById("vebLeft");
-
-const vebRight = document.getElementById("vebRight");
-
 const vebCenter = document.getElementById("vebCenter");
-
 const vebArticle = document.getElementById("vebArticle");
 
 
-// ==========================================
-// 3. LAST OPENED STORAGE
-// ==========================================
+/* ==========================================
+   3. LAST OPENED STORAGE
+========================================== */
 
 const BLOG_STORAGE_KEY = "vashq_blog_last_opened";
 
-
-// Get saved opening times
 
 function getBlogOpeningTimes() {
 
@@ -5247,29 +5340,23 @@ function getBlogOpeningTimes() {
 }
 
 
-// Calculate time since last opening
+/* ==========================================
+   4. LAST OPENED TEXT
+========================================== */
 
 function getLastOpenedText(blogId) {
 
     const openingTimes = getBlogOpeningTimes();
-
     const previousTime = openingTimes[blogId];
 
-
-    // First visit
-
     if (!previousTime) {
-
         return "First visit";
-
     }
-
 
     const elapsedSeconds = Math.max(
         0,
         Math.floor((Date.now() - previousTime) / 1000)
     );
-
 
     if (elapsedSeconds < 60) {
 
@@ -5278,7 +5365,6 @@ function getLastOpenedText(blogId) {
         } ago`;
 
     }
-
 
     if (elapsedSeconds < 3600) {
 
@@ -5290,7 +5376,6 @@ function getLastOpenedText(blogId) {
 
     }
 
-
     if (elapsedSeconds < 86400) {
 
         const hours = Math.floor(elapsedSeconds / 3600);
@@ -5301,7 +5386,6 @@ function getLastOpenedText(blogId) {
 
     }
 
-
     const days = Math.floor(elapsedSeconds / 86400);
 
     return `Last opened ${days} ${
@@ -5311,14 +5395,17 @@ function getLastOpenedText(blogId) {
 }
 
 
-// Save current blog opening time
+/* ==========================================
+   5. SAVE BLOG OPENING TIME
+========================================== */
 
 function saveBlogOpeningTime(blogId) {
+
+    if (blogId === undefined || blogId === null) return;
 
     const openingTimes = getBlogOpeningTimes();
 
     openingTimes[blogId] = Date.now();
-
 
     try {
 
@@ -5336,47 +5423,28 @@ function saveBlogOpeningTime(blogId) {
 }
 
 
-// ==========================================
-// 4. INITIAL BLOG DISTRIBUTION
-// ==========================================
+/* ==========================================
+   6. INITIAL BLOG DISTRIBUTION
 
-// First blog appears in center
+   LAST BLOG IN ARRAY = CENTER
+   ALL OTHER BLOGS = LEFT
+========================================== */
 
-let activeBlog = blogData[0] || null;
+// The most recently added blog opens in the center.
 
-
-// Remaining blogs
-
-let remainingBlogs = blogData.slice(1);
-
-
-// Left and right blog arrays
-
-let leftBlogs = [];
-
-let rightBlogs = [];
+let activeBlog = blogData.length
+    ? blogData[blogData.length - 1]
+    : null;
 
 
-// Automatically divide blogs equally
+// Every other blog stays on the left side.
 
-remainingBlogs.forEach((blog, index) => {
-
-    if (index % 2 === 0) {
-
-        leftBlogs.push(blog);
-
-    } else {
-
-        rightBlogs.push(blog);
-
-    }
-
-});
+let leftBlogs = blogData.slice(0, -1);
 
 
-// ==========================================
-// 5. IMAGE HTML
-// ==========================================
+/* ==========================================
+   7. IMAGE HTML
+========================================== */
 
 function vebImage(url, alt) {
 
@@ -5392,11 +5460,13 @@ function vebImage(url, alt) {
 }
 
 
-// ==========================================
-// 6. RENDER SIDE BLOGS
-// ==========================================
+/* ==========================================
+   8. RENDER LEFT BLOGS ONLY
+========================================== */
 
 function renderSideBlogs() {
+
+    if (!vebLeft) return;
 
     function createPreview(blog, index) {
 
@@ -5433,51 +5503,24 @@ function renderSideBlogs() {
 
     }
 
-
-    // LEFT BLOGS
-
     vebLeft.innerHTML = leftBlogs
-
         .map(createPreview)
-
-        .join("");
-
-
-    // RIGHT BLOGS
-
-    vebRight.innerHTML = rightBlogs
-
-        .map(createPreview)
-
         .join("");
 
 }
 
 
-// ==========================================
-// 7. RENDER CENTER ARTICLE
-// ==========================================
+/* ==========================================
+   9. RENDER CENTER ARTICLE
+========================================== */
 
 function renderActiveBlog() {
 
-    if (!activeBlog) return;
-
-
-    // Related articles
-
-    const relatedBlogs = blogData
-
-        .filter(blog => blog.id !== activeBlog.id)
-
-        .slice(0, 2);
-
-
-    // Center article HTML
+    if (!activeBlog || !vebArticle) return;
 
     vebArticle.innerHTML = `
 
         <article class="veb-article">
-
 
             <!-- CATEGORY -->
 
@@ -5535,49 +5578,13 @@ function renderActiveBlog() {
 
             <!-- COMPLETE BLOG CONTENT -->
 
-<div class="veb-article-content">
-
-    ${marked.parse(activeBlog.content)}
-
+            <div class="veb-article-content">
+    ${
+        DOMPurify.sanitize(
+            marked.parse(activeBlog.content)
+        )
+    }
 </div>
-
-
-            <!-- RELATED ARTICLES -->
-
-            <div class="veb-related">
-
-                <h3 class="veb-related-heading">
-
-                    Related Articles
-
-                </h3>
-
-
-                <div class="veb-related-grid">
-
-                    ${relatedBlogs.map(blog => `
-
-                        <div class="veb-related-item">
-
-                            ${vebImage(
-                                blog.image,
-                                blog.title
-                            )}
-
-                            <span>
-
-                                ${blog.title}
-
-                            </span>
-
-                        </div>
-
-                    `).join("")}
-
-                </div>
-
-            </div>
-
 
         </article>
 
@@ -5586,129 +5593,109 @@ function renderActiveBlog() {
 }
 
 
-// ==========================================
-// 8. SWITCH BLOG POSITION
-// ==========================================
+/* ==========================================
+   10. SWITCH BLOG
 
-function switchBlog(blogId, side) {
+   CLICKED BLOG MOVES TO CENTER
+   PREVIOUS CENTER BLOG MOVES TO LEFT
+========================================== */
 
+function switchBlog(blogId) {
 
-    // Select clicked side array
-
-    const selectedList = side === "left"
-
-        ? leftBlogs
-
-        : rightBlogs;
-
-
-    // Find clicked blog position
-
-    const selectedIndex = selectedList.findIndex(
-
+    const selectedIndex = leftBlogs.findIndex(
         blog => blog.id === Number(blogId)
-
     );
-
-
-    // Stop if blog not found
 
     if (selectedIndex === -1) return;
 
 
-    // Get selected blog
+    // Get selected blog from left side.
 
-    const selectedBlog = selectedList[selectedIndex];
+    const selectedBlog = leftBlogs[selectedIndex];
 
 
-    // Save current center blog
+    // Keep the current center blog.
 
     const previousActiveBlog = activeBlog;
 
 
-    // Move selected blog to center
+    // Move selected blog to center.
 
     activeBlog = selectedBlog;
 
 
-    // Move old center blog to clicked position
+    // Move previous center blog to the end of left list.
 
-    selectedList[selectedIndex] = previousActiveBlog;
+    leftBlogs.splice(selectedIndex, 1);
+
+    if (previousActiveBlog) {
+        leftBlogs.push(previousActiveBlog);
+    }
 
 
-    // Update side columns
+    // Update left previews.
 
     renderSideBlogs();
 
 
-    // Restart switching animation
+    // Restart switching animation.
 
-    vebCenter.classList.remove("veb-switching");
+    if (vebCenter) {
 
-    void vebCenter.offsetWidth;
+        vebCenter.classList.remove("veb-switching");
 
-    vebCenter.classList.add("veb-switching");
+        void vebCenter.offsetWidth;
+
+        vebCenter.classList.add("veb-switching");
+
+    }
 
 
-    // Update center content
+    // Update center content.
 
     renderActiveBlog();
 
 
-    // Reset center scroll position
+    // Reset center scroll position.
 
-    vebArticle.scrollTop = 0;
+    if (vebArticle) {
+        vebArticle.scrollTop = 0;
+    }
 
 
-    // Save new blog opening time
+    // Save new blog opening time.
 
     saveBlogOpeningTime(activeBlog.id);
 
 }
 
 
-// ==========================================
-// 9. LEFT BLOG CLICK EVENT
-// ==========================================
+/* ==========================================
+   11. LEFT BLOG CLICK EVENT
+========================================== */
 
-vebLeft.addEventListener("click", function(event) {
+if (vebLeft) {
 
-    const preview = event.target.closest("[data-blog-id]");
+    vebLeft.addEventListener("click", function(event) {
 
-    if (!preview) return;
+        const preview = event.target.closest("[data-blog-id]");
 
-    switchBlog(preview.dataset.blogId, "left");
+        if (!preview) return;
 
-});
+        switchBlog(preview.dataset.blogId);
 
+    });
 
-// ==========================================
-// 10. RIGHT BLOG CLICK EVENT
-// ==========================================
-
-vebRight.addEventListener("click", function(event) {
-
-    const preview = event.target.closest("[data-blog-id]");
-
-    if (!preview) return;
-
-    switchBlog(preview.dataset.blogId, "right");
-
-});
+}
 
 
-// ==========================================
-// 11. INITIALIZE BLOG SECTION
-// ==========================================
+/* ==========================================
+   12. INITIALIZE BLOG SECTION
+========================================== */
 
 function initializeBlogSection() {
 
-    if (
-        !vebLeft ||
-        !vebRight ||
-        !vebCenter ||
-        !vebArticle
-    ) {
+    if (!vebLeft || !vebCenter || !vebArticle) {
 
         console.error(
             "VASHQ Blog section elements not found."
@@ -5723,35 +5710,37 @@ function initializeBlogSection() {
 
         vebArticle.innerHTML = "<p>No blogs available.</p>";
 
+        vebLeft.innerHTML = "";
+
         return;
 
     }
 
 
-    // Render side blogs
+    // Render all remaining blogs on the left.
 
     renderSideBlogs();
 
 
-    // Render first center blog
+    // Render the latest blog in the center.
 
     renderActiveBlog();
 
 
-    // Save first blog opening time
+    // Save the opening time of the active blog.
 
     saveBlogOpeningTime(activeBlog.id);
 
 }
 
 
-// ==========================================
-// START BLOG SYSTEM
-// ==========================================
+/* ==========================================
+   START BLOG SYSTEM
+========================================== */
 
 initializeBlogSection();
 
 
-// ==========================================
-// END VASHQ EDITORIAL BLOG SYSTEM
-//==========================================
+/* ==========================================
+   END VASHQ EDITORIAL BLOG SYSTEM
+========================================== */

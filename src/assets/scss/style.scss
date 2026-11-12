@@ -2111,20 +2111,38 @@
     align-items: center;
     justify-content: center;
 
-    width: 47px;
-    height: 47px;
-    flex: 0 0 47px;
+    width: 75px;
+    height: 75px;
+    flex: 0 0 75px;
 
     background: #eaf1ff;
     border: 1px solid #dce7ff;
-    border-radius: 50%;
+
+    /* Square with slightly rounded corners */
+    border-radius: 10px;
 
     color: #2864e8;
 
-    font-size: 14px;
+    font-size: 19px;
     font-weight: 750;
     letter-spacing: 0.3px;
+
+    overflow: hidden;
 }
+
+/* If customer image is added */
+
+.vashq-review-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 9px;
+    display: block;
+}
+
 
 
 /* Customer name and role */
@@ -2548,6 +2566,7 @@
 .vashq-why-choose {
     position: relative;
     width: 100%;
+    padding-bottom: 70px;
     background: #fff;
     overflow: hidden;
     background: linear-gradient(to bottom, #ebebeb 0%,#ffff 70%, #ffffff 100%);
@@ -2759,95 +2778,6 @@
     background: #2864e8;
 }
 
-/* Compact Our Team */
-
-.vashq-our-team {
-    margin-top: 40px;
-    padding-top: 30px;
-    text-align: center;
-}
-
-.vashq-our-team > h2 {
-    margin-bottom: 25px;
-    font-size: 28px;
-    font-weight: 750;
-    color: #151b28;
-}
-
-.vashq-our-team > h2 span {
-    color: #2864e8;
-}
-
-.vashq-team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-.vashq-team-card {
-    padding: 16px 10px;
-    background: rgba(255, 255, 255, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    border-radius: 14px;
-    transition: transform 0.25s ease;
-}
-
-.vashq-team-card:hover {
-    transform: translateY(-3px);
-}
-
-.vashq-team-photo {
-    position: relative;
-    width: 85px;
-    height: 85px;
-    margin: 0 auto 12px;
-    overflow: hidden;
-    border-radius: 50%;
-    background: #dce8fa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.vashq-team-photo img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-}
-
-.vashq-team-photo img[src]:not([src=""]) {
-    opacity: 1;
-}
-
-.vashq-team-photo:has(img[src]:not([src=""])) span {
-    display: none;
-}
-
-.vashq-team-photo span {
-    color: #2864e8;
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.vashq-team-card h3 {
-    margin: 0 0 5px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #19202d;
-}
-
-.vashq-team-card p {
-    margin: 0;
-    color: #2864e8;
-    font-size: 12px;
-    font-weight: 600;
-}
-
 
 /* =========================================
    SCROLL REVEAL ANIMATION
@@ -2917,170 +2847,6 @@
 
 .vashq-team-card:nth-child(3) {
     transition-delay: 0.4s;
-}
-
-
-/* Accessibility */
-
-/* =================================
-   VASHQ PREMIUM FINAL CTA
-================================= */
-
-#final-cta {
-    width: 100%;
-     background: #ffffff ;
-     padding-bottom: 70px;
-}
-
-.vashq-final-cta {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 55px;
-    padding: 75px 80px;
-    background: linear-gradient(
-        120deg,
-        #e5efff 0%,
-        #d5e5fc 55%,
-        #cbdffc 100%
-    );
-
-    border: 1px solid rgba(40, 100, 232, 0.08);
-    border-radius: 32px;
-
-    overflow: hidden;
-    isolation: isolate;
-}
-
-/* Subtle Decorative Circle */
-
-.vashq-final-cta::before {
-    content: "";
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    right: 22%;
-    top: -230px;
-
-    border: 1px solid rgba(40, 100, 232, 0.10);
-    border-radius: 50%;
-
-    box-shadow:
-        0 0 0 35px rgba(40, 100, 232, 0.025),
-        0 0 0 70px rgba(40, 100, 232, 0.02);
-
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* LEFT CONTENT */
-
-.vashq-cta-content {
-    flex: 1;
-    max-width: 650px;
-}
-
-.vashq-cta-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    margin-bottom: 23px;
-    font-family:sans-serif;
-    color: #2864e8;
-    font-size: 60px;
-    font-weight: 200;
-    letter-spacing: 2px;
-}
-
-.vashq-cta-content h2 {
-    margin: 0 0 20px;
-
-    color: #172033;
-    font-size: 38px;
-    font-weight: 650;
-    line-height: 1.16;
-    letter-spacing: -1.8px;
-}
-
-.vashq-cta-content h2 span {
-    color: #2864e8;
-}
-
-.vashq-cta-content p {
-    max-width: 470px;
-    margin: 0;
-
-    color: #596b85;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.8;
-}
-
-/* RIGHT CTA */
-
-.vashq-cta-action {
-    position: relative;
-    z-index: 1;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-shrink: 0;
-}
-
-/* Main Button */
-
-.vashq-cta-primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-
-    min-width: 255px;
-    padding: 20px 23px 20px 27px;
-
-    color: #fff !important;
-    background: #2864e8;
-
-    border: 1px solid #2864e8;
-    border-radius: 50px;
-
-    font-size: 16px;
-    font-weight: 650;
-    text-decoration: none;
-
-    box-shadow: 0 8px 20px rgba(40, 100, 232, 0.20);
-
-    transition:
-        background 0.25s ease,
-        box-shadow 0.25s ease,
-        transform 0.25s ease;
-}
-
-.vashq-cta-primary:hover {
-    color: #fff !important;
-    background: #1e50c5;
-    border-color: #1e50c5;
-
-    transform: translateY(-3px);
-    box-shadow: 0 13px 25px rgba(40, 100, 232, 0.25);
-}
-
-
-
-.vashq-cta-primary:hover .vashq-cta-arrow {
-    transform: translateX(3px);
-}
-
-/* Supporting Text */
-
-.vashq-cta-note {
-    margin-top: 15px;
-    color: #60718a;
-    font-size: 12px;
-    line-height: 1.6;
 }
 
 
@@ -3278,8 +3044,6 @@
     align-items: center;
     justify-content: center;
 
-    gap: 14px;
-
     width: 100%;
     max-width: 340px;
 
@@ -3297,65 +3061,7 @@
     color: #fff;
     font-weight: bold;
     font-size: 45px;
-    margin-bottom: 10px;
-}
 
-
-/* ==========================================
-   BOOK BUTTON
-========================================== */
-
-.vashq-footer-booking button {
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 9px;
-
-    width: 125px;
-    height: 43px;
-
-    padding: 0 20px;
-
-    border: none;
-
-    border-radius: 50px;
-
-    background: #ffffff;
-
-    color: #027ad5;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    letter-spacing: 0.3px;
-
-    cursor: pointer;
-
-    transition: all 0.3s ease;
-
-    margin-bottom: 30px;
-}
-
-
-.vashq-footer-booking button:hover {
-
-    background: #ffffff;
-
-    color: #0565ff;
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 6px 15px rgba(7, 29, 53, 0.2);
-}
-
-
-.vashq-footer-booking button:active {
-
-    transform: scale(0.96);
 }
 
 
@@ -3752,6 +3458,17 @@
     .vashq-footer-bottom p {
 
         font-size: 13px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .vashq-review-avatar {
+        width: 55px;
+        height: 55px;
+        flex: 0 0 65px;
     }
 
 }

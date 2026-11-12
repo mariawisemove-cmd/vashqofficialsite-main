@@ -25,1188 +25,495 @@
     <link rel="manifest" href="./assets/images/favicon_io/site.webmanifest">
     <link rel="stylesheet" href="./assets/scss/style.scss">
     <style>
-        /* =====================================================
-   VASHQ PREMIUM TERMS & CONDITIONS
-   BLUE + WHITE THEME
-===================================================== */
-
-        .vtc-section {
-            --vtc-primary: #1769ff;
-            --vtc-dark: #10264b;
-            --vtc-text: #52627a;
-            --vtc-muted: #8491a5;
-            --vtc-light: #f4f8ff;
-            --vtc-border: #e8eef7;
-
-            width: 100%;
-            background: #fff;
-            color: var(--vtc-dark);
-            overflow: hidden;
-            position: relative;
-            font-family: inherit;
-            scroll-behavior: smooth;
-        }
-
-        .vtc-section * {
-            box-sizing: border-box;
-        }
-
-        .vtc-section a {
-            text-decoration: none;
-        }
-
-        /* ================= HERO ================= */
-
-        .vtc-hero {
-            min-height: 470px;
-            background:
-                radial-gradient(circle at 75% 25%, rgba(91, 155, 255, .22), transparent 30%),
-                linear-gradient(120deg, #f5f9ff 0%, #eaf3ff 48%, #dceaff 100%);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-        }
-
-        .vtc-hero-container {
-            width: min(1160px, calc(100% - 48px));
-            margin: 0 auto;
-            min-height: 470px;
-            display: grid;
-            grid-template-columns: 1.05fr .95fr;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-            gap: 30px;
-        }
-
-        .vtc-hero-content {
-            padding: 65px 0;
-            animation: vtcHeroText .9s ease both;
-        }
-
-        @keyframes vtcHeroText {
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .vtc-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-            padding: 9px 16px;
-            background: rgba(23, 105, 255, .09);
-            border: 1px solid rgba(23, 105, 255, .13);
-            border-radius: 50px;
-            color: var(--vtc-primary);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 2px;
-        }
-
-        .vtc-eyebrow i {
-            font-size: 15px;
-        }
-
-        .vtc-hero-content h1 {
-            font-size: clamp(42px, 5vw, 66px);
-            line-height: 1.08;
-            letter-spacing: -2.5px;
-            font-weight: 800;
-            color: #10264b;
-            margin: 25px 0 18px;
-        }
-
-        .vtc-hero-content h1 span {
-            color: var(--vtc-primary);
-        }
-
-        .vtc-hero-content>p {
-            max-width: 480px;
-            color: #65758e;
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 28px;
-        }
-
-        .vtc-effective {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: rgba(255, 255, 255, .85);
-            border: 1px solid rgba(255, 255, 255, .9);
-            border-radius: 15px;
-            padding: 12px 17px;
-            box-shadow: 0 8px 30px rgba(32, 82, 150, .07);
-        }
-
-        .vtc-date-icon {
-            width: 42px;
-            height: 42px;
-            display: grid;
-            place-items: center;
-            color: var(--vtc-primary);
-            background: #eaf2ff;
-            border-radius: 12px;
-            font-size: 19px;
-        }
-
-        .vtc-effective small,
-        .vtc-effective strong {
-            display: block;
-        }
-
-        .vtc-effective small {
-            color: #8795a9;
-            font-size: 11px;
-            margin-bottom: 3px;
-        }
-
-        .vtc-effective strong {
-            color: #1b345a;
-            font-size: 13px;
-        }
-
-        /* HERO DECORATION */
-
-        .vtc-hero-glow {
-            position: absolute;
-            border-radius: 50%;
-            pointer-events: none;
-            filter: blur(2px);
-        }
-
-        .vtc-glow-one {
-            width: 300px;
-            height: 300px;
-            right: -80px;
-            top: -130px;
-            background: rgba(65, 137, 255, .12);
-        }
-
-        .vtc-glow-two {
-            width: 230px;
-            height: 230px;
-            left: -110px;
-            bottom: -130px;
-            background: rgba(65, 137, 255, .12);
-        }
-
-        .vtc-hero-bottom {
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 100%;
-            height: 28px;
-            background: #fff;
-            clip-path: ellipse(55% 100% at 50% 100%);
-        }
-
-        /* HERO ILLUSTRATION */
-
-        .vtc-hero-art {
-            min-height: 390px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            animation: vtcArtEnter 1s .15s ease both;
-        }
-
-        @keyframes vtcArtEnter {
-            from {
-                opacity: 0;
-                transform: translateY(25px) scale(.94);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        .vtc-orbit {
-            position: absolute;
-            border: 1px solid rgba(23, 105, 255, .17);
-            border-radius: 50%;
-            animation: vtcOrbit 18s linear infinite;
-        }
-
-        .vtc-orbit-one {
-            width: 340px;
-            height: 340px;
-        }
-
-        .vtc-orbit-two {
-            width: 430px;
-            height: 430px;
-            border-style: dashed;
-            animation-direction: reverse;
-            opacity: .7;
-        }
-
-        @keyframes vtcOrbit {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        .vtc-document {
-            width: 245px;
-            min-height: 300px;
-            padding: 25px;
-            position: relative;
-            z-index: 2;
-            border-radius: 20px;
-            background: linear-gradient(145deg, #fff, #f6f9ff);
-            border: 1px solid #fff;
-            box-shadow:
-                0 30px 75px rgba(34, 91, 173, .17),
-                0 5px 15px rgba(34, 91, 173, .06);
-            transform: rotate(-5deg);
-            animation: vtcDocumentFloat 5s ease-in-out infinite;
-        }
-
-        @keyframes vtcDocumentFloat {
-
-            0%,
-            100% {
-                transform: translateY(0) rotate(-5deg);
-            }
-
-            50% {
-                transform: translateY(-13px) rotate(-3deg);
-            }
-        }
-
-        .vtc-doc-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 27px;
-        }
-
-        .vtc-doc-icon {
-            width: 43px;
-            height: 43px;
-            border-radius: 13px;
-            background: #e8f1ff;
-            display: grid;
-            place-items: center;
-            color: var(--vtc-primary);
-            font-size: 23px;
-        }
-
-        .vtc-doc-check {
-            width: 27px;
-            height: 27px;
-            display: grid;
-            place-items: center;
-            color: #fff;
-            background: #25bf83;
-            border-radius: 50%;
-            font-size: 16px;
-        }
-
-        .vtc-doc-heading {
-            height: 9px;
-            width: 75%;
-            background: #1e3d68;
-            border-radius: 10px;
-            margin-bottom: 18px;
-        }
-
-        .vtc-doc-line {
-            height: 5px;
-            width: 100%;
-            background: #dce6f4;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-
-        .vtc-doc-line.short {
-            width: 65%;
-        }
-
-        .vtc-doc-divider {
-            height: 1px;
-            background: #e7edf6;
-            margin: 23px 0 18px;
-        }
-
-        .vtc-doc-row {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 14px;
-        }
-
-        .vtc-doc-row span {
-            height: 6px;
-            border-radius: 10px;
-            background: #dce6f4;
-        }
-
-        .vtc-doc-row span:first-child {
-            width: 35%;
-        }
-
-        .vtc-doc-row span:last-child {
-            width: 60%;
-        }
-
-        .vtc-doc-sign {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--vtc-primary);
-            font-size: 11px;
-            font-weight: 700;
-            margin-top: 22px;
-        }
-
-        .vtc-float-card {
-            width: 57px;
-            height: 57px;
-            display: grid;
-            place-items: center;
-            background: #fff;
-            border: 1px solid rgba(23, 105, 255, .1);
-            box-shadow: 0 12px 30px rgba(23, 75, 150, .13);
-            border-radius: 17px;
-            position: absolute;
-            z-index: 3;
-            font-size: 23px;
-        }
-
-        .vtc-float-shield {
-            color: var(--vtc-primary);
-            top: 55px;
-            right: 55px;
-            animation: vtcFloatOne 4s ease-in-out infinite;
-        }
-
-        .vtc-float-check {
-            color: #22b983;
-            bottom: 65px;
-            left: 45px;
-            animation: vtcFloatTwo 4.5s ease-in-out infinite;
-        }
-
-        .vtc-float-dots {
-            width: 43px;
-            height: 43px;
-            color: #6697e8;
-            top: 90px;
-            left: 55px;
-            animation: vtcFloatOne 5s ease-in-out infinite reverse;
-        }
-
-        @keyframes vtcFloatOne {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-12px);
-            }
-        }
-
-        @keyframes vtcFloatTwo {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(12px);
-            }
-        }
-
-
-        /* ================= CONTENT ================= */
-
-        .vtc-content-wrap {
-            width: min(1160px, calc(100% - 48px));
-            margin: 0 auto;
-            padding: 75px 0 100px;
-        }
-
-        .vtc-content-header {
-            max-width: 660px;
-            margin-bottom: 42px;
-        }
-
-        .vtc-content-label {
-            display: inline-block;
-            color: var(--vtc-primary);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            margin-bottom: 13px;
-        }
-
-        .vtc-content-header h2 {
-            font-size: clamp(28px, 3vw, 39px);
-            color: #142b4e;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 12px;
-        }
-
-        .vtc-content-header p {
-            color: var(--vtc-muted);
-            font-size: 15px;
-            line-height: 1.8;
-            margin: 0;
-        }
-
-        .vtc-layout {
-            display: grid;
-            grid-template-columns: 255px minmax(0, 1fr);
-            align-items: start;
-            gap: 35px;
-        }
-
-
-        /* ================= SIDEBAR ================= */
-
-        .vtc-sidebar {
-            position: sticky;
-            top: 105px;
-            align-self: start;
-        }
-
-        .vtc-sidebar-inner {
-            padding: 22px 17px;
-            border: 1px solid var(--vtc-border);
-            border-radius: 19px;
-            background: #fff;
-            box-shadow: 0 10px 35px rgba(29, 69, 125, .045);
-        }
-
-        .vtc-sidebar-heading {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 0 5px 18px;
-            border-bottom: 1px solid var(--vtc-border);
-        }
-
-        .vtc-sidebar-icon {
-            width: 38px;
-            height: 38px;
-            display: grid;
-            place-items: center;
-            border-radius: 11px;
-            color: var(--vtc-primary);
-            background: #edf4ff;
-            font-size: 17px;
-        }
-
-        .vtc-sidebar-heading strong,
-        .vtc-sidebar-heading small {
-            display: block;
-        }
-
-        .vtc-sidebar-heading strong {
-            color: #1a3459;
-            font-size: 13px;
-        }
-
-        .vtc-sidebar-heading small {
-            color: #98a4b5;
-            font-size: 11px;
-            margin-top: 3px;
-        }
-
-        .vtc-toc {
-            display: flex;
-            flex-direction: column;
-            gap: 3px;
-            padding: 15px 0;
-        }
-
-        .vtc-toc a {
-            display: block;
-            padding: 9px 11px;
-            border-radius: 8px;
-            color: #718098;
-            font-size: 11.5px;
-            line-height: 1.45;
-            font-weight: 600;
-            transition: all .25s ease;
-            border-left: 2px solid transparent;
-        }
-
-        .vtc-toc a:hover {
-            color: var(--vtc-primary);
-            background: #f3f7ff;
-            padding-left: 15px;
-        }
-
-        .vtc-toc a.active {
-            color: var(--vtc-primary);
-            background: #edf4ff;
-            border-left-color: var(--vtc-primary);
-            font-weight: 800;
-        }
-
-        .vtc-sidebar-note {
-            padding: 15px;
-            background: #f4f8ff;
-            border: 1px solid #e7efff;
-            border-radius: 13px;
-        }
-
-        .vtc-sidebar-note>i {
-            color: var(--vtc-primary);
-            font-size: 19px;
-        }
-
-        .vtc-sidebar-note p {
-            color: #728198;
-            font-size: 11px;
-            line-height: 1.7;
-            margin: 8px 0;
-        }
-
-        .vtc-sidebar-note a {
-            color: var(--vtc-primary);
-            font-size: 11px;
-            font-weight: 800;
-        }
-
-
-        /* ================= INTRO ================= */
-
-        .vtc-intro-card {
-            display: flex;
-            gap: 17px;
-            align-items: flex-start;
-            padding: 25px;
-            margin-bottom: 22px;
-            border-radius: 17px;
-            background: linear-gradient(120deg, #edf4ff, #f8fbff);
-            border: 1px solid #e4edff;
-        }
-
-        .vtc-intro-icon {
-            flex: 0 0 47px;
-            width: 47px;
-            height: 47px;
-            display: grid;
-            place-items: center;
-            border-radius: 14px;
-            background: #fff;
-            color: var(--vtc-primary);
-            font-size: 21px;
-            box-shadow: 0 5px 15px rgba(23, 105, 255, .08);
-        }
-
-        .vtc-intro-card h3 {
-            color: #18365e;
-            font-size: 16px;
-            font-weight: 800;
-            margin: 2px 0 8px;
-        }
-
-        .vtc-intro-card p {
-            color: #65758e;
-            font-size: 13px;
-            line-height: 1.8;
-            margin: 0;
-        }
-
-
-        /* ================= POLICY CARDS ================= */
-
-        .vtc-policy-card {
-            display: grid;
-            grid-template-columns: 43px minmax(0, 1fr);
-            gap: 18px;
-            padding: 27px;
-            margin-bottom: 16px;
-            background: #fff;
-            border: 1px solid var(--vtc-border);
-            border-radius: 17px;
-            box-shadow: 0 5px 20px rgba(23, 55, 100, .025);
-            scroll-margin-top: 110px;
-            transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
-        }
-
-        .vtc-policy-card:hover {
-            border-color: #d4e3ff;
-            box-shadow: 0 13px 35px rgba(23, 85, 170, .07);
-            transform: translateY(-2px);
-        }
-
-        .vtc-card-number {
-            width: 40px;
-            height: 40px;
-            display: grid;
-            place-items: center;
-            border-radius: 12px;
-            color: var(--vtc-primary);
-            background: #edf4ff;
-            font-size: 12px;
-            font-weight: 800;
-        }
-
-        .vtc-card-body h3 {
-            color: #172f53;
-            font-size: 17px;
-            font-weight: 800;
-            margin: 7px 0 15px;
-        }
-
-        .vtc-card-body p {
-            color: #69788e;
-            font-size: 13px;
-            line-height: 1.9;
-            margin-bottom: 12px;
-        }
-
-        .vtc-card-body ul {
-            padding-left: 20px;
-            color: #69788e;
-            font-size: 13px;
-            line-height: 2;
-        }
-
-        .vtc-card-body li::marker {
-            color: var(--vtc-primary);
-        }
-
-
-        /* FEATURE GRID */
-
-        .vtc-feature-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 9px 12px;
-            margin: 15px 0 20px;
-        }
-
-        .vtc-feature-grid span {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            color: #63748c;
-            font-size: 12px;
-            line-height: 1.6;
-        }
-
-        .vtc-feature-grid span i {
-            color: var(--vtc-primary);
-            font-size: 14px;
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
-
-        .vtc-info-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 15px 0 18px;
-        }
-
-        .vtc-info-list div {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            padding: 11px 14px;
-            border-radius: 10px;
-            background: #f4f8ff;
-            color: #526781;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .vtc-info-list i {
-            color: var(--vtc-primary);
-            font-size: 16px;
-        }
-
-
-        /* IMPORTANT REFUND CARD */
-
-        .vtc-important-card {
-            background: linear-gradient(135deg, #f8fbff, #fff);
-            border-color: #d9e7ff;
-        }
-
-        .vtc-important-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: #1769ff;
-            background: #eaf2ff;
-            padding: 6px 10px;
-            border-radius: 30px;
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: .4px;
-            margin-bottom: 8px;
-        }
-
-        .vtc-refund-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 9px;
-            margin: 15px 0 20px;
-        }
-
-        .vtc-refund-grid span {
-            padding: 10px 12px;
-            border: 1px solid #e7edf6;
-            border-radius: 9px;
-            background: #fff;
-            color: #65758c;
-            font-size: 11.5px;
-            line-height: 1.5;
-        }
-
-        .vtc-check-list {
-            list-style: none;
-            padding: 0 !important;
-            margin: 13px 0 0;
-        }
-
-        .vtc-check-list li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 9px;
-        }
-
-        .vtc-check-list li::before {
-            content: "\F26A";
-            font-family: "bootstrap-icons";
-            position: absolute;
-            left: 0;
-            top: 2px;
-            color: var(--vtc-primary);
-            font-size: 14px;
-        }
-
-        .vtc-highlight {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-            padding: 15px;
-            border-radius: 11px;
-            background: #f1f6ff;
-            border: 1px solid #e5efff;
-            margin-top: 16px;
-        }
-
-        .vtc-highlight>i {
-            color: var(--vtc-primary);
-            font-size: 18px;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .vtc-highlight p {
-            margin: 0;
-        }
-
-
-        /* ================= BOTTOM CTA ================= */
-
-        .vtc-bottom-card {
-            display: flex;
-            align-items: flex-start;
-            gap: 17px;
-            padding: 26px;
-            margin-top: 28px;
-            border-radius: 17px;
-            color: #fff;
-            background: linear-gradient(120deg, #1769ff, #0b3d91);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .vtc-bottom-card::after {
-            content: "";
-            position: absolute;
-            width: 180px;
-            height: 180px;
-            right: -55px;
-            top: -75px;
-            border: 1px solid rgba(255, 255, 255, .17);
-            border-radius: 50%;
-            box-shadow: 0 0 0 22px rgba(255, 255, 255, .035),
-                0 0 0 45px rgba(255, 255, 255, .025);
-        }
-
-        .vtc-bottom-icon {
-            flex: 0 0 47px;
-            width: 47px;
-            height: 47px;
-            display: grid;
-            place-items: center;
-            background: rgba(255, 255, 255, .15);
-            border: 1px solid rgba(255, 255, 255, .2);
-            border-radius: 13px;
-            font-size: 20px;
-        }
-
-        .vtc-bottom-card h3 {
-            color: #fff;
-            font-size: 17px;
-            font-weight: 800;
-            margin: 3px 0 8px;
-        }
-
-        .vtc-bottom-card p {
-            color: rgba(255, 255, 255, .78);
-            font-size: 12px;
-            line-height: 1.8;
-            margin-bottom: 12px;
-        }
-
-        .vtc-bottom-card a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #fff;
-            font-size: 12px;
-            font-weight: 800;
-            border-bottom: 1px solid rgba(255, 255, 255, .55);
-            padding-bottom: 4px;
-            transition: gap .25s ease;
-        }
-
-        .vtc-bottom-card a:hover {
-            gap: 13px;
-        }
-
-
-        /* POLICY LINKS */
-
-        .vtc-policy-links {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
-            margin-top: 17px;
-        }
-
-        .vtc-policy-links>a {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 15px;
-            background: #fff;
-            border: 1px solid var(--vtc-border);
-            border-radius: 13px;
-            transition: all .25s ease;
-        }
-
-        .vtc-policy-links>a:hover {
-            border-color: #bcd4ff;
-            background: #f8fbff;
-            transform: translateY(-3px);
-        }
-
-        .vtc-link-icon {
-            width: 39px;
-            height: 39px;
-            flex-shrink: 0;
-            display: grid;
-            place-items: center;
-            color: var(--vtc-primary);
-            background: #edf4ff;
-            border-radius: 11px;
-            font-size: 17px;
-        }
-
-        .vtc-policy-links small,
-        .vtc-policy-links strong {
-            display: block;
-        }
-
-        .vtc-policy-links small {
-            color: #98a4b5;
-            font-size: 10px;
-            margin-bottom: 3px;
-        }
-
-        .vtc-policy-links strong {
-            color: #1c3558;
-            font-size: 12px;
-        }
-
-        .vtc-link-arrow {
-            color: var(--vtc-primary);
-            margin-left: auto;
-        }
-
-
-        /* BACK TO TOP */
-
-        .vtc-back-top {
-            position: fixed;
-            right: 25px;
-            bottom: 25px;
-            width: 45px;
-            height: 45px;
-            border: 0;
-            border-radius: 13px;
-            background: var(--vtc-primary);
-            color: #fff;
-            font-size: 18px;
-            box-shadow: 0 8px 25px rgba(23, 105, 255, .25);
-            cursor: pointer;
-            z-index: 100;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(12px);
-            transition: all .3s ease;
-        }
-
-        .vtc-back-top.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .vtc-back-top:hover {
-            background: #0b3d91;
-            transform: translateY(-3px);
-        }
-
-
-        /* ================= SCROLL REVEAL ================= */
-
-        .vtc-js-ready .vtc-intro-card,
-        .vtc-js-ready .vtc-policy-card,
-        .vtc-js-ready .vtc-bottom-card,
-        .vtc-js-ready .vtc-policy-links {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity .65s ease, transform .65s ease;
-        }
-
-        .vtc-js-ready .vtc-intro-card.vtc-visible,
-        .vtc-js-ready .vtc-policy-card.vtc-visible,
-        .vtc-js-ready .vtc-bottom-card.vtc-visible,
-        .vtc-js-ready .vtc-policy-links.vtc-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-
-        /* ================= RESPONSIVE ================= */
-
-        @media (max-width: 991px) {
-            .vtc-hero-container {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .vtc-hero-art {
-                transform: scale(.85);
-            }
-
-            .vtc-layout {
-                grid-template-columns: 210px minmax(0, 1fr);
-                gap: 20px;
-            }
-
-            .vtc-sidebar-inner {
-                padding: 17px 12px;
-            }
-
-            .vtc-toc a {
-                font-size: 10.5px;
-            }
-
-            .vtc-policy-card {
-                padding: 22px;
-            }
-        }
-
-        @media (max-width: 767px) {
-
-            .vtc-hero,
-            .vtc-hero-container {
-                min-height: auto;
-            }
-
-            .vtc-hero-container {
-                width: min(100% - 36px, 560px);
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-
-            .vtc-hero-content {
-                padding: 65px 0 5px;
-                text-align: center;
-            }
-
-            .vtc-hero-content h1 {
-                font-size: 43px;
-                letter-spacing: -1.8px;
-            }
-
-            .vtc-hero-content>p {
-                margin-left: auto;
-                margin-right: auto;
-                font-size: 14px;
-            }
-
-            .vtc-hero-art {
-                min-height: 340px;
-                transform: scale(.85);
-                margin: -5px 0 5px;
-            }
-
-            .vtc-orbit-one {
-                width: 290px;
-                height: 290px;
-            }
-
-            .vtc-orbit-two {
-                width: 360px;
-                height: 360px;
-            }
-
-            .vtc-content-wrap {
-                width: calc(100% - 36px);
-                padding: 55px 0 70px;
-            }
-
-            .vtc-content-header {
-                margin-bottom: 25px;
-            }
-
-            .vtc-content-header h2 {
-                font-size: 29px;
-            }
-
-            .vtc-layout {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .vtc-sidebar {
-                position: relative;
-                top: auto;
-            }
-
-            .vtc-sidebar-inner {
-                padding: 17px;
-            }
-
-            .vtc-toc {
-                display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 5px;
-            }
-
-            .vtc-toc a {
-                font-size: 10px;
-                padding: 9px 7px;
-            }
-
-            .vtc-sidebar-note {
-                display: none;
-            }
-
-            .vtc-policy-card {
-                grid-template-columns: 35px minmax(0, 1fr);
-                gap: 12px;
-                padding: 19px 15px;
-                border-radius: 14px;
-            }
-
-            .vtc-card-number {
-                width: 34px;
-                height: 34px;
-                font-size: 10px;
-            }
-
-            .vtc-card-body h3 {
-                font-size: 15px;
-                margin-top: 6px;
-            }
-
-            .vtc-card-body p,
-            .vtc-card-body ul {
-                font-size: 12px;
-            }
-
-            .vtc-intro-card {
-                padding: 19px 15px;
-            }
-
-            .vtc-feature-grid,
-            .vtc-refund-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .vtc-policy-links {
-                grid-template-columns: 1fr;
-            }
-
-            .vtc-bottom-card {
-                padding: 21px 17px;
-            }
-
-            .vtc-back-top {
-                right: 15px;
-                bottom: 15px;
-                width: 42px;
-                height: 42px;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .vtc-hero-content h1 {
-                font-size: 37px;
-            }
-
-            .vtc-hero-art {
-                transform: scale(.75);
-                margin: -25px 0 -20px;
-            }
-
-            .vtc-toc {
-                grid-template-columns: 1fr;
-            }
-        }
-
-
-        /* REDUCED MOTION ACCESSIBILITY */
-
-        @media (prefers-reduced-motion: reduce) {
-
-            .vtc-section *,
-            .vtc-section *::before,
-            .vtc-section *::after {
-                animation-duration: .01ms !important;
-                animation-iteration-count: 1 !important;
-                scroll-behavior: auto !important;
-                transition-duration: .01ms !important;
-            }
-
-            .vtc-js-ready .vtc-intro-card,
-            .vtc-js-ready .vtc-policy-card,
-            .vtc-js-ready .vtc-bottom-card,
-            .vtc-js-ready .vtc-policy-links {
-                opacity: 1;
-                transform: none;
-            }
-        }
+       
+
+       /* ==========================================
+   VASHQ TERMS & CONDITIONS
+   CLEAN WHITE + BLUE DESIGN
+========================================== */
+
+.vtc-section {
+    --vtc-primary: #1769ff;
+    --vtc-heading: #172033;
+    --vtc-text: #536174;
+    --vtc-muted: #8491a5;
+    --vtc-border: #e5eaf2;
+
+    width: 100%;
+    background: #fff;
+    color: var(--vtc-text);
+    font-family: Arial, sans-serif;
+}
+
+.vtc-section *,
+.vtc-section *::before,
+.vtc-section *::after {
+    box-sizing: border-box;
+}
+
+.vtc-section a {
+    text-decoration: none;
+}
+
+/* HERO */
+
+.vtc-hero {
+    padding: 65px 20px 45px;
+    background: #fff;
+    text-align: center;
+    border-bottom: 1px solid var(--vtc-border);
+}
+
+.vtc-hero-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.vtc-hero-content {
+    max-width: 720px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.vtc-eyebrow {
+    display: inline-block;
+    color: var(--vtc-primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    margin-bottom: 15px;
+}
+
+.vtc-hero-content h1 {
+    color: var(--vtc-heading);
+    font-size: clamp(32px, 5vw, 46px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    margin: 0 0 15px;
+}
+
+.vtc-hero-content h1 span {
+    color: var(--vtc-primary);
+}
+
+.vtc-hero-content > p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--vtc-text);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* CONTENT */
+
+.vtc-content-wrap {
+    width: min(850px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 45px 0 75px;
+}
+
+.vtc-content-header {
+    margin-bottom: 28px;
+}
+
+.vtc-content-label {
+    display: inline-block;
+    color: var(--vtc-primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.vtc-content-header h2 {
+    color: var(--vtc-heading);
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.vtc-content-header p {
+    color: var(--vtc-text);
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.vtc-layout {
+    display: block;
+}
+
+.vtc-policy-content {
+    width: 100%;
+}
+
+/* INTRO */
+
+.vtc-intro-card {
+    padding: 20px 22px;
+    margin-bottom: 25px;
+    background: #f5f8ff;
+    border: 1px solid #e5edff;
+    border-radius: 10px;
+}
+
+.vtc-intro-card h3 {
+    color: var(--vtc-heading);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.vtc-intro-card p {
+    color: var(--vtc-text);
+    font-size: 13px;
+    line-height: 1.85;
+    margin: 0;
+}
+
+/* POLICY SECTIONS */
+
+.vtc-policy-card {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 15px;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--vtc-border);
+    scroll-margin-top: 100px;
+}
+
+.vtc-card-number {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edf4ff;
+    color: var(--vtc-primary);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.vtc-card-body h3 {
+    color: var(--vtc-heading);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 4px 0 12px;
+}
+
+.vtc-card-body p {
+    color: var(--vtc-text);
+    font-size: 13.5px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.vtc-card-body p:last-child {
+    margin-bottom: 0;
+}
+
+.vtc-card-body ul {
+    padding-left: 20px;
+    margin: 12px 0 0;
+    color: var(--vtc-text);
+    font-size: 13.5px;
+    line-height: 1.9;
+}
+
+.vtc-card-body li {
+    padding-left: 3px;
+    margin-bottom: 5px;
+}
+
+.vtc-card-body li::marker {
+    color: var(--vtc-primary);
+}
+
+/* FEATURE LIST */
+
+.vtc-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 15px;
+    margin: 15px 0;
+}
+
+.vtc-feature-grid span {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    color: var(--vtc-text);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.vtc-feature-grid span i {
+    flex-shrink: 0;
+    color: var(--vtc-primary);
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+/* SUBSCRIPTION DETAILS */
+
+.vtc-info-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 14px 0;
+}
+
+.vtc-info-list div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 13px;
+    background: #f5f8ff;
+    border: 1px solid #e8efff;
+    border-radius: 8px;
+    color: var(--vtc-text);
+    font-size: 12px;
+}
+
+.vtc-info-list i {
+    color: var(--vtc-primary);
+    font-size: 15px;
+}
+
+/* IMPORTANT POLICY */
+
+.vtc-important-card {
+    padding: 24px 0;
+}
+
+.vtc-important-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--vtc-primary);
+    background: #edf4ff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.vtc-refund-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    margin: 15px 0;
+}
+
+.vtc-refund-grid span {
+    padding: 10px 12px;
+    background: #f8faff;
+    border: 1px solid var(--vtc-border);
+    border-radius: 7px;
+    color: var(--vtc-text);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* CHECK LIST */
+
+.vtc-check-list {
+    list-style: none;
+    padding: 0 !important;
+    margin: 12px 0 0 !important;
+}
+
+.vtc-check-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 9px;
+}
+
+.vtc-check-list li::before {
+    content: "\F26A";
+    font-family: "bootstrap-icons";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--vtc-primary);
+    font-size: 14px;
+}
+
+/* HIGHLIGHT */
+
+.vtc-highlight {
+    padding: 14px 16px;
+    margin-top: 15px;
+    background: #f5f8ff;
+    border-left: 3px solid var(--vtc-primary);
+    border-radius: 4px;
+}
+
+.vtc-highlight p {
+    margin: 0;
+}
+
+/* BOTTOM CONTACT */
+
+.vtc-bottom-card {
+    padding: 22px 0;
+    margin-top: 15px;
+    border-bottom: 1px solid var(--vtc-border);
+}
+
+.vtc-bottom-card h3 {
+    color: var(--vtc-heading);
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.vtc-bottom-card p {
+    color: var(--vtc-text);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.vtc-bottom-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--vtc-primary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* RELATED POLICY LINKS */
+
+.vtc-policy-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.vtc-policy-links > a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid var(--vtc-border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--vtc-heading);
+}
+
+.vtc-link-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--vtc-primary);
+    background: #edf4ff;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+.vtc-policy-links small,
+.vtc-policy-links strong {
+    display: block;
+}
+
+.vtc-policy-links small {
+    color: var(--vtc-muted);
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+.vtc-policy-links strong {
+    color: var(--vtc-heading);
+    font-size: 12px;
+}
+
+.vtc-link-arrow {
+    color: var(--vtc-primary);
+    margin-left: auto;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+
+    .vtc-hero {
+        padding: 50px 18px 35px;
+    }
+
+    .vtc-hero-content h1 {
+        font-size: 34px;
+        letter-spacing: -0.8px;
+    }
+
+    .vtc-hero-content > p {
+        font-size: 13px;
+    }
+
+    .vtc-content-wrap {
+        width: calc(100% - 36px);
+        padding: 35px 0 55px;
+    }
+
+    .vtc-content-header h2 {
+        font-size: 22px;
+    }
+
+    .vtc-policy-card {
+        grid-template-columns: 32px minmax(0, 1fr);
+        gap: 11px;
+        padding: 21px 0;
+    }
+
+    .vtc-card-number {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+    }
+
+    .vtc-card-body h3 {
+        font-size: 15px;
+        margin-top: 3px;
+    }
+
+    .vtc-card-body p,
+    .vtc-card-body ul {
+        font-size: 12.5px;
+    }
+
+    .vtc-feature-grid,
+    .vtc-refund-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vtc-policy-links {
+        grid-template-columns: 1fr;
+    }
+
+    .vtc-intro-card {
+        padding: 17px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .vtc-hero-content h1 {
+        font-size: 30px;
+    }
+
+    .vtc-content-wrap {
+        width: calc(100% - 30px);
+    }
+}
 
 
         #page-loader {
@@ -1449,6 +756,7 @@
 </head>
 
 <body>
+
     <div id="page-loader" aria-hidden="true">
 
         <div class="vashq-loader-content">
@@ -1613,572 +921,544 @@
 
     <section class="vtc-section" id="terms">
 
-        <!-- HERO -->
-        <div class="vtc-hero">
-            <div class="vtc-hero-glow vtc-glow-one"></div>
-            <div class="vtc-hero-glow vtc-glow-two"></div>
-            <div class="vtc-hero-container">
+    <!-- HERO -->
+    <div class="vtc-hero">
+        <div class="vtc-hero-container">
+            <div class="vtc-hero-content">
+                 <h1>Terms &amp; <span>Conditions</span></h1>
 
-                <div class="vtc-hero-content">
+                <p>
+                    Please review the terms that govern your access to
+                    and use of the VASHQ platform.
+                </p>
 
-                    <h1>Terms &amp; <span>Conditions</span></h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CONTENT -->
+    <div class="vtc-content-wrap">
+
+        <div class="vtc-content-header">
+            <span class="vtc-content-label">VASHQ LEGAL</span>
+
+            <h2>Our Terms of Service</h2>
+
+            <p>
+                Everything you need to know about using VASHQ,
+                your responsibilities, and our service commitments.
+            </p>
+        </div>
+
+
+        <div class="vtc-layout">
+
+            <div class="vtc-policy-content">
+
+                <!-- INTRO -->
+                <div class="vtc-intro-card">
+
+                    <h3>Welcome to VASHQ</h3>
 
                     <p>
-                        Please review the terms that govern your access to
-                        and use of the VASHQ platform.
+                        These Terms &amp; Conditions explain the rules and
+                        responsibilities associated with using VASHQ.
+                        By accessing or using our platform, you agree to
+                        the terms outlined below.
                     </p>
 
                 </div>
 
-                <div class="vtc-hero-art">
-                    <div class="vtc-orbit vtc-orbit-one"></div>
-                    <div class="vtc-orbit vtc-orbit-two"></div>
 
-                    <div class="vtc-document">
-                        <div class="vtc-doc-top">
-                            <span class="vtc-doc-icon">
-                                <i class="bi bi-file-earmark-text"></i>
-                            </span>
-                            <span class="vtc-doc-check">
-                                <i class="bi bi-check-lg"></i>
-                            </span>
-                        </div>
+                <!-- 01 -->
+                <article class="vtc-policy-card" id="vtc-acceptance">
 
-                        <div class="vtc-doc-heading"></div>
-                        <div class="vtc-doc-line"></div>
-                        <div class="vtc-doc-line short"></div>
-                        <div class="vtc-doc-line"></div>
+                    <div class="vtc-card-number">01</div>
 
-                        <div class="vtc-doc-divider"></div>
+                    <div class="vtc-card-body">
 
-                        <div class="vtc-doc-row">
-                            <span></span><span></span>
-                        </div>
-                        <div class="vtc-doc-row">
-                            <span></span><span></span>
-                        </div>
-                        <div class="vtc-doc-row">
-                            <span></span><span></span>
-                        </div>
+                        <h3>Acceptance</h3>
 
-                        <div class="vtc-doc-sign">
-                            <i class="bi bi-pen"></i>
-                            <span>Terms of Service</span>
-                        </div>
+                        <p>
+                            By registering, accessing, subscribing to, or using
+                            VASHQ, you agree to these Terms &amp; Conditions.
+                        </p>
+
+                        <p>
+                            If you disagree with any part, you should not use
+                            the platform.
+                        </p>
+
                     </div>
+                </article>
 
-                    <div class="vtc-float-card vtc-float-shield">
-                        <i class="bi bi-shield-lock-fill"></i>
+
+                <!-- 02 -->
+                <article class="vtc-policy-card" id="vtc-service">
+
+                    <div class="vtc-card-number">02</div>
+
+                    <div class="vtc-card-body">
+
+                        <h3>Service Description</h3>
+
+                        <p>
+                            VASHQ is a cloud-based ERP and business management
+                            software for the car care industry.
+                        </p>
+
+                        <p>Features may include:</p>
+
+                        <div class="vtc-feature-grid">
+
+                            <span><i class="bi bi-check2"></i> Job Management</span>
+                            <span><i class="bi bi-check2"></i> Customer Management</span>
+                            <span><i class="bi bi-check2"></i> Billing &amp; Invoicing</span>
+                            <span><i class="bi bi-check2"></i> Booking Management</span>
+                            <span><i class="bi bi-check2"></i> Employee Management</span>
+                            <span><i class="bi bi-check2"></i> Inventory</span>
+                            <span><i class="bi bi-check2"></i> Expense Tracking</span>
+                            <span><i class="bi bi-check2"></i> Credit Management</span>
+                            <span><i class="bi bi-check2"></i> Reports</span>
+                            <span><i class="bi bi-check2"></i> AI Insights</span>
+                            <span><i class="bi bi-check2"></i> WhatsApp Integration</span>
+                            <span><i class="bi bi-check2"></i> Business Analytics</span>
+
+                        </div>
+
+                        <p>
+                            Features may change over time without prior notice.
+                        </p>
+
                     </div>
+                </article>
 
-                    <div class="vtc-float-card vtc-float-check">
-                        <i class="bi bi-check-circle-fill"></i>
+
+                <!-- 03 -->
+                <article class="vtc-policy-card" id="vtc-trial">
+
+                    <div class="vtc-card-number">03</div>
+
+                    <div class="vtc-card-body">
+
+                        <h3>Free Trial</h3>
+
+                        <p>
+                            VASHQ provides a free trial period to allow customers
+                            to evaluate the software before purchasing.
+                        </p>
+
+                        <p>
+                            Customers are expected to fully evaluate all features
+                            during the trial.
+                        </p>
+
+                        <p>
+                            Once a paid subscription is purchased, it confirms
+                            that the customer is satisfied with the software.
+                        </p>
+
                     </div>
-
-                    <div class="vtc-float-card vtc-float-dots">
-                        <i class="bi bi-three-dots"></i>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="vtc-hero-bottom"></div>
-        </div>
+                </article>
 
 
-        <!-- CONTENT -->
-        <div class="vtc-content-wrap">
+                <!-- 04 -->
+                <article class="vtc-policy-card" id="vtc-subscription">
 
-            <div class="vtc-content-header">
-                <span class="vtc-content-label">VASHQ LEGAL</span>
-                <h2>Our Terms of Service</h2>
-                <p>
-                    Everything you need to know about using VASHQ,
-                    your responsibilities, and our service commitments.
-                </p>
-            </div>
+                    <div class="vtc-card-number">04</div>
 
-            <div class="vtc-layout">
+                    <div class="vtc-card-body">
 
-                <!-- TABLE OF CONTENTS -->
-                <aside class="vtc-sidebar">
-                    <div class="vtc-sidebar-inner">
+                        <h3>Subscription</h3>
 
-                        <div class="vtc-sidebar-heading">
-                            <span class="vtc-sidebar-icon">
-                                <i class="bi bi-list-ul"></i>
-                            </span>
+                        <p>Subscriptions are offered on:</p>
+
+                        <div class="vtc-info-list">
+
                             <div>
-                                <strong>On this page</strong>
-                                <small>Explore the terms</small>
+                                <i class="bi bi-calendar-month"></i>
+                                <span>Monthly (if applicable)</span>
                             </div>
+
+                            <div>
+                                <i class="bi bi-calendar-check"></i>
+                                <span>Annual Plans</span>
+                            </div>
+
                         </div>
 
-                        <nav class="vtc-toc">
-                            <a href="#vtc-acceptance" class="active">01. Acceptance</a>
-                            <a href="#vtc-service">02. Service Description</a>
-                            <a href="#vtc-trial">03. Free Trial</a>
-                            <a href="#vtc-subscription">04. Subscription</a>
-                            <a href="#vtc-refund">05. No Refund Policy</a>
-                            <a href="#vtc-renewal">06. Auto Renewal</a>
-                            <a href="#vtc-responsibilities">07. User Responsibilities</a>
-                            <a href="#vtc-ip">08. Intellectual Property</a>
-                            <a href="#vtc-availability">09. Availability</a>
-                            <a href="#vtc-support">10. Support</a>
-                            <a href="#vtc-backup">11. Data Backup</a>
-                            <a href="#vtc-suspension">12. Suspension</a>
-                            <a href="#vtc-liability">13. Limitation of Liability</a>
-                            <a href="#vtc-indemnification">14. Indemnification</a>
-                            <a href="#vtc-law">15. Governing Law</a>
-                            <a href="#vtc-changes">16. Changes</a>
-                        </nav>
+                        <p>
+                            Subscriptions begin once payment is successfully completed.
+                        </p>
 
-                        <div class="vtc-sidebar-note">
-                            <i class="bi bi-info-circle"></i>
-                            <p>Have questions about these terms? Contact our team for assistance.</p>
-                            <a href="contact.html">Contact us <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                </article>
+
+
+                <!-- 05 -->
+                <article class="vtc-policy-card vtc-important-card" id="vtc-refund">
+
+                    <div class="vtc-card-number">05</div>
+
+                    <div class="vtc-card-body">
+
+                        <div class="vtc-important-label">
+                            <i class="bi bi-exclamation-circle"></i>
+                            Important Policy
+                        </div>
+
+                        <h3>No Refund Policy</h3>
+
+                        <p>
+                            All subscription payments are final and non-refundable.
+                        </p>
+
+                        <p>
+                            Because VASHQ provides a free trial before purchase,
+                            users have sufficient opportunity to evaluate the
+                            platform before subscribing.
+                        </p>
+
+                        <p>
+                            No refunds, whether full or partial, will be issued for:
+                        </p>
+
+                        <div class="vtc-refund-grid">
+
+                            <span>Change of mind</span>
+                            <span>Lack of usage</span>
+                            <span>Business closure</span>
+                            <span>Staff changes</span>
+                            <span>Technical knowledge limitations</span>
+                            <span>Failure to utilize available features</span>
+                            <span>Switching to another software</span>
+                            <span>Dissatisfaction after subscription</span>
+                            <span>Early cancellation</span>
+                            <span>Partial subscription periods</span>
+
+                        </div>
+
+                        <p>
+                            This policy applies to all annual subscription plans
+                            unless otherwise required by applicable law.
+                        </p>
+
+                    </div>
+                </article>
+
+
+                <!-- 06 -->
+                <article class="vtc-policy-card" id="vtc-renewal">
+
+                    <div class="vtc-card-number">06</div>
+
+                    <div class="vtc-card-body">
+
+                        <h3>Auto Renewal</h3>
+
+                        <p>
+                            Subscriptions may renew automatically if enabled
+                            by the customer.
+                        </p>
+
+                        <p>
+                            Customers are responsible for canceling auto-renewal
+                            before the renewal date.
+                        </p>
+
+                    </div>
+                </article>
+
+
+                <!-- 07 -->
+                <article class="vtc-policy-card" id="vtc-responsibilities">
+
+                    <div class="vtc-card-number">07</div>
+
+                    <div class="vtc-card-body">
+
+                        <h3>User Responsibilities</h3>
+
+                        <p>Customers agree:</p>
+
+                        <ul class="vtc-check-list">
+
+                            <li>To provide accurate information.</li>
+                            <li>To maintain password confidentiality.</li>
+                            <li>Not to share accounts without authorization.</li>
+                            <li>Not to attempt unauthorized access.</li>
+                            <li>Not to misuse the platform.</li>
+                            <li>Not to upload illegal or harmful content.</li>
+                            <li>Not to interfere with system operations.</li>
+
+                        </ul>
+
+                    </div>
+                </article>
+
+
+                <!-- 08 -->
+                <article class="vtc-policy-card" id="vtc-ip">
+
+                    <div class="vtc-card-number">08</div>
+
+                    <div class="vtc-card-body">
+
+                        <h3>Intellectual Property</h3>
+
+                        <p>
+                            All software, source code, branding, logos, designs,
+                            UI, workflows, documentation, AI systems, APIs,
+                            databases, and related intellectual property remain
+                            the exclusive property of Wisemove Consultancy Pvt. Ltd.
+                        </p>
+
+                        <div class="vtc-highlight">
+
+                            <p>
+                                Customers receive a limited, non-transferable,
+                                non-exclusive license to use the software during
+                                an active subscription.
+                            </p>
+
                         </div>
 
                     </div>
-                </aside>
+                </article>
 
 
-                <!-- POLICY CONTENT -->
-                <div class="vtc-policy-content">
+                <!-- 09 -->
+                <article class="vtc-policy-card" id="vtc-availability">
 
-                    <div class="vtc-intro-card">
-                        <div class="vtc-intro-icon">
-                            <i class="bi bi-handshake"></i>
+                    <div class="vtc-card-number">09</div>
+
+                    <div class="vtc-card-body">
+
+                        <h3>Availability</h3>
+
+                        <p>
+                            While we strive for high availability, uninterrupted
+                            service cannot be guaranteed.
+                        </p>
+
+                        <p>Temporary interruptions may occur due to:</p>
+
+                        <div class="vtc-feature-grid">
+
+                            <span><i class="bi bi-tools"></i> Maintenance</span>
+                            <span><i class="bi bi-arrow-repeat"></i> Server Upgrades</span>
+                            <span><i class="bi bi-wifi-off"></i> Internet Issues</span>
+                            <span><i class="bi bi-cloud-slash"></i> Third-party Service Failures</span>
+                            <span><i class="bi bi-exclamation-triangle"></i> Force Majeure Events</span>
+
                         </div>
-                        <div>
-                            <h3>Welcome to VASHQ</h3>
-                            <p>
-                                These Terms &amp; Conditions explain the rules and
-                                responsibilities associated with using VASHQ.
-                                By accessing or using our platform, you agree to
-                                the terms outlined below.
-                            </p>
-                        </div>
+
                     </div>
+                </article>
 
 
-                    <!-- 01 -->
-                    <article class="vtc-policy-card" id="vtc-acceptance">
-                        <div class="vtc-card-number">01</div>
-                        <div class="vtc-card-body">
-                            <h3>Acceptance</h3>
-                            <p>
-                                By registering, accessing, subscribing to, or using
-                                VASHQ, you agree to these Terms &amp; Conditions.
-                            </p>
-                            <p class="mb-0">
-                                If you disagree with any part, you should not use
-                                the platform.
-                            </p>
-                        </div>
-                    </article>
+                <!-- 10 -->
+                <article class="vtc-policy-card" id="vtc-support">
 
+                    <div class="vtc-card-number">10</div>
 
-                    <!-- 02 -->
-                    <article class="vtc-policy-card" id="vtc-service">
-                        <div class="vtc-card-number">02</div>
-                        <div class="vtc-card-body">
-                            <h3>Service Description</h3>
-                            <p>
-                                VASHQ is a cloud-based ERP and business management
-                                software for the car care industry.
-                            </p>
-                            <p>Features may include:</p>
+                    <div class="vtc-card-body">
 
-                            <div class="vtc-feature-grid">
-                                <span><i class="bi bi-check2"></i> Job Management</span>
-                                <span><i class="bi bi-check2"></i> Customer Management</span>
-                                <span><i class="bi bi-check2"></i> Billing &amp; Invoicing</span>
-                                <span><i class="bi bi-check2"></i> Booking Management</span>
-                                <span><i class="bi bi-check2"></i> Employee Management</span>
-                                <span><i class="bi bi-check2"></i> Inventory</span>
-                                <span><i class="bi bi-check2"></i> Expense Tracking</span>
-                                <span><i class="bi bi-check2"></i> Credit Management</span>
-                                <span><i class="bi bi-check2"></i> Reports</span>
-                                <span><i class="bi bi-check2"></i> AI Insights</span>
-                                <span><i class="bi bi-check2"></i> WhatsApp Integration</span>
-                                <span><i class="bi bi-check2"></i> Business Analytics</span>
-                            </div>
+                        <h3>Support</h3>
 
-                            <p class="mb-0">
-                                Features may change over time without prior notice.
-                            </p>
-                        </div>
-                    </article>
+                        <p>
+                            Technical support is provided according to the
+                            subscribed plan.
+                        </p>
 
+                        <p>
+                            Support does not include custom development unless
+                            separately agreed in writing.
+                        </p>
 
-                    <!-- 03 -->
-                    <article class="vtc-policy-card" id="vtc-trial">
-                        <div class="vtc-card-number">03</div>
-                        <div class="vtc-card-body">
-                            <h3>Free Trial</h3>
-                            <p>
-                                VASHQ provides a free trial period to allow customers
-                                to evaluate the software before purchasing.
-                            </p>
-                            <p>
-                                Customers are expected to fully evaluate all features
-                                during the trial.
-                            </p>
-                            <p class="mb-0">
-                                Once a paid subscription is purchased, it confirms
-                                that the customer is satisfied with the software.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <!-- 04 -->
-                    <article class="vtc-policy-card" id="vtc-subscription">
-                        <div class="vtc-card-number">04</div>
-                        <div class="vtc-card-body">
-                            <h3>Subscription</h3>
-                            <p>Subscriptions are offered on:</p>
-
-                            <div class="vtc-info-list">
-                                <div>
-                                    <i class="bi bi-calendar-month"></i>
-                                    <span>Monthly (if applicable)</span>
-                                </div>
-                                <div>
-                                    <i class="bi bi-calendar-check"></i>
-                                    <span>Annual Plans</span>
-                                </div>
-                            </div>
-
-                            <p class="mb-0">
-                                Subscriptions begin once payment is successfully completed.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <!-- 05 -->
-                    <article class="vtc-policy-card vtc-important-card" id="vtc-refund">
-                        <div class="vtc-card-number">05</div>
-                        <div class="vtc-card-body">
-                            <div class="vtc-important-label">
-                                <i class="bi bi-exclamation-circle"></i>
-                                Important Policy
-                            </div>
-                            <h3>No Refund Policy</h3>
-                            <p>All subscription payments are final and non-refundable.</p>
-                            <p>
-                                Because VASHQ provides a free trial before purchase,
-                                users have sufficient opportunity to evaluate the
-                                platform before subscribing.
-                            </p>
-                            <p>No refunds, whether full or partial, will be issued for:</p>
-
-                            <div class="vtc-refund-grid">
-                                <span>Change of mind</span>
-                                <span>Lack of usage</span>
-                                <span>Business closure</span>
-                                <span>Staff changes</span>
-                                <span>Technical knowledge limitations</span>
-                                <span>Failure to utilize available features</span>
-                                <span>Switching to another software</span>
-                                <span>Dissatisfaction after subscription</span>
-                                <span>Early cancellation</span>
-                                <span>Partial subscription periods</span>
-                            </div>
-
-                            <p class="mb-0">
-                                This policy applies to all annual subscription plans
-                                unless otherwise required by applicable law.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <!-- 06 -->
-                    <article class="vtc-policy-card" id="vtc-renewal">
-                        <div class="vtc-card-number">06</div>
-                        <div class="vtc-card-body">
-                            <h3>Auto Renewal</h3>
-                            <p>
-                                Subscriptions may renew automatically if enabled
-                                by the customer.
-                            </p>
-                            <p class="mb-0">
-                                Customers are responsible for canceling auto-renewal
-                                before the renewal date.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <!-- 07 -->
-                    <article class="vtc-policy-card" id="vtc-responsibilities">
-                        <div class="vtc-card-number">07</div>
-                        <div class="vtc-card-body">
-                            <h3>User Responsibilities</h3>
-                            <p>Customers agree:</p>
-
-                            <ul class="vtc-check-list">
-                                <li>To provide accurate information.</li>
-                                <li>To maintain password confidentiality.</li>
-                                <li>Not to share accounts without authorization.</li>
-                                <li>Not to attempt unauthorized access.</li>
-                                <li>Not to misuse the platform.</li>
-                                <li>Not to upload illegal or harmful content.</li>
-                                <li>Not to interfere with system operations.</li>
-                            </ul>
-                        </div>
-                    </article>
-
-
-                    <!-- 08 -->
-                    <article class="vtc-policy-card" id="vtc-ip">
-                        <div class="vtc-card-number">08</div>
-                        <div class="vtc-card-body">
-                            <h3>Intellectual Property</h3>
-                            <p>
-                                All software, source code, branding, logos, designs,
-                                UI, workflows, documentation, AI systems, APIs,
-                                databases, and related intellectual property remain
-                                the exclusive property of Wisemove Consultancy Pvt. Ltd.
-                            </p>
-                            <div class="vtc-highlight">
-                                <i class="bi bi-shield-lock"></i>
-                                <p class="mb-0">
-                                    Customers receive a limited, non-transferable,
-                                    non-exclusive license to use the software during
-                                    an active subscription.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <!-- 09 -->
-                    <article class="vtc-policy-card" id="vtc-availability">
-                        <div class="vtc-card-number">09</div>
-                        <div class="vtc-card-body">
-                            <h3>Availability</h3>
-                            <p>
-                                While we strive for high availability, uninterrupted
-                                service cannot be guaranteed.
-                            </p>
-                            <p>Temporary interruptions may occur due to:</p>
-
-                            <div class="vtc-feature-grid vtc-two-column">
-                                <span><i class="bi bi-tools"></i> Maintenance</span>
-                                <span><i class="bi bi-arrow-repeat"></i> Server Upgrades</span>
-                                <span><i class="bi bi-wifi-off"></i> Internet Issues</span>
-                                <span><i class="bi bi-cloud-slash"></i> Third-party Service Failures</span>
-                                <span><i class="bi bi-exclamation-triangle"></i> Force Majeure Events</span>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <!-- 10 -->
-                    <article class="vtc-policy-card" id="vtc-support">
-                        <div class="vtc-card-number">10</div>
-                        <div class="vtc-card-body">
-                            <h3>Support</h3>
-                            <p>
-                                Technical support is provided according to the
-                                subscribed plan.
-                            </p>
-                            <p class="mb-0">
-                                Support does not include custom development unless
-                                separately agreed in writing.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <!-- 11 -->
-                    <article class="vtc-policy-card" id="vtc-backup">
-                        <div class="vtc-card-number">11</div>
-                        <div class="vtc-card-body">
-                            <h3>Data Backup</h3>
-                            <p>
-                                We perform regular backups; however, customers are
-                                responsible for maintaining copies of important
-                                business records where appropriate.
-                            </p>
-                            <p class="mb-0">
-                                The Company is not liable for losses arising from
-                                unforeseen technical failures, third-party outages,
-                                or events beyond its reasonable control.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <!-- 12 -->
-                    <article class="vtc-policy-card" id="vtc-suspension">
-                        <div class="vtc-card-number">12</div>
-                        <div class="vtc-card-body">
-                            <h3>Suspension</h3>
-                            <p>We may suspend or terminate accounts for:</p>
-
-                            <div class="vtc-feature-grid">
-                                <span><i class="bi bi-x-circle"></i> Fraud</span>
-                                <span><i class="bi bi-x-circle"></i> Abuse</span>
-                                <span><i class="bi bi-x-circle"></i> Illegal Activities</span>
-                                <span><i class="bi bi-x-circle"></i> Non-payment</span>
-                                <span><i class="bi bi-x-circle"></i> Security Threats</span>
-                                <span><i class="bi bi-x-circle"></i> Violation of these Terms</span>
-                            </div>
-
-                            <p class="mb-0">
-                                No refund will be issued for accounts terminated
-                                due to violations.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <!-- 13 -->
-                    <article class="vtc-policy-card" id="vtc-liability">
-                        <div class="vtc-card-number">13</div>
-                        <div class="vtc-card-body">
-                            <h3>Limitation of Liability</h3>
-                            <p>To the maximum extent permitted by law:</p>
-
-                            <ul class="vtc-check-list">
-                                <li>
-                                    VASHQ is provided on an "as is" and
-                                    "as available" basis.
-                                </li>
-                                <li>
-                                    The Company does not guarantee uninterrupted,
-                                    error-free, or completely secure operation.
-                                </li>
-                                <li>
-                                    The Company shall not be liable for indirect,
-                                    incidental, consequential, special, exemplary,
-                                    or punitive damages, including loss of profits,
-                                    revenue, business opportunities, goodwill, or data.
-                                </li>
-                                <li>
-                                    The Company's total aggregate liability arising
-                                    out of or relating to the use of VASHQ shall not
-                                    exceed the subscription fees paid by the customer
-                                    during the twelve (12) months immediately preceding
-                                    the event giving rise to the claim.
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-
-
-                    <!-- 14 -->
-                    <article class="vtc-policy-card" id="vtc-indemnification">
-                        <div class="vtc-card-number">14</div>
-                        <div class="vtc-card-body">
-                            <h3>Indemnification</h3>
-                            <p class="mb-0">
-                                Customers agree to indemnify and hold harmless
-                                Wisemove Consultancy Pvt. Ltd., its directors,
-                                employees, affiliates, and partners from claims,
-                                damages, liabilities, losses, and expenses arising
-                                from misuse of the platform, violation of these Terms,
-                                infringement of third-party rights, or unlawful
-                                activities conducted through their account.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <!-- 15 -->
-                    <article class="vtc-policy-card" id="vtc-law">
-                        <div class="vtc-card-number">15</div>
-                        <div class="vtc-card-body">
-                            <h3>Governing Law</h3>
-                            <p>These Terms shall be governed by the laws of India.</p>
-                            <div class="vtc-highlight">
-                                <i class="bi bi-geo-alt"></i>
-                                <p class="mb-0">
-                                    Any disputes shall be subject to the exclusive
-                                    jurisdiction of the courts located in Ernakulam,
-                                    Kerala, India, unless otherwise required by
-                                    applicable law.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <!-- 16 -->
-                    <article class="vtc-policy-card" id="vtc-changes">
-                        <div class="vtc-card-number">16</div>
-                        <div class="vtc-card-body">
-                            <h3>Changes</h3>
-                            <p>
-                                The Company reserves the right to modify these
-                                Terms at any time.
-                            </p>
-                            <p class="mb-0">
-                                Continued use constitutes acceptance of the
-                                revised Terms.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <!-- BOTTOM -->
-                    <div class="vtc-bottom-card">
-                        <div class="vtc-bottom-icon">
-                            <i class="bi bi-chat-square-text"></i>
-                        </div>
-                        <div>
-                            <h3>Need clarification?</h3>
-                            <p>
-                                If you have questions about these Terms &amp; Conditions,
-                                our team is here to help.
-                            </p>
-                            <a href="contact.html">
-                                Get in touch <i class="bi bi-arrow-up-right"></i>
-                            </a>
-                        </div>
                     </div>
+                </article>
 
 
-                    <!-- POLICY LINKS -->
-                    <div class="vtc-policy-links">
-                        <a href="privacy-policy.html">
-                            <span class="vtc-link-icon">
-                                <i class="bi bi-shield-check"></i>
-                            </span>
-                            <span>
-                                <small>Read also</small>
-                                <strong>Privacy Policy</strong>
-                            </span>
-                            <i class="bi bi-arrow-up-right vtc-link-arrow"></i>
-                        </a>
+                <!-- 11 -->
+                <article class="vtc-policy-card" id="vtc-backup">
 
-                        <a href="refund-policy.html">
-                            <span class="vtc-link-icon">
-                                <i class="bi bi-wallet2"></i>
-                            </span>
-                            <span>
-                                <small>Read also</small>
-                                <strong>Refund Policy</strong>
-                            </span>
-                            <i class="bi bi-arrow-up-right vtc-link-arrow"></i>
-                        </a>
+                    <div class="vtc-card-number">11</div>
+
+                    <div class="vtc-card-body">
+
+                        <h3>Data Backup</h3>
+
+                        <p>
+                            We perform regular backups; however, customers are
+                            responsible for maintaining copies of important
+                            business records where appropriate.
+                        </p>
+
+                        <p>
+                            The Company is not liable for losses arising from
+                            unforeseen technical failures, third-party outages,
+                            or events beyond its reasonable control.
+                        </p>
+
                     </div>
+                </article>
 
-                </div>
+
+                <!-- 12 -->
+                <article class="vtc-policy-card" id="vtc-suspension">
+
+                    <div class="vtc-card-number">12</div>
+
+                    <div class="vtc-card-body">
+
+                        <h3>Suspension</h3>
+
+                        <p>We may suspend or terminate accounts for:</p>
+
+                        <div class="vtc-feature-grid">
+
+                            <span><i class="bi bi-x-circle"></i> Fraud</span>
+                            <span><i class="bi bi-x-circle"></i> Abuse</span>
+                            <span><i class="bi bi-x-circle"></i> Illegal Activities</span>
+                            <span><i class="bi bi-x-circle"></i> Non-payment</span>
+                            <span><i class="bi bi-x-circle"></i> Security Threats</span>
+                            <span><i class="bi bi-x-circle"></i> Violation of these Terms</span>
+
+                        </div>
+
+                        <p>
+                            No refund will be issued for accounts terminated
+                            due to violations.
+                        </p>
+
+                    </div>
+                </article>
+
+
+                <!-- 13 -->
+                <article class="vtc-policy-card" id="vtc-liability">
+
+                    <div class="vtc-card-number">13</div>
+
+                    <div class="vtc-card-body">
+
+                        <h3>Limitation of Liability</h3>
+
+                        <p>To the maximum extent permitted by law:</p>
+
+                        <ul class="vtc-check-list">
+
+                            <li>
+                                VASHQ is provided on an "as is" and
+                                "as available" basis.
+                            </li>
+
+                            <li>
+                                The Company does not guarantee uninterrupted,
+                                error-free, or completely secure operation.
+                            </li>
+
+                            <li>
+                                The Company shall not be liable for indirect,
+                                incidental, consequential, special, exemplary,
+                                or punitive damages, including loss of profits,
+                                revenue, business opportunities, goodwill, or data.
+                            </li>
+
+                            <li>
+                                The Company's total aggregate liability arising
+                                out of or relating to the use of VASHQ shall not
+                                exceed the subscription fees paid by the customer
+                                during the twelve (12) months immediately preceding
+                                the event giving rise to the claim.
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </article>
+
+
+                <!-- 14 -->
+                <article class="vtc-policy-card" id="vtc-indemnification">
+
+                    <div class="vtc-card-number">14</div>
+
+                    <div class="vtc-card-body">
+
+                        <h3>Indemnification</h3>
+
+                        <p>
+                            Customers agree to indemnify and hold harmless
+                            Wisemove Consultancy Pvt. Ltd., its directors,
+                            employees, affiliates, and partners from claims,
+                            damages, liabilities, losses, and expenses arising
+                            from misuse of the platform, violation of these Terms,
+                            infringement of third-party rights, or unlawful
+                            activities conducted through their account.
+                        </p>
+
+                    </div>
+                </article>
+
+
+                <!-- 15 -->
+                <article class="vtc-policy-card" id="vtc-law">
+
+                    <div class="vtc-card-number">15</div>
+
+                    <div class="vtc-card-body">
+
+                        <h3>Governing Law</h3>
+
+                        <p>
+                            These Terms shall be governed by the laws of India.
+                        </p>
+
+                        <div class="vtc-highlight">
+
+                            <p>
+                                Any disputes shall be subject to the exclusive
+                                jurisdiction of the courts located in Ernakulam,
+                                Kerala, India, unless otherwise required by
+                                applicable law.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- 16 -->
+                <article class="vtc-policy-card" id="vtc-changes">
+
+                    <div class="vtc-card-number">16</div>
+
+                    <div class="vtc-card-body">
+
+                        <h3>Changes</h3>
+
+                        <p>
+                            The Company reserves the right to modify these
+                            Terms at any time.
+                        </p>
+
+                        <p>
+                            Continued use constitutes acceptance of the
+                            revised Terms.
+                        </p>
+
+                    </div>
+                </article>
+
             </div>
         </div>
+    </div>
 
-        <!-- BACK TO TOP -->
-        <button class="vtc-back-top" type="button" aria-label="Back to top">
-            <i class="bi bi-arrow-up"></i>
-        </button>
-
-    </section>
+</section>
 
 
 
@@ -2189,7 +1469,7 @@
                 <!-- TOP BRAND SECTION -->
                 <div class="vashq-footer-brand-center">
 
-                    <a href="/" class="vashq-footer-logo">
+                    <a href="" class="vashq-footer-logo">
                         <img src="./assets/images/brand/logo-icon.webp" alt="Vashq" height="200">
                     </a>
 
@@ -2211,7 +1491,7 @@
 
                             <h1>BOOK NOW</h1>
 
-                            <p style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-size: 14px; font-weight: 500; color: #fff;"><i class="bi bi-clock" style="color: #1769ff; font-size: 15px;"></i> 20-minute personalized demo
+                            <p style="display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #fff;"><i class="bi bi-clock" style="color: #ffff; font-size: 15px;"></i> 20-minute personalized demo
                             </p>
 
                             <button type="submit">
@@ -2428,7 +1708,7 @@
 
                                 <label for="demoLocationSearch">
                                     Business Location
-                                    <span class="vashq-optional-label">(Optional)</span>
+                                    <span class="vashq-optional-label"></span>
                                 </label>
 
                                 <div class="location-combobox vashq-demo-location" id="demoLocationCombobox">
@@ -2529,172 +1809,6 @@
 
 
 
-
-    <script>
-
-
-        /* =====================================================
-           VASHQ TERMS & CONDITIONS INTERACTIONS
-        ===================================================== */
-
-        /* =====================================================
-           VASHQ TERMS & CONDITIONS INTERACTIONS
-        ===================================================== */
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const section = document.querySelector(".vtc-section");
-
-            if (!section) return;
-
-            const tocLinks = section.querySelectorAll(".vtc-toc a");
-            const policyCards = section.querySelectorAll(".vtc-policy-card");
-            const revealElements = section.querySelectorAll(
-                ".vtc-intro-card, .vtc-policy-card, .vtc-bottom-card, .vtc-policy-links"
-            );
-            const backTop = section.querySelector(".vtc-back-top");
-
-            const reduceMotion = window.matchMedia(
-                "(prefers-reduced-motion: reduce)"
-            ).matches;
-
-
-            /* ================= SCROLL REVEAL ================= */
-
-            if ("IntersectionObserver" in window && !reduceMotion) {
-
-                section.classList.add("vtc-js-ready");
-
-                const revealObserver = new IntersectionObserver(
-                    function (entries, observer) {
-
-                        entries.forEach(function (entry) {
-
-                            if (entry.isIntersecting) {
-
-                                entry.target.classList.add("vtc-visible");
-
-                                observer.unobserve(entry.target);
-                            }
-
-                        });
-
-                    },
-                    {
-                        threshold: 0.08,
-                        rootMargin: "0px 0px -35px 0px"
-                    }
-                );
-
-                revealElements.forEach(function (element) {
-                    revealObserver.observe(element);
-                });
-
-            } else {
-
-                revealElements.forEach(function (element) {
-                    element.classList.add("vtc-visible");
-                });
-
-            }
-
-
-            /* ================= TOC NAVIGATION ================= */
-
-            tocLinks.forEach(function (link) {
-
-                link.addEventListener("click", function (event) {
-
-                    const targetId = this.getAttribute("href");
-
-                    if (!targetId || !targetId.startsWith("#")) return;
-
-                    const target = section.querySelector(targetId);
-
-                    if (!target) return;
-
-                    event.preventDefault();
-
-                    target.scrollIntoView({
-                        behavior: reduceMotion ? "auto" : "smooth",
-                        block: "start"
-                    });
-
-                });
-
-            });
-
-
-            /* ================= ACTIVE TOC LINK ================= */
-
-            if ("IntersectionObserver" in window) {
-
-                const sectionObserver = new IntersectionObserver(
-                    function (entries) {
-
-                        entries.forEach(function (entry) {
-
-                            if (entry.isIntersecting) {
-
-                                const activeId = entry.target.id;
-
-                                tocLinks.forEach(function (link) {
-
-                                    const isActive =
-                                        link.getAttribute("href") === "#" + activeId;
-
-                                    link.classList.toggle("active", isActive);
-
-                                });
-
-                            }
-
-                        });
-
-                    },
-                    {
-                        rootMargin: "-20% 0px -65% 0px",
-                        threshold: 0
-                    }
-                );
-
-                policyCards.forEach(function (card) {
-                    sectionObserver.observe(card);
-                });
-
-            }
-
-
-            /* ================= BACK TO TOP ================= */
-
-            function updateBackTop() {
-
-                if (window.scrollY > 450) {
-                    backTop.classList.add("show");
-                } else {
-                    backTop.classList.remove("show");
-                }
-
-            }
-
-            window.addEventListener("scroll", updateBackTop, {
-                passive: true
-            });
-
-            updateBackTop();
-
-            backTop.addEventListener("click", function () {
-
-                window.scrollTo({
-                    top: 0,
-                    behavior: reduceMotion ? "auto" : "smooth"
-                });
-
-            });
-
-        });
-
-    </script>
 
 
 

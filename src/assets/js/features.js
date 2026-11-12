@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
 /* =====================================================
    VASHQ INTERACTIVE MOUSE FOLLOWING GRID EFFECT
 ===================================================== */
@@ -71,48 +72,77 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let animationFrame = null;
 
+    let mouseX = 0;
+    let mouseY = 0;
+    let isMouseInside = false;
+
+    /* ================================================
+       UPDATE GRID POSITION
+    ================================================ */
+
+    const updateGridPosition = () => {
+
+        const rect = section.getBoundingClientRect();
+
+        const x = mouseX - rect.left;
+        const y = mouseY - rect.top;
+
+        section.style.setProperty(
+            "--vfd-mouse-x",
+            `${x}px`
+        );
+
+        section.style.setProperty(
+            "--vfd-mouse-y",
+            `${y}px`
+        );
+
+        animationFrame = null;
+    };
+
+
+    const requestGridUpdate = () => {
+
+        if (!animationFrame) {
+            animationFrame = requestAnimationFrame(
+                updateGridPosition
+            );
+        }
+
+    };
+
+
     /* ================================================
        MOUSE MOVE
     ================================================ */
 
     section.addEventListener("mousemove", (event) => {
 
-        // Avoid unnecessary animation frames
-        if (animationFrame) {
-            cancelAnimationFrame(animationFrame);
-        }
+        mouseX = event.clientX;
+        mouseY = event.clientY;
 
-        animationFrame = requestAnimationFrame(() => {
+        isMouseInside = true;
 
-            // Get section position
-            const rect = section.getBoundingClientRect();
+        section.classList.add(
+            "vfd-mouse-active"
+        );
 
-            // Calculate cursor position inside section
-            const mouseX = event.clientX - rect.left;
-            const mouseY = event.clientY - rect.top;
-
-            // Update horizontal cursor position
-            section.style.setProperty(
-                "--vfd-mouse-x",
-                `${mouseX}px`
-            );
-
-            // Update vertical cursor position
-            section.style.setProperty(
-                "--vfd-mouse-y",
-                `${mouseY}px`
-            );
-
-            // Activate local grid and glow
-            section.classList.add(
-                "vfd-mouse-active"
-            );
-
-            animationFrame = null;
-
-        });
+        requestGridUpdate();
 
     });
+
+
+    /* ================================================
+       WINDOW SCROLL
+    ================================================ */
+
+    window.addEventListener("scroll", () => {
+
+        if (isMouseInside) {
+            requestGridUpdate();
+        }
+
+    }, { passive: true });
 
 
     /* ================================================
@@ -121,13 +151,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     section.addEventListener("mouseleave", () => {
 
-        // Cancel pending animation
+        isMouseInside = false;
+
         if (animationFrame) {
             cancelAnimationFrame(animationFrame);
             animationFrame = null;
         }
 
-        // Hide grid and glow
         section.classList.remove(
             "vfd-mouse-active"
         );
@@ -135,3 +165,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+

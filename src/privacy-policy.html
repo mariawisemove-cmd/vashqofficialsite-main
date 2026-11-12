@@ -25,1129 +25,388 @@
     <link rel="manifest" href="./assets/images/favicon_io/site.webmanifest">
     <link rel="stylesheet" href="./assets/scss/style.scss">
     <style>
-        /* =====================================================
-   VASHQ PREMIUM PRIVACY POLICY
-===================================================== */
-
-        .vpp-section {
-            --vpp-blue: #1769ff;
-            --vpp-dark: #0b3d91;
-            --vpp-heading: #172033;
-            --vpp-text: #68768b;
-            --vpp-border: #e8eef8;
-
-            position: relative;
-            width: 100%;
-            background: #fff;
-            overflow: hidden;
-            isolation: isolate;
-            font-family: 'DM Sans', sans-serif;
-            color: var(--vpp-text);
-        }
-
-        .vpp-section * {
-            box-sizing: border-box;
-        }
-
-        .vpp-container {
-            width: 100%;
-            max-width: 1240px;
-            margin: 0 auto;
-            padding-left: 25px;
-            padding-right: 25px;
-        }
-
-        /* BACKGROUND */
-
-        .vpp-grid-bg {
-            position: absolute;
-            inset: 0;
-            z-index: -2;
-            pointer-events: none;
-            opacity: .3;
-            background-image: radial-gradient(#8ab5ff 1px, transparent 1px);
-            background-size: 32px 32px;
-            mask-image: linear-gradient(to bottom, black, transparent 75%);
-        }
-
-        .vpp-bg-orb {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            filter: blur(100px);
-            z-index: -1;
-            pointer-events: none;
-            opacity: .12;
-            animation: vpp-orb-float 12s ease-in-out infinite alternate;
-        }
-
-        .vpp-orb-one {
-            background: #1769ff;
-            top: -220px;
-            left: -200px;
-        }
-
-        .vpp-orb-two {
-            background: #73aaff;
-            top: 400px;
-            right: -350px;
-            animation-delay: -5s;
-        }
-
-        @keyframes vpp-orb-float {
-            to {
-                transform: translate(50px, 40px) scale(1.2);
-            }
-        }
-
-        /* =====================================================
-   HERO
-===================================================== */
-
-        .vpp-hero {
-            position: relative;
-            padding: 115px 0 105px;
-            background: linear-gradient(120deg,
-                    #f5f9ff 0%,
-                    #edf4ff 50%,
-                    #ffffff 100%);
-            border-bottom: 1px solid #e8effa;
-        }
-
-        .vpp-hero>.vpp-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 50px;
-        }
-
-        .vpp-hero-content {
-            max-width: 650px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .vpp-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 16px 8px 9px;
-            background: #fff;
-            border: 1px solid #dce8ff;
-            border-radius: 50px;
-            color: var(--vpp-blue);
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 1.8px;
-            margin-bottom: 27px;
-            box-shadow: 0 5px 20px rgba(23, 105, 255, .05);
-        }
-
-        .vpp-eyebrow-icon {
-            width: 29px;
-            height: 29px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            color: white;
-            background: var(--vpp-blue);
-            font-size: 14px;
-        }
-
-        .vpp-hero h1 {
-            font-family: 'Outfit', sans-serif;
-            font-size: clamp(44px, 5.5vw, 72px);
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -2.8px;
-            color: var(--vpp-heading);
-            margin: 0 0 22px;
-        }
-
-        .vpp-hero h1 span {
-            background: linear-gradient(110deg, #1769ff, #0b3d91);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .vpp-hero-content>p {
-            max-width: 550px;
-            font-size: 16px;
-            line-height: 1.9;
-            color: #718096;
-            margin-bottom: 30px;
-        }
-
-        .vpp-hero-meta {
-            display: flex;
-            align-items: center;
-            gap: 17px;
-            flex-wrap: wrap;
-            font-size: 12px;
-            font-weight: 600;
-            color: #62738b;
-        }
-
-        .vpp-hero-meta span:not(.vpp-meta-divider) {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .vpp-hero-meta i {
-            color: var(--vpp-blue);
-            font-size: 15px;
-        }
-
-        .vpp-meta-divider {
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background: #a8b9d1;
-        }
-
-        /* HERO VISUAL */
-
-        .vpp-hero-visual {
-            width: 360px;
-            height: 350px;
-            flex-shrink: 0;
-            position: relative;
-            display: grid;
-            place-items: center;
-        }
-
-        .vpp-shield {
-            width: 155px;
-            height: 175px;
-            position: relative;
-            z-index: 2;
-            display: grid;
-            place-items: center;
-            color: #fff;
-            font-size: 75px;
-            background: linear-gradient(145deg, #4a91ff, #0b3d91);
-            clip-path: polygon(50% 0%, 93% 17%, 89% 66%, 75% 85%, 50% 100%, 25% 85%, 11% 66%, 7% 17%);
-            filter: drop-shadow(0 15px 25px rgba(23, 105, 255, .3));
-            animation: vpp-shield-float 4s ease-in-out infinite;
-        }
-
-        .vpp-shield i {
-            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .12));
-        }
-
-        @keyframes vpp-shield-float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-13px);
-            }
-        }
-
-        .vpp-visual-ring {
-            position: absolute;
-            border: 1px solid rgba(23, 105, 255, .16);
-            border-radius: 50%;
-        }
-
-        .vpp-ring-one {
-            width: 250px;
-            height: 250px;
-            animation: vpp-ring-pulse 5s ease-in-out infinite;
-        }
-
-        .vpp-ring-two {
-            width: 320px;
-            height: 320px;
-            border-style: dashed;
-            animation: vpp-rotate 35s linear infinite;
-        }
-
-        @keyframes vpp-ring-pulse {
-            50% {
-                transform: scale(1.08);
-                opacity: .4;
-            }
-        }
-
-        @keyframes vpp-rotate {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* FLOATING CARDS */
-
-        .vpp-float-card {
-            position: absolute;
-            z-index: 3;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 13px 17px;
-            background: rgba(255, 255, 255, .92);
-            backdrop-filter: blur(15px);
-            border: 1px solid #e3edff;
-            border-radius: 15px;
-            box-shadow: 0 12px 35px rgba(23, 60, 120, .09);
-            animation: vpp-card-float 4s ease-in-out infinite;
-        }
-
-        .vpp-float-top {
-            top: 30px;
-            right: -5px;
-        }
-
-        .vpp-float-bottom {
-            bottom: 35px;
-            left: -20px;
-            animation-delay: -2s;
-        }
-
-        .vpp-float-icon {
-            width: 38px;
-            height: 38px;
-            display: grid;
-            place-items: center;
-            color: white;
-            background: linear-gradient(135deg, #1769ff, #0b3d91);
-            border-radius: 11px;
-            font-size: 17px;
-        }
-
-        .vpp-float-card strong,
-        .vpp-float-card small {
-            display: block;
-        }
-
-        .vpp-float-card strong {
-            color: #172033;
-            font-size: 12px;
-            margin-bottom: 3px;
-        }
-
-        .vpp-float-card small {
-            color: #8592a5;
-            font-size: 10px;
-        }
-
-        @keyframes vpp-card-float {
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .vpp-orbit-dot {
-            position: absolute;
-            width: 11px;
-            height: 11px;
-            background: #1769ff;
-            border-radius: 50%;
-            top: 70px;
-            left: 50px;
-            box-shadow: 0 0 20px #1769ff;
-        }
-
-        .vpp-dot-two {
-            top: auto;
-            left: auto;
-            right: 30px;
-            bottom: 75px;
-            width: 8px;
-            height: 8px;
-            background: #8bb8ff;
-        }
-
-        /* =====================================================
-   MAIN LAYOUT
-===================================================== */
-
-        .vpp-main {
-            display: grid;
-            grid-template-columns: 270px minmax(0, 1fr);
-            gap: 40px;
-            align-items: start;
-            padding-top: 75px;
-            padding-bottom: 100px;
-        }
-
-        /* SIDEBAR */
-
-        .vpp-sidebar {
-            position: sticky;
-            top: 30px;
-        }
-
-        .vpp-sidebar-card {
-            border: 1px solid #e7edf7;
-            border-radius: 20px;
-            background: #fff;
-            padding: 22px 16px;
-            box-shadow: 0 10px 40px rgba(25, 65, 120, .045);
-        }
-
-        .vpp-sidebar-heading {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 3px 9px 18px;
-            border-bottom: 1px solid #edf1f7;
-            color: #172033;
-            font-size: 14px;
-            font-weight: 800;
-        }
-
-        .vpp-sidebar-heading i {
-            color: var(--vpp-blue);
-            font-size: 18px;
-        }
-
-        .vpp-toc {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            padding: 15px 0;
-        }
-
-        .vpp-toc-link {
-            display: flex;
-            align-items: center;
-            gap: 11px;
-            padding: 10px 9px;
-            text-decoration: none;
-            border-radius: 9px;
-            color: #77869a;
-            font-size: 12px;
-            font-weight: 600;
-            transition: all .3s ease;
-        }
-
-        .vpp-toc-link span {
-            font-size: 10px;
-            font-weight: 800;
-            color: #a4b1c3;
-            transition: color .3s ease;
-        }
-
-        .vpp-toc-link:hover,
-        .vpp-toc-link.active {
-            color: var(--vpp-blue);
-            background: #eff5ff;
-        }
-
-        .vpp-toc-link.active span {
-            color: var(--vpp-blue);
-        }
-
-        /* SIDEBAR SUPPORT */
-
-        .vpp-sidebar-help {
-            margin-top: 12px;
-            padding: 18px;
-            border-radius: 14px;
-            background: linear-gradient(145deg, #f1f6ff, #e8f1ff);
-        }
-
-        .vpp-help-icon {
-            width: 35px;
-            height: 35px;
-            display: grid;
-            place-items: center;
-            border-radius: 10px;
-            background: #fff;
-            color: var(--vpp-blue);
-            margin-bottom: 12px;
-            font-size: 17px;
-        }
-
-        .vpp-sidebar-help strong {
-            display: block;
-            color: #172033;
-            font-size: 13px;
-        }
-
-        .vpp-sidebar-help p {
-            color: #718096;
-            font-size: 11px;
-            line-height: 1.7;
-            margin: 7px 0 12px;
-        }
-
-        .vpp-sidebar-help a {
-            color: var(--vpp-blue);
-            font-size: 11px;
-            font-weight: 800;
-            text-decoration: none;
-        }
-
-        /* =====================================================
-   POLICY CARDS
-===================================================== */
-
-        .vpp-policy-content {
-            min-width: 0;
-        }
-
-        .vpp-policy-card {
-            position: relative;
-            padding: 35px 38px;
-            margin-bottom: 22px;
-            border: 1px solid #e9eef6;
-            border-radius: 19px;
-            background: #fff;
-            box-shadow: 0 8px 30px rgba(30, 65, 115, .035);
-            scroll-margin-top: 35px;
-
-            opacity: 0;
-            transform: translateY(25px);
-            transition:
-                opacity .7s ease,
-                transform .7s cubic-bezier(.2, .8, .2, 1),
-                box-shadow .35s ease,
-                border-color .35s ease;
-        }
-
-        .vpp-policy-card.vpp-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .vpp-policy-card:hover {
-            border-color: #d7e5ff;
-            box-shadow: 0 15px 40px rgba(23, 105, 255, .065);
-        }
-
-        .vpp-card-heading {
-            display: flex;
-            align-items: center;
-            gap: 17px;
-            margin-bottom: 25px;
-        }
-
-        .vpp-section-number {
-            flex-shrink: 0;
-            width: 48px;
-            height: 48px;
-            display: grid;
-            place-items: center;
-            border-radius: 14px;
-            color: var(--vpp-blue);
-            background: #eff5ff;
-            font-family: 'Outfit', sans-serif;
-            font-size: 17px;
-            font-weight: 800;
-            transition: all .35s ease;
-        }
-
-        .vpp-policy-card:hover .vpp-section-number {
-            background: var(--vpp-blue);
-            color: white;
-            transform: rotate(-5deg);
-        }
-
-        .vpp-card-label {
-            display: block;
-            color: var(--vpp-blue);
-            font-size: 9px;
-            font-weight: 800;
-            letter-spacing: 1.6px;
-            margin-bottom: 5px;
-        }
-
-        .vpp-card-heading h2 {
-            font-family: 'Outfit', sans-serif;
-            color: var(--vpp-heading);
-            font-size: 23px;
-            font-weight: 700;
-            letter-spacing: -.5px;
-            margin: 0;
-        }
-
-        .vpp-policy-card>p,
-        .vpp-info-group>p {
-            color: #6e7b8f;
-            font-size: 13px;
-            line-height: 1.95;
-            margin-bottom: 15px;
-        }
-
-        .vpp-policy-card p.mb-0 {
-            margin-bottom: 0;
-        }
-
-        .vpp-muted-note {
-            color: #8a97a8 !important;
-            font-size: 12px !important;
-            margin-top: 20px;
-        }
-
-        /* =====================================================
-   INFORMATION GROUPS
-===================================================== */
-
-        .vpp-info-group {
-            padding: 20px;
-            margin-top: 17px;
-            border: 1px solid #edf1f8;
-            border-radius: 13px;
-            background: #fbfcff;
-        }
-
-        .vpp-info-group h3 {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #26374f;
-            font-size: 14px;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .vpp-info-group h3 i {
-            color: var(--vpp-blue);
-            font-size: 17px;
-        }
-
-        .vpp-info-group>p {
-            margin-bottom: 10px;
-        }
-
-        /* LIST */
-
-        .vpp-list {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px 20px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .vpp-list li {
-            position: relative;
-            padding-left: 21px;
-            color: #6c7b90;
-            font-size: 12px;
-            line-height: 1.6;
-        }
-
-        .vpp-list li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 6px;
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #1769ff;
-            box-shadow: 0 0 0 3px #eaf2ff;
-        }
-
-        /* NOTICE */
-
-        .vpp-notice {
-            display: flex;
-            align-items: flex-start;
-            gap: 13px;
-            padding: 17px 19px;
-            margin-top: 22px;
-            border: 1px solid #dce9ff;
-            border-left: 3px solid var(--vpp-blue);
-            border-radius: 10px;
-            background: #f4f8ff;
-        }
-
-        .vpp-notice>i {
-            flex-shrink: 0;
-            color: var(--vpp-blue);
-            font-size: 17px;
-            margin-top: 2px;
-        }
-
-        .vpp-notice p {
-            color: #526985;
-            font-size: 12px;
-            line-height: 1.8;
-            margin: 0;
-        }
-
-        /* PAYMENT GRID */
-
-        .vpp-exclusion-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 11px;
-        }
-
-        .vpp-exclusion-grid>div {
-            display: flex;
-            align-items: center;
-            gap: 11px;
-            padding: 14px;
-            border: 1px solid #edf1f8;
-            border-radius: 10px;
-            background: #fbfcff;
-            color: #56667c;
-            font-size: 12px;
-            font-weight: 600;
-            transition: all .3s ease;
-        }
-
-        .vpp-exclusion-grid>div:hover {
-            background: #eff5ff;
-            border-color: #cfe0ff;
-            transform: translateY(-3px);
-        }
-
-        .vpp-exclusion-grid i {
-            color: var(--vpp-blue);
-            font-size: 17px;
-        }
-
-        /* SECURITY GRID */
-
-        .vpp-security-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .vpp-security-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 15px;
-            border: 1px solid #e9eff9;
-            border-radius: 11px;
-            background: #fbfcff;
-            transition: all .3s ease;
-        }
-
-        .vpp-security-item:hover {
-            background: #eff5ff;
-            transform: translateY(-3px);
-            border-color: #d3e3ff;
-        }
-
-        .vpp-security-item i {
-            color: var(--vpp-blue);
-            font-size: 19px;
-        }
-
-        .vpp-security-item span {
-            color: #53647b;
-            font-size: 11px;
-            font-weight: 600;
-            line-height: 1.5;
-        }
-
-        /* =====================================================
-   CONTACT CARD
-===================================================== */
-
-        .vpp-contact-card {
-            background: linear-gradient(145deg, #fff, #f5f9ff);
-            border-color: #dce9ff;
-        }
-
-        .vpp-company-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 20px;
-            margin-top: 20px;
-            background: white;
-            border: 1px solid #e5edfa;
-            border-radius: 13px;
-        }
-
-        .vpp-company-icon {
-            width: 48px;
-            height: 48px;
-            flex-shrink: 0;
-            display: grid;
-            place-items: center;
-            border-radius: 13px;
-            background: #eff5ff;
-            color: var(--vpp-blue);
-            font-size: 20px;
-        }
-
-        .vpp-company-info strong,
-        .vpp-company-info a {
-            display: block;
-        }
-
-        .vpp-company-info strong {
-            color: #172033;
-            font-size: 13px;
-            margin-bottom: 7px;
-        }
-
-        .vpp-company-info a {
-            color: var(--vpp-blue);
-            text-decoration: none;
-            font-size: 12px;
-        }
-
-        .vpp-company-info a i {
-            margin-right: 5px;
-        }
-
-        .vpp-contact-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 13px 23px;
-            margin-top: 20px;
-            border-radius: 50px;
-            background: linear-gradient(120deg, #1769ff, #0b3d91);
-            color: white;
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: 700;
-            box-shadow: 0 8px 20px rgba(23, 105, 255, .18);
-            transition: all .3s ease;
-        }
-
-        .vpp-contact-btn:hover {
-            color: white;
-            transform: translateY(-4px);
-            box-shadow: 0 13px 25px rgba(23, 105, 255, .28);
-        }
-
-        /* =====================================================
-   BOTTOM NAVIGATION
-===================================================== */
-
-        .vpp-bottom-nav {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 15px;
-            margin-top: 35px;
-        }
-
-        .vpp-bottom-nav>a {
-            display: flex;
-            align-items: center;
-            gap: 13px;
-            padding: 19px;
-            border: 1px solid #e5ecf6;
-            border-radius: 13px;
-            text-decoration: none;
-            background: #fff;
-            transition: all .3s ease;
-        }
-
-        .vpp-bottom-nav>a:hover {
-            border-color: #cbdfff;
-            background: #f5f9ff;
-            transform: translateY(-4px);
-        }
-
-        .vpp-bottom-nav>a>i:first-child {
-            color: var(--vpp-blue);
-            font-size: 22px;
-        }
-
-        .vpp-bottom-nav>a>i:last-child {
-            margin-left: auto;
-            color: #8ba0bd;
-        }
-
-        .vpp-bottom-nav span small,
-        .vpp-bottom-nav span strong {
-            display: block;
-        }
-
-        .vpp-bottom-nav span small {
-            color: #9aa8bb;
-            font-size: 9px;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        .vpp-bottom-nav span strong {
-            color: #27364b;
-            font-size: 12px;
-        }
-
-        /* BACK TO TOP */
-
-        .vpp-back-top {
-            position: fixed;
-            right: 25px;
-            bottom: 25px;
-            width: 45px;
-            height: 45px;
-            display: grid;
-            place-items: center;
-            border: 0;
-            border-radius: 13px;
-            background: linear-gradient(135deg, #1769ff, #0b3d91);
-            color: white;
-            font-size: 19px;
-            cursor: pointer;
-            z-index: 999;
-            box-shadow: 0 8px 25px rgba(23, 105, 255, .25);
-
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(15px);
-            transition: all .3s ease;
-        }
-
-        .vpp-back-top.vpp-show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .vpp-back-top:hover {
-            transform: translateY(-5px);
-        }
-
-        /* =====================================================
-   RESPONSIVE
-===================================================== */
-
-        @media (max-width: 991px) {
-
-            .vpp-hero {
-                padding: 85px 0 75px;
-            }
-
-            .vpp-hero>.vpp-container {
-                gap: 15px;
-            }
-
-            .vpp-hero-visual {
-                width: 280px;
-                transform: scale(.85);
-            }
-
-            .vpp-main {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                padding-top: 50px;
-            }
-
-            .vpp-sidebar {
-                position: relative;
-                top: 0;
-            }
-
-            .vpp-sidebar-card {
-                padding: 20px;
-            }
-
-            .vpp-toc {
-                display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 5px;
-            }
-
-            .vpp-sidebar-help {
-                display: none;
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            .vpp-container {
-                padding-left: 18px;
-                padding-right: 18px;
-            }
-
-            .vpp-hero {
-                padding: 70px 0 55px;
-            }
-
-            .vpp-hero>.vpp-container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .vpp-hero-content {
-                width: 100%;
-            }
-
-            .vpp-eyebrow {
-                font-size: 9px;
-                margin-bottom: 20px;
-            }
-
-            .vpp-hero h1 {
-                font-size: 43px;
-                letter-spacing: -1.8px;
-            }
-
-            .vpp-hero-content>p {
-                font-size: 13px;
-                line-height: 1.8;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .vpp-hero-meta {
-                justify-content: center;
-                gap: 10px;
-                font-size: 10px;
-            }
-
-            .vpp-hero-visual {
-                width: 100%;
-                max-width: 300px;
-                height: 260px;
-                transform: scale(.85);
-                margin-top: -5px;
-            }
-
-            .vpp-main {
-                padding-top: 35px;
-                padding-bottom: 60px;
-                gap: 22px;
-            }
-
-            .vpp-sidebar-card {
-                padding: 15px 12px;
-                border-radius: 15px;
-            }
-
-            .vpp-toc {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .vpp-toc-link {
-                gap: 7px;
-                padding: 9px 6px;
-                font-size: 10px;
-            }
-
-            .vpp-toc-link span {
-                font-size: 9px;
-            }
-
-            .vpp-policy-card {
-                padding: 23px 19px;
-                margin-bottom: 15px;
-                border-radius: 15px;
-            }
-
-            .vpp-card-heading {
-                gap: 12px;
-                margin-bottom: 20px;
-            }
-
-            .vpp-section-number {
-                width: 40px;
-                height: 40px;
-                font-size: 14px;
-                border-radius: 11px;
-            }
-
-            .vpp-card-heading h2 {
-                font-size: 19px;
-            }
-
-            .vpp-card-label {
-                font-size: 8px;
-            }
-
-            .vpp-policy-card>p,
-            .vpp-info-group>p {
-                font-size: 12px;
-            }
-
-            .vpp-info-group {
-                padding: 15px;
-            }
-
-            .vpp-info-group h3 {
-                font-size: 12px;
-            }
-
-            .vpp-list {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .vpp-list li {
-                font-size: 11px;
-            }
-
-            .vpp-exclusion-grid,
-            .vpp-security-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .vpp-notice {
-                padding: 14px;
-            }
-
-            .vpp-notice p {
-                font-size: 11px;
-            }
-
-            .vpp-company-info {
-                padding: 15px;
-            }
-
-            .vpp-company-info strong {
-                font-size: 11px;
-            }
-
-            .vpp-company-info a {
-                font-size: 10px;
-                overflow-wrap: anywhere;
-            }
-
-            .vpp-bottom-nav {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .vpp-bottom-nav>a {
-                padding: 15px;
-            }
-
-            .vpp-back-top {
-                width: 40px;
-                height: 40px;
-                right: 15px;
-                bottom: 15px;
-            }
-        }
-
-        /* REDUCED MOTION */
-
-        @media (prefers-reduced-motion: reduce) {
-
-            .vpp-section *,
-            .vpp-section *::before,
-            .vpp-section *::after {
-                animation: none !important;
-                transition-duration: .01ms !important;
-                scroll-behavior: auto !important;
-            }
-
-            .vpp-policy-card {
-                opacity: 1;
-                transform: none;
-            }
-        }
-
-
-
-
-
+   /* ==========================================
+   VASHQ PRIVACY POLICY
+   SIMPLE WHITE & BLUE LEGAL PAGE
+========================================== */
+
+.vpp-section {
+    --vpp-blue: #1769ff;
+    --vpp-dark: #0b3d91;
+    --vpp-heading: #172033;
+    --vpp-text: #536174;
+    --vpp-border: #e5eaf2;
+
+    width: 100%;
+    background: #fff !important;
+    color: var(--vpp-text) !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    overflow: visible !important;
+}
+
+.vpp-section * {
+    box-sizing: border-box;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* CONTAINER */
+
+.vpp-container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+/* REMOVE DECORATIVE ELEMENTS */
+
+.vpp-bg-orb,
+.vpp-grid-bg,
+.vpp-hero-visual,
+.vpp-sidebar {
+    display: none !important;
+}
+
+/* HERO */
+
+.vpp-hero {
+    padding: 76px 0 42px !important;
+    background: #fff !important;
+    border-bottom: 1px solid var(--vpp-border) !important;
+}
+
+.vpp-hero > .vpp-container {
+    display: block !important;
+}
+
+.vpp-hero-content {
+    max-width: 850px !important;
+    margin: 0 auto;
+}
+
+.vpp-eyebrow {
+    display: inline-block !important;
+    padding: 0 !important;
+    margin: 0 0 18px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    color: var(--vpp-blue) !important;
+    font-size: 12px !important;
+    letter-spacing: 1.4px !important;
+}
+
+.vpp-eyebrow-icon {
+    display: none !important;
+}
+
+.vpp-hero h1 {
+    margin: 0 0 16px !important;
+    color: var(--vpp-heading) !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: clamp(34px, 4vw, 48px) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -1px !important;
+}
+
+.vpp-hero h1 span {
+    color: var(--vpp-blue) !important;
+    background: none !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+
+.vpp-hero-content > p {
+    max-width: 760px !important;
+    margin: 0 0 20px !important;
+    color: #536174 !important;
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+}
+
+.vpp-hero-meta {
+    gap: 12px !important;
+    color: #667085 !important;
+    font-size: 13px !important;
+}
+
+.vpp-hero-meta i {
+    color: var(--vpp-blue) !important;
+}
+
+/* MAIN CONTENT */
+
+.vpp-main {
+    display: block !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    padding: 38px 24px 80px !important;
+}
+
+.vpp-policy-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* POLICY SECTIONS */
+
+.vpp-policy-card {
+    padding: 30px 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    
+    border-radius: 0 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    scroll-margin-top: 100px;
+}
+
+.vpp-policy-card:first-child {
+    padding-top: 0 !important;
+}
+
+.vpp-card-heading {
+    display: block !important;
+    margin: 0 0 16px !important;
+}
+
+.vpp-section-number {
+    display: none !important;
+}
+
+.vpp-card-label {
+    margin-bottom: 8px !important;
+    color: var(--vpp-blue) !important;
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+}
+
+.vpp-card-heading h2 {
+    color: var(--vpp-heading) !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 23px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.35 !important;
+}
+
+/* PARAGRAPHS */
+
+.vpp-policy-card > p,
+.vpp-info-group > p {
+    color: var(--vpp-text) !important;
+    font-size: 15px !important;
+    line-height: 1.85 !important;
+    margin: 0 0 14px !important;
+}
+
+.vpp-policy-card p.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.vpp-muted-note {
+    color: #667085 !important;
+    font-size: 13px !important;
+}
+
+/* INFORMATION GROUPS */
+
+.vpp-info-group {
+    padding: 18px 20px !important;
+    margin-top: 18px !important;
+    border: 1px solid var(--vpp-border) !important;
+    border-radius: 8px !important;
+    background: #f8faff !important;
+}
+
+.vpp-info-group h3 {
+    color: var(--vpp-heading) !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    margin: 0 0 12px !important;
+}
+
+.vpp-info-group h3 i {
+    color: var(--vpp-blue) !important;
+}
+
+/* LISTS */
+
+.vpp-list {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+}
+
+.vpp-list li {
+    color: var(--vpp-text) !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+}
+
+.vpp-list li::before {
+    background: var(--vpp-blue) !important;
+    box-shadow: none !important;
+    width: 6px !important;
+    height: 6px !important;
+}
+
+/* NOTICE */
+
+.vpp-notice {
+    padding: 16px 18px !important;
+    border: 1px solid #dce7fb !important;
+    border-left: 3px solid var(--vpp-blue) !important;
+    border-radius: 6px !important;
+    background: #f5f8ff !important;
+    margin-top: 15px;
+}
+
+.vpp-notice p {
+    color: #46566d !important;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+}
+
+/* GRID ITEMS */
+
+.vpp-exclusion-grid,
+.vpp-security-grid {
+    grid-template-columns: 1fr !important;
+}
+
+.vpp-exclusion-grid > div,
+.vpp-security-item {
+    background: #fff !important;
+    color: var(--vpp-text) !important;
+}
+
+.vpp-exclusion-grid i,
+.vpp-security-item i {
+    color: var(--vpp-blue) !important;
+}
+
+/* CONTACT */
+
+.vpp-contact-card {
+    background: #fff !important;
+    border-color: var(--vpp-border) !important;
+}
+
+.vpp-company-info {
+    padding: 18px !important;
+    border: 1px solid var(--vpp-border) !important;
+    border-radius: 7px !important;
+    background: #fff !important;
+}
+
+.vpp-company-icon {
+    border-radius: 7px !important;
+    background: #edf4ff !important;
+    color: var(--vpp-blue) !important;
+}
+
+.vpp-company-info strong {
+    color: var(--vpp-heading) !important;
+}
+
+.vpp-company-info a {
+    color: var(--vpp-blue) !important;
+}
+
+.vpp-contact-btn {
+    border-radius: 5px !important;
+    background: var(--vpp-blue) !important;
+    box-shadow: none !important;
+}
+
+/* BOTTOM LINKS */
+
+.vpp-bottom-nav {
+    gap: 12px !important;
+    margin-top: 28px !important;
+}
+
+.vpp-bottom-nav > a {
+    padding: 16px !important;
+    border: 1px solid var(--vpp-border) !important;
+    border-radius: 7px !important;
+    background: #fff !important;
+}
+
+.vpp-bottom-nav > a > i:first-child {
+    color: var(--vpp-blue) !important;
+}
+
+.vpp-bottom-nav span small {
+    color: #667085 !important;
+}
+
+.vpp-bottom-nav span strong {
+    color: var(--vpp-heading) !important;
+}
+
+.vpp-back-top {
+    display: none !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .vpp-container {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .vpp-hero {
+        padding: 52px 0 30px !important;
+    }
+
+    .vpp-hero h1 {
+        font-size: 34px !important;
+        letter-spacing: -.6px !important;
+    }
+
+    .vpp-hero-content > p {
+        font-size: 14px !important;
+    }
+
+    .vpp-hero-meta {
+        font-size: 11px !important;
+    }
+
+    .vpp-main {
+        padding: 26px 18px 55px !important;
+    }
+
+    .vpp-policy-card {
+        padding: 24px 0 !important;
+    }
+
+    .vpp-card-heading h2 {
+        font-size: 20px !important;
+    }
+
+    .vpp-policy-card > p,
+    .vpp-info-group > p {
+        font-size: 14px !important;
+    }
+
+    .vpp-info-group {
+        padding: 15px !important;
+    }
+
+    .vpp-bottom-nav {
+        grid-template-columns: 1fr !important;
+    }
+}
 
 
         #page-loader {
@@ -1557,636 +816,451 @@
     </div>
 
 
+
     <section class="vpp-section" id="privacy-policy">
 
-        <!-- Background Effects -->
-        <div class="vpp-bg-orb vpp-orb-one"></div>
-        <div class="vpp-bg-orb vpp-orb-two"></div>
-        <div class="vpp-grid-bg"></div>
-
-        <!-- HERO -->
-        <div class="vpp-hero">
-            <div class="vpp-container">
-
-                <div class="vpp-hero-content">
-
-
-                    <h1>
-                        Your Privacy.<br>
-                        <span>Our Responsibility.</span>
-                    </h1>
-
-                    <p>
-                        Your business data deserves the highest level of protection.
-                        Learn how VASHQ collects, uses, protects, and manages your
-                        information.
-                    </p>
-
-                    <div class="vpp-hero-meta">
-                        <!-- <span><i class="bi bi-calendar3"></i> Effective July 23, 2026</span>
-                    <span class="vpp-meta-divider"></span> -->
-                        <span><i class="bi bi-shield-check"></i> Privacy & Data Protection</span>
-                    </div>
-
-                </div>
-
-                <!-- HERO VISUAL -->
-                <div class="vpp-hero-visual">
-
-                    <div class="vpp-visual-ring vpp-ring-one"></div>
-                    <div class="vpp-visual-ring vpp-ring-two"></div>
-
-                    <div class="vpp-shield">
-                        <i class="bi bi-shield-lock-fill"></i>
-                    </div>
-
-                    <div class="vpp-float-card vpp-float-top">
-                        <span class="vpp-float-icon">
-                            <i class="bi bi-lock-fill"></i>
-                        </span>
-                        <div>
-                            <strong>Secure Data</strong>
-                            <small>Privacy comes first</small>
-                        </div>
-                    </div>
-
-                    <div class="vpp-float-card vpp-float-bottom">
-                        <span class="vpp-float-icon">
-                            <i class="bi bi-check-circle-fill"></i>
-                        </span>
-                        <div>
-                            <strong>Data Protection</strong>
-                            <small>Built around trust</small>
-                        </div>
-                    </div>
-
-                    <div class="vpp-orbit-dot"></div>
-                    <div class="vpp-orbit-dot vpp-dot-two"></div>
-
-                </div>
-
-            </div>
-        </div>
-
-
-        <!-- MAIN POLICY CONTENT -->
-        <div class="vpp-container vpp-main">
-
-            <!-- LEFT SIDEBAR -->
-            <aside class="vpp-sidebar">
-
-                <div class="vpp-sidebar-card">
-
-                    <div class="vpp-sidebar-heading">
-                        <i class="bi bi-list-ul"></i>
-                        <span>On This Page</span>
-                    </div>
-
-                    <nav class="vpp-toc">
-
-                        <a href="#vpp-intro" class="vpp-toc-link active">
-                            <span>01</span> Introduction
-                        </a>
-
-                        <a href="#vpp-collect" class="vpp-toc-link">
-                            <span>02</span> Information We Collect
-                        </a>
-
-                        <a href="#vpp-payment" class="vpp-toc-link">
-                            <span>03</span> Payment Information
-                        </a>
-
-                        <a href="#vpp-device" class="vpp-toc-link">
-                            <span>04</span> Device Information
-                        </a>
-
-                        <a href="#vpp-usage" class="vpp-toc-link">
-                            <span>05</span> How We Use Information
-                        </a>
-
-                        <a href="#vpp-ai" class="vpp-toc-link">
-                            <span>06</span> AI Features
-                        </a>
-
-                        <a href="#vpp-security" class="vpp-toc-link">
-                            <span>07</span> Data Security
-                        </a>
-
-                        <a href="#vpp-ownership" class="vpp-toc-link">
-                            <span>08</span> Data Ownership
-                        </a>
-
-                        <a href="#vpp-retention" class="vpp-toc-link">
-                            <span>09</span> Data Retention
-                        </a>
-
-                        <a href="#vpp-thirdparty" class="vpp-toc-link">
-                            <span>10</span> Third-Party Services
-                        </a>
-
-                        <a href="#vpp-cookies" class="vpp-toc-link">
-                            <span>11</span> Cookies
-                        </a>
-
-                        <a href="#vpp-children" class="vpp-toc-link">
-                            <span>12</span> Children's Privacy
-                        </a>
-
-                        <a href="#vpp-updates" class="vpp-toc-link">
-                            <span>13</span> Policy Updates
-                        </a>
-
-                        <a href="#vpp-contact" class="vpp-toc-link">
-                            <span>14</span> Contact
-                        </a>
-
-                    </nav>
-
-                    <!-- <div class="vpp-sidebar-help">
-                    <div class="vpp-help-icon">
-                        <i class="bi bi-headset"></i>
-                    </div>
-                    <strong>Have questions?</strong>
-                    <p>We're here to help with your privacy concerns.</p>
-                    <a href="mailto:vashqofficial@gmail.com">
-                        Contact Support <i class="bi bi-arrow-up-right"></i>
-                    </a>
-                </div> -->
-
-                </div>
-
-            </aside>
-
-
-            <!-- RIGHT CONTENT -->
-            <div class="vpp-policy-content">
-
-                <!-- INTRODUCTION -->
-                <article class="vpp-policy-card" id="vpp-intro">
-
-                    <div class="vpp-card-heading">
-                        <span class="vpp-section-number">01</span>
-                        <div>
-                            <span class="vpp-card-label">GETTING STARTED</span>
-                            <h2>Introduction</h2>
-                        </div>
-                    </div>
-
-                    <p>
-                        Welcome to VASHQ, a cloud-based Software-as-a-Service (SaaS)
-                        platform developed and operated by Wisemove Consultancy Pvt.
-                        Ltd. ("Company", "we", "our", or "us").
-                    </p>
-
-                    <p>
-                        VASHQ is designed specifically for businesses in the car care
-                        industry, including car wash centers, detailing studios,
-                        ceramic coating centers, automobile service centers, and
-                        related businesses.
-                    </p>
-
-                    <p class="mb-0">
-                        By accessing or using VASHQ, you agree to the collection
-                        and use of information in accordance with this Privacy Policy.
-                    </p>
-
-                </article>
-
-
-                <!-- INFORMATION COLLECTED -->
-                <article class="vpp-policy-card" id="vpp-collect">
-
-                    <div class="vpp-card-heading">
-                        <span class="vpp-section-number">02</span>
-                        <div>
-                            <span class="vpp-card-label">DATA COLLECTION</span>
-                            <h2>Information We Collect</h2>
-                        </div>
-                    </div>
-
-                    <p>We may collect the following information:</p>
-
-                    <div class="vpp-info-group">
-                        <h3><i class="bi bi-building"></i> Business Information</h3>
-                        <ul class="vpp-list">
-                            <li>Business Name</li>
-                            <li>GST Number (if applicable)</li>
-                            <li>Business Address</li>
-                            <li>Business Phone Number</li>
-                            <li>Business Email Address</li>
-                            <li>Business Logo</li>
-                        </ul>
-                    </div>
-
-                    <div class="vpp-info-group">
-                        <h3><i class="bi bi-person-badge"></i> User Information</h3>
-                        <ul class="vpp-list">
-                            <li>Owner Name</li>
-                            <li>Employee Details</li>
-                            <li>Login Credentials</li>
-                            <li>User Roles &amp; Permissions</li>
-                        </ul>
-                    </div>
-
-                    <div class="vpp-info-group">
-                        <h3><i class="bi bi-people"></i> Customer Data</h3>
-                        <p>Businesses using VASHQ may store:</p>
-                        <ul class="vpp-list">
-                            <li>Customer Names</li>
-                            <li>Mobile Numbers</li>
-                            <li>Vehicle Information</li>
-                            <li>Registration Numbers</li>
-                            <li>Service History</li>
-                            <li>Booking Details</li>
-                            <li>Invoice Information</li>
-                            <li>Payment Records</li>
-                            <li>Outstanding Credit Details</li>
-                            <li>Loyalty Information</li>
-                        </ul>
-                    </div>
-
-                    <div class="vpp-notice">
-                        <i class="bi bi-info-circle-fill"></i>
-                        <p>The customer data entered into VASHQ belongs to the subscribing business.</p>
-                    </div>
-
-                </article>
-
-
-                <!-- PAYMENT -->
-                <article class="vpp-policy-card" id="vpp-payment">
-
-                    <div class="vpp-card-heading">
-                        <span class="vpp-section-number">03</span>
-                        <div>
-                            <span class="vpp-card-label">TRANSACTION SAFETY</span>
-                            <h2>Payment Information</h2>
-                        </div>
-                    </div>
-
-                    <p>
-                        Payments are securely processed through third-party
-                        payment gateways.
-                    </p>
-
-                    <p>We do not store:</p>
-
-                    <div class="vpp-exclusion-grid">
-                        <div><i class="bi bi-credit-card"></i> Debit Card Numbers</div>
-                        <div><i class="bi bi-credit-card-2-front"></i> Credit Card Numbers</div>
-                        <div><i class="bi bi-shield-lock"></i> CVV</div>
-                        <div><i class="bi bi-key"></i> Banking Passwords</div>
-                        <div><i class="bi bi-phone"></i> UPI PINs</div>
-                    </div>
-
-                </article>
-
-
-                <!-- DEVICE -->
-                <article class="vpp-policy-card" id="vpp-device">
-
-                    <div class="vpp-card-heading">
-                        <span class="vpp-section-number">04</span>
-                        <div>
-                            <span class="vpp-card-label">TECHNICAL INFORMATION</span>
-                            <h2>Device Information</h2>
-                        </div>
-                    </div>
-
-                    <p>We may automatically collect:</p>
-
-                    <ul class="vpp-list">
-                        <li>Browser Information</li>
-                        <li>Device Type</li>
-                        <li>IP Address</li>
-                        <li>Login History</li>
-                        <li>Operating System</li>
-                        <li>Time Zone</li>
-                        <li>Usage Analytics</li>
-                    </ul>
-
-                </article>
-
-
-                <!-- USAGE -->
-                <article class="vpp-policy-card" id="vpp-usage">
-
-                    <div class="vpp-card-heading">
-                        <span class="vpp-section-number">05</span>
-                        <div>
-                            <span class="vpp-card-label">PURPOSE OF COLLECTION</span>
-                            <h2>How We Use Information</h2>
-                        </div>
-                    </div>
-
-                    <p>Information is used for:</p>
-
-                    <ul class="vpp-list">
-                        <li>Providing SaaS services</li>
-                        <li>Customer Support</li>
-                        <li>Billing</li>
-                        <li>Product Improvements</li>
-                        <li>Security Monitoring</li>
-                        <li>AI-powered Analytics</li>
-                        <li>Feature Enhancements</li>
-                        <li>Service Notifications</li>
-                        <li>Legal Compliance</li>
-                    </ul>
-
-                </article>
-
-
-                <!-- AI -->
-                <article class="vpp-policy-card" id="vpp-ai">
-
-                    <div class="vpp-card-heading">
-                        <span class="vpp-section-number">06</span>
-                        <div>
-                            <span class="vpp-card-label">INTELLIGENT TECHNOLOGY</span>
-                            <h2>AI Features</h2>
-                        </div>
-                    </div>
-
-                    <p>
-                        Certain features within VASHQ use Artificial Intelligence
-                        to generate business insights and operational recommendations.
-                    </p>
-
-                    <div class="vpp-notice">
-                        <i class="bi bi-lightbulb-fill"></i>
-                        <p>
-                            AI-generated content is advisory only and should not
-                            be considered legal, accounting, financial, or
-                            business advice.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <!-- SECURITY -->
-                <article class="vpp-policy-card" id="vpp-security">
-
-                    <div class="vpp-card-heading">
-                        <span class="vpp-section-number">07</span>
-                        <div>
-                            <span class="vpp-card-label">PROTECTION & SAFETY</span>
-                            <h2>Data Security</h2>
-                        </div>
-                    </div>
-
-                    <p>We implement industry-standard security measures including:</p>
-
-                    <div class="vpp-security-grid">
-
-                        <div class="vpp-security-item">
-                            <i class="bi bi-cloud-check"></i>
-                            <span>Secure Cloud Hosting</span>
-                        </div>
-
-                        <div class="vpp-security-item">
-                            <i class="bi bi-lock"></i>
-                            <span>Encrypted Connections (HTTPS/SSL)</span>
-                        </div>
-
-                        <div class="vpp-security-item">
-                            <i class="bi bi-person-check"></i>
-                            <span>Authentication Controls</span>
-                        </div>
-
-                        <div class="vpp-security-item">
-                            <i class="bi bi-people"></i>
-                            <span>Role-based Access</span>
-                        </div>
-
-                        <div class="vpp-security-item">
-                            <i class="bi bi-database-check"></i>
-                            <span>Regular Backups</span>
-                        </div>
-
-                        <div class="vpp-security-item">
-                            <i class="bi bi-shield-check"></i>
-                            <span>Firewall Protection</span>
-                        </div>
-
-                    </div>
-
-                    <p class="vpp-muted-note mb-0">
-                        However, no online system can guarantee 100% security.
-                    </p>
-
-                </article>
-
-
-                <!-- OWNERSHIP -->
-                <article class="vpp-policy-card" id="vpp-ownership">
-
-                    <div class="vpp-card-heading">
-                        <span class="vpp-section-number">08</span>
-                        <div>
-                            <span class="vpp-card-label">YOUR BUSINESS DATA</span>
-                            <h2>Data Ownership</h2>
-                        </div>
-                    </div>
-
-                    <p>
-                        All customer records, invoices, job details, employee data,
-                        reports, and business information entered into VASHQ remain
-                        the property of the subscribing business.
-                    </p>
-
-                    <div class="vpp-notice">
-                        <i class="bi bi-patch-check-fill"></i>
-                        <p>The Company does not claim ownership over business data.</p>
-                    </div>
-
-                </article>
-
-
-                <!-- RETENTION -->
-                <article class="vpp-policy-card" id="vpp-retention">
-
-                    <div class="vpp-card-heading">
-                        <span class="vpp-section-number">09</span>
-                        <div>
-                            <span class="vpp-card-label">DATA MANAGEMENT</span>
-                            <h2>Data Retention</h2>
-                        </div>
-                    </div>
-
-                    <p>Data is retained while your subscription remains active.</p>
-
-                    <p class="mb-0">
-                        Following subscription expiry or account termination,
-                        data may be retained for a reasonable period for backup,
-                        compliance, dispute resolution, fraud prevention, and
-                        legal obligations, after which it may be permanently
-                        deleted at our discretion.
-                    </p>
-
-                </article>
-
-
-                <!-- THIRD PARTY -->
-                <article class="vpp-policy-card" id="vpp-thirdparty">
-
-                    <div class="vpp-card-heading">
-                        <span class="vpp-section-number">10</span>
-                        <div>
-                            <span class="vpp-card-label">EXTERNAL INTEGRATIONS</span>
-                            <h2>Third-Party Services</h2>
-                        </div>
-                    </div>
-
-                    <p>VASHQ may integrate with:</p>
-
-                    <ul class="vpp-list">
-                        <li>Payment Gateways</li>
-                        <li>WhatsApp APIs</li>
-                        <li>SMS Providers</li>
-                        <li>Email Providers</li>
-                        <li>Google Services</li>
-                        <li>Cloud Infrastructure Providers</li>
-                    </ul>
-
-                    <p class="mb-0">
-                        These providers maintain their own privacy policies.
-                    </p>
-
-                </article>
-
-
-                <!-- COOKIES -->
-                <article class="vpp-policy-card" id="vpp-cookies">
-
-                    <div class="vpp-card-heading">
-                        <span class="vpp-section-number">11</span>
-                        <div>
-                            <span class="vpp-card-label">BROWSING EXPERIENCE</span>
-                            <h2>Cookies</h2>
-                        </div>
-                    </div>
-
-                    <p>We may use cookies for:</p>
-
-                    <ul class="vpp-list">
-                        <li>Authentication</li>
-                        <li>User Sessions</li>
-                        <li>Preferences</li>
-                        <li>Analytics</li>
-                        <li>Security</li>
-                    </ul>
-
-                </article>
-
-
-                <!-- CHILDREN -->
-                <article class="vpp-policy-card" id="vpp-children">
-
-                    <div class="vpp-card-heading">
-                        <span class="vpp-section-number">12</span>
-                        <div>
-                            <span class="vpp-card-label">AGE REQUIREMENTS</span>
-                            <h2>Children's Privacy</h2>
-                        </div>
-                    </div>
-
-                    <p>VASHQ is intended solely for business use.</p>
-
-                    <p class="mb-0">
-                        Our services are not intended for individuals under
-                        18 years of age.
-                    </p>
-
-                </article>
-
-
-                <!-- UPDATES -->
-                <article class="vpp-policy-card" id="vpp-updates">
-
-                    <div class="vpp-card-heading">
-                        <span class="vpp-section-number">13</span>
-                        <div>
-                            <span class="vpp-card-label">KEEPING YOU INFORMED</span>
-                            <h2>Policy Updates</h2>
-                        </div>
-                    </div>
-
-                    <p>We may update this Privacy Policy at any time.</p>
-
-                    <p class="mb-0">
-                        Continued use of VASHQ constitutes acceptance of the
-                        updated policy.
-                    </p>
-
-                </article>
-
-
-                <!-- CONTACT -->
-                <article class="vpp-policy-card vpp-contact-card" id="vpp-contact">
-
-                    <div class="vpp-card-heading">
-                        <span class="vpp-section-number">14</span>
-                        <div>
-                            <span class="vpp-card-label">WE'RE HERE TO HELP</span>
-                            <h2>Contact</h2>
-                        </div>
-                    </div>
-
-                    <p>For privacy-related questions:</p>
-
-                    <div class="vpp-company-info">
-
-                        <div class="vpp-company-icon">
-                            <i class="bi bi-buildings-fill"></i>
-                        </div>
-
-                        <div>
-                            <strong>Wisemove Consultancy Pvt. Ltd.</strong>
-                            <a href="mailto:vashqofficial@gmail.com">
-                                <i class="bi bi-envelope"></i>
-                                vashqofficial@gmail.com
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <a href="mailto:vashqofficial@gmail.com" class="vpp-contact-btn">
-                        Get in Touch
-                        <i class="bi bi-arrow-up-right"></i>
-                    </a>
-
-                </article>
-
-
-                <!-- BOTTOM NAVIGATION -->
-                <div class="vpp-bottom-nav">
-
-                    <a href="terms-and-conditions.html">
-                        <i class="bi bi-file-earmark-text"></i>
-                        <span>
-                            <small>READ ALSO</small>
-                            <strong>Terms & Conditions</strong>
-                        </span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </a>
-
-                    <a href="refund-policy.html">
-                        <i class="bi bi-arrow-counterclockwise"></i>
-                        <span>
-                            <small>READ ALSO</small>
-                            <strong>Refund Policy</strong>
-                        </span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </a>
-
+    <!-- HERO -->
+    <div class="vpp-hero">
+        <div class="vpp-container">
+
+            <div class="vpp-hero-content">
+
+                <h1>
+                    Your Privacy.<br>
+                    <span>Our Responsibility.</span>
+                </h1>
+
+                <p>
+                    Your business data deserves the highest level of protection.
+                    Learn how VASHQ collects, uses, protects, and manages your
+                    information.
+                </p>
+
+                <div class="vpp-hero-meta">
+                    <span>
+                        <i class="bi bi-shield-check"></i>
+                        Privacy & Data Protection
+                    </span>
                 </div>
 
             </div>
 
         </div>
+    </div>
 
-    </section>
+
+    <!-- MAIN POLICY CONTENT -->
+    <div class="vpp-container vpp-main">
+
+        <div class="vpp-policy-content">
+
+            <!-- 01. INTRODUCTION -->
+            <article class="vpp-policy-card" id="vpp-intro">
+
+                <div class="vpp-card-heading">
+                    <span class="vpp-section-number">01</span>
+
+                    <div>
+                        <span class="vpp-card-label">GETTING STARTED</span>
+                        <h2>Introduction</h2>
+                    </div>
+                </div>
+
+                <p>
+                    Welcome to VASHQ, a cloud-based Software-as-a-Service (SaaS)
+                    platform developed and operated by Wisemove Consultancy Pvt.
+                    Ltd. ("Company", "we", "our", or "us").
+                </p>
+
+                <p>
+                    VASHQ is designed specifically for businesses in the car care
+                    industry, including car wash centers, detailing studios,
+                    ceramic coating centers, automobile service centers, and
+                    related businesses.
+                </p>
+
+                <p class="mb-0">
+                    By accessing or using VASHQ, you agree to the collection
+                    and use of information in accordance with this Privacy Policy.
+                </p>
+
+            </article>
+
+                <!-- 02. INFORMATION WE COLLECT -->
+            <article class="vpp-policy-card" id="vpp-collect">
+
+                <div class="vpp-card-heading">
+                    <span class="vpp-section-number">02</span>
+                    <div>
+                        <span class="vpp-card-label">DATA COLLECTION</span>
+                        <h2>Information We Collect</h2>
+                    </div>
+                </div>
+
+                <p>We may collect the following information:</p>
+
+                <div class="vpp-info-group">
+                    <h3><i class="bi bi-building"></i> Business Information</h3>
+                    <ul class="vpp-list">
+                        <li>Business Name</li>
+                        <li>GST Number (if applicable)</li>
+                        <li>Business Address</li>
+                        <li>Business Phone Number</li>
+                        <li>Business Email Address</li>
+                        <li>Business Logo</li>
+                    </ul>
+                </div>
+
+                <div class="vpp-info-group">
+                    <h3><i class="bi bi-person-badge"></i> User Information</h3>
+                    <ul class="vpp-list">
+                        <li>Owner Name</li>
+                        <li>Employee Details</li>
+                        <li>Login Credentials</li>
+                        <li>User Roles &amp; Permissions</li>
+                    </ul>
+                </div>
+
+                <div class="vpp-info-group">
+                    <h3><i class="bi bi-people"></i> Customer Data</h3>
+                    <p>Businesses using VASHQ may store:</p>
+                    <ul class="vpp-list">
+                        <li>Customer Names</li>
+                        <li>Mobile Numbers</li>
+                        <li>Vehicle Information</li>
+                        <li>Registration Numbers</li>
+                        <li>Service History</li>
+                        <li>Booking Details</li>
+                        <li>Invoice Information</li>
+                        <li>Payment Records</li>
+                        <li>Outstanding Credit Details</li>
+                        <li>Loyalty Information</li>
+                    </ul>
+                </div>
+
+                <div class="vpp-notice">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <p>The customer data entered into VASHQ belongs to the subscribing business.</p>
+                </div>
+
+            </article>
+
+
+            <!-- 03. PAYMENT -->
+            <article class="vpp-policy-card" id="vpp-payment">
+
+                <div class="vpp-card-heading">
+                    <span class="vpp-section-number">03</span>
+                    <div>
+                        <span class="vpp-card-label">TRANSACTION SAFETY</span>
+                        <h2>Payment Information</h2>
+                    </div>
+                </div>
+
+                <p>
+                    Payments are securely processed through third-party
+                    payment gateways.
+                </p>
+
+                <p>We do not store:</p>
+
+                <div class="vpp-exclusion-grid">
+                    <div><i class="bi bi-credit-card"></i> Debit Card Numbers</div>
+                    <div><i class="bi bi-credit-card-2-front"></i> Credit Card Numbers</div>
+                    <div><i class="bi bi-shield-lock"></i> CVV</div>
+                    <div><i class="bi bi-key"></i> Banking Passwords</div>
+                    <div><i class="bi bi-phone"></i> UPI PINs</div>
+                </div>
+
+            </article>
+
+
+            <!-- 04. DEVICE -->
+            <article class="vpp-policy-card" id="vpp-device">
+
+                <div class="vpp-card-heading">
+                    <span class="vpp-section-number">04</span>
+                    <div>
+                        <span class="vpp-card-label">TECHNICAL INFORMATION</span>
+                        <h2>Device Information</h2>
+                    </div>
+                </div>
+
+                <p>We may automatically collect:</p>
+
+                <ul class="vpp-list">
+                    <li>Browser Information</li>
+                    <li>Device Type</li>
+                    <li>IP Address</li>
+                    <li>Login History</li>
+                    <li>Operating System</li>
+                    <li>Time Zone</li>
+                    <li>Usage Analytics</li>
+                </ul>
+
+            </article>
+
+
+            <!-- 05. HOW WE USE INFORMATION -->
+            <article class="vpp-policy-card" id="vpp-usage">
+
+                <div class="vpp-card-heading">
+                    <span class="vpp-section-number">05</span>
+                    <div>
+                        <span class="vpp-card-label">PURPOSE OF COLLECTION</span>
+                        <h2>How We Use Information</h2>
+                    </div>
+                </div>
+
+                <p>Information is used for:</p>
+
+                <ul class="vpp-list">
+                    <li>Providing SaaS services</li>
+                    <li>Customer Support</li>
+                    <li>Billing</li>
+                    <li>Product Improvements</li>
+                    <li>Security Monitoring</li>
+                    <li>AI-powered Analytics</li>
+                    <li>Feature Enhancements</li>
+                    <li>Service Notifications</li>
+                    <li>Legal Compliance</li>
+                </ul>
+
+            </article>
+
+
+            <!-- 06. AI FEATURES -->
+            <article class="vpp-policy-card" id="vpp-ai">
+
+                <div class="vpp-card-heading">
+                    <span class="vpp-section-number">06</span>
+                    <div>
+                        <span class="vpp-card-label">INTELLIGENT TECHNOLOGY</span>
+                        <h2>AI Features</h2>
+                    </div>
+                </div>
+
+                <p>
+                    Certain features within VASHQ use Artificial Intelligence
+                    to generate business insights and operational recommendations.
+                </p>
+
+                <div class="vpp-notice">
+                    <i class="bi bi-lightbulb-fill"></i>
+                    <p>
+                        AI-generated content is advisory only and should not
+                        be considered legal, accounting, financial, or
+                        business advice.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Continue with Part 3 here -->
+
+                        <!-- 07. SECURITY -->
+            <article class="vpp-policy-card" id="vpp-security">
+
+                <div class="vpp-card-heading">
+                    <span class="vpp-section-number">07</span>
+                    <div>
+                        <span class="vpp-card-label">PROTECTION & SAFETY</span>
+                        <h2>Data Security</h2>
+                    </div>
+                </div>
+
+                <p>We implement industry-standard security measures including:</p>
+
+                <div class="vpp-security-grid">
+
+                    <div class="vpp-security-item">
+                        <i class="bi bi-cloud-check"></i>
+                        <span>Secure Cloud Hosting</span>
+                    </div>
+
+                    <div class="vpp-security-item">
+                        <i class="bi bi-lock"></i>
+                        <span>Encrypted Connections (HTTPS/SSL)</span>
+                    </div>
+
+                    <div class="vpp-security-item">
+                        <i class="bi bi-person-check"></i>
+                        <span>Authentication Controls</span>
+                    </div>
+
+                    <div class="vpp-security-item">
+                        <i class="bi bi-people"></i>
+                        <span>Role-based Access</span>
+                    </div>
+
+                    <div class="vpp-security-item">
+                        <i class="bi bi-database-check"></i>
+                        <span>Regular Backups</span>
+                    </div>
+
+                    <div class="vpp-security-item">
+                        <i class="bi bi-shield-check"></i>
+                        <span>Firewall Protection</span>
+                    </div>
+
+                </div>
+
+                <p class="vpp-muted-note mb-0">
+                    However, no online system can guarantee 100% security.
+                </p>
+
+            </article>
+
+
+            <!-- 08. OWNERSHIP -->
+            <article class="vpp-policy-card" id="vpp-ownership">
+
+                <div class="vpp-card-heading">
+                    <span class="vpp-section-number">08</span>
+                    <div>
+                        <span class="vpp-card-label">YOUR BUSINESS DATA</span>
+                        <h2>Data Ownership</h2>
+                    </div>
+                </div>
+
+                <p>
+                    All customer records, invoices, job details, employee data,
+                    reports, and business information entered into VASHQ remain
+                    the property of the subscribing business.
+                </p>
+
+                <div class="vpp-notice">
+                    <i class="bi bi-patch-check-fill"></i>
+                    <p>The Company does not claim ownership over business data.</p>
+                </div>
+
+            </article>
+
+
+            <!-- 09. RETENTION -->
+            <article class="vpp-policy-card" id="vpp-retention">
+
+                <div class="vpp-card-heading">
+                    <span class="vpp-section-number">09</span>
+                    <div>
+                        <span class="vpp-card-label">DATA MANAGEMENT</span>
+                        <h2>Data Retention</h2>
+                    </div>
+                </div>
+
+                <p>Data is retained while your subscription remains active.</p>
+
+                <p class="mb-0">
+                    Following subscription expiry or account termination,
+                    data may be retained for a reasonable period for backup,
+                    compliance, dispute resolution, fraud prevention, and
+                    legal obligations, after which it may be permanently
+                    deleted at our discretion.
+                </p>
+
+            </article>
+
+
+            <!-- 10. THIRD PARTY -->
+            <article class="vpp-policy-card" id="vpp-thirdparty">
+
+                <div class="vpp-card-heading">
+                    <span class="vpp-section-number">10</span>
+                    <div>
+                        <span class="vpp-card-label">EXTERNAL INTEGRATIONS</span>
+                        <h2>Third-Party Services</h2>
+                    </div>
+                </div>
+
+                <p>VASHQ may integrate with:</p>
+
+                <ul class="vpp-list">
+                    <li>Payment Gateways</li>
+                    <li>WhatsApp APIs</li>
+                    <li>SMS Providers</li>
+                    <li>Email Providers</li>
+                    <li>Google Services</li>
+                    <li>Cloud Infrastructure Providers</li>
+                </ul>
+
+                <p class="mb-0">
+                    These providers maintain their own privacy policies.
+                </p>
+
+            </article>
+
+
+            <!-- 11. COOKIES -->
+            <article class="vpp-policy-card" id="vpp-cookies">
+
+                <div class="vpp-card-heading">
+                    <span class="vpp-section-number">11</span>
+                    <div>
+                        <span class="vpp-card-label">BROWSING EXPERIENCE</span>
+                        <h2>Cookies</h2>
+                    </div>
+                </div>
+
+                <p>We may use cookies for:</p>
+
+                <ul class="vpp-list">
+                    <li>Authentication</li>
+                    <li>User Sessions</li>
+                    <li>Preferences</li>
+                    <li>Analytics</li>
+                    <li>Security</li>
+                </ul>
+
+            </article>
+
+
+            <!-- 12. CHILDREN -->
+            <article class="vpp-policy-card" id="vpp-children">
+
+                <div class="vpp-card-heading">
+                    <span class="vpp-section-number">12</span>
+                    <div>
+                        <span class="vpp-card-label">AGE REQUIREMENTS</span>
+                        <h2>Children's Privacy</h2>
+                    </div>
+                </div>
+
+                <p>VASHQ is intended solely for business use.</p>
+
+                <p class="mb-0">
+                    Our services are not intended for individuals under
+                    18 years of age.
+                </p>
+
+            </article>
+
+
+            <!-- 13. UPDATES -->
+            <article class="vpp-policy-card" id="vpp-updates">
+
+                <div class="vpp-card-heading">
+                    <span class="vpp-section-number">13</span>
+                    <div>
+                        <span class="vpp-card-label">KEEPING YOU INFORMED</span>
+                        <h2>Policy Updates</h2>
+                    </div>
+                </div>
+
+                <p>We may update this Privacy Policy at any time.</p>
+
+                <p class="mb-0">
+                    Continued use of VASHQ constitutes acceptance of the
+                    updated policy.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 
@@ -2197,7 +1271,7 @@
                 <!-- TOP BRAND SECTION -->
                 <div class="vashq-footer-brand-center">
 
-                    <a href="/" class="vashq-footer-logo">
+                    <a href="" class="vashq-footer-logo">
                         <img src="./assets/images/brand/logo-icon.webp" alt="Vashq" height="200">
                     </a>
 
@@ -2219,7 +1293,7 @@
 
                             <h1>BOOK NOW</h1>
 
-                            <p style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-size: 14px; font-weight: 500; color: #fff;"><i class="bi bi-clock" style="color: #1769ff; font-size: 15px;"></i> 20-minute personalized demo
+                            <p style="display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #fff;"><i class="bi bi-clock" style="color: #ffff; font-size: 15px;"></i> 20-minute personalized demo
                             </p>
 
                             <button type="submit">
@@ -2435,7 +1509,7 @@
 
                                 <label for="demoLocationSearch">
                                     Business Location
-                                    <span class="vashq-optional-label">(Optional)</span>
+                                    <span class="vashq-optional-label"></span>
                                 </label>
 
                                 <div class="location-combobox vashq-demo-location" id="demoLocationCombobox">
@@ -2536,185 +1610,7 @@
 
 
 
-    <script>
-
-        /* =====================================================
-           VASHQ PRIVACY POLICY INTERACTIONS
-        ===================================================== */
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const vppSection = document.querySelector(".vpp-section");
-
-            if (!vppSection) return;
-
-            const vppCards = vppSection.querySelectorAll(".vpp-policy-card");
-            const vppLinks = vppSection.querySelectorAll(".vpp-toc-link");
-            const vppBackTop = document.getElementById("vppBackTop");
-
-
-            /* ==============================================
-               1. SCROLL REVEAL ANIMATION
-            ============================================== */
-
-            if ("IntersectionObserver" in window) {
-
-                const vppRevealObserver = new IntersectionObserver(
-                    (entries, observer) => {
-
-                        entries.forEach(entry => {
-
-                            if (entry.isIntersecting) {
-
-                                entry.target.classList.add("vpp-visible");
-
-                                observer.unobserve(entry.target);
-
-                            }
-
-                        });
-
-                    },
-                    {
-                        threshold: 0.08,
-                        rootMargin: "0px 0px -35px 0px"
-                    }
-                );
-
-                vppCards.forEach(card => {
-                    vppRevealObserver.observe(card);
-                });
-
-            } else {
-
-                vppCards.forEach(card => {
-                    card.classList.add("vpp-visible");
-                });
-
-            }
-
-
-            /* ==============================================
-               2. TABLE OF CONTENTS SMOOTH SCROLL
-            ============================================== */
-
-            vppLinks.forEach(link => {
-
-                link.addEventListener("click", function (e) {
-
-                    const targetId = this.getAttribute("href");
-
-                    const target = vppSection.querySelector(targetId);
-
-                    if (!target) return;
-
-                    e.preventDefault();
-
-                    target.scrollIntoView({
-                        behavior: window.matchMedia(
-                            "(prefers-reduced-motion: reduce)"
-                        ).matches ? "instant" : "smooth",
-                        block: "start"
-                    });
-
-                    vppLinks.forEach(item => {
-                        item.classList.remove("active");
-                    });
-
-                    this.classList.add("active");
-
-                });
-
-            });
-
-
-            /* ==============================================
-               3. ACTIVE SECTION TRACKING
-            ============================================== */
-
-            if ("IntersectionObserver" in window) {
-
-                const vppSectionObserver = new IntersectionObserver(
-                    (entries) => {
-
-                        entries.forEach(entry => {
-
-                            if (entry.isIntersecting) {
-
-                                const currentId = entry.target.id;
-
-                                vppLinks.forEach(link => {
-
-                                    link.classList.toggle(
-                                        "active",
-                                        link.getAttribute("href") === "#" + currentId
-                                    );
-
-                                });
-
-                            }
-
-                        });
-
-                    },
-                    {
-                        rootMargin: "-20% 0px -65% 0px",
-                        threshold: 0
-                    }
-                );
-
-                vppCards.forEach(card => {
-                    vppSectionObserver.observe(card);
-                });
-
-            }
-
-
-            /* ==============================================
-               4. BACK TO TOP BUTTON
-            ============================================== */
-
-            function vppHandleScroll() {
-
-                if (!vppBackTop) return;
-
-                if (window.scrollY > 450) {
-
-                    vppBackTop.classList.add("vpp-show");
-
-                } else {
-
-                    vppBackTop.classList.remove("vpp-show");
-
-                }
-
-            }
-
-            window.addEventListener("scroll", vppHandleScroll, {
-                passive: true
-            });
-
-            vppHandleScroll();
-
-
-            if (vppBackTop) {
-
-                vppBackTop.addEventListener("click", function () {
-
-                    window.scrollTo({
-                        top: 0,
-                        behavior: window.matchMedia(
-                            "(prefers-reduced-motion: reduce)"
-                        ).matches ? "instant" : "smooth"
-                    });
-
-                });
-
-            }
-
-        });
-
-    </script>
+    
 
     <script src="./assets/js/main.js" type="module"></script>
     <script src="./assets/js/pageload.js" defer></script>
