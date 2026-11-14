@@ -1,4 +1,3 @@
-
 /* ==========================================
    VASHQ EDITORIAL BLOG SYSTEM
    LAST OPENED TIME
@@ -6,22 +5,20 @@
    LATEST BLOG OPENS IN CENTER
 ========================================== */
 
-
 /* ==========================================
    1. BLOG DATA
 ========================================== */
 
-
 const blogData = [
 
-
-    // BLOG 01
-{
+  // BLOG 01
+  {
     id: 1,
     category: "Finance",
-    title: "GST for Car Wash Business in India (2026): The Complete Guide for Car Wash & Auto Detailing Owners",
+    title:
+      "GST for Car Wash Business in India (2026): The Complete Guide for Car Wash & Auto Detailing Owners",
     date: "November 05, 2026",
-    image: "assets/blog/blog-01.png",
+    image: "assets/blog/blog-01.jpeg",
 
     content: String.raw`
 *Everything you need to know about GST registration, GST rates, invoicing, compliance, and record keeping—explained specifically for car wash and auto detailing businesses.*
@@ -1317,17 +1314,17 @@ Every invoice, every customer, every payment, every service, and every expense c
 Whether you continue using manual processes or adopt a digital solution like **Vashq**, the objective remains the same:
 
 **Stay organized. Stay compliant. Build a stronger business.**
-    `
-},
+    `,
+  },
 
-
-    // BLOG 02
-{
+  // BLOG 02
+  {
     id: 2,
     category: "Car Wash Business Growth",
-    title: "Car Wash Management Software: The Smart Way to Automate and Grow Your Car Wash Business",
+    title:
+      "Car Wash Management Software: The Smart Way to Automate and Grow Your Car Wash Business",
     date: "November 02, 2026",
-    image: "assets/blog/blog-02.png",
+    image: "assets/blog/blog-02.jpeg",
 
     content: String.raw`
 
@@ -1560,15 +1557,15 @@ By automating jobs, appointments, billing, employee management, communication, e
 
 For businesses planning to grow, open new branches, or improve daily operations, adopting a reliable car wash management system is a smart and practical step.
 
-    `
-},
+    `,
+  },
 
-
-    // BLOG 03
-{
+  // BLOG 03
+  {
     id: 3,
     category: "Appointment Scheduling",
-    title: "10 Proven Ways to Reduce Booking Cancellations and No-Shows in Your Car Wash Business",
+    title:
+      "10 Proven Ways to Reduce Booking Cancellations and No-Shows in Your Car Wash Business",
     date: "October 28, 2026",
     image: "assets/blog/blog-03.jpeg",
 
@@ -2004,17 +2001,17 @@ VASHQ will facilitate the process of managing clients, cars, bookings, jobs, com
 
 Visit [home.vashq.com](https://home.vashq.com/) to learn more about how VASHQ can help you manage the bookings for your car wash business.
 
-`
-},
+`,
+  },
 
-
-    // BLOG 04
+   // BLOG 04
 {
     id: 4,
     category: "Invoice Management",
-    title: "Finding Old Car Wash Invoices Shouldn’t Take More Than a Few Seconds",
+    title:
+      "Finding Old Car Wash Invoices Shouldn’t Take More Than a Few Seconds",
     date: "October 25, 2026",
-    image: "assets/blog/blog-04.png",
+    image: "assets/blog/blog-04.jpeg",
 
     content: String.raw`
 
@@ -2263,17 +2260,18 @@ Less time searching for old records means more time focused on customers and bus
 
 Visit [home.vashq.com](https://home.vashq.com/) to explore how VASHQ can help simplify your car wash management.
 
-`
-},
+`,
+  },
 
-
-    // BLOG 05
-{
+  // Blog 05
+  
+  {
     id: 5,
     category: "Car Wash Industry Trends",
-    title: "Are You Unsure When It’s the Right Time to Expand Your Car Wash Business?",
+    title:
+      "Are You Unsure When It’s the Right Time to Expand Your Car Wash Business?",
     date: "October 20, 2026",
-    image: "assets/blog/blog-05.png",
+    image: "assets/blog/blog-05.jpeg",
 
     content: String.raw`
 
@@ -2525,17 +2523,17 @@ VASHQ is one of the car wash and auto detailing software solutions that allows i
 
 Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support your car wash business as it grows.
 
-`
-},
+`,
+  },
 
-
-    // BLOG 06
-{
+  // BLOG 06
+  {
     id: 6,
     category: "Multi-Location Business Management",
-    title: "How to Manage Different Service Prices Across Multiple Car Wash Branches",
+    title:
+      "How to Manage Different Service Prices Across Multiple Car Wash Branches",
     date: "October 18, 2026",
-    image: "assets/blog/blog-06.png",
+    image: "assets/blog/blog-06.jpeg",
 
     content: String.raw`
 
@@ -2997,12 +2995,11 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
     Visit <a href="https://home.vashq.com/" target="_blank" rel="noopener noreferrer">home.vashq.com</a> to explore how VASHQ can support your multi-branch car wash operations.
 </p>
 
-    `
-},
+    `,
+  },
 
-
-    // BLOG 07
-{
+  // BLOG 07
+  {
     id: 7,
     category: "Seasonal Business Challenges",
     title: "How Monsoon Season Reduces Demand for Premium Car Detailing",
@@ -3166,17 +3163,16 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
     Car wash and detailing businesses that introduce seasonal packages, adjust their marketing messages, and use <a href="https://home.vashq.com/" target="_blank" rel="noopener noreferrer">VASHQ Car Wash Management Software</a> to organize customers, services, bookings, and business information can continue serving customers throughout the rainy season.
 </p>
 
-    `
-},
+    `,
+  },
 
-
-    // BLOG 08
-{
+  // BLOG 08
+  {
     id: 8,
     category: "Workflow Management",
     title: "How to Reduce Customer Waiting Time at a Service Centre",
     date: "October 12, 2026",
-    image: "assets/blog/blog-08.png",
+    image: "assets/blog/blog-08.jpeg",
 
     content: String.raw`
 
@@ -3630,17 +3626,16 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
     When internal operations become more organized, employees spend less time searching and coordinating manually and more time focusing on delivering a better service experience.
 </p>
 
-    `
-},
+    `,
+  },
 
-
-    // BLOG 09
-{
+  // BLOG 09
+  {
     id: 9,
     category: "Car Wash Risk Management",
     title: "How to Reduce Vehicle Damage Claims and Disputes During Service",
     date: "October 10, 2026",
-    image: "assets/blog/blog-09.png",
+    image: "assets/blog/blog-09.jpeg",
 
     content: String.raw`
 
@@ -3936,17 +3931,16 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
     The principle is simple: make every service transparent, provide customers with the necessary information, and handle vehicle damage concerns using documented facts rather than assumptions.
 </p>
 
-    `
-},
+    `,
+  },
 
-
-    // BLOG 10
-{
+  // BLOG 10
+  {
     id: 10,
     category: "Service Center Management",
     title: "How to Prevent Double-Booking at a Busy Service Center",
     date: "October 08, 2026",
-    image: "assets/blog/blog-10.png",
+    image: "assets/blog/blog-10.jpeg",
 
     content: String.raw`
 
@@ -4267,17 +4261,17 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
     By improving scheduling procedures and maintaining accurate records, businesses can use their resources more effectively, manage appointments with greater clarity, and provide customers with a smoother service experience.
 </p>
 
-    `
-},
+    `,
+  },
 
-
-    // BLOG 11
-{
+  // BLOG 11
+  {
     id: 11,
     category: "Car Wash Operations",
-    title: 'How to Track Vehicle Status So Customers Stop Calling to Ask, "Is It Ready Yet?"',
+    title:
+      'How to Track Vehicle Status So Customers Stop Calling to Ask, "Is It Ready Yet?"',
     date: "October 05, 2026",
-    image: "assets/blog/blog-11.png",
+    image: "assets/blog/blog-11.jpeg",
 
     content: String.raw`
 
@@ -4544,17 +4538,17 @@ Visit [home.vashq.com](https://home.vashq.com/) to learn how VASHQ can support y
     When employees can access accurate job information and customers receive timely updates, the service experience becomes more convenient and easier to manage for everyone involved.
 </p>
 
-    `
-},
+    `,
+  },
 
-
-    // BLOG 12
-{
+  // BLOG 12
+  {
     id: 12,
     category: "Business Performance Analysis",
-    title: "How to Track Which Services Are Actually Profitable (and Which Aren't)",
+    title:
+      "How to Track Which Services Are Actually Profitable (and Which Aren't)",
     date: "October 02, 2026",
-    image: "assets/blog/blog-12.png",
+    image: "assets/blog/blog-12.jpeg",
 
     content: String.raw`
 
@@ -4795,11 +4789,11 @@ You need to start by logging revenues and expenses of each service. Make compari
 
 With VASHQ software, [car wash](https://home.vashq.com/) companies can organize important operational and business data, helping owners understand service performance and make more informed business decisions.
 
-`
-},
+`,
+  },
 
-    // BLOG 13
-{
+  // BLOG 13
+  {
     id: 13,
     category: "Car Detailing & Maintenance",
     title: "Why Do We Love Shiny Cars? The Psychology of a Clean Vehicle",
@@ -4910,14 +4904,15 @@ With [VASHQ](https://home.vashq.com/), businesses can manage customer informatio
 
 A shiny car may bring a customer through the door, but a consistently good experience gives them a reason to return.
 
-`
-},
+`,
+  },
 
-   // BLOG 14
-{
+  // BLOG 14
+  {
     id: 14,
     category: "Car Care Center",
-    title: "From Horse Carriages to Hatchbacks: How Vehicle Care Changed With Every Era",
+    title:
+      "From Horse Carriages to Hatchbacks: How Vehicle Care Changed With Every Era",
     date: "October 20, 2026",
     image: "assets/blog/blog-14.jpeg",
 
@@ -5069,16 +5064,16 @@ The evolution is clear: first, people cared for the carriage; then they cared fo
 
 From horse carriages to hatchbacks, the methods have changed. The need for good care has not.
 
-`
-},
+`,
+  },
 
-    // BLOG 15
-{
+  // BLOG 15
+  {
     id: 15,
     category: "Car Detailing & Maintenance",
     title: "The Science of Dirt: Why Your Car Gets Dirty Faster Than You Think",
     date: "November 07, 2026",
-    image: "assets/blog/blog-15.png",
+    image: "assets/blog/blog-15.jpeg",
 
     content: String.raw`
 
@@ -5181,16 +5176,17 @@ A better cleaning experience begins with identifying the problem. With organised
 
 **Discover VASHQ:** [https://home.vashq.com/](https://home.vashq.com/)
 
-`
-},
+`,
+  },
 
-    // BLOG 16
-{
+  // BLOG 16
+  {
     id: 16,
-    category: "Car Detailing & Maintenance",
-    title: "How Sunlight, Salt, and Rain Slowly Destroy Car Paint (Especially in Humid Climates)",
+    category: "Car Paint Protection & Maintenance",
+    title:
+      "How Sunlight, Salt, and Rain Slowly Destroy Car Paint (Especially in Humid Climates)",
     date: "November 12, 2026",
-    image: "assets/blog/blog-16.png",
+    image: "assets/blog/blog-15.jpeg",
 
     content: String.raw`
 # How Sunlight, Salt and Rain Affect Your Car's Paint
@@ -5289,11 +5285,10 @@ A well-maintained car does not depend on one expensive treatment. It depends on 
 
 **Discover VASHQ:** [https://home.vashq.com/](https://home.vashq.com/)
 
-`
-},
-
+`,
+  },
+  
 ];
-
 
 /* ==========================================
    2. GET HTML ELEMENTS
@@ -5303,125 +5298,87 @@ const vebLeft = document.getElementById("vebLeft");
 const vebCenter = document.getElementById("vebCenter");
 const vebArticle = document.getElementById("vebArticle");
 
-
 /* ==========================================
    3. LAST OPENED STORAGE
 ========================================== */
 
 const BLOG_STORAGE_KEY = "vashq_blog_last_opened";
 
-
 function getBlogOpeningTimes() {
+  try {
+    const savedTimes = localStorage.getItem(BLOG_STORAGE_KEY);
 
-    try {
+    const parsedTimes = savedTimes ? JSON.parse(savedTimes) : {};
 
-        const savedTimes = localStorage.getItem(
-            BLOG_STORAGE_KEY
-        );
+    return parsedTimes &&
+      typeof parsedTimes === "object" &&
+      !Array.isArray(parsedTimes)
+      ? parsedTimes
+      : {};
+  } catch (error) {
+    console.warn("Could not read blog history:", error);
 
-        const parsedTimes = savedTimes
-            ? JSON.parse(savedTimes)
-            : {};
-
-        return (
-            parsedTimes &&
-            typeof parsedTimes === "object" &&
-            !Array.isArray(parsedTimes)
-        ) ? parsedTimes : {};
-
-    } catch (error) {
-
-        console.warn("Could not read blog history:", error);
-
-        return {};
-
-    }
-
+    return {};
+  }
 }
-
 
 /* ==========================================
    4. LAST OPENED TEXT
 ========================================== */
 
 function getLastOpenedText(blogId) {
+  const openingTimes = getBlogOpeningTimes();
+  const previousTime = openingTimes[blogId];
 
-    const openingTimes = getBlogOpeningTimes();
-    const previousTime = openingTimes[blogId];
+  if (!previousTime) {
+    return "First visit";
+  }
 
-    if (!previousTime) {
-        return "First visit";
-    }
+  const elapsedSeconds = Math.max(
+    0,
+    Math.floor((Date.now() - previousTime) / 1000),
+  );
 
-    const elapsedSeconds = Math.max(
-        0,
-        Math.floor((Date.now() - previousTime) / 1000)
-    );
-
-    if (elapsedSeconds < 60) {
-
-        return `Last opened ${elapsedSeconds} ${
-            elapsedSeconds === 1 ? "second" : "seconds"
-        } ago`;
-
-    }
-
-    if (elapsedSeconds < 3600) {
-
-        const minutes = Math.floor(elapsedSeconds / 60);
-
-        return `Last opened ${minutes} ${
-            minutes === 1 ? "minute" : "minutes"
-        } ago`;
-
-    }
-
-    if (elapsedSeconds < 86400) {
-
-        const hours = Math.floor(elapsedSeconds / 3600);
-
-        return `Last opened ${hours} ${
-            hours === 1 ? "hour" : "hours"
-        } ago`;
-
-    }
-
-    const days = Math.floor(elapsedSeconds / 86400);
-
-    return `Last opened ${days} ${
-        days === 1 ? "day" : "days"
+  if (elapsedSeconds < 60) {
+    return `Last opened ${elapsedSeconds} ${
+      elapsedSeconds === 1 ? "second" : "seconds"
     } ago`;
+  }
 
+  if (elapsedSeconds < 3600) {
+    const minutes = Math.floor(elapsedSeconds / 60);
+
+    return `Last opened ${minutes} ${minutes === 1 ? "minute" : "minutes"} ago`;
+  }
+
+  if (elapsedSeconds < 86400) {
+    const hours = Math.floor(elapsedSeconds / 3600);
+
+    return `Last opened ${hours} ${hours === 1 ? "hour" : "hours"} ago`;
+  }
+
+  const days = Math.floor(elapsedSeconds / 86400);
+
+  return `Last opened ${days} ${days === 1 ? "day" : "days"} ago`;
 }
-
 
 /* ==========================================
    5. SAVE BLOG OPENING TIME
 ========================================== */
 
 function saveBlogOpeningTime(blogId) {
+  if (blogId === undefined || blogId === null) return;
 
-    if (blogId === undefined || blogId === null) return;
+  const openingTimes = getBlogOpeningTimes();
 
-    const openingTimes = getBlogOpeningTimes();
+  openingTimes[blogId] = Date.now();
 
-    openingTimes[blogId] = Date.now();
-
-    try {
-
-        localStorage.setItem(
-            BLOG_STORAGE_KEY,
-            JSON.stringify(openingTimes)
-        );
-
-    } catch (error) {
-
-        console.warn("Could not save blog history:", error);
-
-    }
-
+  try {
+    localStorage.setItem(BLOG_STORAGE_KEY, JSON.stringify(openingTimes));
+  } catch (error) {
+    console.warn("Could not save blog history:", error);
+  }
 }
-
 
 /* ==========================================
    6. INITIAL BLOG DISTRIBUTION
@@ -5432,23 +5389,18 @@ function saveBlogOpeningTime(blogId) {
 
 // The most recently added blog opens in the center.
 
-let activeBlog = blogData.length
-    ? blogData[blogData.length - 1]
-    : null;
-
+let activeBlog = blogData.length ? blogData[blogData.length - 1] : null;
 
 // Every other blog stays on the left side.
 
 let leftBlogs = blogData.slice(0, -1);
-
 
 /* ==========================================
    7. IMAGE HTML
 ========================================== */
 
 function vebImage(url, alt) {
-
-    return `
+  return `
         <img
             src="${url}"
             alt="${alt}"
@@ -5456,21 +5408,17 @@ function vebImage(url, alt) {
             onerror="this.style.display='none'"
         >
     `;
-
 }
-
 
 /* ==========================================
    8. RENDER LEFT BLOGS ONLY
 ========================================== */
 
 function renderSideBlogs() {
+  if (!vebLeft) return;
 
-    if (!vebLeft) return;
-
-    function createPreview(blog, index) {
-
-        return `
+  function createPreview(blog, index) {
+    return `
 
             <button
                 type="button"
@@ -5500,25 +5448,19 @@ function renderSideBlogs() {
             </button>
 
         `;
+  }
 
-    }
-
-    vebLeft.innerHTML = leftBlogs
-        .map(createPreview)
-        .join("");
-
+  vebLeft.innerHTML = leftBlogs.map(createPreview).join("");
 }
-
 
 /* ==========================================
    9. RENDER CENTER ARTICLE
 ========================================== */
 
 function renderActiveBlog() {
+  if (!activeBlog || !vebArticle) return;
 
-    if (!activeBlog || !vebArticle) return;
-
-    vebArticle.innerHTML = `
+  vebArticle.innerHTML = `
 
         <article class="veb-article">
 
@@ -5568,10 +5510,7 @@ function renderActiveBlog() {
 
             <div class="veb-hero-image">
 
-                ${vebImage(
-                    activeBlog.image,
-                    activeBlog.title
-                )}
+                ${vebImage(activeBlog.image, activeBlog.title)}
 
             </div>
 
@@ -5579,19 +5518,13 @@ function renderActiveBlog() {
             <!-- COMPLETE BLOG CONTENT -->
 
             <div class="veb-article-content">
-    ${
-        DOMPurify.sanitize(
-            marked.parse(activeBlog.content)
-        )
-    }
+    ${DOMPurify.sanitize(marked.parse(activeBlog.content))}
 </div>
 
         </article>
 
     `;
-
 }
-
 
 /* ==========================================
    10. SWITCH BLOG
@@ -5601,145 +5534,112 @@ function renderActiveBlog() {
 ========================================== */
 
 function switchBlog(blogId) {
+  const selectedIndex = leftBlogs.findIndex(
+    (blog) => blog.id === Number(blogId),
+  );
 
-    const selectedIndex = leftBlogs.findIndex(
-        blog => blog.id === Number(blogId)
-    );
+  if (selectedIndex === -1) return;
 
-    if (selectedIndex === -1) return;
+  // Get selected blog from left side.
 
+  const selectedBlog = leftBlogs[selectedIndex];
 
-    // Get selected blog from left side.
+  // Keep the current center blog.
 
-    const selectedBlog = leftBlogs[selectedIndex];
+  const previousActiveBlog = activeBlog;
 
+  // Move selected blog to center.
 
-    // Keep the current center blog.
+  activeBlog = selectedBlog;
 
-    const previousActiveBlog = activeBlog;
+  // Move previous center blog to the end of left list.
 
+  leftBlogs.splice(selectedIndex, 1);
 
-    // Move selected blog to center.
+  if (previousActiveBlog) {
+    leftBlogs.push(previousActiveBlog);
+  }
 
-    activeBlog = selectedBlog;
+  // Update left previews.
 
+  renderSideBlogs();
 
-    // Move previous center blog to the end of left list.
+  // Restart switching animation.
 
-    leftBlogs.splice(selectedIndex, 1);
+  if (vebCenter) {
+    vebCenter.classList.remove("veb-switching");
 
-    if (previousActiveBlog) {
-        leftBlogs.push(previousActiveBlog);
-    }
+    void vebCenter.offsetWidth;
 
+    vebCenter.classList.add("veb-switching");
+  }
 
-    // Update left previews.
+  // Update center content.
 
-    renderSideBlogs();
+  renderActiveBlog();
 
+  // Reset center scroll position.
 
-    // Restart switching animation.
+  if (vebArticle) {
+    vebArticle.scrollTop = 0;
+  }
 
-    if (vebCenter) {
+  // Save new blog opening time.
 
-        vebCenter.classList.remove("veb-switching");
-
-        void vebCenter.offsetWidth;
-
-        vebCenter.classList.add("veb-switching");
-
-    }
-
-
-    // Update center content.
-
-    renderActiveBlog();
-
-
-    // Reset center scroll position.
-
-    if (vebArticle) {
-        vebArticle.scrollTop = 0;
-    }
-
-
-    // Save new blog opening time.
-
-    saveBlogOpeningTime(activeBlog.id);
-
+  saveBlogOpeningTime(activeBlog.id);
 }
-
 
 /* ==========================================
    11. LEFT BLOG CLICK EVENT
 ========================================== */
 
 if (vebLeft) {
+  vebLeft.addEventListener("click", function (event) {
+    const preview = event.target.closest("[data-blog-id]");
 
-    vebLeft.addEventListener("click", function(event) {
+    if (!preview) return;
 
-        const preview = event.target.closest("[data-blog-id]");
-
-        if (!preview) return;
-
-        switchBlog(preview.dataset.blogId);
-
-    });
-
+    switchBlog(preview.dataset.blogId);
+  });
 }
-
 
 /* ==========================================
    12. INITIALIZE BLOG SECTION
 ========================================== */
 
 function initializeBlogSection() {
+  if (!vebLeft || !vebCenter || !vebArticle) {
+    console.error("VASHQ Blog section elements not found.");
 
-    if (!vebLeft || !vebCenter || !vebArticle) {
+    return;
+  }
 
-        console.error(
-            "VASHQ Blog section elements not found."
-        );
+  if (!blogData.length) {
+    vebArticle.innerHTML = "<p>No blogs available.</p>";
 
-        return;
+    vebLeft.innerHTML = "";
 
-    }
+    return;
+  }
 
+  // Render all remaining blogs on the left.
 
-    if (!blogData.length) {
+  renderSideBlogs();
 
-        vebArticle.innerHTML = "<p>No blogs available.</p>";
+  // Render the latest blog in the center.
 
-        vebLeft.innerHTML = "";
+  renderActiveBlog();
 
-        return;
+  // Save the opening time of the active blog.
 
-    }
-
-
-    // Render all remaining blogs on the left.
-
-    renderSideBlogs();
-
-
-    // Render the latest blog in the center.
-
-    renderActiveBlog();
-
-
-    // Save the opening time of the active blog.
-
-    saveBlogOpeningTime(activeBlog.id);
-
+  saveBlogOpeningTime(activeBlog.id);
 }
-
 
 /* ==========================================
    START BLOG SYSTEM
 ========================================== */
 
 initializeBlogSection();
-
 
 /* ==========================================
    END VASHQ EDITORIAL BLOG SYSTEM

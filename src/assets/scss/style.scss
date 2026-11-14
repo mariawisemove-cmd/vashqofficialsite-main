@@ -2567,9 +2567,7 @@
     position: relative;
     width: 100%;
     padding-bottom: 70px;
-    background: #fff;
     overflow: hidden;
-    background: linear-gradient(to bottom, #ebebeb 0%,#ffff 70%, #ffffff 100%);
 }
 
 .company-side{
@@ -2851,699 +2849,261 @@
 
 
 
-/* ==========================================
-   FOOTER OUTER SECTION
-========================================== */
 
-.footer-section {
-    background-color: #ffffff;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   VASHQ COMPACT PREMIUM FOOTER
+========================================= */
+
+.vashq-small-footer {
     position: relative;
-}
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    padding: 38px 0 16px;
+    color: #ffffff;
 
-
-/* ==========================================
-   VASHQ FOOTER BACKGROUND GRID
-========================================== */
-
-.vashq-footer {
-    position: relative;
-    z-index: 2;
-
-    background-color: #027ad5;
-
-    background-image:
-        linear-gradient(
-            rgba(255, 255, 255, 0.055) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.055) 1px,
-            transparent 1px
+    /* Premium greyish-blue oxidised finish */
+    background:
+        radial-gradient(
+            ellipse at 15% 20%,
+            rgba(190, 207, 220, 0.16),
+            transparent 40%
         ),
         radial-gradient(
-            circle at 50% 0%,
-            rgba(255, 255, 255, 0.13),
-            transparent 65%
+            ellipse at 85% 80%,
+            rgba(9, 24, 39, 0.30),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #526778 0%,
+            #40586b 45%,
+            #30485b 100%
         );
-
-    background-size:
-        45px 45px,
-        45px 45px,
-        100% 100%;
-
-    background-position:
-        center center,
-        center center,
-        center top;
-
-    background-blend-mode:
-        normal,
-        normal,
-        screen;
-
-    color: #ffffff;
-
-    padding: 1px 45px 22px;
-
-    border-radius: 65px 65px 0 0;
-
-    overflow: visible;
-
-    box-shadow:
-        0 -12px 35px rgba(0, 0, 0, 0.08);
 }
 
-
-/* ==========================================
-   FOOTER CONTAINER
-========================================== */
-
-.vashq-footer-container {
-    position: relative;
-    max-width: 1400px;
-    z-index: 1;
+.vashq-small-footer-container {
+    width: min(1180px, 92%);
     margin: 0 auto;
-    font-family: Minchrome;
 }
 
+/* Main footer layout */
+.vashq-footer-main {
+    display: grid;
+    grid-template-columns: 0.8fr 2.2fr;
+    gap: 45px;
+    align-items: center;
+    padding-bottom: 28px;
+}
 
-/* ==========================================
-   TOP BRAND / LOGO SECTION
-========================================== */
-
-.vashq-footer-brand-center {
-    position: relative;
-    z-index: 3;
-
+/* Brand section */
+.vashq-footer-brand {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-    margin-top: -65px;
-    margin-bottom: 55px;
+    max-width: 230px;
+    margin: 0 auto;
 }
 
-
-/* LOGO */
-
+/* Small logo */
 .vashq-footer-logo {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-
-    width: 120px;
-    height: 120px;
-
-    margin-bottom: 10px;
-    border-radius: 50%;
+    margin-bottom: 9px;
 }
-
-/* Logo dimensions intentionally preserved */
 
 .vashq-footer-logo img {
-    display: block;
-
-    width: auto;
-    max-width: 380px;
-    height: 200px;
-
+    width: 38px;
+    height: 38px;
     object-fit: contain;
-
-    box-shadow:
-        0 3px 12px rgba(16, 27, 53, 0.025);
 }
 
-
-/* ==========================================
-   BRAND DESCRIPTION
-========================================== */
-
-.vashq-footer-brand-center p {
-    max-width: 720px;
-
-    margin: 0;
-
-    color: #ffffff;
-
-    font-size: 26px;
-    font-weight: 800;
-    line-height: 1.6;
-    letter-spacing: 0.4px;
-
-    text-transform: none;
-}
-
-
-/* ==========================================
-   MAIN FOOTER LAYOUT
-========================================== */
-
-.vashq-footer-main {
-
-    display: grid;
-
-    /* Left booking + Right footer contents */
-
-    grid-template-columns: 0.85fr 2.15fr;
-
-    gap: 65px;
-
-    align-items: center;
-
-    padding: 20px 25px 50px;
-}
-
-
-/* ==========================================
-   LEFT BOOKING AREA
-========================================== */
-
-.vashq-footer-booking-area {
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-}
-
-
-/* ==========================================
-   PHONE BOOKING FORM
-========================================== */
-
-.vashq-footer-booking {
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    max-width: 340px;
-
-    margin: 0 auto;
-
-    padding: 0;
-
-    background: transparent;
-
-    border-radius: 0;
-    box-shadow: none;
-}
-
-.vashq-footer-booking h1 {
-    color: #fff;
-    font-weight: bold;
-    font-size: 45px;
-
-}
-
-
-/* ==========================================
-   RIGHT FOOTER CONTENT
-========================================== */
-
-.vashq-footer-right {
-
-    display: grid;
-
-    grid-template-columns: 1.35fr 0.75fr 1fr;
-
-    gap: 35px;
-
-    align-items: start;
-
-    width: 100%;
-}
-
-
-/* ==========================================
-   CONTACT SECTION
-========================================== */
-
-.vashq-footer-contact h4,
-.vashq-footer-links h4 {
-
-    color: #ffffff;
-
-    font-size: 20px;
-    font-weight: 700;
-
-    line-height: 1.4;
-
-    margin: 0 0 22px;
-}
-
-
-/* CONTACT DETAILS */
-
-.vashq-contact-details {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 17px;
-}
-
-
-.vashq-contact-details a,
-.vashq-contact-details div {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    color: #eaf4ff;
-
+/* Centered tagline */
+.vashq-footer-brand p {
+    max-width: 220px;
+    margin: 0 auto 15px;
+    color: rgba(255, 255, 255, 0.76);
     font-size: 14px;
-
-    text-decoration: none;
-
-    transition: color 0.3s ease;
-
-    min-width: 0;
-}
-
-
-.vashq-contact-details span {
-
-    overflow-wrap: anywhere;
-}
-
-
-.vashq-contact-details i {
-
-    flex-shrink: 0;
-
-    color: #071d35;
-
-    font-size: 16px;
-
-    width: 18px;
-
+    line-height: 1.7;
     text-align: center;
 }
 
-
-.vashq-contact-details a:hover {
-
-    color: #071d35;
-}
-
-
-/* ==========================================
-   FOOTER LINK GROUPS
-========================================== */
-
-.vashq-footer-links ul {
-
-    list-style: none;
-
-    padding: 0;
-    margin: 0;
-}
-
-
-.vashq-footer-links li {
-
-    margin-bottom: 13px;
-}
-
-
-.vashq-footer-links a {
-
-    color: #eaf4ff;
-
-    font-size: 15px;
-
-    line-height: 1.5;
-
-    text-decoration: none;
-
-    transition: all 0.3s ease;
-}
-
-
-.vashq-footer-links a:hover {
-
-    color: #071d35;
-
-    padding-left: 4px;
-}
-
-
-/* ==========================================
-   FOOTER BOTTOM
-========================================== */
-
-.vashq-footer-bottom {
-
+/* Social icons */
+.vashq-footer-socials {
     display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    padding: 22px 25px 0;
-
-    border-top:
-        1px solid rgba(255, 255, 255, 0.25);
-}
-
-
-.vashq-footer-bottom p {
-
-    color: #ffffff;
-
-    font-size: 15px;
-
-    margin: 0;
-}
-
-
-/* ==========================================
-   SOCIAL ICONS
-========================================== */
-
-.vashq-social-icons {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-}
-
-
-.vashq-social-icons a {
-
-    display: flex;
-
     align-items: center;
     justify-content: center;
+    gap: 9px;
+}
 
-    width: 36px;
-    height: 36px;
-
-    border-radius: 50%;
-
-    background: #071d35;
-
+.vashq-footer-socials a {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #ffffff;
-
-    font-size: 17px;
-
+    font-size: 15px;
     text-decoration: none;
-
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
     transition: all 0.3s ease;
 }
 
-
-.vashq-social-icons a:hover {
-
-    background: #ffffff;
-
-    color: #071d35;
-
-    transform: translateY(-4px);
+.vashq-footer-socials a:hover {
+    color: #ffffff;
+    background: #1769ff;
+    border-color: #1769ff;
+    transform: translateY(-3px);
 }
 
+/* Navigation */
+.vashq-footer-navigation {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
 
-/* ==========================================
-   TABLET RESPONSIVE
-========================================== */
+.vashq-footer-nav-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.vashq-footer-nav-group h4 {
+    margin: 0 0 7px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.vashq-footer-nav-group a,
+.vashq-footer-location {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 13px;
+    line-height: 1.8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.vashq-footer-nav-group a:hover {
+    color: #ffffff;
+}
+
+.vashq-footer-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vashq-footer-location i {
+    color: #fefefe;
+}
+
+/* Bottom copyright section */
+.vashq-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-top: 14px;
+    // border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.vashq-footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 10px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
 
 @media (max-width: 991px) {
-
-    .vashq-footer {
-
-        padding: 1px 30px 22px;
-
-        border-radius: 45px 45px 0 0;
-    }
-
-
     .vashq-footer-main {
-
-        grid-template-columns: 0.8fr 2fr;
-
-        gap: 35px;
-
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-
-    .vashq-footer-right {
-
-        grid-template-columns: 1fr 0.7fr 1fr;
-
-        gap: 20px;
-    }
-
-
-    .vashq-footer-contact h4,
-    .vashq-footer-links h4 {
-
-        font-size: 17px;
-    }
-
-
-    .vashq-contact-details a,
-    .vashq-contact-details div {
-
-        font-size: 13px;
-    }
-
-
-    .vashq-footer-links a {
-
-        font-size: 14px;
-    }
-
-}
-
-
-/* ==========================================
-   MOBILE RESPONSIVE
-========================================== */
-
-@media (max-width: 767px) {
-
-    .vashq-footer {
-
-        padding: 1px 22px 20px;
-
-        border-radius: 35px 35px 0 0;
-    }
-
-
-    /* BRAND */
-
-    .vashq-footer-brand-center {
-
-        margin-top: -45px;
-
-        margin-bottom: 35px;
-    }
-
-
-    .vashq-footer-brand-center p {
-
-        font-size: 18px;
-
-        line-height: 1.5;
-
-        max-width: 420px;
-    }
-
-
-    /* LOGO SIZE PRESERVED */
-
-    .vashq-footer-logo img {
-
-        height: 200px;
-        width: auto;
-        max-width: 380px;
-    }
-
-
-    /* MAIN LAYOUT */
-
-    .vashq-footer-main {
-
         grid-template-columns: 1fr;
-
-        gap: 45px;
-
-        padding: 15px 5px 35px;
+        gap: 30px;
     }
 
-
-    /* BOOKING FORM */
-
-    .vashq-footer-booking-area {
-
-        width: 100%;
+    .vashq-footer-brand {
+        max-width: 260px;
     }
 
-
-    .vashq-footer-booking {
-
-        max-width: 360px;
-    }
-
-
-    /* RIGHT CONTENT */
-
-    .vashq-footer-right {
-
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        gap: 35px 25px;
-    }
-
-
-    .vashq-footer-contact {
-
-        grid-column: 1 / -1;
-    }
-
-
-    .vashq-footer-contact h4,
-    .vashq-footer-links h4 {
-
-        font-size: 18px;
-    }
-
-
-    .vashq-contact-details a,
-    .vashq-contact-details div {
-
-        font-size: 14px;
-    }
-
-
-    .vashq-footer-links a {
-
-        font-size: 14px;
-    }
-
-
-    /* BOTTOM */
-
-    .vashq-footer-bottom {
-
-        padding: 20px 5px 0;
-
-        flex-direction: column;
-
-        text-align: center;
-
+    .vashq-footer-navigation {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 18px;
     }
-
-
-    .vashq-footer-bottom p {
-
-        font-size: 13px;
-    }
-
 }
 
+/* =========================================
+   MOBILE
+========================================= */
 
-@media (max-width: 576px) {
-
-    .vashq-review-avatar {
-        width: 55px;
-        height: 55px;
-        flex: 0 0 65px;
+@media (max-width: 600px) {
+    .vashq-small-footer {
+        padding: 32px 0 15px;
     }
 
-}
-
-
-/* ==========================================
-   SMALL MOBILE
-========================================== */
-
-@media (max-width: 480px) {
-
-    .vashq-footer {
-
-        padding-left: 18px;
-        padding-right: 18px;
+    .vashq-footer-navigation {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 18px;
     }
 
-
-    .vashq-footer-brand-center p {
-
-        font-size: 16px;
+    .vashq-footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 7px;
     }
-
-
-    .vashq-footer-right {
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 30px 15px;
-    }
-
-
-    .vashq-footer-contact {
-
-        grid-column: 1 / -1;
-    }
-
-
-    .vashq-footer-contact h4,
-    .vashq-footer-links h4 {
-
-        font-size: 16px;
-    }
-
-
-    .vashq-footer-links a {
-
+     .vashq-footer-brand p {
         font-size: 13px;
     }
 
-
-    .vashq-contact-details a,
-    .vashq-contact-details div {
-
-        font-size: 13px;
-    }
-
-
-    .vashq-footer-booking input {
-
-        height: 50px;
-
+    .vashq-footer-nav-group h4 {
         font-size: 14px;
     }
 
-
-    .vashq-footer-booking button {
-
-        width: 115px;
-        height: 40px;
-
-        font-size: 13px;
+    .vashq-footer-nav-group a,
+    .vashq-footer-location {
+        font-size: 12px;
     }
 
+    .vashq-footer-bottom p {
+        font-size: 11px;
+    }
 }
+
 
 
 
