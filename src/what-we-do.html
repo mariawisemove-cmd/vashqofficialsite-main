@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -54,7 +54,6 @@
                 visibility 0.7s ease;
         }
 
-        /* Hide Loader */
 
         #page-loader.is-hidden {
             opacity: 0;
@@ -62,7 +61,6 @@
             pointer-events: none;
         }
 
-        /* Main Content */
 
         .vashq-loader-content {
             display: flex;
@@ -76,7 +74,6 @@
             text-align: center;
         }
 
-        /* Logo */
 
         .vashq-loader-logo {
             position: relative;
@@ -99,7 +96,6 @@
             animation: vashqLogoFloat 3s ease-in-out infinite;
         }
 
-        /* Loading Caption */
 
         .vashq-loader-caption {
             display: flex;
@@ -116,7 +112,6 @@
             letter-spacing: 2.2px;
         }
 
-        /* Animated Dot */
 
         .vashq-loader-dot {
             width: 7px;
@@ -131,7 +126,6 @@
             animation: vashqDotPulse 1.2s ease-in-out infinite;
         }
 
-        /* Progress Track */
 
         .vashq-loader-progress {
             position: relative;
@@ -146,7 +140,6 @@
             background: #eaf0fa;
         }
 
-        /* Animated Progress */
 
         .vashq-loader-progress-bar {
             position: absolute;
@@ -166,7 +159,7 @@
             animation: vashqLoading 1.5s ease-in-out infinite;
         }
 
-        /* Footer */
+
 
         .vashq-loader-footer {
             margin: 22px 0 0;
@@ -178,9 +171,6 @@
             letter-spacing: 2px;
         }
 
-        /* ==========================================
-   ANIMATIONS
-========================================== */
 
         @keyframes vashqLogoReveal {
             from {
@@ -230,7 +220,6 @@
             }
         }
 
-        /* Mobile */
 
         @media (max-width: 576px) {
 
@@ -244,7 +233,6 @@
 
         }
 
-        /* Accessibility */
 
         @media (prefers-reduced-motion: reduce) {
 
@@ -267,13 +255,12 @@
 
         <div class="vashq-loader-content">
 
-            <!-- Logo -->
+            
             <div class="vashq-loader-logo">
                 <img src="./assets/images/brand/logo-full.webp" alt="VASHQ" />
             </div>
 
 
-            <!-- Loading Progress -->
             <div class="vashq-loader-progress">
                 <div class="vashq-loader-progress-bar"></div>
             </div>
@@ -300,7 +287,6 @@
             window.addEventListener('pageshow', (e) => { if (e.persisted) hide(); });
         })();
     </script>
-    <!-- Navbar Start -->
 
     <nav class="navbar navbar-expand-lg px-3">
 
@@ -314,7 +300,6 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- DESKTOP NAVBAR -->
         <div class="d-none d-lg-flex flex-grow-1 align-items-center">
 
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -360,7 +345,6 @@
     </nav>
 
 
-    <!-- MOBILE OFFCANVAS NAVBAR -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
 
         <div class="offcanvas-header">
@@ -415,9 +399,8 @@
 
             <div class="d-grid gap-2 mt-3">
 
-                <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookDemoModal"
-                    data-bs-dismiss="offcanvas">
-                    Log In / Sign Up
+                <a href="https://www.vashq.com/login" class="btn btn-primary">
+                    Log In
                 </a>
 
             </div>
@@ -425,22 +408,16 @@
         </div>
     </div>
 
-    <!-- Navbar End -->
 
-    <!-- ==========================================
-     WHAT WE DO – 3D IMAGE + TEXT REVEAL
-========================================== -->
 
     <section class="what-we-do-hero">
 
-        <!-- BACKGROUND IMAGE -->
         <div class="what-we-do-image-wrapper">
 
             <img src="./assets/images/web.png" alt="What We Do" class="what-we-do-image">
 
         </div>
 
-        <!-- TEXT CONTENT -->
         <div class="what-we-do-content">
 
             <div class="what-we-do-text">
@@ -463,9 +440,6 @@
     </section>
 
 
-    <!-- =========================================
-     VASHQ VIDEO FEATURES SECTION
-========================================= -->
 
     <section class="vashq-video-features" id="vashqVideoFeatures">
 
@@ -473,7 +447,6 @@
 
             <div class="vvf-grid" id="vvfGrid">
 
-                <!-- 01 -->
                 <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_1">
                     <span class="vvf-card-title">Command Center Dashboard</span>
                     <span class="vvf-play">
@@ -481,7 +454,6 @@
                     </span>
                 </button>
 
-                <!-- 02 -->
                 <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_2">
                     <span class="vvf-card-title">Smart Plate Recognition</span>
                     <span class="vvf-play">
@@ -489,15 +461,13 @@
                     </span>
                 </button>
 
-                <!-- 03 -->
-                <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_3">
+               <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_3">
                     <span class="vvf-card-title">AI Business Assistant</span>
                     <span class="vvf-play">
                         <span class="vvf-play-icon"></span>
                     </span>
                 </button>
 
-                <!-- 04 -->
                 <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_4">
                     <span class="vvf-card-title">Intelligent Inventory Control</span>
                     <span class="vvf-play">
@@ -505,7 +475,6 @@
                     </span>
                 </button>
 
-                <!-- 05 -->
                 <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_5">
                     <span class="vvf-card-title">Customer Relationship Hub</span>
                     <span class="vvf-play">
@@ -513,7 +482,6 @@
                     </span>
                 </button>
 
-                <!-- 06 -->
                 <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_6">
                     <span class="vvf-card-title">Workforce Attendance Tracking</span>
                     <span class="vvf-play">
@@ -521,7 +489,6 @@
                     </span>
                 </button>
 
-                <!-- 07 -->
                 <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_7">
                     <span class="vvf-card-title">Service Package Builder</span>
                     <span class="vvf-play">
@@ -529,7 +496,6 @@
                     </span>
                 </button>
 
-                <!-- 08 -->
                 <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_8">
                     <span class="vvf-card-title">Service Catalog Manager</span>
                     <span class="vvf-play">
@@ -537,7 +503,6 @@
                     </span>
                 </button>
 
-                <!-- 09 -->
                 <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_9">
                     <span class="vvf-card-title">Quality Assurance Checkpoint</span>
                     <span class="vvf-play">
@@ -545,7 +510,6 @@
                     </span>
                 </button>
 
-                <!-- 10 -->
                 <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_10">
                     <span class="vvf-card-title">Smart Job Creation & Assignment</span>
                     <span class="vvf-play">
@@ -553,7 +517,6 @@
                     </span>
                 </button>
 
-                <!-- 11 -->
                 <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_11">
                     <span class="vvf-card-title">Finance & Expense Ledger</span>
                     <span class="vvf-play">
@@ -561,7 +524,6 @@
                     </span>
                 </button>
 
-                <!-- 12 -->
                 <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_12">
                     <span class="vvf-card-title">Business Insights & Reports</span>
                     <span class="vvf-play">
@@ -569,7 +531,6 @@
                     </span>
                 </button>
 
-                <!-- 13 -->
                 <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_13">
                     <span class="vvf-card-title">Multi-Branch Management</span>
                     <span class="vvf-play">
@@ -577,7 +538,6 @@
                     </span>
                 </button>
 
-                <!-- 14 -->
                 <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_14">
                     <span class="vvf-card-title">Online Booking Portal</span>
                     <span class="vvf-play">
@@ -585,7 +545,6 @@
                     </span>
                 </button>
 
-                <!-- 15 -->
                 <button class="vvf-card" data-video="https://www.youtube.com/shorts/VIDEO_ID_15">
                     <span class="vvf-card-title">Complete Customer Timeline</span>
                     <span class="vvf-play">
@@ -596,7 +555,6 @@
             </div>
 
 
-            <!-- VIEW MORE -->
             <div class="vvf-more-wrapper">
 
                 <button class="vvf-more-btn" id="vvfMoreBtn">
@@ -609,9 +567,6 @@
         </div>
 
 
-        <!-- =====================================
-         VIDEO POPUP MODAL
-    ====================================== -->
 
         <div class="vvf-modal" id="vvfModal">
 
@@ -634,16 +589,10 @@
     </section>
 
 
-
-    <!-- ==========================================
-     VASHQ IMPORTANT FEATURES
-========================================== -->
-
     <section class="vashq-important-features" id="importantFeatures">
 
         <div class="vif-container">
 
-            <!-- SECTION HEADER -->
             <div class="vif-header vif-reveal">
 
                 <h2>
@@ -658,7 +607,6 @@
             </div>
 
 
-            <!-- FEATURE 01 -->
             <div class="vif-row vif-reveal">
 
                 <div class="vif-image-side">
@@ -692,7 +640,7 @@
             </div>
 
 
-            <!-- FEATURE 02 -->
+
             <div class="vif-row vif-reverse vif-reveal">
 
                 <div class="vif-image-side">
@@ -726,7 +674,7 @@
             </div>
 
 
-            <!-- FEATURE 03 -->
+
             <div class="vif-row vif-reveal">
 
                 <div class="vif-image-side">
@@ -760,7 +708,6 @@
             </div>
 
 
-            <!-- FEATURE 04 -->
             <div class="vif-row vif-reverse vif-reveal">
 
                 <div class="vif-image-side">
@@ -798,9 +745,6 @@
     </section>
 
 
-    <!-- ==========================================
-     VIDEO POPUP
-========================================== -->
 
     <div class="vif-video-modal" id="vifVideoModal">
 
@@ -828,10 +772,8 @@
 
     <div class="vashq-small-footer-container">
 
-        <!-- TOP FOOTER -->
         <div class="vashq-footer-main">
 
-            <!-- LEFT BRAND -->
             <div class="vashq-footer-brand">
 
                 <a href="index.html" class="vashq-footer-logo">
@@ -866,7 +808,6 @@
             </div>
 
 
-            <!-- RIGHT LINKS -->
             <div class="vashq-footer-navigation">
 
                 <div class="vashq-footer-nav-group">
@@ -913,8 +854,6 @@
 
         </div>
 
-
-        <!-- FOOTER BOTTOM -->
         <div class="vashq-footer-bottom">
 
             <p>© 2026 VASHQ. All rights reserved.</p>
@@ -931,7 +870,6 @@
 
 
 
-    <!-- Book Demo Modal -->
     <div class="modal fade vashq-demo-modal" id="bookDemoModal" tabindex="-1" aria-labelledby="bookDemoModalLabel"
         aria-hidden="true">
 
@@ -1134,4 +1072,4 @@
     <script src="./assets/js/pageload.js" defer></script>
 </body>
 
-</html>
+</html> -->
