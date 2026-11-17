@@ -3861,7 +3861,7 @@
 
     display: block;
 
-    object-fit: cover;
+    object-fit: fill;
     object-position: center;
 
     transition: transform .5s ease;
@@ -3910,8 +3910,8 @@
     position: absolute;
     z-index: 2;
 
-    top: 50%;
-    left: 50%;
+    bottom: 0;
+    right: 0;
 
     width: 62px;
     height: 62px;
