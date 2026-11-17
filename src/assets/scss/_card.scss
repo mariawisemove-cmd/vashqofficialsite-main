@@ -543,6 +543,211 @@
 
 }
 
+
+
+/* =====================================================
+   FEATURE HERO
+===================================================== */
+
+.feature-hero {
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #ffffff;
+    padding: 100px 5% 0;
+}
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.feature-hero-content {
+    position: relative;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 2;
+    transform: translateY(32px);
+}
+
+/* =====================================================
+   HERO HEADING
+===================================================== */
+
+.feature-hero h1 {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-size: clamp(80px, 20vw, 250px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.075em;
+
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    background: linear-gradient(
+        90deg,
+        rgba(103, 161, 236, 0.94) 0%,
+        rgba(79, 124, 188, 0.82) 38%,
+        rgba(47, 77, 118, 0.42) 70%,
+        rgba(5, 12, 22, 0.30) 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    position: relative;
+    z-index: 1;
+    user-select: none;
+}
+
+
+/* =====================================================
+   LARGE DESKTOP (1400px and above)
+===================================================== */
+
+@media (min-width: 1400px) {
+
+    .feature-hero {
+        padding: 110px 5% 0;
+    }
+
+    .feature-hero h1 {
+        font-size: clamp(200px, 17vw, 250px);
+    }
+
+}
+
+
+/* =====================================================
+   LAPTOP (1024px - 1399px)
+===================================================== */
+
+@media (max-width: 1399px) {
+
+    .feature-hero {
+        padding: 95px 4% 0;
+    }
+
+    .feature-hero-content {
+        transform: translateY(25px);
+    }
+
+    .feature-hero h1 {
+        font-size: clamp(150px, 19vw, 220px);
+    }
+
+}
+
+
+/* =====================================================
+   TABLET LANDSCAPE (768px - 1023px)
+===================================================== */
+
+@media (max-width: 1023px) {
+
+    .feature-hero {
+        padding: 85px 3% 0;
+    }
+
+    .feature-hero-content {
+        transform: translateY(20px);
+    }
+
+    .feature-hero h1 {
+        font-size: clamp(110px, 19vw, 175px);
+        letter-spacing: -0.07em;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET PORTRAIT (600px - 767px)
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .feature-hero {
+        padding: 75px 3% 0;
+    }
+
+    .feature-hero-content {
+        transform: translateY(15px);
+    }
+
+    .feature-hero h1 {
+        font-size: clamp(85px, 19vw, 140px);
+        letter-spacing: -0.065em;
+        line-height: 1;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE (400px - 599px)
+===================================================== */
+
+@media (max-width: 599px) {
+
+    .feature-hero {
+        padding: 65px 3% 0;
+    }
+
+    .feature-hero-content {
+        transform: translateY(10px);
+    }
+
+    .feature-hero h1 {
+        font-size: clamp(65px, 18vw, 105px);
+        letter-spacing: -0.06em;
+        line-height: 1;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE (320px - 399px)
+===================================================== */
+
+@media (max-width: 399px) {
+
+    .feature-hero {
+        padding: 55px 2% 0;
+    }
+
+    .feature-hero-content {
+        transform: translateY(8px);
+    }
+
+    .feature-hero h1 {
+        font-size: clamp(55px, 17.5vw, 72px);
+        letter-spacing: -0.055em;
+        line-height: 1;
+    }
+
+}
+
+
+
+
+
 /* =====================================================
    INDIVIDUAL FEATURE SECTION
 ===================================================== */
@@ -2339,7 +2544,7 @@
 .vashq-cta-visual {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 28px;
     bottom: 0;
     width: 47%;
     min-height: 340px;
