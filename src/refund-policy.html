@@ -1409,201 +1409,263 @@
 
     <!-- Book Demo Modal -->
     <div class="modal fade vashq-demo-modal" id="bookDemoModal" tabindex="-1" aria-labelledby="bookDemoModalLabel"
-        aria-hidden="true">
+    aria-hidden="true">
 
-        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
 
-            <div class="modal-content">
+      <div class="modal-content">
 
-                <div class="modal-body">
+        <div class="modal-body">
 
-                    <!-- Close Button -->
-                    <button type="button" class="vashq-demo-close" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="bi bi-x-lg"></i>
-                    </button>
+          <!-- Close Button -->
+          <button type="button" class="vashq-demo-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="bi bi-x-lg"></i>
+          </button>
 
-                    <!-- FORM VIEW -->
-                    <div id="bookDemoFormView">
+          <!-- FORM VIEW -->
+          <div id="bookDemoFormView">
 
-                        <!-- Header -->
-                        <div class="vashq-demo-header">
+            <!-- Header -->
+            <div class="vashq-demo-header">
 
-                            <div class="vashq-demo-icon">
-                                <i class="bi bi-calendar2-check"></i>
-                            </div>
+              <div class="vashq-demo-icon">
+                <i class="bi bi-calendar2-check"></i>
+              </div>
 
-                            <h2 id="bookDemoModalLabel">
-                                Book Your <span>Free Demo</span>
-                            </h2>
+              <h2 id="bookDemoModalLabel">
+                Book Your <span>Free Demo</span>
+              </h2>
 
-                            <p>
-                                Discover how VASHQ simplifies your car wash business.
-                                Share your details and our team will get in touch.
-                            </p>
-
-                        </div>
-
-
-                        <!-- Demo Form -->
-                        <form id="bookDemoForm" class="vashq-demo-form needs-validation" novalidate>
-
-                            <!-- Full Name -->
-                            <div class="vashq-demo-field">
-
-                                <label for="demoFullName">Full Name</label>
-
-                                <div class="vashq-demo-input-wrap">
-                                    <i class="bi bi-person"></i>
-
-                                    <input id="demoFullName" name="fullName" type="text"
-                                        placeholder="Enter your full name" required minlength="2" autocomplete="name">
-                                </div>
-
-                                <div class="invalid-feedback">
-                                    Please enter your full name.
-                                </div>
-
-                            </div>
-
-
-                            <!-- Business Name -->
-                            <div class="vashq-demo-field">
-
-                                <label for="demoBusinessName"> Business Name </label>
-
-                                <div class="vashq-demo-input-wrap">
-                                    <i class="bi bi-building"></i>
-
-                                    <input id="demoBusinessName" name="businessName" type="text"
-                                        placeholder="Enter your business name" autocomplete="organization">
-                                </div>
-
-                            </div>
-
-
-                            <!-- Mobile Number -->
-                            <div class="vashq-demo-field">
-
-                                <label for="demoMobile">Mobile Number</label>
-
-                                <div class="vashq-demo-input-wrap">
-                                    <i class="bi bi-telephone"></i>
-
-                                    <input id="demoMobile" name="mobile" type="tel"
-                                        placeholder="Enter 10-digit mobile number" required inputmode="numeric"
-                                        autocomplete="tel" pattern="^[6-9][0-9]{9}$">
-                                </div>
-
-                                <div class="invalid-feedback">
-                                    Please enter a valid 10-digit Indian mobile number.
-                                </div>
-
-                            </div>
-
-
-                            <!-- Location -->
-                            <div class="vashq-demo-field">
-
-                                <label for="demoLocationSearch">
-                                    Business Location
-                                    <span class="vashq-optional-label"></span>
-                                </label>
-
-                                <div class="location-combobox vashq-demo-location" id="demoLocationCombobox">
-
-                                    <input type="hidden" id="demoLocation" name="location" required>
-
-                                    <div class="vashq-demo-input-wrap">
-
-                                        <i class="bi bi-geo-alt"></i>
-
-                                        <input id="demoLocationSearch" type="text"
-                                            placeholder="Search your state or city" role="combobox" autocomplete="off"
-                                            aria-autocomplete="list" aria-expanded="false"
-                                            aria-controls="demoLocationList" required>
-
-                                    </div>
-
-                                    <ul id="demoLocationList" class="location-combobox__list" role="listbox" hidden>
-                                    </ul>
-
-                                </div>
-
-                                <div class="invalid-feedback">
-                                    Please search and select a state or city in India.
-                                </div>
-
-                            </div>
-
-
-                            <!-- Submit Button -->
-                            <button class="vashq-demo-submit" type="submit">
-
-                                <span>Request a Demo</span>
-
-                                <i class="bi bi-arrow-right"></i>
-
-                            </button>
-
-
-                            <!-- Privacy -->
-                            <p class="vashq-demo-privacy">
-                                <i class="bi bi-shield-check"></i>
-                                Your information is safe with us.
-                            </p>
-
-
-                            <!-- Error -->
-                            <p id="bookDemoError" class="small text-danger mt-3 mb-0 d-none" role="alert">
-                            </p>
-
-                        </form>
-
-                    </div>
-
-
-                    <!-- SUCCESS VIEW -->
-                    <div id="bookDemoSuccessView" class="book-demo-success d-none" hidden aria-live="polite">
-
-                        <div class="vashq-success-icon">
-
-                            <svg viewBox="0 0 52 52">
-
-                                <circle cx="26" cy="26" r="24" fill="none" class="success-circle" />
-
-                                <path d="M14 27l8 8 16-17" fill="none" class="success-check" />
-
-                            </svg>
-
-                        </div>
-
-                        <span class="vashq-demo-eyebrow">
-                            REQUEST RECEIVED
-                        </span>
-
-                        <h2>Thank You!</h2>
-
-                        <p>
-                            Your demo request has been submitted successfully.
-                            Our team will connect with you soon.
-                        </p>
-
-                        <button type="button" class="vashq-demo-submit" data-bs-dismiss="modal">
-
-                            Done
-                            <i class="bi bi-check-lg"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
+              <p>
+                Discover how VASHQ simplifies your car wash business.
+                Share your details and our team will get in touch.
+              </p>
 
             </div>
 
-        </div>
+
+            <!-- Demo Form -->
+            <form id="bookDemoForm" class="vashq-demo-form needs-validation" novalidate>
+
+              <!-- Full Name -->
+              <div class="vashq-demo-field">
+
+                <label for="demoFullName">Full Name</label>
+
+                <div class="vashq-demo-input-wrap">
+                  <i class="bi bi-person"></i>
+
+                  <input id="demoFullName" name="fullName" type="text" placeholder="Enter your full name" required
+                    minlength="2" autocomplete="name">
+                </div>
+
+                <div class="invalid-feedback">
+                  Please enter your full name.
+                </div>
+
+              </div>
+
+
+              <!-- Business Name -->
+              <div class="vashq-demo-field">
+
+                <label for="demoBusinessName"> Business Name </label>
+
+                <div class="vashq-demo-input-wrap">
+                  <i class="bi bi-building"></i>
+
+                  <input id="demoBusinessName" name="businessName" type="text" placeholder="Enter your business name"
+                    autocomplete="organization">
+                </div>
+
+              </div>
+
+
+              <!-- TYPE OF CAR CARE -->
+              
+<div class="vashq-demo-field">
+
+    <label for="demoCarCare">Type of Car Care</label>
+
+    <div class="vashq-demo-input-wrap vashq-select-wrap">
+
+        <i class="bi bi-car-front"></i>
+
+        <select
+            id="demoCarCare"
+            name="carCareType"
+            class="vashq-car-care-select"
+            required
+        >
+
+            <option value="" selected disabled>
+                Select type of car care
+            </option>
+
+            <option value="Hand Car Wash">
+                Hand car wash
+            </option>
+
+            <option value="Automatic/Tunnel Car Wash">
+                Automatic/tunnel car wash
+            </option>
+
+            <option value="Touchless/In-Bay Automatic Wash">
+                Touchless/in-bay automatic wash
+            </option>
+
+            <option value="Waterless and Rinseless Wash">
+                Waterless and rinseless wash
+            </option>
+
+            <option value="Mobile/Doorstep Car Wash">
+                Mobile/doorstep car wash
+            </option>
+
+            <option value="Steam Wash">
+                Steam wash
+            </option>
+
+            <option value="Bike and Commercial Vehicle Wash">
+                Bike and commercial vehicle wash (buses, trucks, fleets)
+            </option>
+
+            <option value="Other">
+                Other
+            </option>
+
+        </select>
 
     </div>
+
+    <div class="invalid-feedback">
+        Please select your type of car care.
+    </div>
+
+</div>
+
+
+              <!-- Mobile Number -->
+              <div class="vashq-demo-field">
+
+                <label for="demoMobile">Mobile Number</label>
+
+                <div class="vashq-demo-input-wrap">
+                  <i class="bi bi-telephone"></i>
+
+                  <input id="demoMobile" name="mobile" type="tel" placeholder="Enter 10-digit mobile number" required
+                    inputmode="numeric" autocomplete="tel" pattern="^[6-9][0-9]{9}$">
+                </div>
+
+                <div class="invalid-feedback">
+                  Please enter a valid 10-digit Indian mobile number.
+                </div>
+
+              </div>
+
+
+              <!-- Location -->
+              <div class="vashq-demo-field">
+
+                <label for="demoLocationSearch">
+                  Business Location
+                  <span class="vashq-optional-label"></span>
+                </label>
+
+                <div class="location-combobox vashq-demo-location" id="demoLocationCombobox">
+
+                  <input type="hidden" id="demoLocation" name="location" required>
+
+                  <div class="vashq-demo-input-wrap">
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    <input id="demoLocationSearch" type="text" placeholder="Search your state or city" role="combobox"
+                      autocomplete="off" aria-autocomplete="list" aria-expanded="false" aria-controls="demoLocationList"
+                      required>
+
+                  </div>
+
+                  <ul id="demoLocationList" class="location-combobox__list" role="listbox" hidden>
+                  </ul>
+
+                </div>
+
+                <div class="invalid-feedback">
+                  Please search and select a state or city in India.
+                </div>
+
+              </div>
+
+
+              <!-- Submit Button -->
+              <button class="vashq-demo-submit" type="submit">
+
+                <span>Request a Demo</span>
+
+                <i class="bi bi-arrow-right"></i>
+
+              </button>
+
+
+              <!-- Privacy -->
+              <p class="vashq-demo-privacy">
+                <i class="bi bi-shield-check"></i>
+                Your information is safe with us.
+              </p>
+
+
+              <!-- Error -->
+              <p id="bookDemoError" class="small text-danger mt-3 mb-0 d-none" role="alert">
+              </p>
+
+            </form>
+
+          </div>
+
+
+          <!-- SUCCESS VIEW -->
+          <div id="bookDemoSuccessView" class="book-demo-success d-none" hidden aria-live="polite">
+
+            <div class="vashq-success-icon">
+
+              <svg viewBox="0 0 52 52">
+
+                <circle cx="26" cy="26" r="24" fill="none" class="success-circle" />
+
+                <path d="M14 27l8 8 16-17" fill="none" class="success-check" />
+
+              </svg>
+
+            </div>
+
+            <span class="vashq-demo-eyebrow">
+              REQUEST RECEIVED
+            </span>
+
+            <h2>Thank You!</h2>
+
+            <p>
+              Your demo request has been submitted successfully.
+              Our team will connect with you soon.
+            </p>
+
+            <button type="button" class="vashq-demo-submit" data-bs-dismiss="modal">
+
+              Done
+              <i class="bi bi-check-lg"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 
 

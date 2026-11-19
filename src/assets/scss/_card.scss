@@ -15,19 +15,88 @@
    }
 }
 
+
 /* ========================================
-   FEATURES SECTION
+   INDEX FEATURES SECTION
 ======================================== */
 
 #features {
+    position: relative;
     overflow: hidden;
-    padding: 0px 0px !important;
+
+    padding: 60px 0 !important;
+
+   
 }
 
+.vashq-feature-container {
+    position: relative;
+    width: 100%;
+    padding: 70px 100px;
+    overflow: hidden;
+    border-radius: 40px;
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(37, 99, 235, 0.08),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(96, 165, 250, 0.10),
+            transparent 35%
+        ),
+        #f8fbff;
 
+}
+
+@media (max-width: 1400px) {
+
+    .vashq-feature-container {
+        padding: 65px 65px;
+    }
+}
+@media (max-width: 1200px) {
+
+    .vashq-feature-container {
+        padding: 55px 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .vashq-feature-container {
+        padding: 50px 25px;
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vashq-feature-container {
+        padding: 40px 20px;
+        border-radius: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .vashq-feature-container {
+        padding: 35px 14px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .vashq-feature-container {
+        padding: 30px 10px;
+    }
+}
+
+/* ========================================
+   SECTION HEADING
+======================================== */
 
 .features-eyebrow {
     display: inline-block;
+
     margin-bottom: 16px;
     padding: 7px 14px;
 
@@ -44,6 +113,7 @@
 
 .features-heading {
     color: #111827;
+
     font-size: clamp(28px, 3vw, 42px);
     line-height: 1.25;
     letter-spacing: -1.2px;
@@ -58,70 +128,118 @@
     margin-inline: auto;
 
     color: #64748b;
+
     font-size: 15px;
     line-height: 1.8;
 }
 
 
 /* ========================================
-   FEATURE CARDS
+   FEATURE CARD LINK
 ======================================== */
 
-#features .feature-card {
+#features .feature-card-link {
+    display: block;
     height: 100%;
-    min-height: auto;
 
-    display: flex;
-    flex-direction: column;
-
-    background: #ffffff;
-
-    border: 1px solid #e5e7eb;
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.025);
-
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-
-/* Hover Effect */
-
-#features .feature-card:hover {
-    transform: translateY(-5px);
-
-    border-color: #bfdbfe;
-
-    box-shadow:
-        0 12px 30px rgba(15, 23, 42, 0.07),
-        0 3px 8px rgba(37, 99, 235, 0.035);
+    text-decoration: none;
 }
 
 
 /* ========================================
-   IMAGE AREA
-   Fixed space for every feature image
+   PREMIUM GLASSMORPHISM FEATURE CARDS
+======================================== */
+
+#features .feature-card {
+    position: relative;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    /* Frosted Glass Background */
+
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.78),
+        rgba(239, 246, 255, 0.38)
+    );
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    /* Glass Border */
+
+    border: 1px solid rgba(255, 255, 255, 0.85);
+
+    border-radius: 20px;
+
+    /* Glass Shadow */
+
+    box-shadow:
+        0 8px 32px rgba(31, 75, 135, 0.08),
+        inset 0 1px 1px rgba(255, 255, 255, 0.9);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+
+/* ========================================
+   CARD HOVER EFFECT
+======================================== */
+
+#features .feature-card:hover {
+
+    transform: translateY(-8px);
+
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.95),
+        rgba(219, 234, 254, 0.65)
+    );
+
+    border-color: rgba(37, 99, 235, 0.25);
+
+    box-shadow:
+        0 18px 40px rgba(37, 99, 235, 0.13),
+        inset 0 1px 2px rgba(255, 255, 255, 1);
+}
+
+
+/* ========================================
+   FEATURE IMAGE AREA
 ======================================== */
 
 #features .feature-image-area {
+    position: relative;
+
     width: 100%;
+
     height: 175px;
     min-height: 175px;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffff;
-    border-bottom: 1px solid #f1f5f9;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+    overflow: hidden;
 }
 
 
-/* Feature Images */
+/* ========================================
+   FEATURE IMAGE
+======================================== */
 
 #features .feature-image {
     width: 100%;
@@ -131,11 +249,11 @@
 
     display: block;
 
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 #features .feature-card:hover .feature-image {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 
@@ -144,29 +262,33 @@
 ======================================== */
 
 #features .feature-content {
-    display: flex;
-    flex-direction: column;
-    background-color: #f8fafc;
     flex-grow: 1;
-    padding: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px 12px;
+
+    background: transparent;
 }
-
-
-/* Feature Title */
 
 #features .feature-content h3 {
-    margin: 0 0 18px;
-    color: #111827;
+    margin: 0;
+
     font-size: 15px;
     font-weight: 600;
+
+    color: #172033;
+
+    text-align: center;
     line-height: 1.5;
-    letter-spacing: -0.25px;
-    display: flex;
-    justify-content: center;
 }
 
 
-/* Feature List */
+/* ========================================
+   FEATURE LIST
+======================================== */
 
 #features .feature-content ul {
     list-style: none;
@@ -192,12 +314,15 @@
 }
 
 
-/* Professional Blue Checkmarks */
+/* ========================================
+   PROFESSIONAL BLUE CHECKMARKS
+======================================== */
 
 #features .feature-content ul li::before {
     content: "";
 
     position: absolute;
+
     left: 0;
     top: 7px;
 
@@ -205,20 +330,27 @@
     height: 7px;
 
     background: #2563eb;
+
     border-radius: 50%;
 }
 
 
 /* ========================================
-   RESPONSIVE DESIGN
+   EXTRA LARGE SCREENS
 ======================================== */
 
 @media (min-width: 1200px) {
+
     #features .col-xl-20 {
         flex: 0 0 20%;
         max-width: 20%;
     }
 }
+
+
+/* ========================================
+   LARGE SCREENS
+======================================== */
 
 @media (min-width: 992px) {
 
@@ -228,7 +360,7 @@
     }
 
     #features .feature-content {
-        padding: 5px;
+        padding: 12px 8px;
     }
 
     #features .feature-content h3 {
@@ -237,7 +369,36 @@
 }
 
 
+/* ========================================
+   TABLETS
+======================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    #features .feature-image-area {
+        height: 165px;
+        min-height: 165px;
+    }
+
+    #features .feature-content {
+        padding: 14px 8px;
+    }
+
+    #features .feature-content h3 {
+        font-size: 14px;
+    }
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
 @media (max-width: 767px) {
+
+    #features {
+        padding: 45px 0 !important;
+    }
 
     .features-heading {
         font-size: 29px;
@@ -261,10 +422,11 @@
     #features .feature-image {
         max-width: 110px;
         max-height: 110px;
+        object-fit: contain;
     }
 
     #features .feature-content {
-        padding: 5px;
+        padding: 12px 8px;
     }
 
     #features .feature-content h3 {
@@ -273,7 +435,31 @@
 }
 
 
-/* Accessibility: Disable animation when requested */
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+
+    #features .feature-image-area {
+        height: 130px;
+        min-height: 130px;
+    }
+
+    #features .feature-content h3 {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    #features .feature-card {
+        border-radius: 13px;
+    }
+}
+
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -316,8 +502,9 @@
 
 
 
+
 /* =====================================================
-   VASHQ PREMIUM FULL SCREEN FEATURE SECTIONS
+   FEATURES PAGE FEATURE SECTIONS
    INTERACTIVE MOUSE GRID + ALTERNATING GRADIENTS
 ===================================================== */
 
@@ -558,7 +745,7 @@
     justify-content: center;
     overflow: hidden;
     box-sizing: border-box;
-    background: #ffffff;
+    background: #e9e9e9;
     padding: 100px 5% 0;
 }
 
@@ -1240,7 +1427,7 @@
 
     padding: 110px 6%;
 
-    background: #ffffff;
+    background: #e9e9e9;
     overflow: hidden;
 
     box-sizing: border-box;
@@ -2411,6 +2598,93 @@
     }
 
 }
+
+
+
+
+/* =====================================================
+   TYPE OF CAR CARE SELECT DROPDOWN
+===================================================== */
+
+#contactForm .vashq-contact-select {
+    display: block;
+
+    width: 100%;
+    height: 49px;
+
+    padding: 0 42px 0 17px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background-color: var(--vc-input);
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 16 16'%3E%3Cpath fill='%238A96A8' d='m2 5 6 6 6-6z'/%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+    background-position: right 17px center;
+    background-size: 12px;
+
+    border: 1px solid transparent;
+    border-radius: 11px;
+
+    outline: none;
+    box-shadow: none;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    color: #26344c;
+
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+/* Placeholder */
+#contactForm .vashq-contact-select:invalid {
+    color: #a3adbc;
+}
+
+/* Dropdown Options */
+#contactForm .vashq-contact-select option {
+    background: #ffffff;
+    color: #26344c;
+    font-size: 13px;
+    padding: 12px;
+}
+
+/* Focus */
+#contactForm .vashq-contact-select:focus {
+    background-color: #ffffff;
+
+    border-color: var(--vc-blue);
+
+    box-shadow:
+        0 0 0 4px rgba(23, 105, 255, .08);
+}
+
+/* Invalid */
+#contactForm.was-validated
+.vashq-contact-select:invalid {
+    border-color: #dc3545;
+}
+
+/* Hover */
+#contactForm .vashq-contact-select:hover {
+    border-color: #d5e2f5;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    #contactForm .vashq-contact-select {
+        height: 47px;
+    }
+}
+
 
 /* ==========================================
    VASHQ BLUE CTA SECTION
