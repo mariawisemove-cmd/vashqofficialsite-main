@@ -2559,147 +2559,197 @@
 
 
 
-/* =========================================
-   VASHQ WHY CHOOSE US
-========================================= */
+
+/* =====================================================
+   VASHQ WHY CHOOSE US SECTION
+===================================================== */
 
 .vashq-why-choose {
     position: relative;
     width: 100%;
-    padding-bottom: 70px;
     overflow: hidden;
 }
 
-.company-side{
+.vashq-why-choose .company-side {
     position: relative;
     overflow: hidden;
-    background-color: #cde1fc;
-    padding: 70px;
-    padding-left: 150px;
-    padding-right: 150px;
-    border-radius: 50px;
 
+    background: #fff;
+
+    padding: 40px;
+
+    border-radius: 45px;
 }
 
-/* Half-circle decorative design */
-.company-side::after {
+
+/* =====================================================
+   DECORATIVE BACKGROUND
+===================================================== */
+
+.vashq-why-choose .company-side::after {
     content: "";
+
     position: absolute;
+
     width: 300px;
     height: 250px;
-    right: 18%;
-    bottom: -150px;
+
+    right: 10%;
+    bottom: -160px;
+
     transform: translateX(-50%);
+
     border-radius: 50%;
+
     box-shadow:
         0 0 0 35px rgba(40, 100, 232, 0.025),
         0 0 0 70px rgba(40, 100, 232, 0.02);
+
     pointer-events: none;
     z-index: 0;
 }
 
-/* Keep content above the decoration */
-.company-side > * {
+.vashq-why-choose .company-side > * {
     position: relative;
     z-index: 1;
 }
 
 
-/* =========================================
-   SECTION HEADING
-========================================= */
+/* =====================================================
+   SECTION INTRO - CENTERED
+===================================================== */
 
-.vashq-why-heading {
-    max-width: 700px;
+.vashq-why-intro {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    width: 100%;
 
     margin: 0 auto 65px;
-    padding: 0 15px;
 
+    text-align: center;
+}
+
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.vashq-why-title {
+    width: 100%;
     text-align: center;
 }
 
 .vashq-why-label {
     display: inline-block;
 
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 
     color: #2864e8;
 
     font-size: 11px;
     font-weight: 750;
+
     letter-spacing: 2.5px;
 }
 
-.vashq-why-heading h2 {
-    margin: 0 0 18px;
+.vashq-why-title h2 {
+    margin: 0;
 
     color: #151b28;
 
-    font-size: clamp(32px, 4vw, 46px);
-    font-weight: 750;
-    line-height: 1.2;
-    letter-spacing: -1.3px;
+    font-size: clamp(36px, 4vw, 52px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.8px;
 }
 
-.vashq-why-heading h2 span {
+.vashq-why-title h2 span {
     color: #2864e8;
 }
 
-.vashq-why-heading > p {
-    max-width: 570px;
+
+/* =====================================================
+   SUBHEADING / DESCRIPTION
+===================================================== */
+
+.vashq-why-description {
+    width: 100%;
+    max-width: 650px;
 
     margin: 0 auto;
 
+    text-align: center;
+}
+
+.vashq-why-description p {
+    margin: 0;
+
     color: #667085;
 
-    font-size: 15px;
-    line-height: 1.8;
+    font-size: 16px;
+
+    line-height: 1.9;
 }
 
 
-/* =========================================
-   FEATURES GRID
-========================================= */
+/* =====================================================
+   THREE SUPPORT POINTS
+===================================================== */
 
 .vashq-why-grid {
     display: grid;
 
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    column-gap: 42px;
-    row-gap: 52px;
+    column-gap: 38px;
+    row-gap: 35px;
+
+    padding-bottom: 55px;
 }
 
 
-/* =========================================
+/* =====================================================
    FEATURE ITEM
-========================================= */
+===================================================== */
 
 .vashq-why-item {
     position: relative;
 
-    padding: 0 0 8px;
+    min-width: 0;
 
     transition: transform 0.3s ease;
 }
 
+.vashq-why-item:hover {
+    transform: translateY(-4px);
+}
 
-/* Feature heading row */
+
+/* FEATURE HEADING ROW */
 
 .vashq-why-item-heading {
     display: grid;
 
-    grid-template-columns: auto 42px minmax(0, 1fr);
+    grid-template-columns: auto 38px minmax(0, 1fr);
 
     align-items: start;
 
     column-gap: 10px;
 
-    margin-bottom: 17px;
+    margin-bottom: 18px;
 }
 
 
-/* Number */
+/* FEATURE NUMBER */
 
 .vashq-why-number {
     padding-top: 3px;
@@ -2708,11 +2758,10 @@
 
     font-size: 13px;
     font-weight: 750;
-    letter-spacing: 0.5px;
 }
 
 
-/* Horizontal divider */
+/* HORIZONTAL LINE */
 
 .vashq-why-line {
     display: block;
@@ -2724,51 +2773,13 @@
 
     background: linear-gradient(
         120deg,
-        #e5efff 0%,
-        #d5e5fc 55%,
-        #cbdffc 100%
-    );;
+        #e5efff,
+        #a9c9f1
+    );
 
     transition:
         background 0.3s ease,
         height 0.3s ease;
-}
-
-
-/* Feature title */
-
-.vashq-why-item-heading h3 {
-    margin: 0;
-
-    color: #19202d;
-
-    font-size: 18px;
-    font-weight: 750;
-    line-height: 1.45;
-    letter-spacing: -0.3px;
-}
-
-
-/* Feature description */
-
-.vashq-why-item > p {
-    margin: 0;
-
-    padding-left: 0;
-
-    color: #667085;
-
-    font-size: 14px;
-    line-height: 1.9;
-}
-
-
-/* =========================================
-   HOVER EFFECT
-========================================= */
-
-.vashq-why-item:hover {
-    transform: translateY(-3px);
 }
 
 .vashq-why-item:hover .vashq-why-line {
@@ -2777,36 +2788,311 @@
 }
 
 
-/* =========================================
+/* FEATURE TITLE */
+
+.vashq-why-item-heading h3 {
+    margin: 0;
+
+    color: #19202d;
+
+    font-size: 18px;
+    font-weight: 750;
+
+    line-height: 1.45;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* FEATURE DESCRIPTION */
+
+.vashq-why-item > p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   BUSINESS STATISTICS
+   LARGE NUMBER BLOCK DESIGN
+===================================================== */
+
+.vashq-why-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    max-width: 850px;
+    margin: 0 auto;
+
+    padding-top: 40px;
+    gap: 25px;
+}
+
+
+/* =====================================================
+   STAT ITEM
+===================================================== */
+
+
+.vashq-stat-item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    min-width: 0;
+    min-height: 300px;
+
+    padding: 30px 28px;
+
+    overflow: hidden;
+
+    border: none;
+    border-radius: 0;
+
+    outline: none;
+    box-shadow: none;
+
+    text-align: left;
+
+    /* CLEAN DIAGONAL CORNER */
+    clip-path: polygon(
+        0 0,
+        calc(100% - 56px) 0,
+        100% 56px,
+        100% 100%,
+        0 100%
+    );
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.8s ease;
+}
+
+/* REMOVE OLD CORNER */
+.vashq-stat-item::after {
+    display: none !important;
+}
+
+
+
+/* =====================================================
+   STAT BLOCK COLORS
+===================================================== */
+
+/* PROFIT GROWTH */
+
+.vashq-stat-item.stat-profit {
+    background: #196bab;
+    color: #ffffff;
+}
+
+/* COMPLETED JOBS */
+
+.vashq-stat-item.stat-jobs {
+    background: #66ade2;
+    color: #052f2c;
+}
+
+
+/* =====================================================
+   DIAGONAL CORNER DESIGN
+===================================================== */
+
+.vashq-stat-item::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 45px;
+    height: 45px;
+
+    // background: #cde1fc;
+    background: #fff;
+
+    clip-path: polygon(
+        0 0,
+        100% 100%,
+        100% 0
+    );
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   NUMBER AREA
+===================================================== */
+
+.vashq-stat-top {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 5px;
+}
+
+
+/* LARGE NUMBER */
+
+.vashq-stat-number {
+    display: block;
+
+    font-size: clamp(65px, 8vw, 115px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: -6px;
+
+    font-variant-numeric: tabular-nums;
+
+    white-space: nowrap;
+}
+
+
+/* PROFIT NUMBER */
+
+.stat-profit .vashq-stat-number {
+    color: #ffffff;
+}
+
+/* JOBS NUMBER */
+
+.stat-jobs .vashq-stat-number {
+    color: #052f2c;
+}
+
+
+/* PERCENTAGE SYMBOL */
+
+.vashq-stat-symbol {
+    font-size: 17px;
+
+    font-weight: 600;
+
+    padding: 8px 12px 0 0;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   STAT BOTTOM CONTENT
+===================================================== */
+
+.vashq-stat-bottom {
+    display: grid;
+
+    grid-template-columns: auto minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+
+/* RANK NUMBER */
+
+.vashq-stat-rank {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* STAT INFORMATION */
+
+.vashq-stat-info {
+    max-width: 240px;
+    min-width: 0;
+}
+
+
+/* STAT LABEL */
+
+.vashq-stat-label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+
+/* STAT DESCRIPTION */
+
+.vashq-stat-info p {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    opacity: 0.85;
+}
+
+
+/* =====================================================
+   STAT HOVER EFFECT
+===================================================== */
+
+.vashq-stat-item:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =====================================================
    SCROLL REVEAL ANIMATION
-========================================= */
+===================================================== */
 
-/* Initial hidden state */
-
-.vashq-why-heading,
+.vashq-why-intro,
 .vashq-why-item,
-.vashq-our-team > h2,
-.vashq-team-card {
+.vashq-stat-item {
     opacity: 0;
-    transform: translateY(35px);
+
+    transform: translateY(30px);
+
     transition:
         opacity 0.8s ease,
         transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 
-/* Visible state */
+/* VISIBLE STATE */
 
-.vashq-why-heading.show,
+.vashq-why-intro.show,
 .vashq-why-item.show,
-.vashq-our-team > h2.show,
-.vashq-team-card.show {
+.vashq-stat-item.show {
     opacity: 1;
+
     transform: translateY(0);
 }
 
 
-/* Feature items stagger delay */
+/* FEATURE STAGGER */
 
 .vashq-why-item:nth-child(1) {
     transition-delay: 0.1s;
@@ -2820,32 +3106,239 @@
     transition-delay: 0.3s;
 }
 
-.vashq-why-item:nth-child(4) {
-    transition-delay: 0.1s;
+
+/* STATISTICS STAGGER */
+
+.vashq-stat-item:nth-child(1) {
+    transition-delay: 0.15s;
+
 }
 
-.vashq-why-item:nth-child(5) {
-    transition-delay: 0.2s;
-}
-
-.vashq-why-item:nth-child(6) {
+.vashq-stat-item:nth-child(2) {
     transition-delay: 0.3s;
 }
 
 
-/* Team cards stagger delay */
+/* =====================================================
+   TABLET RESPONSIVE
+===================================================== */
 
-.vashq-team-card:nth-child(1) {
-    transition-delay: 0.1s;
+@media (max-width: 991px) {
+
+    .vashq-why-choose .company-side {
+        padding: 65px 45px;
+
+        border-radius: 35px;
+    }
+
+    .vashq-why-intro {
+        margin-bottom: 55px;
+    }
+
+    .vashq-why-title h2 {
+        font-size: 42px;
+    }
+
+    .vashq-why-grid {
+        column-gap: 22px;
+    }
+
+    .vashq-why-item-heading {
+        grid-template-columns: auto 25px minmax(0, 1fr);
+
+        column-gap: 8px;
+    }
+
+    .vashq-why-item-heading h3 {
+        font-size: 16px;
+    }
+
+
+    /* STATISTICS */
+
+    .vashq-why-stats {
+        max-width: 750px;
+    }
+
+    .vashq-stat-item {
+        min-height: 260px;
+
+        padding: 25px 20px;
+    }
+
+    .vashq-stat-number {
+        font-size: clamp(65px, 8vw, 85px);
+
+        letter-spacing: -4px;
+    }
+
+    .vashq-stat-bottom {
+        gap: 15px;
+    }
+
 }
 
-.vashq-team-card:nth-child(2) {
-    transition-delay: 0.25s;
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .vashq-why-choose {
+        padding-bottom: 45px;
+    }
+
+    .vashq-why-choose .company-side {
+        padding: 45px 25px;
+
+        border-radius: 28px;
+    }
+
+
+    /* HEADING */
+
+    .vashq-why-intro {
+        gap: 15px;
+
+        margin-bottom: 45px;
+    }
+
+    .vashq-why-title h2 {
+        font-size: 36px;
+
+        letter-spacing: -1.2px;
+    }
+
+    .vashq-why-label {
+        font-size: 10px;
+
+        margin-bottom: 14px;
+    }
+
+    .vashq-why-description p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+
+    /* FEATURES */
+
+    .vashq-why-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding-bottom: 35px;
+    }
+
+    .vashq-why-item-heading h3 {
+        font-size: 17px;
+    }
+
+    .vashq-why-item > p {
+        font-size: 13px;
+    }
+
+
+    /* STATISTICS */
+
+    .vashq-why-stats {
+        grid-template-columns: 1fr;
+
+        max-width: 450px;
+
+        padding-top: 20px;
+
+        gap: 0;
+    }
+
+    .vashq-stat-item {
+        min-height: 230px;
+
+        padding: 28px 25px;
+    }
+
+    .vashq-stat-number {
+        font-size: 85px;
+
+        letter-spacing: -4px;
+    }
+
+    .vashq-stat-bottom {
+        margin-top: 25px;
+
+        gap: 20px;
+    }
+
 }
 
-.vashq-team-card:nth-child(3) {
-    transition-delay: 0.4s;
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .vashq-why-choose .company-side {
+        padding: 38px 20px;
+    }
+
+    .vashq-why-title h2 {
+        font-size: 33px;
+    }
+
+
+    /* STATISTICS */
+
+    .vashq-stat-item {
+        min-height: 210px;
+
+        padding: 23px 18px;
+    }
+
+    .vashq-stat-number {
+        font-size: 68px;
+
+        letter-spacing: -3px;
+    }
+
+    .vashq-stat-symbol {
+        font-size: 14px;
+
+        padding-right: 8px;
+    }
+
+    .vashq-stat-bottom {
+        gap: 14px;
+    }
+
+    .vashq-stat-info p {
+        font-size: 12px;
+    }
+
 }
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .vashq-why-intro,
+    .vashq-why-item,
+    .vashq-stat-item {
+        transition: none;
+
+        transform: none;
+
+        opacity: 1;
+    }
+
+}
+
 
 
 
