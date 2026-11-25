@@ -268,6 +268,8 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach((link) => {
     ? "index.html"
     : current;
 
+  const isBlogSection = /(?:^|\/)blog(?:\.html|\/)/i.test(rawPath);
+
   links.forEach((a) => {
     const href = (a.getAttribute("href") || "").trim();
 
@@ -278,9 +280,12 @@ document.querySelectorAll('.nav-link[href^="#"]').forEach((link) => {
     const hrefFile =
       href === "/" ? "index.html" : href.split("/").pop();
 
+    const isBlogLink = hrefFile === "blog.html";
+
     const matches =
       hrefFile === currentNormalized ||
-      (isHomePath && (href === "/" || hrefFile === "index.html"));
+      (isHomePath && (href === "/" || hrefFile === "index.html")) ||
+      (isBlogSection && isBlogLink);
 
     if (matches) {
       a.classList.add("active");
